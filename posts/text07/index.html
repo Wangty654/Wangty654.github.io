@@ -1,0 +1,669 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程 - wangty-notepad</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://Wangty654.github.io/posts/text07/">
+  <meta property="og:site_name" content="wangty-notepad">
+  <meta property="og:title" content="如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程">
+  <meta property="og:description" content="如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程 实现：Windows系统电脑使用HUGO快速搭建一个本地博客网站，并结合cpo">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-08-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-08-09T00:00:00+00:00">
+    <meta property="article:tag" content="Hugo">
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程">
+  <meta name="twitter:description" content="如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程 实现：Windows系统电脑使用HUGO快速搭建一个本地博客网站，并结合cpo">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Wangty654.github.io/posts/text07/" /><link rel="prev" href="https://Wangty654.github.io/posts/text17/" /><link rel="next" href="https://Wangty654.github.io/posts/text18/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/Wangty654.github.io\/posts\/text07\/"
+        },"genre": "posts","keywords": "hugo","wordcount":  3672 ,
+        "url": "https:\/\/Wangty654.github.io\/posts\/text07\/","datePublished": "2024-08-09T00:00:00+00:00","dateModified": "2024-08-09T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "wangty"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="wangty-notepad">My cool site</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="wangty-notepad">My cool site</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><main class="main">
+                <div class="container"><div class="toc" id="toc-auto">
+            <h2 class="toc-title">Contents</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-09">2024-08-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3672 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;8 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span>Contents</span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#1-安装环境">1. 安装环境</a></li>
+        <li><a href="#2-配置环境变量与hugo安装">2. 配置环境变量与hugo安装</a></li>
+        <li><a href="#21-创建程序目录">2.1 创建程序目录</a></li>
+        <li><a href="#22-配置环境变量">2.2 配置环境变量</a></li>
+        <li><a href="#23-查看程序版本">2.3 查看程序版本</a></li>
+        <li><a href="#3-创建博客网站">3. 创建博客网站</a></li>
+        <li><a href="#31-创建站点">3.1 创建站点</a></li>
+        <li><a href="#32-在站点中创建一篇文章">3.2 在站点中创建一篇文章</a></li>
+        <li><a href="#33-为网站添加主题">3.3 为网站添加主题</a></li>
+        <li><a href="#4-本地访问测试">4. 本地访问测试</a></li>
+        <li><a href="#5-安装内网穿透工具">5. 安装内网穿透工具</a></li>
+        <li><a href="#6-配置公网地址">6. 配置公网地址</a></li>
+        <li><a href="#7-快速搭建本地服务器">7. 快速搭建本地服务器</a></li>
+        <li><a href="#8-编译网站文件并运行于本地服务器">8. 编译网站文件并运行于本地服务器</a></li>
+        <li><a href="#9通过内网穿透配置的地址跳转问题解释">9.通过内网穿透配置的地址跳转问题解释</a></li>
+        <li><a href="#10网站样式自定义设置">10.网站样式自定义设置</a></li>
+        <li><a href="#101-关于themes主题">10.1 关于themes主题</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h1 id="如何搭建hugo博客网站并配置公网地址实现随时随地远程访问教程">如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程</h1>
+<p>实现：Windows系统电脑使用HUGO快速搭建一个本地博客网站，并结合cpolar内网穿透工具实现一键发布本地站点至公网，随时随地远程访问，无需公网IP与准备域名、服务器。</p>
+<hr>
+<p>Hugo 是 Go 编写的静态网站生成器，速度快，易用，可配置。</p>
+<p>Hugo 依赖于 Markdown 文件，元数据字体 。用户可以从任意的目录中运行 Hugo，支持共享主机和其他系统。只需要几分之一秒就可以渲染一个经典的中型网站，非常适合博客，文档等等网站的生成。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810202919284.png"
+        data-srcset="./images/image-20240810202919284.png, ./images/image-20240810202919284.png 1.5x, ./images/image-20240810202919284.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810202919284.png"
+        title="image-20240810202919284" /></p>
+<h3 id="1-安装环境">1. 安装环境</h3>
+<p>接下来教大家如何在Windows系统本地安装HUGO</p>
+<p>首先需要安装好Windows版本的 git：</p>
+<p>（如果没有安装git的话，进入git官网进行下载windows版本）</p>
+<p>git官网：<a href="https://git-scm.com/downloads%ef%bc%8c%e5%a6%82%e4%b8%8b%e5%9b%be%ef%bc%9a" target="_blank" rel="noopener noreffer ">https://git-scm.com/downloads</a></p>
+<p>git安装教程请参考：【 <a href="https://www.cnblogs.com/xueweisuoyong/p/11914045.html" target="_blank" rel="noopener noreffer ">Windows系统Git安装教程（详解Git安装过程） - 学为所用 - 博客园 (cnblogs.com)</a>】</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810202936356.png"
+        data-srcset="./images/image-20240810202936356.png, ./images/image-20240810202936356.png 1.5x, ./images/image-20240810202936356.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810202936356.png"
+        title="image-20240810202936356" /></p>
+<p>然后需要下载并安装Windows版本的 GO：</p>
+<p>（如果没有安装go的话，进入go的中文官网进行下载windows版本）</p>
+<p>go的中文官网：https://go.p2hp.com/</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810203335315.png"
+        data-srcset="./images/image-20240810203335315.png, ./images/image-20240810203335315.png 1.5x, ./images/image-20240810203335315.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810203335315.png"
+        title="image-20240810203335315" /></p>
+<h3 id="2-配置环境变量与hugo安装">2. 配置环境变量与hugo安装</h3>
+<p>然后去上方的hugo项目地址下载好Windows版本的hugo后，放在一边备用。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810203409152.png"
+        data-srcset="./images/image-20240810203409152.png, ./images/image-20240810203409152.png 1.5x, ./images/image-20240810203409152.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810203409152.png"
+        title="image-20240810203409152" /></p>
+<p>本教程中下载的项目压缩包名为：hugo_extended_0.128.2_windows-amd64</p>
+<p>压缩包下载路径：</p>
+<p><a href="https://github.com/gohugoio/hugo/releases/download/v0.128.2/hugo_extended_0.128.2_windows-amd64.zip" target="_blank" rel="noopener noreffer ">https://github.com/gohugoio/hugo/releases/download/v0.128.2/hugo_extended_0.128.2_windows-amd64.zip</a></p>
+<p>【注：hugo·GitHub 地址 <a href="https://github.com/gohugoio/hugo/releases" target="_blank" rel="noopener noreffer ">https://github.com/gohugoio/hugo/releases</a>】</p>
+<h3 id="21-创建程序目录">2.1 创建程序目录</h3>
+<p>在C盘新建一个名为hugo的文件夹，进入文件夹后再创建一个名为bin的文件夹</p>
+<p>将下载好的Windows版本hugo应用程序压缩包解压到这个bin文件夹</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810212706040.png"
+        data-srcset="./images/image-20240810212706040.png, ./images/image-20240810212706040.png 1.5x, ./images/image-20240810212706040.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810212706040.png"
+        title="image-20240810212706040" /></p>
+<h3 id="22-配置环境变量">2.2 配置环境变量</h3>
+<p>然后在Windows搜索栏中搜索环境变量，点击环境变量</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810212719681.png"
+        data-srcset="./images/image-20240810212719681.png, ./images/image-20240810212719681.png 1.5x, ./images/image-20240810212719681.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810212719681.png"
+        title="image-20240810212719681" /></p>
+<p>选择系统变量中的Path，点击新建</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810212757603.png"
+        data-srcset="./images/image-20240810212757603.png, ./images/image-20240810212757603.png 1.5x, ./images/image-20240810212757603.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810212757603.png"
+        title="image-20240810212757603" /></p>
+<p>将 C:\hugo\bin 这个路径添加到环境变量</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810212812958.png"
+        data-srcset="./images/image-20240810212812958.png, ./images/image-20240810212812958.png 1.5x, ./images/image-20240810212812958.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810212812958.png"
+        title="image-20240810212812958" /></p>
+<h3 id="23-查看程序版本">2.3 查看程序版本</h3>
+<p>然后打开powershell终端，输入下方命令查看</p>
+<pre tabindex="0"><code>hugo version
+</code></pre><p>显示版本号，即为成功安装了hugo程序。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810212845738.png"
+        data-srcset="./images/image-20240810212845738.png, ./images/image-20240810212845738.png 1.5x, ./images/image-20240810212845738.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810212845738.png"
+        title="image-20240810212845738" /></p>
+<h3 id="3-创建博客网站">3. 创建博客网站</h3>
+<p>现在我们就可以使用hugo搭建一个属于自己的博客网站了。</p>
+<h3 id="31-创建站点">3.1 创建站点</h3>
+<p>首先，我们进入到C盘下的hugo文件夹，点击鼠标右键选择在终端中打开</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810212901191.png"
+        data-srcset="./images/image-20240810212901191.png, ./images/image-20240810212901191.png 1.5x, ./images/image-20240810212901191.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810212901191.png"
+        title="image-20240810212901191" /></p>
+<p>执行下方命令创建一个静态站点：（本例创建的站点名为myblog，大家可以自定义）</p>
+<pre tabindex="0"><code>hugo new site myblog
+</code></pre><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810212927099.png"
+        data-srcset="./images/image-20240810212927099.png, ./images/image-20240810212927099.png 1.5x, ./images/image-20240810212927099.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810212927099.png"
+        title="image-20240810212927099" /></p>
+<p>创建后，我们回到hugo目录，可以看到新增了一个名为myblog的文件夹：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810212941017.png"
+        data-srcset="./images/image-20240810212941017.png, ./images/image-20240810212941017.png 1.5x, ./images/image-20240810212941017.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810212941017.png"
+        title="image-20240810212941017" /></p>
+<p>进入该文件夹后，就能看到刚刚创建的博客网站程序：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810212953946.png"
+        data-srcset="./images/image-20240810212953946.png, ./images/image-20240810212953946.png 1.5x, ./images/image-20240810212953946.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810212953946.png"
+        title="image-20240810212953946" /></p>
+<h3 id="32-在站点中创建一篇文章">3.2 在站点中创建一篇文章</h3>
+<p>创建好了站点后，现在网站中还什么内容都没有，我们可以创建一篇文章来进行一下测试：</p>
+<p>现在我们在终端中执行下方命令，进入站点目录：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213008612.png"
+        data-srcset="./images/image-20240810213008612.png, ./images/image-20240810213008612.png 1.5x, ./images/image-20240810213008612.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213008612.png"
+        title="image-20240810213008612" /></p>
+<p>进入网站目录后，执行下方命令创建一篇markdown格式的文章：</p>
+<pre tabindex="0"><code>hugo new posts/Articles01.md
+</code></pre><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213030184.png"
+        data-srcset="./images/image-20240810213030184.png, ./images/image-20240810213030184.png 1.5x, ./images/image-20240810213030184.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213030184.png"
+        title="image-20240810213030184" /></p>
+<p>执行后可以看到提示已经创建了一篇名为Articles01的文章与其所属路径。</p>
+<p>进入这个路径，就能看到文章了。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213046159.png"
+        data-srcset="./images/image-20240810213046159.png, ./images/image-20240810213046159.png 1.5x, ./images/image-20240810213046159.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213046159.png"
+        title="image-20240810213046159" /></p>
+<p>打开这篇文章后能看到这篇文章的标题，日期等相关信息</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213101516.png"
+        data-srcset="./images/image-20240810213101516.png, ./images/image-20240810213101516.png 1.5x, ./images/image-20240810213101516.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213101516.png"
+        title="image-20240810213101516" /></p>
+<p>在这里我们需要把draft（草稿） = true 修改为 draft = false 来表示这并不是一篇草稿。</p>
+<p>然后随便在文档中写一些内容，比如：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213117876.png"
+        data-srcset="./images/image-20240810213117876.png, ./images/image-20240810213117876.png 1.5x, ./images/image-20240810213117876.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213117876.png"
+        title="image-20240810213117876" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213132762.png"
+        data-srcset="./images/image-20240810213132762.png, ./images/image-20240810213132762.png 1.5x, ./images/image-20240810213132762.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213132762.png"
+        title="image-20240810213132762" /></p>
+<p>然后保存关闭即可。</p>
+<h3 id="33-为网站添加主题">3.3 为网站添加主题</h3>
+<p>现在我们已经创建好了一个博客网站，并在网站中发布了一篇文章，不过现在我们还不能在浏览器中运行这个本地网站进行查看，因为在这之前，我们需要先给网站添加一个主题。</p>
+<p>我们可以登录下方的hugo官网页面来挑选一个你喜欢的网站主题：</p>
+<p><a href="https://themes.gohugo.io/themes" target="_blank" rel="noopener noreffer ">https://themes.gohugo.io/themes</a></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213248545.png"
+        data-srcset="./images/image-20240810213248545.png, ./images/image-20240810213248545.png 1.5x, ./images/image-20240810213248545.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213248545.png"
+        title="image-20240810213248545" /></p>
+<p>这里我们随便选择一个主题，点击进入页面后，可以看到安装方式：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213305652.png"
+        data-srcset="./images/image-20240810213305652.png, ./images/image-20240810213305652.png 1.5x, ./images/image-20240810213305652.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213305652.png"
+        title="image-20240810213305652" /></p>
+<p>可以看到，想要安装这个网站主题，需要先在终端中进入站点目录：</p>
+<pre tabindex="0"><code>cd myblog
+</code></pre><p>也可以想上边一样，在myblog目录中右键在终端中打开。</p>
+<p>然后执行下方命令：</p>
+<pre tabindex="0"><code>git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c
+</code></pre><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213345052.png"
+        data-srcset="./images/image-20240810213345052.png, ./images/image-20240810213345052.png 1.5x, ./images/image-20240810213345052.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213345052.png"
+        title="image-20240810213345052" /></p>
+<p>然后在打开名为 hugo 的 toml源文件，添加主题配置即可。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213434934.png"
+        data-srcset="./images/image-20240810213434934.png, ./images/image-20240810213434934.png 1.5x, ./images/image-20240810213434934.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213434934.png"
+        title="image-20240810213434934" /></p>
+<p>网站标题修改为myblog，然后再把theme = “m10c”这行代码加进去保存即可。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213448481.png"
+        data-srcset="./images/image-20240810213448481.png, ./images/image-20240810213448481.png 1.5x, ./images/image-20240810213448481.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213448481.png"
+        title="image-20240810213448481" /></p>
+<p>现在，我们在myblog目录下的主题文件夹中就能看到刚才添加的主题文件目录了：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213501829.png"
+        data-srcset="./images/image-20240810213501829.png, ./images/image-20240810213501829.png 1.5x, ./images/image-20240810213501829.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213501829.png"
+        title="image-20240810213501829" /></p>
+<h3 id="4-本地访问测试">4. 本地访问测试</h3>
+<p>现在，我们在终端中执行下方代码启动本地网站进行测试：</p>
+<pre tabindex="0"><code>hugo server
+</code></pre><p>本地清除缓存运行</p>
+<pre tabindex="0"><code>hugo server --disableFastRender --gc --noHTTPCache --noBuildLock --logLevel debug
+</code></pre><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213527096.png"
+        data-srcset="./images/image-20240810213527096.png, ./images/image-20240810213527096.png 1.5x, ./images/image-20240810213527096.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213527096.png"
+        title="image-20240810213527096" /></p>
+<p>可以看到成功启动，在浏览器中输入 localhost:1313/ 即可访问这个本地站点：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213538584.png"
+        data-srcset="./images/image-20240810213538584.png, ./images/image-20240810213538584.png 1.5x, ./images/image-20240810213538584.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213538584.png"
+        title="image-20240810213538584" /></p>
+<p>可以看到网站标题为myblog，里边有刚才我们发布的第一篇文章Article01：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213551572.png"
+        data-srcset="./images/image-20240810213551572.png, ./images/image-20240810213551572.png 1.5x, ./images/image-20240810213551572.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213551572.png"
+        title="image-20240810213551572" /></p>
+<p>点击文章标题Article01，即可进入文章页面。</p>
+<p>这样我们就成功使用HUGO在Windows本地快速部署了一个静态博客网站。</p>
+<h3 id="5-安装内网穿透工具">5. 安装内网穿透工具</h3>
+<p>目前我们在本机成功部署了一个博客网站，但如果没有公网IP的话，只能在本地局域网环境使用，有一定局限性。如果出差在外想要远程使用的话，可以结合Cpolar内网穿透生成公网地址，免去了本地重新部署过程，只需要使用公网地址直接就可以访问本地部署的网站，进行演示。</p>
+<p>点击进入cpolar官网注册一个账号，并下载最新版本的Cpolar</p>
+<p><a href="https://www.cpolar.com/" target="_blank" rel="noopener noreffer ">https://www.cpolar.com/</a></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213650120.png"
+        data-srcset="./images/image-20240810213650120.png, ./images/image-20240810213650120.png 1.5x, ./images/image-20240810213650120.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213650120.png"
+        title="image-20240810213650120" /></p>
+<p>登录成功后，点击下载Cpolar到本地并安装（一路默认安装即可）本教程选择下载Windows版本。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213729647.png"
+        data-srcset="./images/image-20240810213729647.png, ./images/image-20240810213729647.png 1.5x, ./images/image-20240810213729647.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213729647.png"
+        title="image-20240810213729647" /></p>
+<p>Cpolar安装成功后，在浏览器上访问 localhost:9200，使用cpolar账号登录,登录后即可看到Cpolar web 配置界面,结下来在web 管理界面配置即可。</p>
+<p>http://localhost:9200/#/login?redirect=%2Fdashboard</p>
+<p>【hugo-账户：1437059026@qq.com 密码：Wty201408.】</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213845659.png"
+        data-srcset="./images/image-20240810213845659.png, ./images/image-20240810213845659.png 1.5x, ./images/image-20240810213845659.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213845659.png"
+        title="image-20240810213845659" /></p>
+<h3 id="6-配置公网地址">6. 配置公网地址</h3>
+<p>接下来配置一下本地 博客网站 的公网地址，</p>
+<p>登录后，点击左侧仪表盘的隧道管理——创建隧道，</p>
+<p>创建一个 博客网站 的公网地址隧道：</p>
+<ul>
+<li>隧道名称：可自定义命名，注意不要与已有的隧道名称重复</li>
+<li>协议：选择</li>
+<li>本地地址：1313</li>
+<li>域名类型：选择随机域名</li>
+<li>地区：选择China VIP</li>
+</ul>
+<p>点击创建</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213949633.png"
+        data-srcset="./images/image-20240810213949633.png, ./images/image-20240810213949633.png 1.5x, ./images/image-20240810213949633.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213949633.png"
+        title="image-20240810213949633" /></p>
+<p>隧道创建成功后，点击左侧的状态——在线隧道列表,查看所生成的公网访问地址，有两种访问方式。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810214037707.png"
+        data-srcset="./images/image-20240810214037707.png, ./images/image-20240810214037707.png 1.5x, ./images/image-20240810214037707.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810214037707.png"
+        title="image-20240810214037707" /></p>
+<p>使用任意一个上面生成的公网地址,在电脑或任意设备在浏览器进行登录访问,即可成功看到 本地博客网站 界面,这样一个可以远程访问的公网地址就创建好了,使用了Cpolar的公网域名,无需自己购买云服务器,即可在公网访问本地部署的服务了！</p>
+<h3 id="7-快速搭建本地服务器">7. 快速搭建本地服务器</h3>
+<p>配置本地服务器，将编译后的网站文件运行与服务器后，本地可以不启动hugo server</p>
+<p>在控制面板打开命令提示符窗格，键入npm install -g anywhere 9999</p>
+<pre tabindex="0"><code>npm install -g anywhere 9999
+</code></pre><p>9999这里是设置端口号，端口号自行设置，也可以不输入xxx会默认8000端口号</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810214930068.png"
+        data-srcset="./images/image-20240810214930068.png, ./images/image-20240810214930068.png 1.5x, ./images/image-20240810214930068.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810214930068.png"
+        title="image-20240810214930068" /></p>
+<p>安装成功anywhere后，可以直接使用anywhere指令启动服务，但是默认是查看全部文件列表</p>
+<h3 id="8-编译网站文件并运行于本地服务器">8. 编译网站文件并运行于本地服务器</h3>
+<p>进入myblog根目录下，输入hugo命令进行编译</p>
+<pre tabindex="0"><code>hugo
+</code></pre><p>编译后，生成public文件夹，进入该文件夹根目录，并输入anywhere使编译文件运行在上面</p>
+<pre tabindex="0"><code>anywhere
+</code></pre><p>【特别注意：运行在服务器上的一定是：&quot;<strong>编译后的文件！！！！</strong>&quot;】</p>
+<h3 id="9通过内网穿透配置的地址跳转问题解释">9.通过内网穿透配置的地址跳转问题解释</h3>
+<p>使用hugo server本地运行的程序，每次跳转都将走localhost或者127.0.0.1，此处理解和其他程序启动一样，访问及跳转都将走本地。</p>
+<pre tabindex="0"><code>baseURL = &#39;http://136c5bcc.r16.vip.cpolar.cn/&#39;   //内网穿透地址
+</code></pre><p>若要使baseURL配置每次跳转时，自动请求的域名地址为服务器地址，则需要设置.toml文件中的baseURL。</p>
+<p>配置方法同小结6相同，配置好后如图</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810220034303.png"
+        data-srcset="./images/image-20240810220034303.png, ./images/image-20240810220034303.png 1.5x, ./images/image-20240810220034303.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810220034303.png"
+        title="image-20240810220034303" /></p>
+<p>逻辑为：</p>
+<p>1、配置本地baseURL为内网穿透地址，使每次访问均可访问内网穿透地址</p>
+<p>2、编译文件后，跳转路径指向内网穿透地址</p>
+<p>3、内网穿透地址配置localhost:8000指向本地服务器</p>
+<p>4、启动本地服务器，使内网穿透访问正常</p>
+<p>5、使跳转路径正常</p>
+<p>当此处修改为内网穿透地址后，<strong>需先进行编译</strong>，再通过本地服务器启动后的地址后，记得编译之后再运行本地服务器</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/f9b98e47fda48cbc42b3386a0b9babf.png"
+        data-srcset="./images/f9b98e47fda48cbc42b3386a0b9babf.png, ./images/f9b98e47fda48cbc42b3386a0b9babf.png 1.5x, ./images/f9b98e47fda48cbc42b3386a0b9babf.png 2x"
+        data-sizes="auto"
+        alt="./images/f9b98e47fda48cbc42b3386a0b9babf.png"
+        title="f9b98e47fda48cbc42b3386a0b9babf" /></p>
+<h3 id="10网站样式自定义设置">10.网站样式自定义设置</h3>
+<h3 id="101-关于themes主题">10.1 关于themes主题</h3>
+<p>themes主题为git拉取下来用于整个静态网站的样式代码，均可按照需求进行修改</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240811094705788.png"
+        data-srcset="./images/image-20240811094705788.png, ./images/image-20240811094705788.png 1.5x, ./images/image-20240811094705788.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240811094705788.png"
+        title="image-20240811094705788" /></p>
+<h4 id="1011头像设置">10.1.1头像设置</h4>
+<p>1、在layouts包下，有一个baseof.html文件，将其中的首页文件指向调整为你想要的图片</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240811095255206.png"
+        data-srcset="./images/image-20240811095255206.png, ./images/image-20240811095255206.png 1.5x, ./images/image-20240811095255206.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240811095255206.png"
+        title="image-20240811095255206" /></p>
+<p>2、并同时更改static文件夹中的图片，使指向和文件名一致。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240811095325698.png"
+        data-srcset="./images/image-20240811095325698.png, ./images/image-20240811095325698.png 1.5x, ./images/image-20240811095325698.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240811095325698.png"
+        title="image-20240811095325698" /></p>
+<h4 id="1012-主题颜色设置">10.1.2 主题颜色设置</h4>
+<p>1、拷取themes中配置文件config.toml里默认设置主题颜色的部分代码</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240811095726485.png"
+        data-srcset="./images/image-20240811095726485.png, ./images/image-20240811095726485.png 1.5x, ./images/image-20240811095726485.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240811095726485.png"
+        title="image-20240811095726485" /></p>
+<p>默认主题有三种样式</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240811095822984.png"
+        data-srcset="./images/image-20240811095822984.png, ./images/image-20240811095822984.png 1.5x, ./images/image-20240811095822984.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240811095822984.png"
+        title="image-20240811095822984" /></p>
+<p>选择其中一种样式，放入我们的配置文件hugo.toml，可以对其中的文字颜色也进行修改，本主题改为粉色</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240811095946846.png"
+        data-srcset="./images/image-20240811095946846.png, ./images/image-20240811095946846.png 1.5x, ./images/image-20240811095946846.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240811095946846.png"
+        title="image-20240811095946846" /></p>
+<h4 id="1013-主页文字设置">10.1.3 主页文字设置</h4>
+<p>更改layouts包下，baseof.html文件中书写首页介绍文字的位置</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240811100259821.png"
+        data-srcset="./images/image-20240811100259821.png, ./images/image-20240811100259821.png 1.5x, ./images/image-20240811100259821.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240811100259821.png"
+        title="image-20240811100259821" /></p>
+<h4 id="1014-主页分类菜单设置">10.1.4 主页分类菜单设置</h4>
+<p>1、配置文件hugo.html中配置菜单栏</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240811100402415.png"
+        data-srcset="./images/image-20240811100402415.png, ./images/image-20240811100402415.png 1.5x, ./images/image-20240811100402415.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240811100402415.png"
+        title="image-20240811100402415" /></p>
+<p>2、并在每条笔记中，使用yaml格式书写抬头</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240811100528323.png"
+        data-srcset="./images/image-20240811100528323.png, ./images/image-20240811100528323.png 1.5x, ./images/image-20240811100528323.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240811100528323.png"
+        title="image-20240811100528323" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240811100542974.png"
+        data-srcset="./images/image-20240811100542974.png, ./images/image-20240811100542974.png 1.5x, ./images/image-20240811100542974.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240811100542974.png"
+        title="image-20240811100542974" /></p>
+<h4 id="1015-主页关于菜单设置">10.1.5 主页关于菜单设置</h4>
+<p>取主题中content包下的about文件放入myblog的content包根目录下。about内的内容可以自行定义</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240811100726234.png"
+        data-srcset="./images/image-20240811100726234.png, ./images/image-20240811100726234.png 1.5x, ./images/image-20240811100726234.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240811100726234.png"
+        title="image-20240811100726234" /></p>
+<h4 id="1016-关于代码块样式设置">10.1.6 关于代码块样式设置</h4>
+<p>配置文件中写入设置样式的命令模块，根据需要更改其中style的值。</p>
+<p>hugo中文文档中 ：https://hugo.opendocs.io/getting-started/   选择“内容管理” - “语法高亮”</p>
+<p>在style中选择想要更改的样式，放入配置文件中：https://xyproto.github.io/splash/docs/</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240811101001028.png"
+        data-srcset="./images/image-20240811101001028.png, ./images/image-20240811101001028.png 1.5x, ./images/image-20240811101001028.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240811101001028.png"
+        title="image-20240811101001028" /></p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-08-09</span>
+            </div></div>
+        <div class="post-info-line">
+            <div class="post-info-md"></div>
+            <div class="post-info-share">
+                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://Wangty654.github.io/posts/text07/" data-title="如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程" data-hashtags="hugo"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://Wangty654.github.io/posts/text07/" data-hashtag="hugo"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://Wangty654.github.io/posts/text07/" data-title="如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://Wangty654.github.io/posts/text07/" data-title="如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://Wangty654.github.io/posts/text07/" data-title="如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
+            </div>
+        </div>
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/hugo/">Hugo</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/text17/" class="prev" rel="prev" title="子组件向父组件相互传参的方式"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>子组件向父组件相互传参的方式</a>
+            <a href="/posts/text18/" class="next" rel="next" title="Oracle查询sql">Oracle查询sql<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">wangty</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

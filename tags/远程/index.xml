@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>远程 - Tag - wangty-notepad</title>
+        <link>https://Wangty654.github.io/tags/%E8%BF%9C%E7%A8%8B/</link>
+        <description>远程 - Tag - wangty-notepad</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Thu, 04 Apr 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/%E8%BF%9C%E7%A8%8B/" rel="self" type="application/rss+xml" /><item>
+    <title>远程登陆服务器教程</title>
+    <link>https://Wangty654.github.io/posts/text06/</link>
+    <pubDate>Thu, 04 Apr 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text06/</guid>
+    <description><![CDATA[远程登陆服务器教程 打开命令行，输入mstsc 点击确认 出现以下界面 输入ip地址及端口号，然后点击连接 提示页面均点，连接 提示页面均点，是 输入用户]]></description>
+</item>
+</channel>
+</rss>

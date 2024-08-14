@@ -1,0 +1,39 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Javascript - Tag - wangty-notepad</title>
+        <link>https://Wangty654.github.io/tags/javascript/</link>
+        <description>Javascript - Tag - wangty-notepad</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+    <title>JS 对象(Object)和字符串(String)互转方法</title>
+    <link>https://Wangty654.github.io/posts/text01/</link>
+    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text01/</guid>
+    <description><![CDATA[JS 对象(Object)和字符串(String)互转方法 利用原生JSON对象，将对象转为字符串，使用 JSON.stringify（对象名） var jsObj]]></description>
+</item>
+<item>
+    <title>JS 验证码功能的三种实现方式</title>
+    <link>https://Wangty654.github.io/posts/text14/</link>
+    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text14/</guid>
+    <description><![CDATA[JS 验证码功能的三种实现方式 一、数字短信验证码 思路： a.两个文本框+一个获取验证码按钮，文本框用来输入手机号和获取到的验证码，按钮负责点击和记]]></description>
+</item>
+<item>
+    <title>JS控制元素的显示和隐藏</title>
+    <link>https://Wangty654.github.io/posts/text013/</link>
+    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text013/</guid>
+    <description><![CDATA[JS控制元素的显示和隐藏 利用来JS控制页面控件显示和隐藏有两种方法，两种方法分别利用HTML的style中的两个属性，两种方法的不同之处在于]]></description>
+</item>
+<item>
+    <title>子组件向父组件相互传参的方式</title>
+    <link>https://Wangty654.github.io/posts/text17/</link>
+    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text17/</guid>
+    <description><![CDATA[子组件向父组件相互传参的方式 子=&gt;父 子组件向父组件传参的方式通常通过事件来实现。具体步骤如下： 在子组件中定义事件：子组件可以通过 $emit 方法]]></description>
+</item>
+</channel>
+</rss>

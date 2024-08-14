@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Oracle - Tag - wangty-notepad</title>
+        <link>https://Wangty654.github.io/tags/oracle/</link>
+        <description>Oracle - Tag - wangty-notepad</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/oracle/" rel="self" type="application/rss+xml" /><item>
+    <title>Oracle查询sql</title>
+    <link>https://Wangty654.github.io/posts/text18/</link>
+    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text18/</guid>
+    <description><![CDATA[Oracle查询sql 查询系统当前日期 select sysdate from dual; 请查询每个员工的名字、薪水和加薪15.5%之后的薪水（trunc取整） Select 名字,薪水,trunc]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Hugo - Tag - wangty-notepad</title>
+        <link>https://Wangty654.github.io/tags/hugo/</link>
+        <description>Hugo - Tag - wangty-notepad</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+    <title>如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程</title>
+    <link>https://Wangty654.github.io/posts/text07/</link>
+    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text07/</guid>
+    <description><![CDATA[如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程 实现：Windows系统电脑使用HUGO快速搭建一个本地博客网站，并结合cpo]]></description>
+</item>
+</channel>
+</rss>
