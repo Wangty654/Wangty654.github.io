@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Dll文件引用 - Tag - wangty-notepad</title>
+        <link>https://Wangty654.github.io/tags/dll%E6%96%87%E4%BB%B6%E5%BC%95%E7%94%A8/</link>
+        <description>Dll文件引用 - Tag - wangty-notepad</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 18 May 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/dll%E6%96%87%E4%BB%B6%E5%BC%95%E7%94%A8/" rel="self" type="application/rss+xml" /><item>
+    <title>dcrf32.dll</title>
+    <link>https://Wangty654.github.io/posts/text03/</link>
+    <pubDate>Wed, 18 May 2022 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text03/</guid>
+    <description><![CDATA[报错信息Exception in thread &ldquo;AWT-EventQueue-0&rdquo; java.lang.UnsatisfiedLinkError: Unable to load library &lsquo;c:\dcrf32.dll&rsquo;:Native library (win32-x86-64/c:\dcrf32.dll) not found in resource path 翻译过来就是：线程“AWT-EventQueue-0”出现异常，无法加载库&rsq]]></description>
+</item>
+</channel>
+</rss>

@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Sql - Tag - wangty-notepad</title>
+        <link>https://Wangty654.github.io/tags/sql/</link>
+        <description>Sql - Tag - wangty-notepad</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/sql/" rel="self" type="application/rss+xml" /><item>
+    <title>Oracle查询sql</title>
+    <link>https://Wangty654.github.io/posts/text18/</link>
+    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text18/</guid>
+    <description><![CDATA[Oracle查询sql 查询系统当前日期 select sysdate from dual; 请查询每个员工的名字、薪水和加薪15.5%之后的薪水（trunc取整） Select 名字,薪水,trunc]]></description>
+</item>
+<item>
+    <title>SQL语句部分写法</title>
+    <link>https://Wangty654.github.io/posts/text11/</link>
+    <pubDate>Mon, 12 Jul 2021 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text11/</guid>
+    <description><![CDATA[SQL语句部分写法 一、聚合函数 有一个学生表如下： count 1、统计记录总个数 SELECT COUNT (*) FROM 学生表 若要命名 SELECT COUNT (* ) as 学生总人数 FROM 学生表 2、统计指定列的值的数]]></description>
+</item>
+</channel>
+</rss>
