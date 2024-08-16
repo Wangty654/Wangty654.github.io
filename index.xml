@@ -2,7 +2,7 @@
     <channel>
         <title>wangty-notepad</title>
         <link>https://Wangty654.github.io/</link>
-        <description>This is my cool site</description>
+        <description>这是我的全新 Hugo 网站</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 11 Aug 2024 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="https://Wangty654.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
@@ -27,7 +27,7 @@
     <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
     <guid>https://Wangty654.github.io/posts/text02/</guid>
-    <description><![CDATA[Java中int与String互相转换方法 String转为int，使用parseInt，或者valueOf.intValue int i = Integ]]></description>
+    <description><![CDATA[Java中int与String互相转换方法 String转为int，使用parseInt，或者valueOf.intValue 1 2 int i = Int]]></description>
 </item>
 <item>
     <title>JS 对象(Object)和字符串(String)互转方法</title>
@@ -35,7 +35,7 @@
     <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
     <guid>https://Wangty654.github.io/posts/text01/</guid>
-    <description><![CDATA[JS 对象(Object)和字符串(String)互转方法 利用原生JSON对象，将对象转为字符串，使用 JSON.stringify（对象名） var jsObj]]></description>
+    <description><![CDATA[JS 对象(Object)和字符串(String)互转方法 利用原生JSON对象，将对象转为字符串，使用 JSON.stringify（对象名） 1 2]]></description>
 </item>
 <item>
     <title>JS 验证码功能的三种实现方式</title>
@@ -59,7 +59,7 @@
     <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
     <guid>https://Wangty654.github.io/posts/text18/</guid>
-    <description><![CDATA[Oracle查询sql 查询系统当前日期 select sysdate from dual; 请查询每个员工的名字、薪水和加薪15.5%之后的薪水（trunc取整） Select 名字,薪水,trunc]]></description>
+    <description><![CDATA[Oracle查询sql 查询系统当前日期 1 select sysdate from dual; 请查询每个员工的名字、薪水和加薪15.5%之后的薪水（trunc取整） 1 Select 名字,薪水,tru]]></description>
 </item>
 <item>
     <title>如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程</title>

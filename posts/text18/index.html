@@ -4,10 +4,10 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>Oracle查询sql - wangty-notepad</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://Wangty654.github.io/posts/text18/">
+        <title>Oracle查询sql - wangty-notepad</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:url" content="https://Wangty654.github.io/posts/text18/">
   <meta property="og:site_name" content="wangty-notepad">
   <meta property="og:title" content="Oracle查询sql">
-  <meta property="og:description" content="Oracle查询sql 查询系统当前日期 select sysdate from dual; 请查询每个员工的名字、薪水和加薪15.5%之后的薪水（trunc取整） Select 名字,薪水,trunc">
+  <meta property="og:description" content="Oracle查询sql 查询系统当前日期 1 select sysdate from dual; 请查询每个员工的名字、薪水和加薪15.5%之后的薪水（trunc取整） 1 Select 名字,薪水,tru">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -15,14 +15,16 @@
     <meta property="article:modified_time" content="2024-08-09T00:00:00+00:00">
     <meta property="article:tag" content="Sql">
     <meta property="article:tag" content="Oracle">
+    <meta property="og:image" content="https://Wangty654.github.io/images/avatar.png">
 
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://Wangty654.github.io/images/avatar.png">
   <meta name="twitter:title" content="Oracle查询sql">
-  <meta name="twitter:description" content="Oracle查询sql 查询系统当前日期 select sysdate from dual; 请查询每个员工的名字、薪水和加薪15.5%之后的薪水（trunc取整） Select 名字,薪水,trunc">
+  <meta name="twitter:description" content="Oracle查询sql 查询系统当前日期 1 select sysdate from dual; 请查询每个员工的名字、薪水和加薪15.5%之后的薪水（trunc取整） 1 Select 名字,薪水,tru">
 <meta name="application-name" content="My cool site">
-<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Wangty654.github.io/posts/text18/" /><link rel="prev" href="https://Wangty654.github.io/posts/text07/" /><link rel="next" href="https://Wangty654.github.io/posts/text013/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="msapplication-TileColor" href="/favicon-16x16.png" color="#da532c"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Wangty654.github.io/posts/text18/" /><link rel="prev" href="https://Wangty654.github.io/posts/text07/" /><link rel="next" href="https://Wangty654.github.io/posts/text013/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -33,7 +35,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/Wangty654.github.io\/posts\/text18\/"
-        },"genre": "posts","keywords": "sql, Oracle","wordcount":  573 ,
+        },"genre": "posts","keywords": "sql, Oracle","wordcount":  600 ,
         "url": "https:\/\/Wangty654.github.io\/posts\/text18\/","datePublished": "2024-08-09T00:00:00+00:00","dateModified": "2024-08-09T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -47,10 +49,21 @@
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="wangty-notepad">My cool site</a>
+            <a href="/" title="wangty-notepad">wangty notepad</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a></div>
         </div>
@@ -59,49 +72,133 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="wangty-notepad">My cool site</a>
+                <a href="/" title="wangty-notepad">wangty notepad</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
-</header><main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Oracle查询sql</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-09">2024-08-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;573 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-09">2024-08-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;600 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
-                    <span>Contents</span>
+                    <span></span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
             </div><div class="content" id="content"><h1 id="oracle查询sql">Oracle查询sql</h1>
 <p>查询系统当前日期</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">sysdate</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dual</span><span class="p">;</span><span class="w">
-</span></span></span></code></pre></div><p>请查询每个员工的名字、薪水和加薪15.5%之后的薪水（trunc取整）</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">Select</span><span class="w"> </span><span class="err">名字</span><span class="p">,</span><span class="err">薪水</span><span class="p">,</span><span class="n">trunc</span><span class="p">(</span><span class="err">薪水</span><span class="o">*</span><span class="mi">1</span><span class="p">.</span><span class="mi">155</span><span class="p">)</span><span class="w">  </span><span class="s2">&#34;new salary&#34;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span><span class="w">
-</span></span></span></code></pre></div><p>请显示所有以’J’，‘A’，&lsquo;M’打头的员工的名字和名字长度，且按照名字排升序</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="err">名字</span><span class="p">,</span><span class="k">LENGTH</span><span class="p">(</span><span class="err">名字</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">employees</span><span class="w"> 
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">sysdate</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">dual</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>请查询每个员工的名字、薪水和加薪15.5%之后的薪水（trunc取整）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">Select</span><span class="w"> </span><span class="err">名字</span><span class="p">,</span><span class="err">薪水</span><span class="p">,</span><span class="n">trunc</span><span class="p">(</span><span class="err">薪水</span><span class="o">*</span><span class="mi">1</span><span class="p">.</span><span class="mi">155</span><span class="p">)</span><span class="w">  </span><span class="s2">&#34;new salary&#34;</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>请显示所有以’J’，‘A’，&lsquo;M’打头的员工的名字和名字长度，且按照名字排升序</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="err">名字</span><span class="p">,</span><span class="k">LENGTH</span><span class="p">(</span><span class="err">名字</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">employees</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">where</span><span class="w"> </span><span class="n">substr</span><span class="p">(</span><span class="err">名字</span><span class="p">,</span><span class="mi">0</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span><span class="w"> </span><span class="k">in</span><span class="w"> </span><span class="p">(</span><span class="s1">&#39;J&#39;</span><span class="p">,</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;M&#39;</span><span class="p">)</span><span class="w">  </span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="err">名字</span><span class="w"> </span><span class="k">asc</span><span class="p">;</span><span class="w">
-</span></span></span></code></pre></div><p>请查询员工名和工作时间（换算成月并取整），并按工作时间排降序</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">Select</span><span class="w"> </span><span class="err">名</span><span class="p">,</span><span class="n">trunc</span><span class="p">(</span><span class="n">months_between</span><span class="p">(</span><span class="n">sysdate</span><span class="p">,</span><span class="err">时间</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span><span class="w">  </span><span class="k">from</span><span class="w"> </span><span class="n">employees</span><span class="w"> 
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>请查询员工名和工作时间（换算成月并取整），并按工作时间排降序</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">Select</span><span class="w"> </span><span class="err">名</span><span class="p">,</span><span class="n">trunc</span><span class="p">(</span><span class="n">months_between</span><span class="p">(</span><span class="n">sysdate</span><span class="p">,</span><span class="err">时间</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span><span class="w">  </span><span class="k">from</span><span class="w"> </span><span class="n">employees</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">order</span><span class="w"> </span><span class="k">by</span><span class="w"> </span><span class="n">trunc</span><span class="p">(</span><span class="n">months_between</span><span class="p">(</span><span class="n">sysdate</span><span class="p">,</span><span class="err">时间</span><span class="p">),</span><span class="mi">0</span><span class="p">)</span><span class="w"> </span><span class="k">desc</span><span class="p">;</span><span class="w">
-</span></span></span></code></pre></div><p>请查询员工的名字和薪水，并将薪水列变成15个字符长度，左边填充“$”符号</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="err">名字</span><span class="p">,</span><span class="n">lpad</span><span class="p">(</span><span class="err">薪水</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="s1">&#39;$&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span><span class="w">
-</span></span></span></code></pre></div><p>请查询部门id为90的所有员工的名字和他们参加工作的星期数(保留2位小数，不需要四舍五入)使用</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="err">名字</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">trunc</span><span class="p">((</span><span class="err">参加工作星期数</span><span class="p">)</span><span class="o">/</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="err">员工</span><span class="n">id</span><span class="o">=</span><span class="mi">90</span><span class="w">
-</span></span></span></code></pre></div><p>创建报告，显示员工名和奖金系数,如果奖金系数为空,则显示$无奖金</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="err">名字</span><span class="p">,</span><span class="n">decode</span><span class="p">(</span><span class="err">奖金系数</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;无奖金&#39;</span><span class="p">,</span><span class="err">奖金系数</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span><span class="w">
-</span></span></span></code></pre></div><p>请使用case语句，查询员工的job_id和级别.例如:</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">job_id</span><span class="p">,</span><span class="w"> </span><span class="n">decode</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">job_id</span><span class="p">,</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>请查询员工的名字和薪水，并将薪水列变成15个字符长度，左边填充“$”符号</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="err">名字</span><span class="p">,</span><span class="n">lpad</span><span class="p">(</span><span class="err">薪水</span><span class="p">,</span><span class="mi">15</span><span class="p">,</span><span class="s1">&#39;$&#39;</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>请查询部门id为90的所有员工的名字和他们参加工作的星期数(保留2位小数，不需要四舍五入)使用</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="err">名字</span><span class="w"> </span><span class="p">,</span><span class="w"> </span><span class="n">trunc</span><span class="p">((</span><span class="err">参加工作星期数</span><span class="p">)</span><span class="o">/</span><span class="mi">7</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="err">员工</span><span class="n">id</span><span class="o">=</span><span class="mi">90</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>创建报告，显示员工名和奖金系数,如果奖金系数为空,则显示$无奖金</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="err">名字</span><span class="p">,</span><span class="n">decode</span><span class="p">(</span><span class="err">奖金系数</span><span class="p">,</span><span class="s1">&#39;&#39;</span><span class="p">,</span><span class="s1">&#39;无奖金&#39;</span><span class="p">,</span><span class="err">奖金系数</span><span class="p">)</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>请使用case语句，查询员工的job_id和级别.例如:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="n">t</span><span class="p">.</span><span class="n">job_id</span><span class="p">,</span><span class="w"> </span><span class="n">decode</span><span class="p">(</span><span class="n">t</span><span class="p">.</span><span class="n">job_id</span><span class="p">,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="s1">&#39;AD_PRES&#39;</span><span class="p">,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="s1">&#39;A&#39;</span><span class="p">,</span><span class="s1">&#39;ST_MAN&#39;</span><span class="p">,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="s1">&#39;B&#39;</span><span class="p">,</span><span class="s1">&#39;IT_PROG&#39;</span><span class="p">,</span><span class="w">
@@ -109,8 +206,24 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="s1">&#39;D&#39;</span><span class="p">,</span><span class="s1">&#39;ST_CLERK&#39;</span><span class="p">,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="s1">&#39;E&#39;</span><span class="p">,</span><span class="s1">&#39;0&#39;</span><span class="p">)</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w"> </span><span class="n">employees</span><span class="w"> </span><span class="n">t</span><span class="p">;</span><span class="w">
-</span></span></span></code></pre></div><p>或者</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">Select</span><span class="w">  </span><span class="n">job_id</span><span class="p">,</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>或者</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">Select</span><span class="w">  </span><span class="n">job_id</span><span class="p">,</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">case</span><span class="w"> </span><span class="n">job_id</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">when</span><span class="w"> </span><span class="s1">&#39;AD_PRES&#39;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s1">&#39;A&#39;</span><span class="w">
 </span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">when</span><span class="w"> </span><span class="s1">&#39;ST_MAN&#39;</span><span class="w"> </span><span class="k">then</span><span class="w"> </span><span class="s1">&#39;B&#39;</span><span class="w">
@@ -120,18 +233,15 @@
 </span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">else</span><span class="w"> </span><span class="s1">&#39;0&#39;</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">end</span><span class="w"> </span><span class="s2">&#34;Grage&#34;</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">from</span><span class="w"> </span><span class="n">employees</span><span class="p">;</span><span class="w">
-</span></span></span></code></pre></div></div><div class="post-footer" id="post-footer">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
                 <span>Updated on 2024-08-09</span>
             </div></div>
-        <div class="post-info-line">
-            <div class="post-info-md"></div>
-            <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://Wangty654.github.io/posts/text18/" data-title="Oracle查询sql" data-hashtags="sql,Oracle"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://Wangty654.github.io/posts/text18/" data-hashtag="sql"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://Wangty654.github.io/posts/text18/" data-title="Oracle查询sql"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://Wangty654.github.io/posts/text18/" data-title="Oracle查询sql"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://Wangty654.github.io/posts/text18/" data-title="Oracle查询sql"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
-            </div>
-        </div>
+
     </div>
 
     <div class="post-info-more">
@@ -147,7 +257,7 @@
 </article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">wangty</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">wangty</a></span></div>
         </div>
     </footer></div>
 
@@ -156,5 +266,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>

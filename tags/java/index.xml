@@ -9,7 +9,7 @@
     <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
     <guid>https://Wangty654.github.io/posts/text02/</guid>
-    <description><![CDATA[Java中int与String互相转换方法 String转为int，使用parseInt，或者valueOf.intValue int i = Integ]]></description>
+    <description><![CDATA[Java中int与String互相转换方法 String转为int，使用parseInt，或者valueOf.intValue 1 2 int i = Int]]></description>
 </item>
 <item>
     <title>转义StringEscapeUtils的使用</title>

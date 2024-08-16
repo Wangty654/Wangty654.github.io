@@ -9,7 +9,7 @@
     <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
     <guid>https://Wangty654.github.io/posts/text01/</guid>
-    <description><![CDATA[JS 对象(Object)和字符串(String)互转方法 利用原生JSON对象，将对象转为字符串，使用 JSON.stringify（对象名） var jsObj]]></description>
+    <description><![CDATA[JS 对象(Object)和字符串(String)互转方法 利用原生JSON对象，将对象转为字符串，使用 JSON.stringify（对象名） 1 2]]></description>
 </item>
 <item>
     <title>JS 验证码功能的三种实现方式</title>

@@ -4,24 +4,26 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>SQL语句部分写法 - wangty-notepad</title><meta name="Description" content="This is my cool site"><meta property="og:url" content="https://Wangty654.github.io/posts/text11/">
+        <title>SQL语句部分写法 - wangty-notepad</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:url" content="https://Wangty654.github.io/posts/text11/">
   <meta property="og:site_name" content="wangty-notepad">
   <meta property="og:title" content="SQL语句部分写法">
-  <meta property="og:description" content="SQL语句部分写法 一、聚合函数 有一个学生表如下： count 1、统计记录总个数 SELECT COUNT (*) FROM 学生表 若要命名 SELECT COUNT (* ) as 学生总人数 FROM 学生表 2、统计指定列的值的数">
+  <meta property="og:description" content="SQL语句部分写法 一、聚合函数 有一个学生表如下： count 1、统计记录总个数 1 2 3 4 SELECT COUNT (*) FROM 学生表 若要命名 1 2 3 4 SELECT COUNT (* ) as 学生总人数 FROM 学生表 2、统">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2021-07-12T00:00:00+00:00">
     <meta property="article:modified_time" content="2021-07-12T00:00:00+00:00">
     <meta property="article:tag" content="Sql">
+    <meta property="og:image" content="https://Wangty654.github.io/images/avatar.png">
 
-  <meta name="twitter:card" content="summary">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://Wangty654.github.io/images/avatar.png">
   <meta name="twitter:title" content="SQL语句部分写法">
-  <meta name="twitter:description" content="SQL语句部分写法 一、聚合函数 有一个学生表如下： count 1、统计记录总个数 SELECT COUNT (*) FROM 学生表 若要命名 SELECT COUNT (* ) as 学生总人数 FROM 学生表 2、统计指定列的值的数">
+  <meta name="twitter:description" content="SQL语句部分写法 一、聚合函数 有一个学生表如下： count 1、统计记录总个数 1 2 3 4 SELECT COUNT (*) FROM 学生表 若要命名 1 2 3 4 SELECT COUNT (* ) as 学生总人数 FROM 学生表 2、统">
 <meta name="application-name" content="My cool site">
-<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Wangty654.github.io/posts/text11/" /><link rel="next" href="https://Wangty654.github.io/posts/text03/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="msapplication-TileColor" href="/favicon-16x16.png" color="#da532c"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Wangty654.github.io/posts/text11/" /><link rel="next" href="https://Wangty654.github.io/posts/text03/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -32,7 +34,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/Wangty654.github.io\/posts\/text11\/"
-        },"genre": "posts","keywords": "SQL","wordcount":  945 ,
+        },"genre": "posts","keywords": "SQL","wordcount":  988 ,
         "url": "https:\/\/Wangty654.github.io\/posts\/text11\/","datePublished": "2021-07-12T00:00:00+00:00","dateModified": "2021-07-12T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -46,10 +48,21 @@
         <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
     <div class="header-wrapper">
         <div class="header-title">
-            <a href="/" title="wangty-notepad">My cool site</a>
+            <a href="/" title="wangty-notepad">wangty notepad</a>
         </div>
         <div class="menu">
-            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 标签 </a><a class="menu-item" href="/categories/"> 分类 </a><span class="menu-item delimiter"></span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                     <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
                 </a></div>
         </div>
@@ -58,45 +71,152 @@
     <div class="header-container">
         <div class="header-wrapper">
             <div class="header-title">
-                <a href="/" title="wangty-notepad">My cool site</a>
+                <a href="/" title="wangty-notepad">wangty notepad</a>
             </div>
             <div class="menu-toggle" id="menu-toggle-mobile">
                 <span></span><span></span><span></span>
             </div>
         </div>
-        <div class="menu" id="menu-mobile"><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">标签</a><a class="menu-item" href="/categories/" title="">分类</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
                 <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
             </a></div>
     </div>
-</header><main class="main">
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
                 <div class="container"><div class="toc" id="toc-auto">
             <h2 class="toc-title">Contents</h2>
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">SQL语句部分写法</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2021-07-12">2021-07-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;945 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2021-07-12">2021-07-12</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;988 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
-                    <span>Contents</span>
+                    <span></span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
     <li><a href="#一聚合函数">一、聚合函数</a>
       <ul>
-        <li><a href="#count">count</a></li>
-        <li><a href="#sum">sum</a></li>
-        <li><a href="#maxminavg">MAX、MIN、AVG</a></li>
-        <li><a href="#firstround">FIRST、ROUND</a></li>
-        <li><a href="#mid">MID</a></li>
-        <li><a href="#len">LEN</a></li>
+        <li><a href="#count">count</a>
+          <ul>
+            <li>
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="#1统计记录总个数">1、统计记录总个数</a></li>
+                    <li><a href="#2统计指定列的值的数目null-值不计入">2、统计指定列的值的数目（NULL 值不计入）</a></li>
+                    <li><a href="#3统计指定列拥有不同值的数目null-值不计入">3、统计指定列，拥有不同值的数目（NULL 值不计入）</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#sum">sum</a>
+          <ul>
+            <li>
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="#4计算某一列值的总和">4、计算某一列值的总和</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#maxminavg">MAX、MIN、AVG</a>
+          <ul>
+            <li>
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="#5求某一列值的最大值">5、求某一列值的最大值</a></li>
+                    <li><a href="#6求某一列值的最小值">6、求某一列值的最小值</a></li>
+                    <li><a href="#7求某一列值的平均值">7、求某一列值的平均值</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#firstround">FIRST、ROUND</a>
+          <ul>
+            <li>
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="#6取指定字段的第一个记录的值">6、取指定字段的第一个记录的值</a></li>
+                    <li><a href="#7round-函数四舍五入规则用于把数值字段舍入为指定的小数位数">7、ROUND() 函数（四舍五入规则）、用于把数值字段舍入为指定的小数位数。</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#mid">MID</a>
+          <ul>
+            <li>
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="#8mid-函数-用于从文本字段中提取字符">8、MID() 函数 ：用于从文本字段中提取字符。</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#len">LEN</a>
+          <ul>
+            <li>
+              <ul>
+                <li>
+                  <ul>
+                    <li><a href="#9len-函数返回文本字段中值的长度">9、LEN 函数返回文本字段中值的长度。</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
     </li>
     <li><a href="#二数据库查询前10条数据">二、数据库查询前10条数据</a></li>
     <li><a href="#三sql语言多表关联查询">三、SQL语言多表关联查询</a>
       <ul>
-        <li></li>
+        <li>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#一外连接">一、外连接</a></li>
+                <li><a href="#二内连接">二、内连接</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
       </ul>
     </li>
   </ul>
@@ -114,11 +234,21 @@
         title="image-20240813103742628" /></p>
 <h3 id="count">count</h3>
 <h6 id="1统计记录总个数">1、统计记录总个数</h6>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">COUNT</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="p">)</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="err">学生表</span><span class="w">
-</span></span></span></code></pre></div><p><img
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><img
         class="lazyload"
         src="/svg/loading.min.svg"
         data-src="./images/image-20240813103912705.png"
@@ -127,11 +257,21 @@
         alt="./images/image-20240813103912705.png"
         title="image-20240813103912705" /></p>
 <p>若要命名</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">COUNT</span><span class="w"> </span><span class="p">(</span><span class="o">*</span><span class="w"> </span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="err">学生总人数</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="err">学生表</span><span class="w">
-</span></span></span></code></pre></div><p><img
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><img
         class="lazyload"
         src="/svg/loading.min.svg"
         data-src="./images/image-20240813104026134.png"
@@ -140,11 +280,21 @@
         alt="./images/image-20240813104026134.png"
         title="image-20240813104026134" /></p>
 <h6 id="2统计指定列的值的数目null-值不计入">2、统计指定列的值的数目（NULL 值不计入）</h6>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">COUNT</span><span class="w"> </span><span class="p">(</span><span class="err">专业代码</span><span class="p">)</span><span class="w">   
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="err">学生表</span><span class="w">
-</span></span></span></code></pre></div><p><img
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><img
         class="lazyload"
         src="/svg/loading.min.svg"
         data-src="./images/image-20240813104342410.png"
@@ -153,11 +303,21 @@
         alt="./images/image-20240813104342410.png"
         title="image-20240813104342410" /></p>
 <h6 id="3统计指定列拥有不同值的数目null-值不计入">3、统计指定列，拥有不同值的数目（NULL 值不计入）</h6>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">COUNT</span><span class="w"> </span><span class="p">(</span><span class="k">distinct</span><span class="w">  </span><span class="err">专业代码</span><span class="p">)</span><span class="w">   
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="err">学生表</span><span class="w">
-</span></span></span></code></pre></div><p><img
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><img
         class="lazyload"
         src="/svg/loading.min.svg"
         data-src="./images/image-20240813104822638.png"
@@ -167,10 +327,19 @@
         title="image-20240813104822638" /></p>
 <h3 id="sum">sum</h3>
 <h6 id="4计算某一列值的总和">4、计算某一列值的总和</h6>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">sum</span><span class="p">(</span><span class="err">高考分数</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="err">高考总分数</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="err">学生表</span><span class="w">
-</span></span></span></code></pre></div><p><img
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><img
         class="lazyload"
         src="/svg/loading.min.svg"
         data-src="./images/image-20240813105040561.png"
@@ -185,59 +354,160 @@
 <p>MAX 函数返回一列中的最大值。NULL 值不包括在计算中。</p>
 <p>注释：MIN 和 MAX 也可用于文本列，以获得按字母顺序排列的最高或最低值。</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">MAX</span><span class="p">(</span><span class="err">高考分数</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="err">高考最高分数</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="err">学生表</span><span class="w">
-</span></span></span></code></pre></div><h6 id="6求某一列值的最小值">6、求某一列值的最小值</h6>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h6 id="6求某一列值的最小值">6、求某一列值的最小值</h6>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">MIN</span><span class="p">(</span><span class="err">高考分数</span><span class="p">)</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="err">高考最低分数</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="err">学生表</span><span class="w">
-</span></span></span></code></pre></div><h6 id="7求某一列值的平均值">7、求某一列值的平均值</h6>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w">  
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h6 id="7求某一列值的平均值">7、求某一列值的平均值</h6>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w">  
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">AVG</span><span class="p">(</span><span class="err">高考分数</span><span class="p">)</span><span class="w">  </span><span class="k">as</span><span class="w">  </span><span class="err">高考最高分数</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="err">学生表</span><span class="w">
-</span></span></span></code></pre></div><h3 id="firstround">FIRST、ROUND</h3>
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="firstround">FIRST、ROUND</h3>
 <h6 id="6取指定字段的第一个记录的值">6、取指定字段的第一个记录的值</h6>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> 
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">first</span><span class="p">(</span><span class="k">column_name</span><span class="p">)</span><span class="w">  
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">from</span><span class="w">  </span><span class="k">table_name</span><span class="w">   
-</span></span></span></code></pre></div><h6 id="7round-函数四舍五入规则用于把数值字段舍入为指定的小数位数">7、ROUND() 函数（四舍五入规则）、用于把数值字段舍入为指定的小数位数。</h6>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h6 id="7round-函数四舍五入规则用于把数值字段舍入为指定的小数位数">7、ROUND() 函数（四舍五入规则）、用于把数值字段舍入为指定的小数位数。</h6>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">round</span><span class="p">(</span><span class="err">列名</span><span class="p">,</span><span class="err">小数位数</span><span class="p">)</span><span class="w"> 
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w"> 
-</span></span></span></code></pre></div><h3 id="mid">MID</h3>
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="mid">MID</h3>
 <h6 id="8mid-函数-用于从文本字段中提取字符">8、MID() 函数 ：用于从文本字段中提取字符。</h6>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">MID</span><span class="p">(</span><span class="err">列名</span><span class="p">,</span><span class="err">开始截取位置</span><span class="p">,</span><span class="err">结束截取位置</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w">
-</span></span></span></code></pre></div><blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">MID</span><span class="p">(</span><span class="err">列名</span><span class="p">,</span><span class="err">开始截取位置</span><span class="p">,</span><span class="err">结束截取位置</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
 <p>[!TIP]</p>
 <p>SELECT MID(列名,1,3) FROM table_name</p>
 <p>3不写，默认返回剩余的所有字段</p>
 </blockquote>
 <h3 id="len">LEN</h3>
 <h6 id="9len-函数返回文本字段中值的长度">9、LEN 函数返回文本字段中值的长度。</h6>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">LEN</span><span class="p">(</span><span class="err">列名</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w">
-</span></span></span></code></pre></div><h2 id="二数据库查询前10条数据">二、数据库查询前10条数据</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">SELECT</span><span class="w"> </span><span class="n">LEN</span><span class="p">(</span><span class="err">列名</span><span class="p">)</span><span class="w"> </span><span class="k">FROM</span><span class="w"> </span><span class="k">table_name</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="二数据库查询前10条数据">二、数据库查询前10条数据</h2>
 <p>Oracle中查询</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">rownum</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">;</span><span class="w">
-</span></span></span></code></pre></div><p>DB2中查询</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="k">fetch</span><span class="w"> </span><span class="k">first</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="k">rows</span><span class="w"> </span><span class="k">only</span><span class="p">;</span><span class="w">
-</span></span></span></code></pre></div><p>MySql中查询</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w">  </span><span class="k">from</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="k">limit</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">
-</span></span></span></code></pre></div><h2 id="三sql语言多表关联查询">三、SQL语言多表关联查询</h2>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="k">where</span><span class="w"> </span><span class="n">rownum</span><span class="o">&lt;=</span><span class="mi">10</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>DB2中查询</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="k">fetch</span><span class="w"> </span><span class="k">first</span><span class="w"> </span><span class="mi">10</span><span class="w"> </span><span class="k">rows</span><span class="w"> </span><span class="k">only</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>MySql中查询</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w">  </span><span class="k">from</span><span class="w"> </span><span class="k">table</span><span class="w"> </span><span class="k">limit</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="三sql语言多表关联查询">三、SQL语言多表关联查询</h2>
 <h5 id="一外连接">一、外连接</h5>
 <p>外连接可分为：左连接、右连接、完全外连接。</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">A表</span><span class="w"> </span><span class="k">left</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">B表</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">A表条件</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B表条件</span><span class="w">
-</span></span></span></code></pre></div><blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">A表</span><span class="w"> </span><span class="k">left</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">B表</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">A表条件</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B表条件</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
 <p>[!TIP]</p>
 <p>左外连接包含left join左表所有行，如果左表中某行在右表没有匹配，则结果中对应行右表的部分全部为空(NULL)</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">A表</span><span class="w"> </span><span class="k">right</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">B表</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">A表条件</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B表条件</span><span class="w">
-</span></span></span></code></pre></div><blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">A表</span><span class="w"> </span><span class="k">right</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">B表</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">A表条件</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B表条件</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
 <p>[!TIP]</p>
 <p>右外连接包含right join右表所有行，如果左表中某行在右表没有匹配，则结果中对应左表的部分全部为空(NULL)。</p>
 </blockquote>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">A表</span><span class="w"> </span><span class="k">full</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">B表</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">A表条件</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B表条件</span><span class="w">
-</span></span></span></code></pre></div><blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">A表</span><span class="w"> </span><span class="k">full</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">B表</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">A表条件</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B表条件</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
 <p>[!TIP]</p>
 <p>完全外连接包含full join左右两表中所有的行，如果右表中某行在左表中没有匹配，则结果中对应行右表的部分全部为空(NULL)，如果左表中某行在右表中没有匹配，则结果中对应行左表的部分全部为空(NULL)。</p>
 </blockquote>
@@ -251,8 +521,15 @@
         title="image-20240813111430284" /></p>
 <h5 id="二内连接">二、内连接</h5>
 <p>join 或 inner join</p>
-<div class="highlight"><pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">A表</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">B表</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">A表条件</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B表条件</span><span class="w">
-</span></span></span></code></pre></div><blockquote>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sql" data-lang="sql"><span class="line"><span class="cl"><span class="k">select</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="k">from</span><span class="w"> </span><span class="n">A表</span><span class="w"> </span><span class="k">join</span><span class="w"> </span><span class="n">B表</span><span class="w"> </span><span class="k">on</span><span class="w"> </span><span class="n">A表条件</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">B表条件</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><blockquote>
 <p>[!TIP]</p>
 <p>inner join 是比较运算符，只返回符合条件的行。</p>
 </blockquote>
@@ -270,12 +547,7 @@
             <div class="post-info-mod">
                 <span>Updated on 2021-07-12</span>
             </div></div>
-        <div class="post-info-line">
-            <div class="post-info-md"></div>
-            <div class="post-info-share">
-                <span><a href="javascript:void(0);" title="Share on Twitter" data-sharer="twitter" data-url="https://Wangty654.github.io/posts/text11/" data-title="SQL语句部分写法" data-hashtags="SQL"><i class="fab fa-twitter fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Facebook" data-sharer="facebook" data-url="https://Wangty654.github.io/posts/text11/" data-hashtag="SQL"><i class="fab fa-facebook-square fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Hacker News" data-sharer="hackernews" data-url="https://Wangty654.github.io/posts/text11/" data-title="SQL语句部分写法"><i class="fab fa-hacker-news fa-fw" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on Line" data-sharer="line" data-url="https://Wangty654.github.io/posts/text11/" data-title="SQL语句部分写法"><i data-svg-src="https://cdn.jsdelivr.net/npm/simple-icons@7.3.0/icons/line.svg" aria-hidden="true"></i></a><a href="javascript:void(0);" title="Share on 微博" data-sharer="weibo" data-url="https://Wangty654.github.io/posts/text11/" data-title="SQL语句部分写法"><i class="fab fa-weibo fa-fw" aria-hidden="true"></i></a></span>
-            </div>
-        </div>
+
     </div>
 
     <div class="post-info-more">
@@ -291,7 +563,7 @@
 </article></div>
             </main><footer class="footer">
         <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
-                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2022 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">wangty</a></span></div>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">wangty</a></span></div>
         </div>
     </footer></div>
 
@@ -300,5 +572,5 @@
             </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
 </html>
