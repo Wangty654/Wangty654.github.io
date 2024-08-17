@@ -1,27 +1,15 @@
-# 如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程
+# HUGO博客网站搭建
 
 
+**Hugo** 是 Go 编写的静态网站生成器，速度快，易用，可配置。
 
+Hugo 依赖于 **Markdown** 文件，元数据字体 。用户可以从任意的目录中运行 Hugo，支持共享主机和其他系统。只需要几分之一秒就可以渲染一个经典的中型网站，非常适合博客，文档等等网站的生成。
 
-# 如何搭建HUGO博客网站并配置公网地址实现随时随地远程访问教程
+<img src="./images/image-20240810202919284.png" alt="image-20240810202919284" style="zoom:50%;" />
 
-实现：Windows系统电脑使用HUGO快速搭建一个本地博客网站，并结合cpolar内网穿透工具实现一键发布本地站点至公网，随时随地远程访问，无需公网IP与准备域名、服务器。
+### 安装环境
 
-------
-
-Hugo 是 Go 编写的静态网站生成器，速度快，易用，可配置。
-
-Hugo 依赖于 Markdown 文件，元数据字体 。用户可以从任意的目录中运行 Hugo，支持共享主机和其他系统。只需要几分之一秒就可以渲染一个经典的中型网站，非常适合博客，文档等等网站的生成。
-
-![image-20240810202919284](./images/image-20240810202919284.png)
-
-### 1. 安装环境
-
-接下来教大家如何在Windows系统本地安装HUGO
-
-首先需要安装好Windows版本的 git：
-
-（如果没有安装git的话，进入git官网进行下载windows版本）
+安装好Windows版本的 git：
 
 git官网：[https://git-scm.com/downloads](https://git-scm.com/downloads，如下图：)
 
@@ -29,51 +17,47 @@ git安装教程请参考：【 [Windows系统Git安装教程（详解Git安装�
 
 ![image-20240810202936356](./images/image-20240810202936356.png)
 
-然后需要下载并安装Windows版本的 GO：
+下载并安装Windows版本的 GO：
 
-（如果没有安装go的话，进入go的中文官网进行下载windows版本）
-
-go的中文官网：https://go.p2hp.com/
+go的中文官网：[https://go.p2hp.com/](https://go.p2hp.com/，如下图：)
 
 ![image-20240810203335315](./images/image-20240810203335315.png)
 
-### 2. 配置环境变量与hugo安装
+下载并安装Windows版本的 hugo：
 
-然后去上方的hugo项目地址下载好Windows版本的hugo后，放在一边备用。
+hugo·GitHub 地址 [https://github.com/gohugoio/hugo/releases](https://github.com/gohugoio/hugo/releases，如下图：)
 
-![image-20240810203409152](./images/image-20240810203409152.png)
+本教程中下载的项目压缩包名为：**hugo_extended_0.128.2_windows-amd64**
 
-本教程中下载的项目压缩包名为：hugo_extended_0.128.2_windows-amd64
+压缩包下载路径：[https://github.com/gohugoio/hugo/releases/download/v0.128.2/hugo_extended_0.128.2_windows-amd64.zip](https://github.com/gohugoio/hugo/releases/download/v0.128.2/hugo_extended_0.128.2_windows-amd64.zip，如下图：)
 
-压缩包下载路径：
+<img src="./images/image-20240810203409152.png" alt="image-20240810203409152" style="zoom:50%;" />
 
-https://github.com/gohugoio/hugo/releases/download/v0.128.2/hugo_extended_0.128.2_windows-amd64.zip
+### 配置环境变量
 
-【注：hugo·GitHub 地址 https://github.com/gohugoio/hugo/releases】
-
-### 2.1 创建程序目录
+#### 创建程序目录
 
 在C盘新建一个名为hugo的文件夹，进入文件夹后再创建一个名为bin的文件夹
 
 将下载好的Windows版本hugo应用程序压缩包解压到这个bin文件夹
 
-![image-20240810212706040](./images/image-20240810212706040.png)
+<img src="./images/image-20240810212706040.png" alt="image-20240810212706040" style="zoom:50%;" />
 
-### 2.2 配置环境变量
+#### 配置环境变量
 
 然后在Windows搜索栏中搜索环境变量，点击环境变量
 
-![image-20240810212719681](./images/image-20240810212719681.png)
+<img src="./images/image-20240810212719681.png" alt="image-20240810212719681" style="zoom: 50%;" />
 
 选择系统变量中的Path，点击新建
 
-![image-20240810212757603](./images/image-20240810212757603.png)
+<img src="./images/image-20240810212757603.png" alt="image-20240810212757603" style="zoom: 50%;" />
 
 将 C:\hugo\bin 这个路径添加到环境变量
 
-![image-20240810212812958](./images/image-20240810212812958.png)
+<img src="./images/image-20240810212812958.png" alt="image-20240810212812958" style="zoom:50%;" />
 
-### 2.3 查看程序版本
+#### 查看程序版本
 
 然后打开powershell终端，输入下方命令查看
 
@@ -85,15 +69,15 @@ hugo version
 
 ![image-20240810212845738](./images/image-20240810212845738.png)
 
-### 3. 创建博客网站
+### 创建博客网站
 
 现在我们就可以使用hugo搭建一个属于自己的博客网站了。
 
-### 3.1 创建站点
+####  创建站点
 
 首先，我们进入到C盘下的hugo文件夹，点击鼠标右键选择在终端中打开
 
-![image-20240810212901191](./images/image-20240810212901191.png)
+<img src="./images/image-20240810212901191.png" alt="image-20240810212901191" style="zoom:50%;" />
 
 执行下方命令创建一个静态站点：（本例创建的站点名为myblog，大家可以自定义）
 
@@ -101,23 +85,25 @@ hugo version
 hugo new site myblog
 ```
 
-![image-20240810212927099](./images/image-20240810212927099.png)
+<img src="./images/image-20240810212927099.png" alt="image-20240810212927099" style="zoom:50%;" />
 
 创建后，我们回到hugo目录，可以看到新增了一个名为myblog的文件夹：
 
-![image-20240810212941017](./images/image-20240810212941017.png)
+<img src="./images/image-20240810212941017.png" alt="image-20240810212941017" style="zoom: 50%;" />
+
+
 
 进入该文件夹后，就能看到刚刚创建的博客网站程序：
 
-![image-20240810212953946](./images/image-20240810212953946.png)
+<img src="./images/image-20240810212953946.png" alt="image-20240810212953946" style="zoom:50%;" />
 
-### 3.2 在站点中创建一篇文章
+#### 在站点中创建一篇文章
 
 创建好了站点后，现在网站中还什么内容都没有，我们可以创建一篇文章来进行一下测试：
 
 现在我们在终端中执行下方命令，进入站点目录：
 
-![image-20240810213008612](./images/image-20240810213008612.png)
+<img src="./images/image-20240810213008612.png" alt="image-20240810213008612" style="zoom:50%;" />
 
 进入网站目录后，执行下方命令创建一篇markdown格式的文章：
 
@@ -125,29 +111,29 @@ hugo new site myblog
 hugo new posts/Articles01.md
 ```
 
-![image-20240810213030184](./images/image-20240810213030184.png)
+<img src="./images/image-20240810213030184.png" alt="image-20240810213030184" style="zoom:50%;" />
 
 执行后可以看到提示已经创建了一篇名为Articles01的文章与其所属路径。
 
 进入这个路径，就能看到文章了。
 
-![image-20240810213046159](./images/image-20240810213046159.png)
+<img src="./images/image-20240810213046159.png" alt="image-20240810213046159" style="zoom:50%;" />
 
 打开这篇文章后能看到这篇文章的标题，日期等相关信息
 
-![image-20240810213101516](./images/image-20240810213101516.png)
+<img src="./images/image-20240810213101516.png" alt="image-20240810213101516" style="zoom:50%;" />
 
 在这里我们需要把draft（草稿） = true 修改为 draft = false 来表示这并不是一篇草稿。
 
 然后随便在文档中写一些内容，比如：
 
-![image-20240810213117876](./images/image-20240810213117876.png)
+<img src="./images/image-20240810213117876.png" alt="image-20240810213117876" style="zoom:50%;" />
 
-![image-20240810213132762](./images/image-20240810213132762.png)
+<img src="./images/image-20240810213132762.png" alt="image-20240810213132762" style="zoom:50%;" />
 
 然后保存关闭即可。
 
-### 3.3 为网站添加主题
+#### 为网站添加主题
 
 现在我们已经创建好了一个博客网站，并在网站中发布了一篇文章，不过现在我们还不能在浏览器中运行这个本地网站进行查看，因为在这之前，我们需要先给网站添加一个主题。
 
@@ -155,7 +141,7 @@ hugo new posts/Articles01.md
 
 https://themes.gohugo.io/themes
 
-![image-20240810213248545](./images/image-20240810213248545.png)
+<img src="./images/image-20240810213248545.png" alt="image-20240810213248545" style="zoom:33%;" />
 
 这里我们随便选择一个主题，点击进入页面后，可以看到安装方式：
 
@@ -179,17 +165,17 @@ git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c
 
 然后在打开名为 hugo 的 toml源文件，添加主题配置即可。
 
-![image-20240810213434934](./images/image-20240810213434934.png)
+<img src="./images/image-20240810213434934.png" alt="image-20240810213434934" style="zoom:50%;" />
 
 网站标题修改为myblog，然后再把theme = “m10c”这行代码加进去保存即可。
 
-![image-20240810213448481](./images/image-20240810213448481.png)
+<img src="./images/image-20240810213448481.png" alt="image-20240810213448481" style="zoom:50%;" />
 
 现在，我们在myblog目录下的主题文件夹中就能看到刚才添加的主题文件目录了：
 
-![image-20240810213501829](./images/image-20240810213501829.png)
+<img src="./images/image-20240810213501829.png" alt="image-20240810213501829" style="zoom:50%;" />
 
-### 4. 本地访问测试
+#### 本地访问测试
 
 现在，我们在终端中执行下方代码启动本地网站进行测试：
 
@@ -207,17 +193,17 @@ hugo server --disableFastRender --gc --noHTTPCache --noBuildLock --logLevel debu
 
 可以看到成功启动，在浏览器中输入 localhost:1313/ 即可访问这个本地站点：
 
-![image-20240810213538584](./images/image-20240810213538584.png)
+<img src="./images/image-20240810213538584.png" alt="image-20240810213538584" style="zoom:33%;" />
 
 可以看到网站标题为myblog，里边有刚才我们发布的第一篇文章Article01：
 
-![image-20240810213551572](./images/image-20240810213551572.png)
+<img src="./images/image-20240810213551572.png" alt="image-20240810213551572" style="zoom:33%;" />
 
 点击文章标题Article01，即可进入文章页面。
 
 这样我们就成功使用HUGO在Windows本地快速部署了一个静态博客网站。
 
-### 5. 安装内网穿透工具
+### 安装内网穿透工具
 
 目前我们在本机成功部署了一个博客网站，但如果没有公网IP的话，只能在本地局域网环境使用，有一定局限性。如果出差在外想要远程使用的话，可以结合Cpolar内网穿透生成公网地址，免去了本地重新部署过程，只需要使用公网地址直接就可以访问本地部署的网站，进行演示。
 
@@ -225,21 +211,21 @@ hugo server --disableFastRender --gc --noHTTPCache --noBuildLock --logLevel debu
 
 https://www.cpolar.com/
 
-![image-20240810213650120](./images/image-20240810213650120.png)
+<img src="./images/image-20240810213650120.png" alt="image-20240810213650120" style="zoom:50%;" />
 
 登录成功后，点击下载Cpolar到本地并安装（一路默认安装即可）本教程选择下载Windows版本。
 
-![image-20240810213729647](./images/image-20240810213729647.png)
+<img src="./images/image-20240810213729647.png" alt="image-20240810213729647" style="zoom:50%;" />
 
 Cpolar安装成功后，在浏览器上访问 localhost:9200，使用cpolar账号登录,登录后即可看到Cpolar web 配置界面,结下来在web 管理界面配置即可。
 
-http://localhost:9200/#/login?redirect=%2Fdashboard
+[http://localhost:9200/#/login?redirect=%2Fdashboard](http://localhost:9200/#/login?redirect=%2Fdashboard，如下图：)
 
 【hugo-账户：1437059026@qq.com 密码：Wty201408.】
 
 ![image-20240810213845659](./images/image-20240810213845659.png)
 
-### 6. 配置公网地址
+#### 配置公网地址
 
 接下来配置一下本地 博客网站 的公网地址，
 
@@ -255,15 +241,17 @@ http://localhost:9200/#/login?redirect=%2Fdashboard
 
 点击创建
 
-![image-20240810213949633](./images/image-20240810213949633.png)
+<img src="./images/image-20240810213949633.png" alt="image-20240810213949633" style="zoom:50%;" />
 
 隧道创建成功后，点击左侧的状态——在线隧道列表,查看所生成的公网访问地址，有两种访问方式。
 
-![image-20240810214037707](./images/image-20240810214037707.png)
+<img src="./images/image-20240810214037707.png" alt="image-20240810214037707" style="zoom:50%;" />
 
 使用任意一个上面生成的公网地址,在电脑或任意设备在浏览器进行登录访问,即可成功看到 本地博客网站 界面,这样一个可以远程访问的公网地址就创建好了,使用了Cpolar的公网域名,无需自己购买云服务器,即可在公网访问本地部署的服务了！
 
-### 7. 快速搭建本地服务器
+### 搭建本地服务器
+
+内网穿透地址会随着ip的更新而变化，为了保证不一直修改baseUrl，配置服务器来搭载网站。
 
 配置本地服务器，将编译后的网站文件运行与服务器后，本地可以不启动hugo server
 
@@ -275,11 +263,11 @@ npm install -g anywhere 9999
 
 9999这里是设置端口号，端口号自行设置，也可以不输入xxx会默认8000端口号
 
-![image-20240810214930068](./images/image-20240810214930068.png)
+<img src="./images/image-20240810214930068.png" alt="image-20240810214930068" style="zoom:50%;" />
 
 安装成功anywhere后，可以直接使用anywhere指令启动服务，但是默认是查看全部文件列表
 
-### 8. 编译网站文件并运行于本地服务器
+#### 编译网站文件并运行于本地服务器
 
 进入myblog根目录下，输入hugo命令进行编译
 
@@ -290,22 +278,30 @@ hugo
 编译后，生成public文件夹，进入该文件夹根目录，并输入anywhere使编译文件运行在上面
 
 ```
+cd public
+```
+
+```
 anywhere
 ```
 
 【特别注意：运行在服务器上的一定是："**编译后的文件！！！！**"】
 
-### 9.通过内网穿透配置的地址跳转问题解释
+### BaseUrl配置
 
 使用hugo server本地运行的程序，每次跳转都将走localhost或者127.0.0.1，此处理解和其他程序启动一样，访问及跳转都将走本地。
+
+若要使baseURL配置每次跳转时，自动请求的域名地址为服务器地址，则需要设置.toml文件中的baseURL。
 
 ```
 baseURL = 'http://136c5bcc.r16.vip.cpolar.cn/'   //内网穿透地址
 ```
 
-若要使baseURL配置每次跳转时，自动请求的域名地址为服务器地址，则需要设置.toml文件中的baseURL。
+```
+baseURL = 'http://192.168.9.125/'   //本地服务器地址
+```
 
-配置方法同小结6相同，配置好后如图
+内网穿透地址需先将本地服务器内网地址先生成，再配置。配置方法同小结6相同，配置好后如图
 
 ![image-20240810220034303](./images/image-20240810220034303.png)
 
@@ -325,69 +321,108 @@ baseURL = 'http://136c5bcc.r16.vip.cpolar.cn/'   //内网穿透地址
 
 ![f9b98e47fda48cbc42b3386a0b9babf](./images/f9b98e47fda48cbc42b3386a0b9babf.png)
 
-### 10.网站样式自定义设置
+### 创建 GitHub Pages 站点
 
-### 10.1 关于themes主题
+GitHub提供了[Github pages](https://gohugo.io/hosting-and-deployment/hosting-on-github/)用于挂在类似于hugo，hexo这样的博客静态网页，
+
+官方教程：[https://docs.github.com/zh/enterprise-server@3.12/pages/getting-started-with-github-pages/creating-a-github-pages-site](https://docs.github.com/zh/enterprise-server@3.12/pages/getting-started-with-github-pages/creating-a-github-pages-site，如下图：)
+
+GitHub登陆后，新建仓库Wangty654.github.io  注意仓库名需要和账户名一致
+
+修改博客配置文件.toml中的默认跳转地址为仓库名
+
+```
+baseURL = 'https://Wangty654.github.io'   //仓库服务器地址
+```
+
+仓库建好后，进入博客根目录，编译网站
+
+```
+cd myblog
+C:/hugo/myblog > hugo
+```
+
+生成的编译后文件夹public为所有html、css、js组成的静态网站文件
+
+#### 上传GitHub
+
+```
+cd public
+C:/hugo/myblog/public > 
+```
+
+```
+git init
+git add . 
+git commit -m '1'
+git push
+```
+
+请求成功后直接访问https://Wangty654.github.io即可
+
+### 网站样式自定义设置
+
+#### 关于themes主题
 
 themes主题为git拉取下来用于整个静态网站的样式代码，均可按照需求进行修改
 
-![image-20240811094705788](./images/image-20240811094705788.png)
+<img src="./images/image-20240811094705788.png" alt="image-20240811094705788" style="zoom: 50%;" />
 
-#### 10.1.1头像设置
+##### 10.1.1头像设置
 
 1、在layouts包下，有一个baseof.html文件，将其中的首页文件指向调整为你想要的图片
 
-![image-20240811095255206](./images/image-20240811095255206.png)
+<img src="./images/image-20240811095255206.png" alt="image-20240811095255206" style="zoom:50%;" />
 
 2、并同时更改static文件夹中的图片，使指向和文件名一致。
 
 ![image-20240811095325698](./images/image-20240811095325698.png)
 
-#### 10.1.2 主题颜色设置
+##### 10.1.2 主题颜色设置
 
 1、拷取themes中配置文件config.toml里默认设置主题颜色的部分代码
 
-![image-20240811095726485](./images/image-20240811095726485.png)
+<img src="./images/image-20240811095726485.png" alt="image-20240811095726485" style="zoom:50%;" />
 
 默认主题有三种样式
 
-![image-20240811095822984](./images/image-20240811095822984.png)
+<img src="./images/image-20240811095822984.png" alt="image-20240811095822984" style="zoom:50%;" />
 
 选择其中一种样式，放入我们的配置文件hugo.toml，可以对其中的文字颜色也进行修改，本主题改为粉色
 
-![image-20240811095946846](./images/image-20240811095946846.png)
+<img src="./images/image-20240811095946846.png" alt="image-20240811095946846" style="zoom:50%;" />
 
-#### 10.1.3 主页文字设置
+##### 10.1.3 主页文字设置
 
 更改layouts包下，baseof.html文件中书写首页介绍文字的位置
 
-![image-20240811100259821](./images/image-20240811100259821.png)
+<img src="./images/image-20240811100259821.png" alt="image-20240811100259821" style="zoom:50%;" />
 
-#### 10.1.4 主页分类菜单设置
+##### 10.1.4 主页分类菜单设置
 
 1、配置文件hugo.html中配置菜单栏
 
-![image-20240811100402415](./images/image-20240811100402415.png)
+<img src="./images/image-20240811100402415.png" alt="image-20240811100402415" style="zoom:50%;" />
 
 2、并在每条笔记中，使用yaml格式书写抬头
 
-![image-20240811100528323](./images/image-20240811100528323.png)
+<img src="./images/image-20240811100528323.png" alt="image-20240811100528323" style="zoom:50%;" />
 
-![image-20240811100542974](./images/image-20240811100542974.png)
+<img src="./images/image-20240811100542974.png" alt="image-20240811100542974" style="zoom:50%;" />
 
-#### 10.1.5 主页关于菜单设置
+##### 10.1.5 主页关于菜单设置
 
 取主题中content包下的about文件放入myblog的content包根目录下。about内的内容可以自行定义
 
-![image-20240811100726234](./images/image-20240811100726234.png)
+<img src="./images/image-20240811100726234.png" alt="image-20240811100726234" style="zoom:50%;" />
 
-#### 10.1.6 关于代码块样式设置
+##### 10.1.6 关于代码块样式设置
 
 配置文件中写入设置样式的命令模块，根据需要更改其中style的值。
 
-hugo中文文档中 ：https://hugo.opendocs.io/getting-started/   选择“内容管理” - “语法高亮”
+hugo中文文档中 ：[https://hugo.opendocs.io/getting-started/](https://hugo.opendocs.io/getting-started/，如下图：)  选择“内容管理” - “语法高亮”
 
-在style中选择想要更改的样式，放入配置文件中：https://xyproto.github.io/splash/docs/
+在style中选择想要更改的样式，放入配置文件中：[https://xyproto.github.io/splash/docs/](https://xyproto.github.io/splash/docs/，如下图：)
 
-![image-20240811101001028](./images/image-20240811101001028.png)
+<img src="./images/image-20240811101001028.png" alt="image-20240811101001028" style="zoom:50%;" />
 

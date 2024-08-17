@@ -7,7 +7,7 @@
         <title>Java中int与String互相转换方法 - wangty-notepad</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:url" content="https://Wangty654.github.io/posts/text02/">
   <meta property="og:site_name" content="wangty-notepad">
   <meta property="og:title" content="Java中int与String互相转换方法">
-  <meta property="og:description" content="Java中int与String互相转换方法 String转为int，使用parseInt，或者valueOf.intValue 1 2 int i = Int">
+  <meta property="og:description" content="String转为int，使用parseInt，或者valueOf.intValue 1 2 int i = Integer.parseInt（string）">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -19,11 +19,11 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://Wangty654.github.io/images/avatar.png">
   <meta name="twitter:title" content="Java中int与String互相转换方法">
-  <meta name="twitter:description" content="Java中int与String互相转换方法 String转为int，使用parseInt，或者valueOf.intValue 1 2 int i = Int">
+  <meta name="twitter:description" content="String转为int，使用parseInt，或者valueOf.intValue 1 2 int i = Integer.parseInt（string）">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="msapplication-TileColor" href="/favicon-16x16.png" color="#da532c"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Wangty654.github.io/posts/text02/" /><link rel="prev" href="https://Wangty654.github.io/posts/text01/" /><link rel="next" href="https://Wangty654.github.io/posts/text08/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="msapplication-TileColor" href="/favicon-16x16.png" color="#da532c"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Wangty654.github.io/posts/text02/" /><link rel="prev" href="https://Wangty654.github.io/posts/text01/" /><link rel="next" href="https://Wangty654.github.io/posts/text07/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
@@ -34,7 +34,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/Wangty654.github.io\/posts\/text02\/"
-        },"genre": "posts","keywords": "java","wordcount":  167 ,
+        },"genre": "posts","keywords": "java","wordcount":  146 ,
         "url": "https:\/\/Wangty654.github.io\/posts\/text02\/","datePublished": "2024-08-09T00:00:00+00:00","dateModified": "2024-08-09T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -108,7 +108,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">Java中int与String互相转换方法</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-09">2024-08-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;167 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-09">2024-08-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;146 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -116,8 +116,7 @@
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><h1 id="java中int与string互相转换方法">Java中int与String互相转换方法</h1>
-<p>String转为int，使用parseInt，或者valueOf.intValue</p>
+            </div><div class="content" id="content"><p>String转为int，使用parseInt，或者valueOf.intValue</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
@@ -157,8 +156,8 @@
         </section>
     </div>
 
-    <div class="post-nav"><a href="/posts/text01/" class="prev" rel="prev" title="JS 对象(Object)和字符串(String)互转方法"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>JS 对象(Object)和字符串(String)互转方法</a>
-            <a href="/posts/text08/" class="next" rel="next" title="破解/激活 Typora 2024 教程">破解/激活 Typora 2024 教程<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+    <div class="post-nav"><a href="/posts/text01/" class="prev" rel="prev" title="JS 中Object和String互转方法"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>JS 中Object和String互转方法</a>
+            <a href="/posts/text07/" class="next" rel="next" title="HUGO博客网站搭建">HUGO博客网站搭建<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">

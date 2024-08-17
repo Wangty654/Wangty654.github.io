@@ -3,9 +3,7 @@
 
 
 
-# JS 验证码功能的三种实现方式
-
-# 一、数字短信验证码
+### 数字短信验证码
 
 **思路：**
 
@@ -78,7 +76,7 @@ $(function(){
 </html>
 ```
 
-# **二、图形验证码**
+### 图形验证码
 
 概要：一般的图形验证码就像上方的短信验证码一样，就是后台生成的验证码图片返回给前端的，那样的话就比较简单，因为复杂的都让后台解决了，我在这里主要说的是另一种，就是不调用后台接口，通过canvas画布来解决图形验证码。
 
@@ -90,231 +88,133 @@ b.提交按钮进行表单验证，输入正确或者错误进行相应的提示
 
 c.用画布生成并渲染出验证码图形，并且得到随机的颜色值；
 
-![image-20240813144012764](./images/image-20240813144012764.png)
+<img src="./images/image-20240813144012764.png" alt="image-20240813144012764" style="zoom:50%;" />
+
+
 
 ```html
 <!DOCTYPE html>
-
 <html lang="en">
-
 <head>
-
-    <meta charset="UTF-8">
-
+   <meta charset="UTF-8">
     <title>验证码</title>
-
     <style>
-
   .input-val {
-
   width: 150px;
-
   height: 30px;
-
   border: 1px solid #ddd;
-
   box-sizing: border-box;/*box-sizing 属性允许你以某种方式定义某些元素，以适应指定区域。*/
-
   }
 
   #canvas {
-
   vertical-align: middle;/*vertical-align属性设置一个元素的垂直对齐。*/
-
   box-sizing: border-box;
-
   border: 1px solid #ddd;
-
   cursor: pointer;
-
   }
 
   .btn {
-
   display: block;
-
   margin-top: 10px;
-
   height: 30px;
-
   width: 80px;
-
   font-size: 16px;
-
   color: #fff;
-
   background-color: #409EFE;
-
   border: 1px solid #EBEDEF;
-
   border-radius: 50px;
-
   }
-
  </style>
-
 </head>
 
 <script type="text/javascript" src="https://libs.baidu.com/jquery/2.1.4/jquery.min.js" ></script>
-
 <script>
-
  $(function(){
-
   var show_num = [];
-
   draw(show_num);
-
   $("#canvas").on('click',function(){
-
    draw(show_num);
-
   })
-
   $(".btn").on('click',function(){
-
    var val = $(".input-val").val().toLowerCase(); //toLowerCase()函数将字符串中的所有字符转为小写。所以输入框不区分大小写。
-
    var num = show_num.join("");
-
    if(val==''){
-
     alert('请输入验证码！');
-
    }else if(val == num){
-
     alert('提交成功！');
-
     $(".input-val").val('');
-
    }else{
-
     alert('验证码错误！请重新输入！');
-
     $(".input-val").val('');
-
    }
-
   })
-
  })
 
  function draw(show_num) {//生成并渲染出验证码图形
-
   var canvas_width=$('#canvas').width();
-
   var canvas_height=$('#canvas').height();
-
   var canvas = document.getElementById("canvas");//获取canvas
-
   var context = canvas.getContext("2d");//获取到canvas画图的环境
-
   canvas.width = canvas_width;
-
   canvas.height = canvas_height;
-
   var sCode = "A,B,C,E,F,G,H,J,K,L,M,N,P,Q,R,S,T,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,m,n,p,q,r,s,t,u,v,w,x,y,z,1,2,3,4,5,6,7,8,9,0";
-
   var aCode = sCode.split(",");
-
   var aLength = aCode.length;//获取到数组的长度
-
   for (var i = 0; i < 4; i++) { //这里的for循环可以控制验证码位数
-
    var j = Math.floor(Math.random() * aLength);//获取到随机的索引值
-
    var deg = Math.random() - 0.5; //产生一个随机弧度
-
    var txt = aCode[j];//得到随机的一个内容
-
    show_num[i] = txt.toLowerCase();
-
    var x = 10 + i * 20;//文字在canvas上的x坐标
-
    var y = 20 + Math.random() * 8;//文字在canvas上的y坐标
-
    context.font = "bold 24px 微软雅黑";
-
    context.translate(x, y);
-
    context.rotate(deg);
-
    context.fillStyle = randomColor();
-
    context.fillText(txt, 0, 0);
-
    context.rotate(-deg);
-
    context.translate(-x, -y);
-
   }
 
   for (var i = 0; i <= 5; i++) { //验证码上显示线条
-
    context.strokeStyle = randomColor();
-
    context.beginPath();
-
    context.moveTo(Math.random() * canvas_width, Math.random() * canvas_height);
-
    context.lineTo(Math.random() * canvas_width, Math.random() * canvas_height);
-
    context.stroke();
-
   }
 
   for (var i = 0; i <= 20; i++) { //验证码上的小点
-
    context.strokeStyle = randomColor();//随机生成
-
    context.beginPath();
-
    var x = Math.random() * canvas_width;
-
    var y = Math.random() * canvas_height;
-
    context.moveTo(x, y);
-
    context.lineTo(x + 1, y + 1);
-
    context.stroke();
-
   }
-
  }
 
  function randomColor() {//得到随机的颜色值
-
   var r = Math.floor(Math.random() * 256);
-
   var g = Math.floor(Math.random() * 256);
-
   var b = Math.floor(Math.random() * 256);
-
   return "rgb(" + r + "," + g + "," + b + ")";
-
  }
-
 </script>
 
 <body>
-
     <div class="code">
-
         <input type="text" value="" placeholder="请输入验证码" class="input-val">
-
         <canvas id="canvas" width="100" height="30"></canvas>
-
         <button class="btn">验证</button>
-
     </div>
-
 </body>
 
 </html>
 ```
 
-# 三、滑动验证码
+### 滑动验证码
 
 滑块登录，是完成拼图形式的，我下面这个原理是一样的，逻辑是根据鼠标滑动轨迹，坐标位置，计算拖动速度等等来判断是否人为操作，如果小伙伴想做和博客园效果一样的，那么可以用来做参考。
 
@@ -326,7 +226,7 @@ b.书写js,注册鼠标按下，悬浮，松开事件；
 
 c.记录滑块移动的距离和状态进行判断是否成功；
 
-![image-20240813150842225](./images/image-20240813150842225.png)
+<img src="./images/image-20240813150842225.png" alt="image-20240813150842225" style="zoom:50%;" />
 
 html
 

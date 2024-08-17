@@ -7,7 +7,7 @@
         <title>JS 验证码功能的三种实现方式 - wangty-notepad</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:url" content="https://Wangty654.github.io/posts/text14/">
   <meta property="og:site_name" content="wangty-notepad">
   <meta property="og:title" content="JS 验证码功能的三种实现方式">
-  <meta property="og:description" content="JS 验证码功能的三种实现方式 一、数字短信验证码 思路： a.两个文本框&#43;一个获取验证码按钮，文本框用来输入手机号和获取到的验证码，按钮负责点击和记">
+  <meta property="og:description" content="数字短信验证码 思路： a.两个文本框&#43;一个获取验证码按钮，文本框用来输入手机号和获取到的验证码，按钮负责点击和记录倒计时； b.js书写定时器s">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://Wangty654.github.io/images/avatar.png">
   <meta name="twitter:title" content="JS 验证码功能的三种实现方式">
-  <meta name="twitter:description" content="JS 验证码功能的三种实现方式 一、数字短信验证码 思路： a.两个文本框&#43;一个获取验证码按钮，文本框用来输入手机号和获取到的验证码，按钮负责点击和记">
+  <meta name="twitter:description" content="数字短信验证码 思路： a.两个文本框&#43;一个获取验证码按钮，文本框用来输入手机号和获取到的验证码，按钮负责点击和记录倒计时； b.js书写定时器s">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -34,7 +34,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/Wangty654.github.io\/posts\/text14\/"
-        },"genre": "posts","keywords": "JavaScript","wordcount":  3110 ,
+        },"genre": "posts","keywords": "JavaScript","wordcount":  2991 ,
         "url": "https:\/\/Wangty654.github.io\/posts\/text14\/","datePublished": "2024-08-09T00:00:00+00:00","dateModified": "2024-08-09T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -108,16 +108,25 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">JS 验证码功能的三种实现方式</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-09">2024-08-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;3110 words&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;7 minutes&nbsp;</div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-09">2024-08-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;2991 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;6 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span></span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><h1 id="js-验证码功能的三种实现方式">JS 验证码功能的三种实现方式</h1>
-<h1 id="一数字短信验证码">一、数字短信验证码</h1>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#数字短信验证码">数字短信验证码</a></li>
+        <li><a href="#图形验证码">图形验证码</a></li>
+        <li><a href="#滑动验证码">滑动验证码</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="数字短信验证码">数字短信验证码</h3>
 <p><strong>思路：</strong></p>
 <p>a.两个文本框+一个获取验证码按钮，文本框用来输入手机号和获取到的验证码，按钮负责点击和记录倒计时；</p>
 <p>b.js书写定时器setTimeout，进行60秒验证码失效时间记录；</p>
@@ -245,20 +254,13 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="二图形验证码"><strong>二、图形验证码</strong></h1>
+</div><h3 id="图形验证码">图形验证码</h3>
 <p>概要：一般的图形验证码就像上方的短信验证码一样，就是后台生成的验证码图片返回给前端的，那样的话就比较简单，因为复杂的都让后台解决了，我在这里主要说的是另一种，就是不调用后台接口，通过canvas画布来解决图形验证码。</p>
 <p><strong>思路：</strong></p>
 <p>a.一个文本框用来输入由数字和字母组合的验证码+一个画布标签来显示图形验证码+一个提交按钮；</p>
 <p>b.提交按钮进行表单验证，输入正确或者错误进行相应的提示；</p>
 <p>c.用画布生成并渲染出验证码图形，并且得到随机的颜色值；</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="./images/image-20240813144012764.png"
-        data-srcset="./images/image-20240813144012764.png, ./images/image-20240813144012764.png 1.5x, ./images/image-20240813144012764.png 2x"
-        data-sizes="auto"
-        alt="./images/image-20240813144012764.png"
-        title="image-20240813144012764" /></p>
+<img src="./images/image-20240813144012764.png" alt="image-20240813144012764" style="zoom:50%;" />
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">  1
@@ -380,343 +382,136 @@
 </span><span class="lnt">117
 </span><span class="lnt">118
 </span><span class="lnt">119
-</span><span class="lnt">120
-</span><span class="lnt">121
-</span><span class="lnt">122
-</span><span class="lnt">123
-</span><span class="lnt">124
-</span><span class="lnt">125
-</span><span class="lnt">126
-</span><span class="lnt">127
-</span><span class="lnt">128
-</span><span class="lnt">129
-</span><span class="lnt">130
-</span><span class="lnt">131
-</span><span class="lnt">132
-</span><span class="lnt">133
-</span><span class="lnt">134
-</span><span class="lnt">135
-</span><span class="lnt">136
-</span><span class="lnt">137
-</span><span class="lnt">138
-</span><span class="lnt">139
-</span><span class="lnt">140
-</span><span class="lnt">141
-</span><span class="lnt">142
-</span><span class="lnt">143
-</span><span class="lnt">144
-</span><span class="lnt">145
-</span><span class="lnt">146
-</span><span class="lnt">147
-</span><span class="lnt">148
-</span><span class="lnt">149
-</span><span class="lnt">150
-</span><span class="lnt">151
-</span><span class="lnt">152
-</span><span class="lnt">153
-</span><span class="lnt">154
-</span><span class="lnt">155
-</span><span class="lnt">156
-</span><span class="lnt">157
-</span><span class="lnt">158
-</span><span class="lnt">159
-</span><span class="lnt">160
-</span><span class="lnt">161
-</span><span class="lnt">162
-</span><span class="lnt">163
-</span><span class="lnt">164
-</span><span class="lnt">165
-</span><span class="lnt">166
-</span><span class="lnt">167
-</span><span class="lnt">168
-</span><span class="lnt">169
-</span><span class="lnt">170
-</span><span class="lnt">171
-</span><span class="lnt">172
-</span><span class="lnt">173
-</span><span class="lnt">174
-</span><span class="lnt">175
-</span><span class="lnt">176
-</span><span class="lnt">177
-</span><span class="lnt">178
-</span><span class="lnt">179
-</span><span class="lnt">180
-</span><span class="lnt">181
-</span><span class="lnt">182
-</span><span class="lnt">183
-</span><span class="lnt">184
-</span><span class="lnt">185
-</span><span class="lnt">186
-</span><span class="lnt">187
-</span><span class="lnt">188
-</span><span class="lnt">189
-</span><span class="lnt">190
-</span><span class="lnt">191
-</span><span class="lnt">192
-</span><span class="lnt">193
-</span><span class="lnt">194
-</span><span class="lnt">195
-</span><span class="lnt">196
-</span><span class="lnt">197
-</span><span class="lnt">198
-</span><span class="lnt">199
-</span><span class="lnt">200
-</span><span class="lnt">201
-</span><span class="lnt">202
-</span><span class="lnt">203
-</span><span class="lnt">204
-</span><span class="lnt">205
-</span><span class="lnt">206
-</span><span class="lnt">207
-</span><span class="lnt">208
-</span><span class="lnt">209
-</span><span class="lnt">210
-</span><span class="lnt">211
-</span><span class="lnt">212
-</span><span class="lnt">213
-</span><span class="lnt">214
-</span><span class="lnt">215
-</span><span class="lnt">216
-</span><span class="lnt">217
-</span><span class="lnt">218
-</span><span class="lnt">219
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="cp">&lt;!DOCTYPE html&gt;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">   <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span>验证码<span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">input-val</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">150</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#ddd</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span><span class="c">/*box-sizing 属性允许你以某种方式定义某些元素，以适应指定区域。*/</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">#</span><span class="nn">canvas</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">vertical-align</span><span class="p">:</span> <span class="kc">middle</span><span class="p">;</span><span class="c">/*vertical-align属性设置一个元素的垂直对齐。*/</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">box-sizing</span><span class="p">:</span> <span class="kc">border-box</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#ddd</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">cursor</span><span class="p">:</span> <span class="kc">pointer</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">.</span><span class="nc">btn</span> <span class="p">{</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">display</span><span class="p">:</span> <span class="kc">block</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">margin-top</span><span class="p">:</span> <span class="mi">10</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">height</span><span class="p">:</span> <span class="mi">30</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">width</span><span class="p">:</span> <span class="mi">80</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">font-size</span><span class="p">:</span> <span class="mi">16</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">color</span><span class="p">:</span> <span class="mh">#fff</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">background-color</span><span class="p">:</span> <span class="mh">#409EFE</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">border</span><span class="p">:</span> <span class="mi">1</span><span class="kt">px</span> <span class="kc">solid</span> <span class="mh">#EBEDEF</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">border-radius</span><span class="p">:</span> <span class="mi">50</span><span class="kt">px</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;https://libs.baidu.com/jquery/2.1.4/jquery.min.js&#34;</span> <span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> <span class="nx">$</span><span class="p">(</span><span class="kd">function</span><span class="p">(){</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">show_num</span> <span class="o">=</span> <span class="p">[];</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="nx">draw</span><span class="p">(</span><span class="nx">show_num</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="nx">$</span><span class="p">(</span><span class="s2">&#34;#canvas&#34;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="nx">draw</span><span class="p">(</span><span class="nx">show_num</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">})</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="nx">$</span><span class="p">(</span><span class="s2">&#34;.btn&#34;</span><span class="p">).</span><span class="nx">on</span><span class="p">(</span><span class="s1">&#39;click&#39;</span><span class="p">,</span><span class="kd">function</span><span class="p">(){</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="kd">var</span> <span class="nx">val</span> <span class="o">=</span> <span class="nx">$</span><span class="p">(</span><span class="s2">&#34;.input-val&#34;</span><span class="p">).</span><span class="nx">val</span><span class="p">().</span><span class="nx">toLowerCase</span><span class="p">();</span> <span class="c1">//toLowerCase()函数将字符串中的所有字符转为小写。所以输入框不区分大小写。
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">   <span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="nx">show_num</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="kd">var</span> <span class="nx">num</span> <span class="o">=</span> <span class="nx">show_num</span><span class="p">.</span><span class="nx">join</span><span class="p">(</span><span class="s2">&#34;&#34;</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">   <span class="k">if</span><span class="p">(</span><span class="nx">val</span><span class="o">==</span><span class="s1">&#39;&#39;</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;请输入验证码！&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="p">}</span><span class="k">else</span> <span class="k">if</span><span class="p">(</span><span class="nx">val</span> <span class="o">==</span> <span class="nx">num</span><span class="p">){</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;提交成功！&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nx">$</span><span class="p">(</span><span class="s2">&#34;.input-val&#34;</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="p">}</span><span class="k">else</span><span class="p">{</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nx">alert</span><span class="p">(</span><span class="s1">&#39;验证码错误！请重新输入！&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="nx">$</span><span class="p">(</span><span class="s2">&#34;.input-val&#34;</span><span class="p">).</span><span class="nx">val</span><span class="p">(</span><span class="s1">&#39;&#39;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">})</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> <span class="p">})</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> <span class="kd">function</span> <span class="nx">draw</span><span class="p">(</span><span class="nx">show_num</span><span class="p">)</span> <span class="p">{</span><span class="c1">//生成并渲染出验证码图形
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">canvas_width</span><span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#canvas&#39;</span><span class="p">).</span><span class="nx">width</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">var</span> <span class="nx">canvas_width</span><span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#canvas&#39;</span><span class="p">).</span><span class="nx">width</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">canvas_height</span><span class="o">=</span><span class="nx">$</span><span class="p">(</span><span class="s1">&#39;#canvas&#39;</span><span class="p">).</span><span class="nx">height</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">canvas</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;canvas&#34;</span><span class="p">);</span><span class="c1">//获取canvas
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">context</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">&#34;2d&#34;</span><span class="p">);</span><span class="c1">//获取到canvas画图的环境
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">  <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">canvas_width</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">var</span> <span class="nx">context</span> <span class="o">=</span> <span class="nx">canvas</span><span class="p">.</span><span class="nx">getContext</span><span class="p">(</span><span class="s2">&#34;2d&#34;</span><span class="p">);</span><span class="c1">//获取到canvas画图的环境
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="nx">canvas</span><span class="p">.</span><span class="nx">width</span> <span class="o">=</span> <span class="nx">canvas_width</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">  <span class="nx">canvas</span><span class="p">.</span><span class="nx">height</span> <span class="o">=</span> <span class="nx">canvas_height</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">sCode</span> <span class="o">=</span> <span class="s2">&#34;A,B,C,E,F,G,H,J,K,L,M,N,P,Q,R,S,T,W,X,Y,Z,a,b,c,d,e,f,g,h,i,j,k,m,n,p,q,r,s,t,u,v,w,x,y,z,1,2,3,4,5,6,7,8,9,0&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">aCode</span> <span class="o">=</span> <span class="nx">sCode</span><span class="p">.</span><span class="nx">split</span><span class="p">(</span><span class="s2">&#34;,&#34;</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">aLength</span> <span class="o">=</span> <span class="nx">aCode</span><span class="p">.</span><span class="nx">length</span><span class="p">;</span><span class="c1">//获取到数组的长度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//这里的for循环可以控制验证码位数
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">   <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">aLength</span><span class="p">);</span><span class="c1">//获取到随机的索引值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">   <span class="kd">var</span> <span class="nx">deg</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">;</span> <span class="c1">//产生一个随机弧度
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">   <span class="kd">var</span> <span class="nx">txt</span> <span class="o">=</span> <span class="nx">aCode</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span><span class="c1">//得到随机的一个内容
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">   <span class="nx">show_num</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">txt</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;</span> <span class="mi">4</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//这里的for循环可以控制验证码位数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="kd">var</span> <span class="nx">j</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">aLength</span><span class="p">);</span><span class="c1">//获取到随机的索引值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="kd">var</span> <span class="nx">deg</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">-</span> <span class="mf">0.5</span><span class="p">;</span> <span class="c1">//产生一个随机弧度
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="kd">var</span> <span class="nx">txt</span> <span class="o">=</span> <span class="nx">aCode</span><span class="p">[</span><span class="nx">j</span><span class="p">];</span><span class="c1">//得到随机的一个内容
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="nx">show_num</span><span class="p">[</span><span class="nx">i</span><span class="p">]</span> <span class="o">=</span> <span class="nx">txt</span><span class="p">.</span><span class="nx">toLowerCase</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">   <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="mi">10</span> <span class="o">+</span> <span class="nx">i</span> <span class="o">*</span> <span class="mi">20</span><span class="p">;</span><span class="c1">//文字在canvas上的x坐标
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">   <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">8</span><span class="p">;</span><span class="c1">//文字在canvas上的y坐标
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">font</span> <span class="o">=</span> <span class="s2">&#34;bold 24px 微软雅黑&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="mi">20</span> <span class="o">+</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">8</span><span class="p">;</span><span class="c1">//文字在canvas上的y坐标
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="nx">context</span><span class="p">.</span><span class="nx">font</span> <span class="o">=</span> <span class="s2">&#34;bold 24px 微软雅黑&#34;</span><span class="p">;</span>
 </span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="nx">deg</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">fillStyle</span> <span class="o">=</span> <span class="nx">randomColor</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">fillText</span><span class="p">(</span><span class="nx">txt</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="mi">0</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">rotate</span><span class="p">(</span><span class="o">-</span><span class="nx">deg</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">translate</span><span class="p">(</span><span class="o">-</span><span class="nx">x</span><span class="p">,</span> <span class="o">-</span><span class="nx">y</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">5</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//验证码上显示线条
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">strokeStyle</span> <span class="o">=</span> <span class="nx">randomColor</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="nx">context</span><span class="p">.</span><span class="nx">strokeStyle</span> <span class="o">=</span> <span class="nx">randomColor</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">canvas_width</span><span class="p">,</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">canvas_height</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">canvas_width</span><span class="p">,</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">canvas_height</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">stroke</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">for</span> <span class="p">(</span><span class="kd">var</span> <span class="nx">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="nx">i</span> <span class="o">&lt;=</span> <span class="mi">20</span><span class="p">;</span> <span class="nx">i</span><span class="o">++</span><span class="p">)</span> <span class="p">{</span> <span class="c1">//验证码上的小点
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">strokeStyle</span> <span class="o">=</span> <span class="nx">randomColor</span><span class="p">();</span><span class="c1">//随机生成
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="nx">context</span><span class="p">.</span><span class="nx">strokeStyle</span> <span class="o">=</span> <span class="nx">randomColor</span><span class="p">();</span><span class="c1">//随机生成
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>   <span class="nx">context</span><span class="p">.</span><span class="nx">beginPath</span><span class="p">();</span>
 </span></span><span class="line"><span class="cl">   <span class="kd">var</span> <span class="nx">x</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">canvas_width</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="kd">var</span> <span class="nx">y</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="nx">canvas_height</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">moveTo</span><span class="p">(</span><span class="nx">x</span><span class="p">,</span> <span class="nx">y</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">lineTo</span><span class="p">(</span><span class="nx">x</span> <span class="o">+</span> <span class="mi">1</span><span class="p">,</span> <span class="nx">y</span> <span class="o">+</span> <span class="mi">1</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">   <span class="nx">context</span><span class="p">.</span><span class="nx">stroke</span><span class="p">();</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> <span class="p">}</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> <span class="kd">function</span> <span class="nx">randomColor</span><span class="p">()</span> <span class="p">{</span><span class="c1">//得到随机的颜色值
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
-</span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">256</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>  <span class="kd">var</span> <span class="nx">r</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">256</span><span class="p">);</span>
 </span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">g</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">256</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="kd">var</span> <span class="nx">b</span> <span class="o">=</span> <span class="nb">Math</span><span class="p">.</span><span class="nx">floor</span><span class="p">(</span><span class="nb">Math</span><span class="p">.</span><span class="nx">random</span><span class="p">()</span> <span class="o">*</span> <span class="mi">256</span><span class="p">);</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">  <span class="k">return</span> <span class="s2">&#34;rgb(&#34;</span> <span class="o">+</span> <span class="nx">r</span> <span class="o">+</span> <span class="s2">&#34;,&#34;</span> <span class="o">+</span> <span class="nx">g</span> <span class="o">+</span> <span class="s2">&#34;,&#34;</span> <span class="o">+</span> <span class="nx">b</span> <span class="o">+</span> <span class="s2">&#34;)&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"> <span class="p">}</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;code&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">value</span><span class="o">=</span><span class="s">&#34;&#34;</span> <span class="na">placeholder</span><span class="o">=</span><span class="s">&#34;请输入验证码&#34;</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;input-val&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">canvas</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;canvas&#34;</span> <span class="na">width</span><span class="o">=</span><span class="s">&#34;100&#34;</span> <span class="na">height</span><span class="o">=</span><span class="s">&#34;30&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">canvas</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">button</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;btn&#34;</span><span class="p">&gt;</span>验证<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h1 id="三滑动验证码">三、滑动验证码</h1>
+</div><h3 id="滑动验证码">滑动验证码</h3>
 <p>滑块登录，是完成拼图形式的，我下面这个原理是一样的，逻辑是根据鼠标滑动轨迹，坐标位置，计算拖动速度等等来判断是否人为操作，如果小伙伴想做和博客园效果一样的，那么可以用来做参考。</p>
 <p><strong>思路：</strong></p>
 <p>a.由三个div组成，构成了滑块和底部进度条的效果；</p>
 <p>b.书写js,注册鼠标按下，悬浮，松开事件；</p>
 <p>c.记录滑块移动的距离和状态进行判断是否成功；</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="./images/image-20240813150842225.png"
-        data-srcset="./images/image-20240813150842225.png, ./images/image-20240813150842225.png 1.5x, ./images/image-20240813150842225.png 2x"
-        data-sizes="auto"
-        alt="./images/image-20240813150842225.png"
-        title="image-20240813150842225" /></p>
+<img src="./images/image-20240813150842225.png" alt="image-20240813150842225" style="zoom:50%;" />
 <p>html</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -981,7 +776,7 @@
     </div>
 
     <div class="post-nav"><a href="/posts/text013/" class="prev" rel="prev" title="JS控制元素的显示和隐藏"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>JS控制元素的显示和隐藏</a>
-            <a href="/posts/text01/" class="next" rel="next" title="JS 对象(Object)和字符串(String)互转方法">JS 对象(Object)和字符串(String)互转方法<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+            <a href="/posts/text01/" class="next" rel="next" title="JS 中Object和String互转方法">JS 中Object和String互转方法<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 </article></div>
             </main><footer class="footer">

@@ -7,7 +7,7 @@
         <title>JS控制元素的显示和隐藏 - wangty-notepad</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:url" content="https://Wangty654.github.io/posts/text013/">
   <meta property="og:site_name" content="wangty-notepad">
   <meta property="og:title" content="JS控制元素的显示和隐藏">
-  <meta property="og:description" content="JS控制元素的显示和隐藏 利用来JS控制页面控件显示和隐藏有两种方法，两种方法分别利用HTML的style中的两个属性，两种方法的不同之处在于">
+  <meta property="og:description" content="利用来JS控制页面控件显示和隐藏有两种方法，两种方法分别利用HTML的style中的两个属性，两种方法的不同之处在于控件隐藏后是否还在页面上">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://Wangty654.github.io/images/avatar.png">
   <meta name="twitter:title" content="JS控制元素的显示和隐藏">
-  <meta name="twitter:description" content="JS控制元素的显示和隐藏 利用来JS控制页面控件显示和隐藏有两种方法，两种方法分别利用HTML的style中的两个属性，两种方法的不同之处在于">
+  <meta name="twitter:description" content="利用来JS控制页面控件显示和隐藏有两种方法，两种方法分别利用HTML的style中的两个属性，两种方法的不同之处在于控件隐藏后是否还在页面上">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -34,7 +34,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/Wangty654.github.io\/posts\/text013\/"
-        },"genre": "posts","keywords": "javascript","wordcount":  418 ,
+        },"genre": "posts","keywords": "javascript","wordcount":  401 ,
         "url": "https:\/\/Wangty654.github.io\/posts\/text013\/","datePublished": "2024-08-09T00:00:00+00:00","dateModified": "2024-08-09T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -108,7 +108,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">JS控制元素的显示和隐藏</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-09">2024-08-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;418 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-09">2024-08-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;401 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;One minute&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
@@ -117,42 +117,41 @@
                 </div>
                 <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
   <ul>
-    <li><a href="#方法一">方法一：</a></li>
-    <li><a href="#方法二">方法二：</a></li>
-    <li><a href="#方法三">方法三：</a></li>
+    <li>
+      <ul>
+        <li><a href="#方法一">方法一</a></li>
+        <li><a href="#方法二">方法二</a></li>
+        <li><a href="#方法三">方法三</a></li>
+      </ul>
+    </li>
   </ul>
 </nav></div>
-            </div><div class="content" id="content"><h1 id="js控制元素的显示和隐藏">JS控制元素的显示和隐藏</h1>
-<p>利用来JS控制页面控件显示和隐藏有两种方法，两种方法分别利用HTML的style中的两个属性，两种方法的不同之处在于控件隐藏后是否还在页面上占空位。</p>
-<h2 id="方法一">方法一：</h2>
+            </div><div class="content" id="content"><p>利用来JS控制页面控件显示和隐藏有两种方法，两种方法分别利用HTML的style中的两个属性，两种方法的不同之处在于控件隐藏后是否还在页面上占空位。</p>
+<h3 id="方法一">方法一</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;EleId&#34;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">visibility</span><span class="o">=</span><span class="s2">&#34;hidden&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;EleId&#34;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">visibility</span><span class="o">=</span><span class="s2">&#34;visible&#34;</span><span class="p">;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>利用上述方法实现隐藏后，页面的位置还被控件占用，显示空白。</p>
-<h2 id="方法二">方法二：</h2>
+<h3 id="方法二">方法二</h3>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span><span class="lnt">2
-</span><span class="lnt">3
 </span></code></pre></td>
 <td class="lntd">
 <pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;EleId&#34;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="o">=</span><span class="s2">&#34;none&#34;</span><span class="p">;</span>
-</span></span><span class="line"><span class="cl">
 </span></span><span class="line"><span class="cl"><span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s2">&#34;EleId&#34;</span><span class="p">).</span><span class="nx">style</span><span class="p">.</span><span class="nx">display</span><span class="o">=</span><span class="s2">&#34;inline&#34;</span><span class="p">;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>利用上述方法实现隐藏后，页面的位置不被占用。</p>
-<h2 id="方法三">方法三：</h2>
+<h3 id="方法三">方法三</h3>
 <p>显示元素进行隐藏</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">

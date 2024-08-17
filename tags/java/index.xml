@@ -9,7 +9,7 @@
     <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
     <guid>https://Wangty654.github.io/posts/text02/</guid>
-    <description><![CDATA[Java中int与String互相转换方法 String转为int，使用parseInt，或者valueOf.intValue 1 2 int i = Int]]></description>
+    <description><![CDATA[String转为int，使用parseInt，或者valueOf.intValue 1 2 int i = Integer.parseInt（string）]]></description>
 </item>
 <item>
     <title>转义StringEscapeUtils的使用</title>
@@ -17,7 +17,7 @@
     <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
     <guid>https://Wangty654.github.io/posts/text15/</guid>
-    <description><![CDATA[StringEscapeUtils的使用 StringEscapeUtils类可以对html js xml sql 等代码进行转义来防止SQL注入及XSS注入 添]]></description>
+    <description><![CDATA[StringEscapeUtils类可以对html js xml sql 等代码进行转义来防止SQL注入及XSS注入 添加依赖 1 2 3 4 5 &lt;dependency&gt; &lt;groupId&gt;commons-lang&lt;/groupId&gt; &lt;artifactId&gt;commons-lang&lt;/artifactId&gt; &lt;version&gt;2.6&lt;/version&gt; &lt;/dependency&gt; 1.html脚]]></description>
 </item>
 </channel>
 </rss>

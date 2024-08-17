@@ -1,8 +1,6 @@
 # Java中int与String互相转换方法
 
 
-# Java中int与String互相转换方法
-
 String转为int，使用parseInt，或者valueOf.intValue
 
 ```java

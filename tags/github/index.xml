@@ -1,0 +1,23 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>GitHub - Tag - wangty-notepad</title>
+        <link>https://Wangty654.github.io/tags/github/</link>
+        <description>GitHub - Tag - wangty-notepad</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 11 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/github/" rel="self" type="application/rss+xml" /><item>
+    <title>git克隆失败解决办法</title>
+    <link>https://Wangty654.github.io/posts/text09/</link>
+    <pubDate>Sun, 11 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text09/</guid>
+    <description><![CDATA[1 2 3 4 5 //报错信息 Failed to connect to github.com port 443: Connection refused. //报错翻译 连接github.com 443端口失败:连接拒绝 解决办法： 排查代理问题 尝试重置代理或者取]]></description>
+</item>
+<item>
+    <title>HUGO博客网站搭建</title>
+    <link>https://Wangty654.github.io/posts/text07/</link>
+    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text07/</guid>
+    <description><![CDATA[Hugo 是 Go 编写的静态网站生成器，速度快，易用，可配置。 Hugo 依赖于 Markdown 文件，元数据字体 。用户可以从任意的目录中运行 Hugo，支持共享主机和其他系统。只]]></description>
+</item>
+</channel>
+</rss>

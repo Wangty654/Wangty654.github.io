@@ -7,7 +7,7 @@
         <title>转义StringEscapeUtils的使用 - wangty-notepad</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:url" content="https://Wangty654.github.io/posts/text15/">
   <meta property="og:site_name" content="wangty-notepad">
   <meta property="og:title" content="转义StringEscapeUtils的使用">
-  <meta property="og:description" content="StringEscapeUtils的使用 StringEscapeUtils类可以对html js xml sql 等代码进行转义来防止SQL注入及XSS注入 添">
+  <meta property="og:description" content="StringEscapeUtils类可以对html js xml sql 等代码进行转义来防止SQL注入及XSS注入 添加依赖 1 2 3 4 5 &lt;dependency&gt; &lt;groupId&gt;commons-lang&lt;/groupId&gt; &lt;artifactId&gt;commons-lang&lt;/artifactId&gt; &lt;version&gt;2.6&lt;/version&gt; &lt;/dependency&gt; 1.html脚">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
@@ -19,7 +19,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://Wangty654.github.io/images/avatar.png">
   <meta name="twitter:title" content="转义StringEscapeUtils的使用">
-  <meta name="twitter:description" content="StringEscapeUtils的使用 StringEscapeUtils类可以对html js xml sql 等代码进行转义来防止SQL注入及XSS注入 添">
+  <meta name="twitter:description" content="StringEscapeUtils类可以对html js xml sql 等代码进行转义来防止SQL注入及XSS注入 添加依赖 1 2 3 4 5 &lt;dependency&gt; &lt;groupId&gt;commons-lang&lt;/groupId&gt; &lt;artifactId&gt;commons-lang&lt;/artifactId&gt; &lt;version&gt;2.6&lt;/version&gt; &lt;/dependency&gt; 1.html脚">
 <meta name="application-name" content="My cool site">
 <meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
@@ -34,7 +34,7 @@
         "mainEntityOfPage": {
             "@type": "WebPage",
             "@id": "https:\/\/Wangty654.github.io\/posts\/text15\/"
-        },"genre": "posts","keywords": "java","wordcount":  576 ,
+        },"genre": "posts","keywords": "java","wordcount":  556 ,
         "url": "https:\/\/Wangty654.github.io\/posts\/text15\/","datePublished": "2024-08-09T00:00:00+00:00","dateModified": "2024-08-09T00:00:00+00:00","publisher": {
             "@type": "Organization",
             "name": ""},"author": {
@@ -108,16 +108,35 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">转义StringEscapeUtils的使用</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-09">2024-08-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;576 words&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-09">2024-08-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;556 words&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
         </div><div class="details toc" id="toc-static"  data-kept="">
                 <div class="details-summary toc-title">
                     <span></span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
-            </div><div class="content" id="content"><h1 id="stringescapeutils的使用">StringEscapeUtils的使用</h1>
-<p>StringEscapeUtils类可以对html js xml  sql 等代码进行<a href="https://so.csdn.net/so/search?q=%e8%bd%ac%e4%b9%89&amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener noreffer ">转义</a>来防止SQL注入及XSS注入</p>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#1html脚本">1.html脚本</a></li>
+                <li><a href="#2js脚本">2.js脚本</a></li>
+                <li><a href="#3字符串unicode">3.字符串Unicode　</a></li>
+                <li><a href="#4xmlhttpssocsdnnetsosearchqxmlspm1001210130017020">4.<a href="https://so.csdn.net/so/search?q=xml&amp;spm=1001.2101.3001.7020">xml</a></a></li>
+                <li><a href="#5sql">5.sql</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><p><strong>StringEscapeUtils类可以对html js xml  sql 等代码进行<a href="https://so.csdn.net/so/search?q=%e8%bd%ac%e4%b9%89&amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener noreffer ">转义</a>来防止SQL注入及XSS注入</strong></p>
 <p>添加依赖</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -135,7 +154,7 @@
 </span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="o">&lt;/</span><span class="n">dependency</span><span class="o">&gt;</span><span class="w">
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><p>1.html脚本</p>
+</div><h5 id="1html脚本">1.html脚本</h5>
 <ul>
 <li>escapeHtml转义html脚本</li>
 <li>unescapeHtml反转义html脚本</li>
@@ -161,7 +180,7 @@
 </span></span><span class="line"><span class="cl">&lt;a&gt;abc&lt;/a&gt;
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>2.js脚本</p>
+</div><h5 id="2js脚本">2.js脚本</h5>
 <ul>
 <li>escapeJavaScript转义js脚本</li>
 <li>unescapeJavaScript反转义js脚本</li>
@@ -187,7 +206,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="err">alert(&#39;123&#39;)&lt;script&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>3.字符串Unicode　</p>
+</div><h5 id="3字符串unicode">3.字符串Unicode　</h5>
 <ul>
 <li>escapeJava转义成Unicode编码</li>
 <li>unescapeJava反转义成Unicode编码</li>
@@ -213,7 +232,7 @@
 </span></span><span class="line"><span class="cl">你好
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>4.<a href="https://so.csdn.net/so/search?q=xml&amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener noreffer ">xml</a></p>
+</div><h5 id="4xmlhttpssocsdnnetsosearchqxmlspm1001210130017020">4.<a href="https://so.csdn.net/so/search?q=xml&amp;spm=1001.2101.3001.7020" target="_blank" rel="noopener noreffer ">xml</a></h5>
 <ul>
 <li>escapeXML转义XML</li>
 <li>unescapeXML反转义XML</li>
@@ -239,7 +258,7 @@
 </span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">name</span><span class="p">&gt;</span>贝贝<span class="p">&lt;/</span><span class="nt">name</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p>5.sql</p>
+</div><h5 id="5sql">5.sql</h5>
 <ul>
 <li>escapeSql sql转义，防止sql注入攻击</li>
 </ul>
