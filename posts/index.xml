@@ -3,7 +3,15 @@
         <title>All Posts - wangty-notepad</title>
         <link>https://Wangty654.github.io/posts/</link>
         <description>All Posts | wangty-notepad</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 11 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 19 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>Python的WebDriver问题</title>
+    <link>https://Wangty654.github.io/posts/text19/</link>
+    <pubDate>Mon, 19 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text19/</guid>
+    <description><![CDATA[本文指导如何处理PyCharm中关于MicrosoftWebDriver.exe路径错误，需下载对应浏览器驱动，如Edge驱动，重命名并将其]]></description>
+</item>
+<item>
     <title>git克隆失败解决办法</title>
     <link>https://Wangty654.github.io/posts/text09/</link>
     <pubDate>Sun, 11 Aug 2024 00:00:00 &#43;0000</pubDate>
@@ -74,14 +82,6 @@
     <author>wangty</author>
     <guid>https://Wangty654.github.io/posts/text17/</guid>
     <description><![CDATA[子=&gt;父 子组件向父组件传参的方式通常通过事件来实现。具体步骤如下： 在子组件中定义事件：子组件可以通过 $emit 方法触发一个自定义事件，并传递参]]></description>
-</item>
-<item>
-    <title>腾讯云直播前端</title>
-    <link>https://Wangty654.github.io/posts/text16/</link>
-    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text16/</guid>
-    <description><![CDATA[腾讯云直播推流器TXLivePusher ：https://webrtc-demo.myqcloud.com/push-sdk/v2/docs]]></description>
 </item>
 </channel>
 </rss>

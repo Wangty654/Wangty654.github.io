@@ -3,7 +3,15 @@
         <title>Python - Tag - wangty-notepad</title>
         <link>https://Wangty654.github.io/tags/python/</link>
         <description>Python - Tag - wangty-notepad</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 08 Jul 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 19 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>Python的WebDriver问题</title>
+    <link>https://Wangty654.github.io/posts/text19/</link>
+    <pubDate>Mon, 19 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text19/</guid>
+    <description><![CDATA[本文指导如何处理PyCharm中关于MicrosoftWebDriver.exe路径错误，需下载对应浏览器驱动，如Edge驱动，重命名并将其]]></description>
+</item>
+<item>
     <title>Python下载与安装操作步骤</title>
     <link>https://Wangty654.github.io/posts/text04/</link>
     <pubDate>Fri, 08 Jul 2022 00:00:00 &#43;0000</pubDate>
