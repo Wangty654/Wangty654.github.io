@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>尚硅谷Vue2.0&#43;Vue3.0全套教程 - wangty-notepad</title><meta name="Description" content="这是我的全新 Hugo 网站"><meta property="og:url" content="https://Wangty654.github.io/posts/text20/">
+  <meta property="og:site_name" content="wangty-notepad">
+  <meta property="og:title" content="尚硅谷Vue2.0&#43;Vue3.0全套教程">
+  <meta property="og:description" content="模版语法 vue示例和容器root，11对应 el：加#指定容器id，不加#指定容器class 双括号中支持的内容为：{{ js表达式}} 数据绑定 v">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-08-05T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-08-05T00:00:00+00:00">
+    <meta property="article:tag" content="Vue2">
+    <meta property="article:tag" content="Vue3">
+    <meta property="og:image" content="https://Wangty654.github.io/images/avatar.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://Wangty654.github.io/images/avatar.png">
+  <meta name="twitter:title" content="尚硅谷Vue2.0&#43;Vue3.0全套教程">
+  <meta name="twitter:description" content="模版语法 vue示例和容器root，11对应 el：加#指定容器id，不加#指定容器class 双括号中支持的内容为：{{ js表达式}} 数据绑定 v">
+<meta name="application-name" content="My cool site">
+<meta name="apple-mobile-web-app-title" content="My cool site"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="msapplication-TileColor" href="/favicon-16x16.png" color="#da532c"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Wangty654.github.io/posts/text20/" /><link rel="prev" href="https://Wangty654.github.io/posts/text10/" /><link rel="next" href="https://Wangty654.github.io/posts/text15/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "尚硅谷Vue2.0+Vue3.0全套教程",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/Wangty654.github.io\/posts\/text20\/"
+        },"genre": "posts","keywords": "vue2, vue3","wordcount":  909 ,
+        "url": "https:\/\/Wangty654.github.io\/posts\/text20\/","datePublished": "2024-08-05T00:00:00+00:00","dateModified": "2024-08-05T00:00:00+00:00","publisher": {
+            "@type": "Organization",
+            "name": ""},"author": {
+                "@type": "Person",
+                "name": "wangty"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="fixed" data-header-mobile="auto"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('auto' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'auto' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="wangty-notepad">wangty notepad</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/posts/"> 所有文章 </a><a class="menu-item" href="/tags/"> 分类 </a><a class="menu-item" href="/about/"> 关于 </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="wangty-notepad">wangty notepad</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="Search titles or contents..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="Search">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="Clear">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        Cancel
+                    </a>
+                </div><a class="menu-item" href="/posts/" title="">所有文章</a><a class="menu-item" href="/tags/" title="">分类</a><a class="menu-item" href="/about/" title="">关于</a><a href="javascript:void(0);" class="menu-item theme-switch" title="Switch Theme">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto" >
+
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">尚硅谷Vue2.0+Vue3.0全套教程</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-05">2024-08-05</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;909 words&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;2 minutes&nbsp;</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#模版语法">模版语法</a></li>
+        <li><a href="#数据绑定">数据绑定</a></li>
+        <li><a href="#mount挂载"><strong>$mount.挂载</strong></a></li>
+        <li><a href="#mvvm模型">MVVM模型</a></li>
+        <li><a href="#数据代理">数据代理</a></li>
+        <li><a href="#computed计算属性">computed计算属性</a></li>
+        <li><a href="#深度监视">深度监视</a></li>
+        <li><a href="#生命周期">生命周期</a></li>
+        <li><a href="#浏览器本地存储">浏览器本地存储</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div><div class="content" id="content"><h3 id="模版语法">模版语法</h3>
+<img src="./images/1d7989ded2ceeba688a6d14734d40e8.png" alt="1d7989ded2ceeba688a6d14734d40e8" style="zoom:50%;" />
+<p>vue示例和容器root，11对应</p>
+<p>el：加#指定容器id，不加#指定容器class</p>
+<p>双括号中支持的内容为：{{ js表达式}}</p>
+<h3 id="数据绑定">数据绑定</h3>
+<p>v-bind：</p>
+<p><strong>单向数据绑定</strong> ：data数据里的值发生变化，组件的值就发生变化。</p>
+<p>v-bind:value=&ldquo;id&rdquo;</p>
+<p>// data:{ name:&ldquo;123&rdquo;}</p>
+<p>但是组件上的值发生变化，data里的值不会发生变化</p>
+<p><strong>双向数据绑定</strong> ：data数据里的值-同-组件的值，同步发生变化。</p>
+<p>v-model:value=&ldquo;id&rdquo;</p>
+<p>// data:{ name:&ldquo;123&rdquo;}</p>
+<p>注意：v-model<strong>只能用在输入值表单元素上</strong></p>
+<h3 id="mount挂载"><strong>$mount.挂载</strong></h3>
+<img src="./images/bf3b997bbe8df22d841d507d600f186.png" alt="bf3b997bbe8df22d841d507d600f186" style="zoom:50%;" />
+<img src="./images/801c33f2fc8fd9b47a021e2c19dd901.png" alt="801c33f2fc8fd9b47a021e2c19dd901" style="zoom:50%;" />
+<p>箭头函数，没有this，data()=&gt;{ }中调用的是实例不是vue是windows</p>
+<h3 id="mvvm模型">MVVM模型</h3>
+<h3 id="数据代理">数据代理</h3>
+<img src="./images/0d3001909f1217d2285a6f6c2b24bae.png" alt="0d3001909f1217d2285a6f6c2b24bae" style="zoom:50%;" />
+<img src="./images/0d7df09f217a940188a8434eba2f14d.png" alt="0d7df09f217a940188a8434eba2f14d" style="zoom:50%;" />
+<img src="./images/239a185fbd8aebeb398dbff1ff3db8e.png" alt="239a185fbd8aebeb398dbff1ff3db8e" style="zoom:50%;" />
+<p>v-on:click = &quot;&quot;  等价于 @click=&quot;&quot;</p>
+<p>click默认方法里面的传参，为点击事件event</p>
+<p>event.target.innerText指获取当前点击元素的文本内容</p>
+<p>:直接写是 v-bind 的简写</p>
+<p>@直接写是 v-on 的简写</p>
+<img src="./images/b5d99c482b0444963662d049347506f.png" alt="b5d99c482b0444963662d049347506f" style="zoom:50%;" />
+<p>事件修饰符prevent，用于操作点击默认的操作</p>
+<p>@keyup 键盘事件</p>
+<img src="./images/088fc780a7a119744f94ec4891da27c.png" alt="088fc780a7a119744f94ec4891da27c" style="zoom:50%;" />
+<img src="./images/26b28bf0bce922454d065142519072a.png" alt="26b28bf0bce922454d065142519072a" style="zoom:50%;" />
+<h3 id="computed计算属性">computed计算属性</h3>
+<img src="./images/c8364d51ed7c2fe31ae0aec4529c472.png" alt="c8364d51ed7c2fe31ae0aec4529c472" style="zoom:50%;" />
+<img src="./images/7f7c7b17f60e21bb030dc00fee9688b.png" alt="7f7c7b17f60e21bb030dc00fee9688b" style="zoom:50%;" />
+<img src="./images/06858126db45ef681202201f2cfaea3.png" alt="06858126db45ef681202201f2cfaea3" style="zoom:50%;" />
+<img src="./images/9afe647ae6b1124f8f6db7d8ec6eb46.png" alt="9afe647ae6b1124f8f6db7d8ec6eb46" style="zoom:50%;" />
+<p>只有读取的时候，简写get为计算属性名加（）{ get方法 }</p>
+<img src="./images/146c68a7a5e4ef769f5c09122ae4f76.png" alt="146c68a7a5e4ef769f5c09122ae4f76" style="zoom:50%;" />
+<img src="./images/309b0791e739f9426910799d28cff61.png" alt="309b0791e739f9426910799d28cff61" style="zoom:50%;" />
+<img src="./images/0c4e4cae618b63b78233e40943fe0d2.png" alt="0c4e4cae618b63b78233e40943fe0d2" style="zoom:50%;" />
+<h3 id="深度监视">深度监视</h3>
+<img src="./images/de5ea77aa17810a42049f57da0f900c.png" alt="de5ea77aa17810a42049f57da0f900c" style="zoom:50%;" />
+<p>加deep</p>
+<img src="./images/ead0c703735822144e8715a65273485.png" alt="ead0c703735822144e8715a65273485" style="zoom:50%;" />
+<img src="./images/3a2ca70b4678953d31f14dfef4dfc24.png" alt="3a2ca70b4678953d31f14dfef4dfc24" style="zoom:50%;" />
+<img src="./images/bcf3d628e49774b9ec6612482d1cfe4.png" alt="bcf3d628e49774b9ec6612482d1cfe4" style="zoom:50%;" />
+<p>computed计算属性不能实现异步返回，watch监听属性可以</p>
+<img src="./images/82a263c5524b93c3d73cade6c1ccdc3.png" alt="82a263c5524b93c3d73cade6c1ccdc3" style="zoom:50%;" />
+<p>条件渲染 v-show</p>
+<img src="./images/10d321f95c7212d9b468f2d9709cbaa.png" alt="10d321f95c7212d9b468f2d9709cbaa" style="zoom:50%;" />
+<img src="./images/6326430e4ae405cf58d0d77014538a0.png" alt="6326430e4ae405cf58d0d77014538a0" style="zoom:50%;" />
+<img src="./images/e4d9ac5a0ac670bee3c5d61a629709c.png" alt="e4d9ac5a0ac670bee3c5d61a629709c" style="zoom:50%;" />
+<img src="./images/22da4cbe1c6654ad36bc48aaee52781.png" alt="22da4cbe1c6654ad36bc48aaee52781" style="zoom:50%;" />
+<img src="./images/eaf202d29ed55bb2b101638fc90063e.png" alt="eaf202d29ed55bb2b101638fc90063e" style="zoom:50%;" />
+<p>v-text 对所在节点传入文本内容</p>
+<p>v-html  对所在节点传入的 带标签的内容 解析成HTML展示</p>
+<img src="./images/8217ea6fd508dbbbd91dd075e4788e7.png" alt="8217ea6fd508dbbbd91dd075e4788e7" style="zoom:50%;" />
+<img src="./images/059a1e8a512c506342de415ed90cb7d.png" alt="059a1e8a512c506342de415ed90cb7d" style="zoom:50%;" />
+<h3 id="生命周期">生命周期</h3>
+<img src="./images/4775842a36018f2a9aeb77f9072fee3.png" alt="4775842a36018f2a9aeb77f9072fee3" style="zoom:50%;" />
+<p>mounted只调一次</p>
+<p>mounted在页面挂载完成之后调用</p>
+<img src="./images/efc63c18d74f3e4f1fe1e1bae0d61ee.png" alt="efc63c18d74f3e4f1fe1e1bae0d61ee" style="zoom:50%;" />
+<p>关键的时间点，调一些函数</p>
+<p>这些函数，统称为生命周期函数</p>
+<p>beforeCreate() 有vm，可用this，无法访问data和method</p>
+<p>生命周期流程：初始化生命周期+事件[数据代理未开始] =&gt; beforeCreate() =&gt;初始化数据监测+数据代理 =&gt; created()</p>
+<p>created() =&gt;解析模板，生成虚拟dom内存，页面还不能显示解析的好的内容</p>
+<p>beforeMount() = &gt;虚拟dom转真是dom，存在vm.$el里</p>
+<p>mounted()=&gt;经过编译的等初始化操作</p>
+<h3 id="浏览器本地存储">浏览器本地存储</h3>
+<p>：window.localStorage.getItem(&lsquo;userInfo&rsquo;)
+window.localStorage.setItem(Json.stringify(userInfo))
+let userInfo = {}</p>
+<p>window.localStorage.removeItem(&lsquo;userInfo&rsquo;)</p>
+<p>会话存储sessionStorage：</p>
+<p>会话会随浏览器窗口关闭而消失</p>
+<p>nextTick()等待下一次 DOM 更新刷新的工具方法</p>
+<p>setup() 渲染在beforeCreate之前，所有的渲染之前，不能用this，返回return为一个函数</p>
+<img src="./images/34aaa8d65da8c91045696a34dbca646.png" alt="34aaa8d65da8c91045696a34dbca646" style="zoom:50%;" />
+<p>简写形式，语法糖</p>
+<p>decode用法</p>
+<p>DECODE(value, if1, then1, if2, then2, &hellip;, else)</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>Updated on 2024-08-05</span>
+            </div></div>
+
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/vue2/">Vue2</a>,&nbsp;<a href="/tags/vue3/">Vue3</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">Back</a></span>&nbsp;|&nbsp;<span><a href="/">Home</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/posts/text10/" class="prev" rel="prev" title="IDEA在Database中连接达梦数据库"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>IDEA在Database中连接达梦数据库</a>
+            <a href="/posts/text15/" class="next" rel="next" title="转义StringEscapeUtils的使用">转义StringEscapeUtils的使用<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container"><div class="footer-line">Powered by <a href="https://gohugo.io/" target="_blank" rel="noopener noreffer" title="Hugo 0.128.2">Hugo</a> | Theme - <a href="https://github.com/dillonzq/LoveIt" target="_blank" rel="noopener noreffer" title="LoveIt 0.2.11"><i class="far fa-kiss-wink-heart fa-fw" aria-hidden="true"></i> LoveIt</a>
+                </div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">wangty</a></span></div>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="Back to Top">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="View Comments">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lunr@2.3.9/lunr.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"Copy to clipboard","maxShownLines":50},"comment":{},"search":{"highlightTag":"em","lunrIndexURL":"/index.json","maxResultLength":10,"noResultsFound":"No results found","snippetLength":30,"type":"lunr"}};</script><script type="text/javascript" src="/js/theme.min.js"></script></body>
+</html>

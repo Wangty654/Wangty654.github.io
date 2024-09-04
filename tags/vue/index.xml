@@ -3,7 +3,15 @@
         <title>Vue - Tag - wangty-notepad</title>
         <link>https://Wangty654.github.io/tags/vue/</link>
         <description>Vue - Tag - wangty-notepad</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/vue/" rel="self" type="application/rss+xml" /><item>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 21 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/vue/" rel="self" type="application/rss+xml" /><item>
+    <title>Vue2.0全套教程</title>
+    <link>https://Wangty654.github.io/posts/vue2/</link>
+    <pubDate>Wed, 21 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/vue2/</guid>
+    <description><![CDATA[Vue2.0全套教程 本章节记录vue2的所有知识点 记录时间是20240821 流程顺序： 1.vue基础 2.vue-cli 脚手架-专门用于工程开发 3.vue-router 4.vuex 5.ele]]></description>
+</item>
+<item>
     <title>子组件向父组件相互传参的方式</title>
     <link>https://Wangty654.github.io/posts/text17/</link>
     <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>

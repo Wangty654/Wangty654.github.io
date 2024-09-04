@@ -203,6 +203,10 @@ hugo server --disableFastRender --gc --noHTTPCache --noBuildLock --logLevel debu
 
 这样我们就成功使用HUGO在Windows本地快速部署了一个静态博客网站。
 
+
+
+> 【下面是三种部署网站到公网的办法】
+
 ### 安装内网穿透工具
 
 目前我们在本机成功部署了一个博客网站，但如果没有公网IP的话，只能在本地局域网环境使用，有一定局限性。如果出差在外想要远程使用的话，可以结合Cpolar内网穿透生成公网地址，免去了本地重新部署过程，只需要使用公网地址直接就可以访问本地部署的网站，进行演示。
@@ -329,6 +333,10 @@ GitHub提供了[Github pages](https://gohugo.io/hosting-and-deployment/hosting-o
 
 GitHub登陆后，新建仓库Wangty654.github.io  注意仓库名需要和账户名一致
 
+<img src="./images/1724037435194.png" alt="1724037435194" style="zoom:50%;" />
+
+<img src="./images/50287696e68c76e16783901342ea9e2.png" alt="50287696e68c76e16783901342ea9e2" style="zoom:50%;" />
+
 修改博客配置文件.toml中的默认跳转地址为仓库名
 
 ```
@@ -359,6 +367,28 @@ git push
 ```
 
 请求成功后直接访问https://Wangty654.github.io即可
+
+### 腾讯云服务器部署
+
+<img src="./images/85900a0f3b241dfb9845c2842b1aa2c.png" alt="85900a0f3b241dfb9845c2842b1aa2c" style="zoom:50%;" />
+
+<img src="./images/4cc09c76553cdb9c11249f2a263d1c7.png" alt="4cc09c76553cdb9c11249f2a263d1c7" style="zoom:50%;" />
+
+配置的后台的代理
+
+静态资源服务器
+
+如果是放我的静态网页
+
+只需要将dist配置在root上，并对其刷新页面的位置进行配置就行
+
+dist内存在index页面等同于，hugo的public页面
+
+<img src="./images/ea8543d5eff09b5e125f556fa98e1cf.png" alt="ea8543d5eff09b5e125f556fa98e1cf" style="zoom: 80%;" />
+
+ftp传文件 、shell 输入命令
+
+<img src="./images/fe423f94796e37fe9bf0064f26f04b6.png" alt="fe423f94796e37fe9bf0064f26f04b6" style="zoom:50%;" />
 
 ### 网站样式自定义设置
 

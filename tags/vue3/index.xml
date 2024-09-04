@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Vue3 - Tag - wangty-notepad</title>
+        <link>https://Wangty654.github.io/tags/vue3/</link>
+        <description>Vue3 - Tag - wangty-notepad</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 05 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/vue3/" rel="self" type="application/rss+xml" /><item>
+    <title>尚硅谷Vue2.0&#43;Vue3.0全套教程</title>
+    <link>https://Wangty654.github.io/posts/text20/</link>
+    <pubDate>Mon, 05 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text20/</guid>
+    <description><![CDATA[模版语法 vue示例和容器root，11对应 el：加#指定容器id，不加#指定容器class 双括号中支持的内容为：{{ js表达式}} 数据绑定 v]]></description>
+</item>
+</channel>
+</rss>

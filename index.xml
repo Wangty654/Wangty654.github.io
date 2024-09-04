@@ -3,9 +3,41 @@
         <title>wangty-notepad</title>
         <link>https://Wangty654.github.io/</link>
         <description>这是我的全新 Hugo 网站</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 19 Aug 2024 00:00:00 &#43;0000</lastBuildDate>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 04 Sep 2024 00:00:00 &#43;0000</lastBuildDate>
             <atom:link href="https://Wangty654.github.io/index.xml" rel="self" type="application/rss+xml" />
         <item>
+    <title>网页设计笔记</title>
+    <link>https://Wangty654.github.io/posts/text22/</link>
+    <pubDate>Wed, 04 Sep 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text22/</guid>
+    <description><![CDATA[网页设计笔记 1、万维网 （world wide web ===&gt; www）作用：实现资源共享 ​ 是Internet上基于客户/服务器体系结构的分布式多平台的超文本超媒体]]></description>
+</item>
+<item>
+    <title>路由表</title>
+    <link>https://Wangty654.github.io/posts/text21/</link>
+    <pubDate>Wed, 04 Sep 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text21/</guid>
+    <description><![CDATA[路由表 路由表操作 1 ipconfig 1 route print 1 2 3 4 5 6 7 8 9 10 11 route delete 0.0.0.0 route delete 10.163.0.0 route delete 10.164.0.0 route delete 10.160.0.0 route delete 10.1.0.0 route add -p 0.0.0.0 mask 0.0.0.0 192.168.9.1 metric 20 route add -p 10.163.0.0 mask 255.255.0.0 192.168.8.1 metric 30 route add -p 10.164.0.0 mask 255.255.0.0 192.168.8.1 metric 30 route add -p 10.160.0.0]]></description>
+</item>
+<item>
+    <title>ES6基础</title>
+    <link>https://Wangty654.github.io/posts/es6/</link>
+    <pubDate>Wed, 21 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/es6/</guid>
+    <description><![CDATA[1.变量定义 ES6新增了 let 和 const，分别用来声明变量和常量，应该尽可能使用 let 和 const 来定义变量，而不是 var 1.1 let 关键字 let 用于声明变量，声明的变量]]></description>
+</item>
+<item>
+    <title>Vue2.0全套教程</title>
+    <link>https://Wangty654.github.io/posts/vue2/</link>
+    <pubDate>Wed, 21 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/vue2/</guid>
+    <description><![CDATA[Vue2.0全套教程 本章节记录vue2的所有知识点 记录时间是20240821 流程顺序： 1.vue基础 2.vue-cli 脚手架-专门用于工程开发 3.vue-router 4.vuex 5.ele]]></description>
+</item>
+<item>
     <title>Python的WebDriver问题</title>
     <link>https://Wangty654.github.io/posts/text19/</link>
     <pubDate>Mon, 19 Aug 2024 00:00:00 &#43;0000</pubDate>
@@ -52,38 +84,6 @@
     <author>wangty</author>
     <guid>https://Wangty654.github.io/posts/text01/</guid>
     <description><![CDATA[利用原生JSON对象，将对象转为字符串，使用 JSON.stringify（对象名） 1 2 3 4 5 6 var jsObj = {}; jsObj.testArray = [1,2,3,4,5]; jsObj.name = &#39;CSS3&#39;; jsObj.date = &#39;8 May, 2011&#39;; var str = JSON.stringify(jsObj); alert(str); 从JS]]></description>
-</item>
-<item>
-    <title>JS 验证码功能的三种实现方式</title>
-    <link>https://Wangty654.github.io/posts/text14/</link>
-    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text14/</guid>
-    <description><![CDATA[数字短信验证码 思路： a.两个文本框+一个获取验证码按钮，文本框用来输入手机号和获取到的验证码，按钮负责点击和记录倒计时； b.js书写定时器s]]></description>
-</item>
-<item>
-    <title>JS控制元素的显示和隐藏</title>
-    <link>https://Wangty654.github.io/posts/text013/</link>
-    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text013/</guid>
-    <description><![CDATA[利用来JS控制页面控件显示和隐藏有两种方法，两种方法分别利用HTML的style中的两个属性，两种方法的不同之处在于控件隐藏后是否还在页面上]]></description>
-</item>
-<item>
-    <title>Oracle查询sql</title>
-    <link>https://Wangty654.github.io/posts/text18/</link>
-    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text18/</guid>
-    <description><![CDATA[Oracle查询sql 查询系统当前日期 1 select sysdate from dual; 请查询每个员工的名字、薪水和加薪15.5%之后的薪水（trunc取整） 1 Select 名字,薪水,tru]]></description>
-</item>
-<item>
-    <title>子组件向父组件相互传参的方式</title>
-    <link>https://Wangty654.github.io/posts/text17/</link>
-    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text17/</guid>
-    <description><![CDATA[子=&gt;父 子组件向父组件传参的方式通常通过事件来实现。具体步骤如下： 在子组件中定义事件：子组件可以通过 $emit 方法触发一个自定义事件，并传递参]]></description>
 </item>
 </channel>
 </rss>

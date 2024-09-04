@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Html - Tag - wangty-notepad</title>
+        <link>https://Wangty654.github.io/tags/html/</link>
+        <description>Html - Tag - wangty-notepad</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 04 Sep 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/html/" rel="self" type="application/rss+xml" /><item>
+    <title>网页设计笔记</title>
+    <link>https://Wangty654.github.io/posts/text22/</link>
+    <pubDate>Wed, 04 Sep 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/text22/</guid>
+    <description><![CDATA[网页设计笔记 1、万维网 （world wide web ===&gt; www）作用：实现资源共享 ​ 是Internet上基于客户/服务器体系结构的分布式多平台的超文本超媒体]]></description>
+</item>
+</channel>
+</rss>

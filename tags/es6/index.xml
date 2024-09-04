@@ -1,0 +1,15 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>ES6 - Tag - wangty-notepad</title>
+        <link>https://Wangty654.github.io/tags/es6/</link>
+        <description>ES6 - Tag - wangty-notepad</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 21 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/es6/" rel="self" type="application/rss+xml" /><item>
+    <title>ES6基础</title>
+    <link>https://Wangty654.github.io/posts/es6/</link>
+    <pubDate>Wed, 21 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/posts/es6/</guid>
+    <description><![CDATA[1.变量定义 ES6新增了 let 和 const，分别用来声明变量和常量，应该尽可能使用 let 和 const 来定义变量，而不是 var 1.1 let 关键字 let 用于声明变量，声明的变量]]></description>
+</item>
+</channel>
+</rss>
