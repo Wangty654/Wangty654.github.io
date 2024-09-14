@@ -1,15 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Typora - Tag - wangty-notepad</title>
+        <title>Typora - 标签 - TyNote</title>
         <link>https://Wangty654.github.io/tags/typora/</link>
-        <description>Typora - Tag - wangty-notepad</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 11 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/typora/" rel="self" type="application/rss+xml" /><item>
-    <title>破解/安装激活 Typora 2024 教程</title>
-    <link>https://Wangty654.github.io/posts/text08/</link>
+        <description>Typora - 标签 - TyNote</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sun, 11 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/typora/" rel="self" type="application/rss+xml" /><item>
+    <title>【Typora】破解/安装激活 Typora 2024 教程</title>
+    <link>https://Wangty654.github.io/text08/</link>
     <pubDate>Sun, 11 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text08/</guid>
-    <description><![CDATA[官网下载Typora 网址：Typora 官方中文站 (typoraio.cn) 安装Typora 双击Typora.exe 安装完成 激活方法 安装路径下找到：Typora\re]]></description>
+    <guid>https://Wangty654.github.io/text08/</guid>
+    <description><![CDATA[一个好用的可视化Markdown文档编辑器]]></description>
 </item>
 </channel>
 </rss>

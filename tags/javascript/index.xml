@@ -1,47 +1,48 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>JavaScript - Tag - wangty-notepad</title>
+        <title>JavaScript - 标签 - TyNote</title>
         <link>https://Wangty654.github.io/tags/javascript/</link>
-        <description>JavaScript - Tag - wangty-notepad</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 04 Sep 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/javascript/" rel="self" type="application/rss+xml" /><item>
-    <title>网页设计笔记</title>
-    <link>https://Wangty654.github.io/posts/text22/</link>
-    <pubDate>Wed, 04 Sep 2024 00:00:00 &#43;0000</pubDate>
+        <description>JavaScript - 标签 - TyNote</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 01 Jul 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/javascript/" rel="self" type="application/rss+xml" /><item>
+    <title>【Vue前端框架】vue子组件向父组件相互传参的方式</title>
+    <link>https://Wangty654.github.io/text17/</link>
+    <pubDate>Mon, 01 Jul 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text22/</guid>
-    <description><![CDATA[网页设计笔记 1、万维网 （world wide web ===&gt; www）作用：实现资源共享 ​ 是Internet上基于客户/服务器体系结构的分布式多平台的超文本超媒体]]></description>
+    <guid>https://Wangty654.github.io/text17/</guid>
+    <description><![CDATA[本篇记录了子组件向父组件相互传参的方式]]></description>
 </item>
 <item>
-    <title>JS 中Object和String互转方法</title>
-    <link>https://Wangty654.github.io/posts/text01/</link>
-    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <title>【JS】JS 验证码功能的三种实现方式</title>
+    <link>https://Wangty654.github.io/text14/</link>
+    <pubDate>Sun, 09 Jan 2022 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text01/</guid>
-    <description><![CDATA[利用原生JSON对象，将对象转为字符串，使用 JSON.stringify（对象名） 1 2 3 4 5 6 var jsObj = {}; jsObj.testArray = [1,2,3,4,5]; jsObj.name = &#39;CSS3&#39;; jsObj.date = &#39;8 May, 2011&#39;; var str = JSON.stringify(jsObj); alert(str); 从JS]]></description>
+    <guid>https://Wangty654.github.io/text14/</guid>
+    <description><![CDATA[验证码功能的三种实现方式]]></description>
 </item>
 <item>
-    <title>JS 验证码功能的三种实现方式</title>
-    <link>https://Wangty654.github.io/posts/text14/</link>
-    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <title>【Js】JS 中Object和String互转方法</title>
+    <link>https://Wangty654.github.io/text01/</link>
+    <pubDate>Sun, 09 Jan 2022 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text14/</guid>
-    <description><![CDATA[数字短信验证码 思路： a.两个文本框+一个获取验证码按钮，文本框用来输入手机号和获取到的验证码，按钮负责点击和记录倒计时； b.js书写定时器s]]></description>
+    <guid>https://Wangty654.github.io/text01/</guid>
+    <description><![CDATA[JS 中Object和String互转方法]]></description>
 </item>
 <item>
-    <title>JS控制元素的显示和隐藏</title>
-    <link>https://Wangty654.github.io/posts/text013/</link>
-    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <title>【Js】JS控制元素的显示和隐藏</title>
+    <link>https://Wangty654.github.io/text013/</link>
+    <pubDate>Sun, 09 Jan 2022 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text013/</guid>
-    <description><![CDATA[利用来JS控制页面控件显示和隐藏有两种方法，两种方法分别利用HTML的style中的两个属性，两种方法的不同之处在于控件隐藏后是否还在页面上]]></description>
+    <guid>https://Wangty654.github.io/text013/</guid>
+    <description><![CDATA[JS控制元素的显示和隐藏]]></description>
 </item>
 <item>
-    <title>子组件向父组件相互传参的方式</title>
-    <link>https://Wangty654.github.io/posts/text17/</link>
-    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <title>【html】网页设计笔记</title>
+    <link>https://Wangty654.github.io/text22/</link>
+    <pubDate>Thu, 01 Jul 2021 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text17/</guid>
-    <description><![CDATA[子=&gt;父 子组件向父组件传参的方式通常通过事件来实现。具体步骤如下： 在子组件中定义事件：子组件可以通过 $emit 方法触发一个自定义事件，并传递参]]></description>
+    <guid>https://Wangty654.github.io/text22/</guid>
+    <description><![CDATA[本篇记录了网页设计课程所涉及的一些简单定义]]></description>
 </item>
 </channel>
 </rss>

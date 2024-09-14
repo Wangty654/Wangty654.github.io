@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Java - 分类 - TyNote</title>
+        <link>https://Wangty654.github.io/categories/java/</link>
+        <description>Java - 分类 - TyNote</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 03 Apr 2023 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/categories/java/" rel="self" type="application/rss+xml" /><item>
+    <title>【Java】转义StringEscapeUtils的使用</title>
+    <link>https://Wangty654.github.io/text15/</link>
+    <pubDate>Mon, 03 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/text15/</guid>
+    <description><![CDATA[转义StringEscapeUtils的使用]]></description>
+</item>
+<item>
+    <title>【Java】Java中int与String互相转换方法</title>
+    <link>https://Wangty654.github.io/text02/</link>
+    <pubDate>Wed, 01 Mar 2023 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/text02/</guid>
+    <description><![CDATA[Java中int与String互相转换方法]]></description>
+</item>
+</channel>
+</rss>

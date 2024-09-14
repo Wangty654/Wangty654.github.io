@@ -1,15 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>内网穿透 - Tag - wangty-notepad</title>
+        <title>内网穿透 - 标签 - TyNote</title>
         <link>https://Wangty654.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
-        <description>内网穿透 - Tag - wangty-notepad</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" rel="self" type="application/rss+xml" /><item>
-    <title>HUGO博客网站搭建</title>
-    <link>https://Wangty654.github.io/posts/text07/</link>
+        <description>内网穿透 - 标签 - TyNote</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" rel="self" type="application/rss+xml" /><item>
+    <title>【HUGO】HUGO博客网站搭建</title>
+    <link>https://Wangty654.github.io/text07/</link>
     <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text07/</guid>
-    <description><![CDATA[Hugo 是 Go 编写的静态网站生成器，速度快，易用，可配置。 Hugo 依赖于 Markdown 文件，元数据字体 。用户可以从任意的目录中运行 Hugo，支持共享主机和其他系统。只]]></description>
+    <guid>https://Wangty654.github.io/text07/</guid>
+    <description><![CDATA[从零开始搭建一个Hugo静态博客网站]]></description>
 </item>
 </channel>
 </rss>

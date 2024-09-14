@@ -1,23 +1,24 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Python - Tag - wangty-notepad</title>
+        <title>Python - 标签 - TyNote</title>
         <link>https://Wangty654.github.io/tags/python/</link>
-        <description>Python - Tag - wangty-notepad</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Mon, 19 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
-    <title>Python的WebDriver问题</title>
-    <link>https://Wangty654.github.io/posts/text19/</link>
-    <pubDate>Mon, 19 Aug 2024 00:00:00 &#43;0000</pubDate>
+        <description>Python - 标签 - TyNote</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 12 Jul 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/python/" rel="self" type="application/rss+xml" /><item>
+    <title>【Python】Python的WebDriver问题</title>
+    <link>https://Wangty654.github.io/text19/</link>
+    <pubDate>Tue, 12 Jul 2022 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text19/</guid>
-    <description><![CDATA[本文指导如何处理PyCharm中关于MicrosoftWebDriver.exe路径错误，需下载对应浏览器驱动，如Edge驱动，重命名并将其]]></description>
+    <guid>https://Wangty654.github.io/text19/</guid>
+    <description><![CDATA[Python的WebDriver驱动问题]]></description>
 </item>
 <item>
-    <title>Python下载与安装操作步骤</title>
-    <link>https://Wangty654.github.io/posts/text04/</link>
+    <title>【Python】Python下载与安装操作步骤</title>
+    <link>https://Wangty654.github.io/text04/</link>
     <pubDate>Fri, 08 Jul 2022 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text04/</guid>
-    <description><![CDATA[python官网地址：https://www.python.org/ 第1步：先勾选，再安装，上面是默认安装路径，下面是自定义安装路径 等待安装]]></description>
+    <guid>https://Wangty654.github.io/text04/</guid>
+    <description><![CDATA[Python下载与安装操作步骤]]></description>
 </item>
 </channel>
 </rss>

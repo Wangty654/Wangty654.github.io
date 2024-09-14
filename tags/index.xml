@@ -1,38 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Tags - Tag - wangty-notepad</title>
+        <title>Tags - 标签 - TyNote</title>
         <link>https://Wangty654.github.io/tags/</link>
-        <description>Tags - Tag - wangty-notepad</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 04 Sep 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/" rel="self" type="application/rss+xml" /><item>
-    <title>Html</title>
-    <link>https://Wangty654.github.io/tags/html/</link>
-    <pubDate>Wed, 04 Sep 2024 00:00:00 &#43;0000</pubDate>
+        <description>Tags - 标签 - TyNote</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 13 Sep 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/" rel="self" type="application/rss+xml" /><item>
+    <title>Hugo</title>
+    <link>https://Wangty654.github.io/tags/hugo/</link>
+    <pubDate>Fri, 13 Sep 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/tags/html/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>JavaScript</title>
-    <link>https://Wangty654.github.io/tags/javascript/</link>
-    <pubDate>Wed, 04 Sep 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/tags/javascript/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>路由</title>
-    <link>https://Wangty654.github.io/tags/%E8%B7%AF%E7%94%B1/</link>
-    <pubDate>Wed, 04 Sep 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/tags/%E8%B7%AF%E7%94%B1/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>ES6</title>
-    <link>https://Wangty654.github.io/tags/es6/</link>
-    <pubDate>Wed, 21 Aug 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/tags/es6/</guid>
+    <guid>https://Wangty654.github.io/tags/hugo/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
@@ -44,30 +21,6 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>Python</title>
-    <link>https://Wangty654.github.io/tags/python/</link>
-    <pubDate>Mon, 19 Aug 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/tags/python/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Git</title>
-    <link>https://Wangty654.github.io/tags/git/</link>
-    <pubDate>Sun, 11 Aug 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/tags/git/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>GitHub</title>
-    <link>https://Wangty654.github.io/tags/github/</link>
-    <pubDate>Sun, 11 Aug 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/tags/github/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
     <title>Typora</title>
     <link>https://Wangty654.github.io/tags/typora/</link>
     <pubDate>Sun, 11 Aug 2024 00:00:00 &#43;0000</pubDate>
@@ -76,11 +29,59 @@
     <description><![CDATA[]]></description>
 </item>
 <item>
-    <title>Hugo</title>
-    <link>https://Wangty654.github.io/tags/hugo/</link>
+    <title>GitHub</title>
+    <link>https://Wangty654.github.io/tags/github/</link>
     <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/tags/hugo/</guid>
+    <guid>https://Wangty654.github.io/tags/github/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>本地服务器</title>
+    <link>https://Wangty654.github.io/tags/%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/tags/%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>内网穿透</title>
+    <link>https://Wangty654.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>腾讯云直播</title>
+    <link>https://Wangty654.github.io/tags/%E8%85%BE%E8%AE%AF%E4%BA%91%E7%9B%B4%E6%92%AD/</link>
+    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/tags/%E8%85%BE%E8%AE%AF%E4%BA%91%E7%9B%B4%E6%92%AD/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Git</title>
+    <link>https://Wangty654.github.io/tags/git/</link>
+    <pubDate>Sat, 03 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/tags/git/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>ES6</title>
+    <link>https://Wangty654.github.io/tags/es6/</link>
+    <pubDate>Sun, 21 Jul 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/tags/es6/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>JavaScript</title>
+    <link>https://Wangty654.github.io/tags/javascript/</link>
+    <pubDate>Mon, 01 Jul 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/tags/javascript/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

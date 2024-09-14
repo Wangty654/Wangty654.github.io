@@ -1,31 +1,24 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Vue - Tag - wangty-notepad</title>
+        <title>Vue - 标签 - TyNote</title>
         <link>https://Wangty654.github.io/tags/vue/</link>
-        <description>Vue - Tag - wangty-notepad</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 21 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/vue/" rel="self" type="application/rss+xml" /><item>
-    <title>Vue2.0全套教程</title>
-    <link>https://Wangty654.github.io/posts/vue2/</link>
+        <description>Vue - 标签 - TyNote</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 21 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/vue/" rel="self" type="application/rss+xml" /><item>
+    <title>【Vue前端框架】Vue2.0全套教程</title>
+    <link>https://Wangty654.github.io/vue2/</link>
     <pubDate>Wed, 21 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/vue2/</guid>
-    <description><![CDATA[Vue2.0全套教程 本章节记录vue2的所有知识点 记录时间是20240821 流程顺序： 1.vue基础 2.vue-cli 脚手架-专门用于工程开发 3.vue-router 4.vuex 5.ele]]></description>
+    <guid>https://Wangty654.github.io/vue2/</guid>
+    <description><![CDATA[本章节记录vue2的所涉及的一些语法和使用场景，记录的流程顺序为：1.vue基础；2.vue-cli 脚手架-专门用于工程开发；3.vue-router；4.vuex；5.element-ui：饿了么团队，做UI组件库的；6.vue3]]></description>
 </item>
 <item>
-    <title>子组件向父组件相互传参的方式</title>
-    <link>https://Wangty654.github.io/posts/text17/</link>
-    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <title>【Vue前端框架】vue子组件向父组件相互传参的方式</title>
+    <link>https://Wangty654.github.io/text17/</link>
+    <pubDate>Mon, 01 Jul 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text17/</guid>
-    <description><![CDATA[子=&gt;父 子组件向父组件传参的方式通常通过事件来实现。具体步骤如下： 在子组件中定义事件：子组件可以通过 $emit 方法触发一个自定义事件，并传递参]]></description>
-</item>
-<item>
-    <title>idea导入ta404前端项目代码后js文件中注释报红色波浪线解决办法</title>
-    <link>https://Wangty654.github.io/posts/text05/</link>
-    <pubDate>Fri, 28 Oct 2022 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text05/</guid>
-    <description><![CDATA[1、现象如下 2、解决办法 3、或者搜索框输入ESLint，选择禁用]]></description>
+    <guid>https://Wangty654.github.io/text17/</guid>
+    <description><![CDATA[本篇记录了子组件向父组件相互传参的方式]]></description>
 </item>
 </channel>
 </rss>

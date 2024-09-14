@@ -1,15 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Oracle - Tag - wangty-notepad</title>
+        <title>Oracle - 标签 - TyNote</title>
         <link>https://Wangty654.github.io/tags/oracle/</link>
-        <description>Oracle - Tag - wangty-notepad</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/oracle/" rel="self" type="application/rss+xml" /><item>
-    <title>Oracle查询sql</title>
-    <link>https://Wangty654.github.io/posts/text18/</link>
-    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+        <description>Oracle - 标签 - TyNote</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 01 Jul 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/oracle/" rel="self" type="application/rss+xml" /><item>
+    <title>【SQL语句】Oracle查询sql</title>
+    <link>https://Wangty654.github.io/text18/</link>
+    <pubDate>Thu, 01 Jul 2021 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text18/</guid>
-    <description><![CDATA[Oracle查询sql 查询系统当前日期 1 select sysdate from dual; 请查询每个员工的名字、薪水和加薪15.5%之后的薪水（trunc取整） 1 Select 名字,薪水,tru]]></description>
+    <guid>https://Wangty654.github.io/text18/</guid>
+    <description><![CDATA[本篇记录了部分Oracle查询sql]]></description>
 </item>
 </channel>
 </rss>

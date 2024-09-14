@@ -1,0 +1,682 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>【HUGO】HUGO博客网站搭建 - TyNote</title><meta name="Description" content="你我一场唤不醒的梦……"><meta property="og:url" content="https://Wangty654.github.io/text07/">
+  <meta property="og:site_name" content="TyNote">
+  <meta property="og:title" content="【HUGO】HUGO博客网站搭建">
+  <meta property="og:description" content="从零开始搭建一个Hugo静态博客网站">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-08-09T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-08-09T00:00:00+00:00">
+    <meta property="article:tag" content="Hugo">
+    <meta property="article:tag" content="本地服务器">
+    <meta property="article:tag" content="内网穿透">
+    <meta property="article:tag" content="GitHub">
+    <meta property="og:image" content="https://Wangty654.github.io/images/avatar.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://Wangty654.github.io/images/avatar.png">
+  <meta name="twitter:title" content="【HUGO】HUGO博客网站搭建">
+  <meta name="twitter:description" content="从零开始搭建一个Hugo静态博客网站">
+<meta name="application-name" content="TyNote">
+<meta name="apple-mobile-web-app-title" content="TyNote"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="msapplication-TileColor" href="/favicon-16x16.png" color="#da532c"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Wangty654.github.io/text07/" /><link rel="prev" href="https://Wangty654.github.io/text16/" /><link rel="next" href="https://Wangty654.github.io/text08/" /><link rel="stylesheet" href="/css/style.min.cafd7a15685d3295cb0c60c3cf7c0cde0632ba4dd2c8b6c34b35bf00ee9e8a08.css" integrity="sha256-yv16FWhdMpXLDGDDz3wM3gYyuk3SyLbDSzW/AO6eigg="><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "【HUGO】HUGO博客网站搭建",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/Wangty654.github.io\/text07\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/Wangty654.github.io\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "hugo, 本地服务器, 内网穿透, gitHub","wordcount":  4066 ,
+        "url": "https:\/\/Wangty654.github.io\/text07\/","datePublished": "2024-08-09T00:00:00+00:00","dateModified": "2024-08-09T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "TyNote","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/Wangty654.github.io\/images\/avatar.png",
+                    "width":  528 ,
+                    "height":  528 
+                }},"author": {
+                "@type": "Person",
+                "name": "wangty"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="normal" data-header-mobile="normal"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="TyNote"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/avatarico.png"
+        data-srcset="/images/avatarico.png, /images/avatarico.png 1.5x, /images/avatarico.png 2x"
+        data-sizes="auto"
+        alt="/images/avatarico.png"
+        title="/images/avatarico.png" />TyNote</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"><i class='fa fa-home' aria-hidden='true'></i> 首页 </a><a class="menu-item" href="/posts/"><i class='fa fa-quote-left' aria-hidden='true'></i> 所有文章 </a><a class="menu-item" href="/tags/"><i class='fa fa-tags' aria-hidden='true'></i> 标签 </a><a class="menu-item" href="/categories/"><i class='fa fa-list' aria-hidden='true'></i> 分类 </a><a class="menu-item" href="/about/"><i class='fa fa-window-restore' aria-hidden='true'></i> 关于 </a><a class="menu-item" href="/friend/" title="Friend"><i class='fa fa-paper-plane' aria-hidden='true'></i> 友链 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="TyNote"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/avatarico.png"
+        data-srcset="/images/avatarico.png, /images/avatarico.png 1.5x, /images/avatarico.png 2x"
+        data-sizes="auto"
+        alt="/images/avatarico.png"
+        title="/images/avatarico.png" />TyNote</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title=""><i class='fa fa-home' aria-hidden='true'></i>首页</a><a class="menu-item" href="/posts/" title=""><i class='fa fa-quote-left' aria-hidden='true'></i>所有文章</a><a class="menu-item" href="/tags/" title=""><i class='fa fa-tags' aria-hidden='true'></i>标签</a><a class="menu-item" href="/categories/" title=""><i class='fa fa-list' aria-hidden='true'></i>分类</a><a class="menu-item" href="/about/" title=""><i class='fa fa-window-restore' aria-hidden='true'></i>关于</a><a class="menu-item" href="/friend/" title="Friend"><i class='fa fa-paper-plane' aria-hidden='true'></i>友链</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto" >
+
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">【HUGO】HUGO博客网站搭建</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/hugo%E7%B3%BB%E5%88%97/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Hugo系列</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-09">2024-08-09</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 4066 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 9 分钟&nbsp;<span id="/text07/" class="leancloud_visitors" data-flag-title="【HUGO】HUGO博客网站搭建">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;
+
+
+
+
+
+
+
+<span id="busuanzi_container_value_page_pv"><i class="far fa-eye fa-fw"></i>
+                
+                <span id="busuanzi_value_page_pv"></span>&nbsp;次阅读</span>
+
+
+
+</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#安装环境">安装环境</a></li>
+            <li><a href="#配置环境变量">配置环境变量</a>
+              <ul>
+                <li><a href="#创建程序目录">创建程序目录</a></li>
+                <li><a href="#配置环境变量-1">配置环境变量</a></li>
+                <li><a href="#查看程序版本">查看程序版本</a></li>
+              </ul>
+            </li>
+            <li><a href="#创建博客网站">创建博客网站</a>
+              <ul>
+                <li><a href="#创建站点">创建站点</a></li>
+                <li><a href="#在站点中创建一篇文章">在站点中创建一篇文章</a></li>
+                <li><a href="#为网站添加主题">为网站添加主题</a></li>
+                <li><a href="#本地访问测试">本地访问测试</a></li>
+              </ul>
+            </li>
+            <li><a href="#安装内网穿透工具">安装内网穿透工具</a>
+              <ul>
+                <li><a href="#配置公网地址">配置公网地址</a></li>
+              </ul>
+            </li>
+            <li><a href="#搭建本地服务器">搭建本地服务器</a>
+              <ul>
+                <li><a href="#编译网站文件并运行于本地服务器">编译网站文件并运行于本地服务器</a></li>
+              </ul>
+            </li>
+            <li><a href="#baseurl配置">BaseUrl配置</a></li>
+            <li><a href="#创建-github-pages-站点">创建 GitHub Pages 站点</a>
+              <ul>
+                <li><a href="#上传github">上传GitHub</a></li>
+              </ul>
+            </li>
+            <li><a href="#腾讯云服务器部署">腾讯云服务器部署</a></li>
+            <li><a href="#网站样式自定义设置">网站样式自定义设置</a>
+              <ul>
+                <li><a href="#关于themes主题">关于themes主题</a>
+                  <ul>
+                    <li><a href="#1011头像设置">10.1.1头像设置</a></li>
+                    <li><a href="#1012-主题颜色设置">10.1.2 主题颜色设置</a></li>
+                    <li><a href="#1013-主页文字设置">10.1.3 主页文字设置</a></li>
+                    <li><a href="#1014-主页分类菜单设置">10.1.4 主页分类菜单设置</a></li>
+                    <li><a href="#1015-主页关于菜单设置">10.1.5 主页关于菜单设置</a></li>
+                    <li><a href="#1016-关于代码块样式设置">10.1.6 关于代码块样式设置</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div>
+
+
+
+        <div class="content" id="content"><p><strong>Hugo</strong> 是 Go 编写的静态网站生成器，速度快，易用，可配置。</p>
+<p>Hugo 依赖于 <strong>Markdown</strong> 文件，元数据字体 。用户可以从任意的目录中运行 Hugo，支持共享主机和其他系统。只需要几分之一秒就可以渲染一个经典的中型网站，非常适合博客，文档等等网站的生成。</p>
+<img src="./images/image-20240810202919284.png" alt="image-20240810202919284" style="zoom:50%;" />
+<h3 id="安装环境">安装环境</h3>
+<p>安装好Windows版本的 git：</p>
+<p>git官网：<a href="https://git-scm.com/downloads%ef%bc%8c%e5%a6%82%e4%b8%8b%e5%9b%be%ef%bc%9a" target="_blank" rel="noopener noreffer ">https://git-scm.com/downloads</a></p>
+<p>git安装教程请参考：【 <a href="https://www.cnblogs.com/xueweisuoyong/p/11914045.html" target="_blank" rel="noopener noreffer ">Windows系统Git安装教程（详解Git安装过程） - 学为所用 - 博客园 (cnblogs.com)</a>】</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810202936356.png"
+        data-srcset="./images/image-20240810202936356.png, ./images/image-20240810202936356.png 1.5x, ./images/image-20240810202936356.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810202936356.png"
+        title="image-20240810202936356" /></p>
+<p>下载并安装Windows版本的 GO：</p>
+<p>go的中文官网：<a href="https://go.p2hp.com/%ef%bc%8c%e5%a6%82%e4%b8%8b%e5%9b%be%ef%bc%9a" target="_blank" rel="noopener noreffer ">https://go.p2hp.com/</a></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810203335315.png"
+        data-srcset="./images/image-20240810203335315.png, ./images/image-20240810203335315.png 1.5x, ./images/image-20240810203335315.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810203335315.png"
+        title="image-20240810203335315" /></p>
+<p>下载并安装Windows版本的 hugo：</p>
+<p>hugo·GitHub 地址 <a href="https://github.com/gohugoio/hugo/releases%ef%bc%8c%e5%a6%82%e4%b8%8b%e5%9b%be%ef%bc%9a" target="_blank" rel="noopener noreffer ">https://github.com/gohugoio/hugo/releases</a></p>
+<p>本教程中下载的项目压缩包名为：<strong>hugo_extended_0.128.2_windows-amd64</strong></p>
+<p>压缩包下载路径：<a href="https://github.com/gohugoio/hugo/releases/download/v0.128.2/hugo_extended_0.128.2_windows-amd64.zip%ef%bc%8c%e5%a6%82%e4%b8%8b%e5%9b%be%ef%bc%9a" target="_blank" rel="noopener noreffer ">https://github.com/gohugoio/hugo/releases/download/v0.128.2/hugo_extended_0.128.2_windows-amd64.zip</a></p>
+<img src="./images/image-20240810203409152.png" alt="image-20240810203409152" style="zoom:50%;" />
+<h3 id="配置环境变量">配置环境变量</h3>
+<h4 id="创建程序目录">创建程序目录</h4>
+<p>在C盘新建一个名为hugo的文件夹，进入文件夹后再创建一个名为bin的文件夹</p>
+<p>将下载好的Windows版本hugo应用程序压缩包解压到这个bin文件夹</p>
+<img src="./images/image-20240810212706040.png" alt="image-20240810212706040" style="zoom:50%;" />
+<h4 id="配置环境变量-1">配置环境变量</h4>
+<p>然后在Windows搜索栏中搜索环境变量，点击环境变量</p>
+<img src="./images/image-20240810212719681.png" alt="image-20240810212719681" style="zoom: 50%;" />
+<p>选择系统变量中的Path，点击新建</p>
+<img src="./images/image-20240810212757603.png" alt="image-20240810212757603" style="zoom: 50%;" />
+<p>将 C:\hugo\bin 这个路径添加到环境变量</p>
+<img src="./images/image-20240810212812958.png" alt="image-20240810212812958" style="zoom:50%;" />
+<h4 id="查看程序版本">查看程序版本</h4>
+<p>然后打开powershell终端，输入下方命令查看</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">hugo version
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>显示版本号，即为成功安装了hugo程序。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810212845738.png"
+        data-srcset="./images/image-20240810212845738.png, ./images/image-20240810212845738.png 1.5x, ./images/image-20240810212845738.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810212845738.png"
+        title="image-20240810212845738" /></p>
+<h3 id="创建博客网站">创建博客网站</h3>
+<p>现在我们就可以使用hugo搭建一个属于自己的博客网站了。</p>
+<h4 id="创建站点">创建站点</h4>
+<p>首先，我们进入到C盘下的hugo文件夹，点击鼠标右键选择在终端中打开</p>
+<img src="./images/image-20240810212901191.png" alt="image-20240810212901191" style="zoom:50%;" />
+<p>执行下方命令创建一个静态站点：（本例创建的站点名为myblog，大家可以自定义）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo new site myblog
+</span></span></code></pre></td></tr></table>
+</div>
+</div><img src="./images/image-20240810212927099.png" alt="image-20240810212927099" style="zoom:50%;" />
+<p>创建后，我们回到hugo目录，可以看到新增了一个名为myblog的文件夹：</p>
+<img src="./images/image-20240810212941017.png" alt="image-20240810212941017" style="zoom: 50%;" />
+<p>进入该文件夹后，就能看到刚刚创建的博客网站程序：</p>
+<img src="./images/image-20240810212953946.png" alt="image-20240810212953946" style="zoom:50%;" />
+<h4 id="在站点中创建一篇文章">在站点中创建一篇文章</h4>
+<p>创建好了站点后，现在网站中还什么内容都没有，我们可以创建一篇文章来进行一下测试：</p>
+<p>现在我们在终端中执行下方命令，进入站点目录：</p>
+<img src="./images/image-20240810213008612.png" alt="image-20240810213008612" style="zoom:50%;" />
+<p>进入网站目录后，执行下方命令创建一篇markdown格式的文章：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo new posts/Articles01.md
+</span></span></code></pre></td></tr></table>
+</div>
+</div><img src="./images/image-20240810213030184.png" alt="image-20240810213030184" style="zoom:50%;" />
+<p>执行后可以看到提示已经创建了一篇名为Articles01的文章与其所属路径。</p>
+<p>进入这个路径，就能看到文章了。</p>
+<img src="./images/image-20240810213046159.png" alt="image-20240810213046159" style="zoom:50%;" />
+<p>打开这篇文章后能看到这篇文章的标题，日期等相关信息</p>
+<img src="./images/image-20240810213101516.png" alt="image-20240810213101516" style="zoom:50%;" />
+<p>在这里我们需要把draft（草稿） = true 修改为 draft = false 来表示这并不是一篇草稿。</p>
+<p>然后随便在文档中写一些内容，比如：</p>
+<img src="./images/image-20240810213117876.png" alt="image-20240810213117876" style="zoom:50%;" />
+<img src="./images/image-20240810213132762.png" alt="image-20240810213132762" style="zoom:50%;" />
+<p>然后保存关闭即可。</p>
+<h4 id="为网站添加主题">为网站添加主题</h4>
+<p>现在我们已经创建好了一个博客网站，并在网站中发布了一篇文章，不过现在我们还不能在浏览器中运行这个本地网站进行查看，因为在这之前，我们需要先给网站添加一个主题。</p>
+<p>我们可以登录下方的hugo官网页面来挑选一个你喜欢的网站主题：</p>
+<p><a href="https://themes.gohugo.io/themes" target="_blank" rel="noopener noreffer ">https://themes.gohugo.io/themes</a></p>
+<img src="./images/image-20240810213248545.png" alt="image-20240810213248545" style="zoom:33%;" />
+<p>这里我们随便选择一个主题，点击进入页面后，可以看到安装方式：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213305652.png"
+        data-srcset="./images/image-20240810213305652.png, ./images/image-20240810213305652.png 1.5x, ./images/image-20240810213305652.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213305652.png"
+        title="image-20240810213305652" /></p>
+<p>可以看到，想要安装这个网站主题，需要先在终端中进入站点目录：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd myblog
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>也可以想上边一样，在myblog目录中右键在终端中打开。</p>
+<p>然后执行下方命令：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git clone https://github.com/vaga/hugo-theme-m10c.git themes/m10c
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213345052.png"
+        data-srcset="./images/image-20240810213345052.png, ./images/image-20240810213345052.png 1.5x, ./images/image-20240810213345052.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213345052.png"
+        title="image-20240810213345052" /></p>
+<p>然后在打开名为 hugo 的 toml源文件，添加主题配置即可。</p>
+<img src="./images/image-20240810213434934.png" alt="image-20240810213434934" style="zoom:50%;" />
+<p>网站标题修改为myblog，然后再把theme = “m10c”这行代码加进去保存即可。</p>
+<img src="./images/image-20240810213448481.png" alt="image-20240810213448481" style="zoom:50%;" />
+<p>现在，我们在myblog目录下的主题文件夹中就能看到刚才添加的主题文件目录了：</p>
+<img src="./images/image-20240810213501829.png" alt="image-20240810213501829" style="zoom:50%;" />
+<h4 id="本地访问测试">本地访问测试</h4>
+<p>现在，我们在终端中执行下方代码启动本地网站进行测试：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo server
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>本地清除缓存运行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo server --disableFastRender --gc --noHTTPCache --noBuildLock --logLevel debug
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213527096.png"
+        data-srcset="./images/image-20240810213527096.png, ./images/image-20240810213527096.png 1.5x, ./images/image-20240810213527096.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213527096.png"
+        title="image-20240810213527096" /></p>
+<p>可以看到成功启动，在浏览器中输入 localhost:1313/ 即可访问这个本地站点：</p>
+<img src="./images/image-20240810213538584.png" alt="image-20240810213538584" style="zoom:33%;" />
+<p>可以看到网站标题为myblog，里边有刚才我们发布的第一篇文章Article01：</p>
+<img src="./images/image-20240810213551572.png" alt="image-20240810213551572" style="zoom:33%;" />
+<p>点击文章标题Article01，即可进入文章页面。</p>
+<p>这样我们就成功使用HUGO在Windows本地快速部署了一个静态博客网站。</p>
+<blockquote>
+<p>【下面是三种部署网站到公网的办法】</p>
+</blockquote>
+<h3 id="安装内网穿透工具">安装内网穿透工具</h3>
+<p>目前我们在本机成功部署了一个博客网站，但如果没有公网IP的话，只能在本地局域网环境使用，有一定局限性。如果出差在外想要远程使用的话，可以结合Cpolar内网穿透生成公网地址，免去了本地重新部署过程，只需要使用公网地址直接就可以访问本地部署的网站，进行演示。</p>
+<p>点击进入cpolar官网注册一个账号，并下载最新版本的Cpolar</p>
+<p><a href="https://www.cpolar.com/" target="_blank" rel="noopener noreffer ">https://www.cpolar.com/</a></p>
+<img src="./images/image-20240810213650120.png" alt="image-20240810213650120" style="zoom:50%;" />
+<p>登录成功后，点击下载Cpolar到本地并安装（一路默认安装即可）本教程选择下载Windows版本。</p>
+<img src="./images/image-20240810213729647.png" alt="image-20240810213729647" style="zoom:50%;" />
+<p>Cpolar安装成功后，在浏览器上访问 localhost:9200，使用cpolar账号登录,登录后即可看到Cpolar web 配置界面,结下来在web 管理界面配置即可。</p>
+<p><a href="http://localhost:9200/#/login?redirect=%2Fdashboard%ef%bc%8c%e5%a6%82%e4%b8%8b%e5%9b%be%ef%bc%9a" target="_blank" rel="noopener noreffer ">http://localhost:9200/#/login?redirect=%2Fdashboard</a></p>
+<p>【hugo-账户：1437059026@qq.com 密码：Wty201408.】</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810213845659.png"
+        data-srcset="./images/image-20240810213845659.png, ./images/image-20240810213845659.png 1.5x, ./images/image-20240810213845659.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810213845659.png"
+        title="image-20240810213845659" /></p>
+<h4 id="配置公网地址">配置公网地址</h4>
+<p>接下来配置一下本地 博客网站 的公网地址，</p>
+<p>登录后，点击左侧仪表盘的隧道管理——创建隧道，</p>
+<p>创建一个 博客网站 的公网地址隧道：</p>
+<ul>
+<li>隧道名称：可自定义命名，注意不要与已有的隧道名称重复</li>
+<li>协议：选择</li>
+<li>本地地址：1313</li>
+<li>域名类型：选择随机域名</li>
+<li>地区：选择China VIP</li>
+</ul>
+<p>点击创建</p>
+<img src="./images/image-20240810213949633.png" alt="image-20240810213949633" style="zoom:50%;" />
+<p>隧道创建成功后，点击左侧的状态——在线隧道列表,查看所生成的公网访问地址，有两种访问方式。</p>
+<img src="./images/image-20240810214037707.png" alt="image-20240810214037707" style="zoom:50%;" />
+<p>使用任意一个上面生成的公网地址,在电脑或任意设备在浏览器进行登录访问,即可成功看到 本地博客网站 界面,这样一个可以远程访问的公网地址就创建好了,使用了Cpolar的公网域名,无需自己购买云服务器,即可在公网访问本地部署的服务了！</p>
+<h3 id="搭建本地服务器">搭建本地服务器</h3>
+<p>内网穿透地址会随着ip的更新而变化，为了保证不一直修改baseUrl，配置服务器来搭载网站。</p>
+<p>配置本地服务器，将编译后的网站文件运行与服务器后，本地可以不启动hugo server</p>
+<p>在控制面板打开命令提示符窗格，键入npm install -g anywhere 9999</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">npm install -g anywhere 9999
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>9999这里是设置端口号，端口号自行设置，也可以不输入xxx会默认8000端口号</p>
+<img src="./images/image-20240810214930068.png" alt="image-20240810214930068" style="zoom:50%;" />
+<p>安装成功anywhere后，可以直接使用anywhere指令启动服务，但是默认是查看全部文件列表</p>
+<h4 id="编译网站文件并运行于本地服务器">编译网站文件并运行于本地服务器</h4>
+<p>进入myblog根目录下，输入hugo命令进行编译</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>编译后，生成public文件夹，进入该文件夹根目录，并输入anywhere使编译文件运行在上面</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd public
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">anywhere
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>【特别注意：运行在服务器上的一定是：&quot;<strong>编译后的文件！！！！</strong>&quot;】</p>
+<h3 id="baseurl配置">BaseUrl配置</h3>
+<p>使用hugo server本地运行的程序，每次跳转都将走localhost或者127.0.0.1，此处理解和其他程序启动一样，访问及跳转都将走本地。</p>
+<p>若要使baseURL配置每次跳转时，自动请求的域名地址为服务器地址，则需要设置.toml文件中的baseURL。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">baseURL = &#39;http://136c5bcc.r16.vip.cpolar.cn/&#39;   //内网穿透地址
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">baseURL = &#39;http://192.168.9.125/&#39;   //本地服务器地址
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>内网穿透地址需先将本地服务器内网地址先生成，再配置。配置方法同小结6相同，配置好后如图</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240810220034303.png"
+        data-srcset="./images/image-20240810220034303.png, ./images/image-20240810220034303.png 1.5x, ./images/image-20240810220034303.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240810220034303.png"
+        title="image-20240810220034303" /></p>
+<p>逻辑为：</p>
+<p>1、配置本地baseURL为内网穿透地址，使每次访问均可访问内网穿透地址</p>
+<p>2、编译文件后，跳转路径指向内网穿透地址</p>
+<p>3、内网穿透地址配置localhost:8000指向本地服务器</p>
+<p>4、启动本地服务器，使内网穿透访问正常</p>
+<p>5、使跳转路径正常</p>
+<p>当此处修改为内网穿透地址后，<strong>需先进行编译</strong>，再通过本地服务器启动后的地址后，记得编译之后再运行本地服务器</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/f9b98e47fda48cbc42b3386a0b9babf.png"
+        data-srcset="./images/f9b98e47fda48cbc42b3386a0b9babf.png, ./images/f9b98e47fda48cbc42b3386a0b9babf.png 1.5x, ./images/f9b98e47fda48cbc42b3386a0b9babf.png 2x"
+        data-sizes="auto"
+        alt="./images/f9b98e47fda48cbc42b3386a0b9babf.png"
+        title="f9b98e47fda48cbc42b3386a0b9babf" /></p>
+<h3 id="创建-github-pages-站点">创建 GitHub Pages 站点</h3>
+<p>GitHub提供了<a href="https://gohugo.io/hosting-and-deployment/hosting-on-github/" target="_blank" rel="noopener noreffer ">Github pages</a>用于挂在类似于hugo，hexo这样的博客静态网页，</p>
+<p>官方教程：<a href="https://docs.github.com/zh/enterprise-server@3.12/pages/getting-started-with-github-pages/creating-a-github-pages-site%ef%bc%8c%e5%a6%82%e4%b8%8b%e5%9b%be%ef%bc%9a" target="_blank" rel="noopener noreffer ">https://docs.github.com/zh/enterprise-server@3.12/pages/getting-started-with-github-pages/creating-a-github-pages-site</a></p>
+<p>GitHub登陆后，新建仓库Wangty654.github.io  注意仓库名需要和账户名一致</p>
+<img src="./images/1724037435194.png" alt="1724037435194" style="zoom:50%;" />
+<img src="./images/50287696e68c76e16783901342ea9e2.png" alt="50287696e68c76e16783901342ea9e2" style="zoom:50%;" />
+<p>修改博客配置文件.toml中的默认跳转地址为仓库名</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">baseURL = &#39;https://Wangty654.github.io&#39;   //仓库服务器地址
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>仓库建好后，进入博客根目录，编译网站</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd myblog
+</span></span><span class="line"><span class="cl">C:/hugo/myblog &gt; hugo
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>生成的编译后文件夹public为所有html、css、js组成的静态网站文件</p>
+<h4 id="上传github">上传GitHub</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">cd public
+</span></span><span class="line"><span class="cl">C:/hugo/myblog/public &gt; 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">git init
+</span></span><span class="line"><span class="cl">git add . 
+</span></span><span class="line"><span class="cl">git commit -m &#39;1&#39;
+</span></span><span class="line"><span class="cl">git push
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>请求成功后直接访问https://Wangty654.github.io即可</p>
+<h3 id="腾讯云服务器部署">腾讯云服务器部署</h3>
+<img src="./images/85900a0f3b241dfb9845c2842b1aa2c.png" alt="85900a0f3b241dfb9845c2842b1aa2c" style="zoom:50%;" />
+<img src="./images/4cc09c76553cdb9c11249f2a263d1c7.png" alt="4cc09c76553cdb9c11249f2a263d1c7" style="zoom:50%;" />
+<p>配置的后台的代理</p>
+<p>静态资源服务器</p>
+<p>如果是放我的静态网页</p>
+<p>只需要将dist配置在root上，并对其刷新页面的位置进行配置就行</p>
+<p>dist内存在index页面等同于，hugo的public页面</p>
+<img src="./images/ea8543d5eff09b5e125f556fa98e1cf.png" alt="ea8543d5eff09b5e125f556fa98e1cf" style="zoom: 80%;" />
+<p>ftp传文件 、shell 输入命令</p>
+<img src="./images/fe423f94796e37fe9bf0064f26f04b6.png" alt="fe423f94796e37fe9bf0064f26f04b6" style="zoom:50%;" />
+<h3 id="网站样式自定义设置">网站样式自定义设置</h3>
+<h4 id="关于themes主题">关于themes主题</h4>
+<p>themes主题为git拉取下来用于整个静态网站的样式代码，均可按照需求进行修改</p>
+<img src="./images/image-20240811094705788.png" alt="image-20240811094705788" style="zoom: 50%;" />
+<h5 id="1011头像设置">10.1.1头像设置</h5>
+<p>1、在layouts包下，有一个baseof.html文件，将其中的首页文件指向调整为你想要的图片</p>
+<img src="./images/image-20240811095255206.png" alt="image-20240811095255206" style="zoom:50%;" />
+<p>2、并同时更改static文件夹中的图片，使指向和文件名一致。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240811095325698.png"
+        data-srcset="./images/image-20240811095325698.png, ./images/image-20240811095325698.png 1.5x, ./images/image-20240811095325698.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240811095325698.png"
+        title="image-20240811095325698" /></p>
+<h5 id="1012-主题颜色设置">10.1.2 主题颜色设置</h5>
+<p>1、拷取themes中配置文件config.toml里默认设置主题颜色的部分代码</p>
+<img src="./images/image-20240811095726485.png" alt="image-20240811095726485" style="zoom:50%;" />
+<p>默认主题有三种样式</p>
+<img src="./images/image-20240811095822984.png" alt="image-20240811095822984" style="zoom:50%;" />
+<p>选择其中一种样式，放入我们的配置文件hugo.toml，可以对其中的文字颜色也进行修改，本主题改为粉色</p>
+<img src="./images/image-20240811095946846.png" alt="image-20240811095946846" style="zoom:50%;" />
+<h5 id="1013-主页文字设置">10.1.3 主页文字设置</h5>
+<p>更改layouts包下，baseof.html文件中书写首页介绍文字的位置</p>
+<img src="./images/image-20240811100259821.png" alt="image-20240811100259821" style="zoom:50%;" />
+<h5 id="1014-主页分类菜单设置">10.1.4 主页分类菜单设置</h5>
+<p>1、配置文件hugo.html中配置菜单栏</p>
+<img src="./images/image-20240811100402415.png" alt="image-20240811100402415" style="zoom:50%;" />
+<p>2、并在每条笔记中，使用yaml格式书写抬头</p>
+<img src="./images/image-20240811100528323.png" alt="image-20240811100528323" style="zoom:50%;" />
+<img src="./images/image-20240811100542974.png" alt="image-20240811100542974" style="zoom:50%;" />
+<h5 id="1015-主页关于菜单设置">10.1.5 主页关于菜单设置</h5>
+<p>取主题中content包下的about文件放入myblog的content包根目录下。about内的内容可以自行定义</p>
+<img src="./images/image-20240811100726234.png" alt="image-20240811100726234" style="zoom:50%;" />
+<h5 id="1016-关于代码块样式设置">10.1.6 关于代码块样式设置</h5>
+<p>配置文件中写入设置样式的命令模块，根据需要更改其中style的值。</p>
+<p>hugo中文文档中 ：<a href="https://hugo.opendocs.io/getting-started/%ef%bc%8c%e5%a6%82%e4%b8%8b%e5%9b%be%ef%bc%9a" target="_blank" rel="noopener noreffer ">https://hugo.opendocs.io/getting-started/</a>  选择“内容管理” - “语法高亮”</p>
+<p>在style中选择想要更改的样式，放入配置文件中：<a href="https://xyproto.github.io/splash/docs/%ef%bc%8c%e5%a6%82%e4%b8%8b%e5%9b%be%ef%bc%9a" target="_blank" rel="noopener noreffer ">https://xyproto.github.io/splash/docs/</a></p>
+<img src="./images/image-20240811101001028.png" alt="image-20240811101001028" style="zoom:50%;" />
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-08-09</span>
+            </div></div>
+
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/hugo/">Hugo</a>,&nbsp;<a href="/tags/%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/">本地服务器</a>,&nbsp;<a href="/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/">内网穿透</a>,&nbsp;<a href="/tags/github/">GitHub</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/text16/" class="prev" rel="prev" title="【腾讯云】腾讯云直播前端"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>【腾讯云】腾讯云直播前端</a>
+            <a href="/text08/" class="next" rel="next" title="【Typora】破解/安装激活 Typora 2024 教程">【Typora】破解/安装激活 Typora 2024 教程<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line">欢迎来到wangty的笔记博客空间</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">wangty</a></span></div>
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">
+                  <i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span> 次
+              </span> |
+                        <span id="busuanzi_container_site_uv">
+                  <i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span> 位
+              </span>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.5.0/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"Wangty654.github.io"},"valine":{"appId":"QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI","appKey":"WBmoGyJtbqUswvfLh6L8iEBr","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-CN","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://leancloud.hugoloveit.com","visitor":true}},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.d7121d72cd85153ec9d35a888cee3eb28c2700ca763f649a538f6c772d750021.js" integrity="sha256-1xIdcs2FFT7J01qIjO4+sownAMp2P2SaU49sdy11ACE="></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/js/custom.js"></script></body>
+</html>

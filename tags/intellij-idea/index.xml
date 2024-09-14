@@ -1,15 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Intellij Idea - Tag - wangty-notepad</title>
+        <title>Intellij Idea - 标签 - TyNote</title>
         <link>https://Wangty654.github.io/tags/intellij-idea/</link>
-        <description>Intellij Idea - Tag - wangty-notepad</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Wed, 18 May 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/intellij-idea/" rel="self" type="application/rss+xml" /><item>
-    <title>dcrf32.dll</title>
-    <link>https://Wangty654.github.io/posts/text03/</link>
+        <description>Intellij Idea - 标签 - TyNote</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 18 May 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/intellij-idea/" rel="self" type="application/rss+xml" /><item>
+    <title>【读卡器驱动】dcrf32.dll</title>
+    <link>https://Wangty654.github.io/text03/</link>
     <pubDate>Wed, 18 May 2022 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text03/</guid>
-    <description><![CDATA[报错信息Exception in thread &ldquo;AWT-EventQueue-0&rdquo; java.lang.UnsatisfiedLinkError: Unable to load library &lsquo;c:\dcrf32.dll&rsquo;:Native library (win32-x86-64/c:\dcrf32.dll) not found in resource path 翻译过来就是：线程“AWT-EventQueue-0”出现异常，无法加载库&rsq]]></description>
+    <guid>https://Wangty654.github.io/text03/</guid>
+    <description><![CDATA[dcrf32.dll引用报错问题]]></description>
 </item>
 </channel>
 </rss>

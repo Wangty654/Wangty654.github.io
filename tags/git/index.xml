@@ -1,15 +1,16 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
-        <title>Git - Tag - wangty-notepad</title>
+        <title>Git - 标签 - TyNote</title>
         <link>https://Wangty654.github.io/tags/git/</link>
-        <description>Git - Tag - wangty-notepad</description>
-        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><lastBuildDate>Sun, 11 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/git/" rel="self" type="application/rss+xml" /><item>
-    <title>git克隆失败解决办法</title>
-    <link>https://Wangty654.github.io/posts/text09/</link>
-    <pubDate>Sun, 11 Aug 2024 00:00:00 &#43;0000</pubDate>
+        <description>Git - 标签 - TyNote</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 03 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/git/" rel="self" type="application/rss+xml" /><item>
+    <title>【git】git克隆失败解决办法</title>
+    <link>https://Wangty654.github.io/text09/</link>
+    <pubDate>Sat, 03 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/posts/text09/</guid>
-    <description><![CDATA[1 2 3 4 5 //报错信息 Failed to connect to github.com port 443: Connection refused. //报错翻译 连接github.com 443端口失败:连接拒绝 解决办法： 排查代理问题 尝试重置代理或者取]]></description>
+    <guid>https://Wangty654.github.io/text09/</guid>
+    <description><![CDATA[git克隆失败解决办法]]></description>
 </item>
 </channel>
 </rss>

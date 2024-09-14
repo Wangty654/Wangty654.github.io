@@ -1,0 +1,24 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>SQL - 分类 - TyNote</title>
+        <link>https://Wangty654.github.io/categories/sql/</link>
+        <description>SQL - 分类 - TyNote</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 01 Jul 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/categories/sql/" rel="self" type="application/rss+xml" /><item>
+    <title>【SQL语句】Oracle查询sql</title>
+    <link>https://Wangty654.github.io/text18/</link>
+    <pubDate>Thu, 01 Jul 2021 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/text18/</guid>
+    <description><![CDATA[本篇记录了部分Oracle查询sql]]></description>
+</item>
+<item>
+    <title>【SQL语句】SQL语句部分写法</title>
+    <link>https://Wangty654.github.io/text11/</link>
+    <pubDate>Thu, 01 Jul 2021 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/text11/</guid>
+    <description><![CDATA[SQL语句部分写法]]></description>
+</item>
+</channel>
+</rss>
