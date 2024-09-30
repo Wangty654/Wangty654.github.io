@@ -4,7 +4,15 @@
         <link>https://Wangty654.github.io/posts/</link>
         <description>所有文章 | TyNote</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
-            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 13 Sep 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 24 Sep 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>yhcms部署在tomcat上启动步骤</title>
+    <link>https://Wangty654.github.io/text27/</link>
+    <pubDate>Tue, 24 Sep 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/text27/</guid>
+    <description><![CDATA[因为该项目启动非常麻烦，该篇重点描述yhcms项目整个配置，已经部署在tomcat上的启动步骤]]></description>
+</item>
+<item>
     <title>【HUGO】Hugo的LoveIt主题美化（二）</title>
     <link>https://Wangty654.github.io/text24/</link>
     <pubDate>Fri, 13 Sep 2024 00:00:00 &#43;0000</pubDate>
@@ -75,14 +83,6 @@
     <author>wangty</author>
     <guid>https://Wangty654.github.io/text09/</guid>
     <description><![CDATA[git克隆失败解决办法]]></description>
-</item>
-<item>
-    <title>【ES6前端框架】ES6基础</title>
-    <link>https://Wangty654.github.io/es6/</link>
-    <pubDate>Sun, 21 Jul 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/es6/</guid>
-    <description><![CDATA[ES6中文说明文档]]></description>
 </item>
 </channel>
 </rss>

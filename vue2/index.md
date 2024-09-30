@@ -1701,19 +1701,272 @@ v-pre可以使其：1、跳过其所在节点的编译过程 2、可利用它跳
 </body>
 ```
 
-#### 自定义指令 函数式
+#### 自定义指令
 
 原始的Vue内置指令，就是对Dom的操作进行封装。由此我们也能相对应的操作dom来实现对Vue自定义指令。
 
+使用directives，进行自定义指令的设置
+
+```vue
+ <script>
+        new Vue({
+            el:'#el',
+            data:{},
+            directives:{
+                //自定义v-big
+                // 两种写法（对象式）
+                big:{
+                    
+                },
+                //两种写法（函数式）
+                big:function(){
+
+                }
+            }
+        })
+    </script>
+```
+
+##### 自定义指令 函数式
+
+需求：定义一个v-big指令，和v-text功能类似，但会把绑定的数值放大10倍。
+
+<img src="./images/image-20240919144126348.png" alt="image-20240919144126348" style="zoom:50%;" />
+
+```vue
+<body>
+    <!-- 需求1:定义一个v-big指令，和v-text功能类似，但会把绑定的数值放大10倍。 -->
+    <div id = "el">
+        {{n}}
+        <h3>当前的n值是：<span v-text="n">{{n}}</span></h3>
+        <h3>放大10倍后的n值是：<span v-big="n">{{n}}</span></h3>
+        <!-- 触发n值的改变，同时引起v-big指令的改变 -->
+        <!-- v-big何时会调用big指令函数：
+                1、指令与元素成功绑定时
+                2、指令所在的模版被重新解析时-->
+        <button @click="n++">点击n+1</button>
+    </div>
+
+    <script>
+        new Vue({
+            el:'#el',
+            data:{
+                n:1
+            },
+            directives:{
+                //element是当前指令所在的真实DOM元素  这里为<span></span>
+                //binding.value为当前指令传入的数据变量n的当前值  这里为1
+                big(element,binding){
+                    //操作DOM元素，修改元素值的内容
+                    element.innerText = binding.value * 10
+                }
+
+	//题外话拓展：
+	//console.dir(element) 可以打印显示当前元素的所有属性
+	//element instanceof HTML 返回true能够验证：元素是否是HTML的实例对象，来判断是否是真实DOM
+            }
+        })
+    </script>
+</body>
+```
 
 
-#### 自走义指令 对象式
+
+##### 自走义指令 对象式
+
+需求：定义一个v-fbind指令，和v-bind功能类似，但可以让其所绑定的input元素默认获取焦点。
+
+这里我们先按照函数式的正常写法，写这个需求
+
+```vue
+<!--此段代码存在问题-->
+<body>
+    <!-- 需求2:定义一个v-fbind指令，和v-bind功能类似，但可以让其所绑定的input元素默认获取焦点。 -->
+    <div id = "el">
+        <input type="text" v-fbind:value="n">
+        <button @click="n++">点击n++</button>
+    </div>
+    <script>
+        new Vue({
+            el:'#el',
+            data:{
+                n:1
+            },
+            directives:{
+                fbind(element,binding){
+                    element.value = binding.value
+                    element.focus()  //改行代码执行了，但在初始化并不生效
+                }
+            }
+        })
+    </script>
+</body>
+```
+
+{{< admonition type=bug title="注意" open=true >}}
+
+**问题现象：**
+
+使用**函数式写法**，导致：初始化加载不生效，点击按钮之后生效。
+
+<img src="./images/image-20240919145802988.png" alt="image-20240919145802988" style="zoom:50%;" />
+
+原因：**执行时机不对**，元素未加载在页面上，就对元素进行了操作，导致操作语句执行无效，页面并不对应出现效果。
+
+这里我们用原生js模仿此处的操作，阐述此现象产生的逻辑
+
+```html
+<body>
+<button id="btn">点我创建一个输入框</button>
+    <script type="text/javascript" >
+        const btn = document.getElementById('btn')
+        btn.onclick=()=>{
+        	const input = document.createElement('input')
+            //执行且有效果
+        	input.className ='demo
+        	input.value = 99
+            //下面这两行代码执行但没有效果
+            input.parentElement.style.backgroundColor ='skyblue'
+            input.focus()
+ 
+            document.body.appendchild(input)
+            
+             //放在元素加载完成后，执行且有效果
+            input.parentElement.style.backgroundColor ='skyblue'
+            input.focus()
+    </script>
+</body>
+```
+
+{{< /admonition >}}
+
+说明v-fbind不能像v-big一样在元素还在加载的时候就被调用。
+
+这里需要设置v-fbind在元素加载完成的时候调用用fbind指令函数。
+
+由此，我们引入自定义指令的对象式写法
+
+```vue
+<body>
+    <!-- 需求2:定义一个v-fbind指令，和v-bind功能类似，但可以让其所绑定的input元素默认获取焦点。 -->
+    <div id = "el">
+        <input type="text" v-fbind:value="n">
+        <button @click="n++">点击n++</button>
+    </div>
+
+    <script>
+        new Vue({
+            el:'#el',
+            data:{
+                n:1
+            },
+            directives:{
+                fbind:{
+					//Vue与我们约定俗成的在对象中规定了一些指定名称的函数，当Vue执行到某个时机时，会自动帮我们执行对应约定的名称的函数
+					//下面就是几个约定时机执行的函数（注意：名字不能敲错，也不能自定义，否则不会在对应时间默认执行），我们通常把这种类型的函数称为钩子，在生命周期小节会详细描述，这里不再过多阐述。
+                    //时机：当指令与元素成功绑定时
+                    bind(){
+                        console.log('bind');
+                        element.value = binding.value
+                    },
+                    //时机：指令所在元素被插入页面时
+                    insterted(){
+                        console.log('insterted');
+                        element.focus()
+                    },
+                    //时机：指令所在的模版被重新解析时
+                    update(){
+                        console.log('update');
+                        element.value = binding.value
+                        element.focus()
+                    }
+                }
+            }
+        })
+    </script>
+</body>
+```
 
 
 
-#### 自定义指令 总结
+##### 自定义指令 总结
 
+1、有个小问题：**两个单词小驼峰命名指令报错**问题 ， 如下图
 
+<img src="./images/image-20240919153729399.png" alt="image-20240919153729399" style="zoom:50%;" />
+
+这时候我们把函数名称改成小写：
+
+<img src="./images/image-20240919154046230.png" alt="image-20240919154046230" style="zoom:50%;" />
+
+这样是可以解决问题的，但很明显，不是很规范的
+
+正常来说，类似于directives 对象中的函数，我们都默认成了简写的形式，这是导致解析时候函数大小写反复横跳的根本原因，这里我们按照正常的完整写法就不会出现问题
+
+```html
+<span v-big-nubmer="n">{{n}}</span>
+
+<script>
+ directives:{
+     //写全
+     'big-nubmer':function(element,binding){
+                
+     }
+     //或者 简写一半
+	'big-nubmer'(element,binding){
+     
+     }
+</script>
+```
+
+2、指令函数里的**this指向问题**：
+
+注意所有指令函数都不维护vm，他们均对dom元素进行直接操作，他们的this指向也均为window
+
+<img src="./images/image-20240919155214333.png" alt="image-20240919155214333" style="zoom:50%;" />
+
+3、自定义的指令同过滤器一样，定义在Vue里的，都是**局部指令**，也不能跨vue使用。
+
+要是想跨Vue使用，同样的也需要通过Vue实体定义全局的
+
+```vue
+<script>
+    <!--依旧是没有s只能一个指令一个指令的写  格式为（指令名，对象函数体）-->
+    Vue.directive('big-nubmer',{
+    	bind(){
+        	element.innerText = binding.value * 10
+            console.log(this);}  
+    })
+</script>
+```
+
+{{< admonition type=abstract title="This is a tip" open=true >}}
+
+几个注意的点
+
+一、定义语法:
+
+&emsp;(1).局部指令:
+
+&emsp;&emsp;new Vue({directives:(指令名:配置对象) }) 或者 new Vue({directives:(指令名:回调函数) }) 
+
+&emsp;(2).全局指令:
+
+&emsp;&emsp;Vue.directive(指令名，配置对象)    或   Vue.directive(指今名，回调喊函数)
+
+二、配置对象中常用的3个回调:
+
+&emsp;(1).bind:指令与元素成功绑定时调用。
+
+&emsp;(2).inserted:指今所在元素被插入页面时调用。
+
+&emsp;(3).update:指今所在模版结构被重新解析时调用。
+三、备注:
+&emsp;1.指今定义时不加`v-`。但使用时要加`v-`
+
+&emsp;2.指令名如果是多个单词。要使用`kebab-case`命名方式(烤肉串)，不要用`camelCase`命名(驼峰)。
+
+{{< /admonition >}}
 
 ## 7. el与data的两种写法
 
@@ -3125,38 +3378,1275 @@ v-model.lazy => 收集时，需要失去焦点后再记录
 
 
 
-## 19.标题
+## 19.生命周期
 
-总结Vue监视数据
-收集表单数据
-过滤器
-v-text指令
-v-html指令
-v-cloak指令
-v-once指令
-v-pre指令
-自定义指令 函数式
-自走义指令 对象式
-自定义指令 总结
+{{< admonition type=success title="定义" open=true >}}
 
-引出生命周期
-生命周期 挂载流程
+**生命周期:**
+&emsp;&emsp;1.又名: 生命周期回调函数、生命周期函数、生命周期**钩子**。（只需要准备好函数，在特定的时间，将函数钩出来使用。）
 
-生命周期 更新流程
-生命周期 销毁流程
-生命周期 总结
-对组件的理解
-非单文件组件
-组件的几个注意点
-组件的嵌套
+&emsp;&emsp;2.是什么: Vue在关键时刻帮我们调用的一些特殊名称的函数。
 
-VueComponent结构函数
-Vue实例与组件实例
-一个重要的内置关系
-单文件组件
-创建Vue脚手架
-分析脚手架结构
-render函数
+&emsp;&emsp;3.生命周期函数的名字不可更改，但函数的具体内容是程序员根据需求编写的
+
+&emsp;&emsp;4.生命周期函数中的this指向是vm或组件实例对象。
+
+{{< /admonition >}}
+
+实现一个幻灯片渐隐渐现的效果
+
+```vue
+<!-- 定时器写在外部(不推荐) -->
+<body>
+    <div id = "el">
+        <!-- 此处为 :style="{opacity:opacity}" 因为style中为js函数体，函数体同名可以省略，由此写成下面的这种形式-->
+      <h2 :style="{opacity}">一个渐隐渐现的效果</h2>
+    </div>
+
+    <script>
+       const vm = new Vue({
+            el:'#el',
+            data:{
+                opacity:1  //初始化：默认透明度为1
+            },
+        })
+
+        //再Vue外面写一个定时器，循环操作vm
+        setInterval(()=>{
+            //每次透明度减小0.01
+           vm.opacity -= 0.01
+           //注意此处写成 <=0 ,而不是写成 ==0 ，因为在js中 0.1 +0.1 不一定等于0.2 ，所以在-0.01的时候不一定会刚好减到0，有可能直接奔负数就去了
+           //一旦发现透明度减完了，就使其恢复到1
+           if(vm.opacity <= 0) vm.opacity =1 
+        },16) //每隔16毫秒就减一次透明度
+    </script>
+</body>
+```
+
+使用声明周期函数，使得定时器能够自然的存在于Vue的内部
+
+原理：Vue在解析完模板，由虚拟DOM生成真实DOM之后，会默认调用的几个函数，帮我们完成在元素加载后，自动调用需要调用的函数 【在Vue整个干活过程中，特殊的时间点，去调用的函数，统称为生命周期函数】
+
+```vue
+<!-- mounted()生命周期函数 写法-->
+<body>
+    <div id = "el">
+      <h2 :style="{opacity}">一个渐隐渐现的效果</h2>
+    </div>
+
+    <script>
+       new Vue({
+            el:'#el',
+            data:{
+                opacity:1  //初始化：默认透明度为1
+            },
+            //Vue完成模版的解析并把真实的DOM元素放入页面后（挂载完成）调用mounted
+            //只在真DOM放入时调用一次，后面解析模板不会再被调用
+            mounted(){
+                    setInterval(()=>{
+                        this.opacity -= 0.01
+                        if(this.opacity <= 0) this.opacity =1 
+                    },16)
+                
+            }
+        })
+    </script>
+</body>
+```
+
+官方操作手册中给出了非常完整的Vue生命周期图示：[如这里](https://v2.cn.vuejs.org/v2/guide/instance.html#生命周期图示) ， 同时也给了详细的解释。这里我们仅仅将图拿过来，进行简单的备注和阐述。
+
+<img src="./images/image-20240921171301860.png" alt="image-20240921171301860" style="zoom:50%;" />
+
+阅读此图注意：
+
+- **实色填充图形**均为 生命周期 **流程**
+- **红色圆角矩形框** 均为 生命周期 **函数** 
+- 绿色填充和黄色填充圆角矩形框和菱形框 均为 生命周期  **某环节**
+
+### 生命周期_挂载流程
+
+- beforeCreate() 第一个生命周期函数：
+
+- 数据创建前
+
+  首先打印函数名称，确定函数执行；其次验证vm上并没有data的数据代理
+
+  ```vue
+  <body>
+      <div id = "el">
+          <h2>当前的n值是：{{n}}</h2>
+          <button @click = "add">点我n+1</button>
+      </div>
+  
+      <script>
+         new Vue({
+              el:'#el',
+              data:{
+                 n:1
+              },
+             methods:{
+                  add(){ n++}
+              },
+              beforeCreate(){
+                  console.log('beforeCreate');
+                  console.log(this);
+                  debugger;
+              }
+          })
+      </script>
+  </body>
+  ```
+
+  控制台表现
+
+  <img src="./images/image-20240921175523577.png" alt="image-20240921175523577" style="zoom:80%;" />
+
+- created() 第二个生命周期函数：
+
+- 数据创建完毕
+
+  首先打印函数名称，确定函数执行；其次验证vm上完成了data的数据代理
+
+  ```vue
+  <body>
+     ....
+  
+      <script>
+         new Vue({
+             .....
+              beforeCreate(){
+                  console.log('beforeCreate');
+              },
+              created(){
+                  console.log('created');
+                  console.log(this);
+              }
+          })
+      </script>
+  </body>
+  ```
+
+  控制台表现
+
+  <img src="./images/image-20240921181158589.png" alt="image-20240921181158589" style="zoom:80%;" />
+
+- beforeMount() 第三个生命周期函数
+
+- 数据挂载前
+
+  首先打印函数名称，确定函数执行；其次验证vm中有值，但此时并没有将解析结果（值）放入页面
+
+  ```vue
+  <body>
+     ....
+  
+      <script>
+         new Vue({
+             .....
+              beforeCreate(){
+                  console.log('beforeCreate');
+              },
+              created(){
+                  console.log('created');
+              },
+              beforeMount(){
+                  console.log('beforeMount');
+                  console.log(this);
+                  debugger;
+              },            
+          })
+      </script>
+  </body>
+  ```
+
+  控制台表现
+
+  <img src="./images/image-20240922094903623.png" alt="image-20240922094903623" style="zoom:80%;" />
+
+  验证此处对DOM的所有操作，最终都不会有效
+
+  <img src="./images/image-20240922102320348.png" alt="image-20240922102320348" style="zoom:80%;" />
+
+- mounted() 第四个生命周期函数
+
+- 数据挂载完毕
+
+  首先打印函数名称，确定函数执行；其次，确定页面上所有的元素都被解析完成，且挂载完毕
+
+  ```vue
+  <body>
+     ....
+  
+      <script>
+         new Vue({
+             .....
+              beforeCreate(){
+                  console.log('beforeCreate');
+              },
+              created(){
+                  console.log('created');
+              },
+              beforeMount(){
+                  console.log('beforeMount');
+              },
+              mounted(){
+                  console.log('mounted');
+                  console.log(this);
+                  debugger;
+              },
+          })
+      </script>
+  </body>
+  ```
+
+  控制台效果
+
+  ![image-20240922103138506](./images/image-20240922103138506.png)
+
+  到此，整个挂载流程结束。
+
+  挂载流程 - 图解：
+
+  ![image-20240922105326834](./images/image-20240922105326834.png)
+
+{{< admonition type=tip title="注意" open=true >}}
+
+在使用template模版对象时，有多个节点只能用`<div>`标签进行包裹，不能使用`<template>`标签。
+
+```vue
+<script>
+.....
+//只能使用div
+template:`
+    <div>
+        <h2>当前的n值是：{{n}}</h2>
+        <button @click = "add">点我n+1</button>
+    </div>
+`,
+......
+//不能使用template
+template:`
+    <template>
+        <h2>当前的n值是：{{n}}</h2>
+        <button @click = "add">点我n+1</button>
+    </template>
+`,
+</script>
+```
+
+我们知道`<template>`标签，在页面解析的时候，会自动隐藏掉最外的一层，只显示`<template>`标签里面的内容。所以，容易产生`<template>`标签里面多根节点的问题。导致template模版对象编译失败报错
+
+<img src="./images/image-20240922154650875.png" alt="image-20240922154650875" style="zoom:50%;" />
+
+{{< /admonition >}}
+
+### 生命周期_更新流程
+
+- beforeUpdate() 第五个生命周期函数
+
+- 在页面数据更新完成前
+
+- 首先打印函数名称，确定函数执行；其次，验证此环节：数据已经更改，但页面并未更新
+
+  ```vue
+  <body>
+     ....
+  
+      <script>
+         new Vue({
+             .....
+              beforeCreate(){
+                  console.log('beforeCreate');
+              },
+              created(){
+                  console.log('created');
+              },
+              beforeMount(){
+                  console.log('beforeMount');
+              },
+              mounted(){
+                  console.log('mounted');
+              },
+              beforeUpdate(){
+                  console.log('beforeUpdate');
+                  console.log(this.n);
+                  debugger;
+              },           
+          })
+      </script>
+  </body>
+  ```
+
+  控制台效果
+
+  <img src="./images/image-20240922155821026.png" alt="image-20240922155821026" style="zoom:80%;" />
+
+- updated() 第六个生命周期函数
+
+- 在页面数据更新完毕
+
+- 首先打印函数名称，确定函数执行；其次，验证此环节：数据已经更改，页面完成更新
+
+  ```vue
+  <body>
+     ....
+  
+      <script>
+         new Vue({
+             .....
+              beforeCreate(){
+                  console.log('beforeCreate');
+              },
+              created(){
+                  console.log('created');
+              },
+              beforeMount(){
+                  console.log('beforeMount');
+              },
+              mounted(){
+                  console.log('mounted');
+              },
+              beforeUpdate(){
+                  console.log('beforeUpdate');
+              },
+              updated(){
+                  console.log('updated');
+                  console.log(this.n);
+                  debugger;
+              },
+          })
+      </script>
+  </body>
+  ```
+
+  控制台效果
+
+ 	<img src="./images/image-20240922160534827.png" alt="image-20240922160534827" style="zoom:50%;" />
+
+到此，整个更新流程结束。
+
+更新流程 - 图解：
+
+<img src="./images/image-20240922160645734.png" alt="image-20240922160645734" style="zoom:50%;" />
+
+### 生命周期_销毁流程
+
+{{< admonition type=tip title="This is a tips" open=true >}}
+
+vm被销毁：
+
+&emsp;&emsp;使得该vm不再工作（数据变化时，不再继续解析了）
+
+&emsp;&emsp;但是原来工作的成果还在（即，已经被解析挂载的页面不会有变化）。
+
+官方解释：https://cn.vuejs.org/v2/api/#vm-destroy
+
+<img src="./images/image-20240922162140663.png" alt="image-20240922162140663" style="zoom:50%;" />
+
+{{< /admonition >}}
+
+- beforeDestroy() 第七个生命周期函数
+- 将要销毁前
+- 这里是可以访问所有的vm中的所有数据和方法的，但是此时所有对数据的修改都不会再返过去触发更新流程了。即，这里所有的数据修改操作，页面都不会有任何效果。（值可以随便用，方法可以随便调，页面不会有变化）
+
+```vue
+<script>
+    new Vue({
+        .....
+        beforeDestroy(){
+        console.log('beforeDestroy');
+        console.log(this.n); //能正常拿到
+        this.n = 99  //改行操作无用
+    	},
+    })
+</script>
+```
+
+
+
+- destroyed() 第八个生命周期函数
+- 销毁完毕
+
+```vue
+<script>
+    new Vue({
+        .....
+        beforeDestroy(){
+        console.log('beforeDestroy');
+    	},
+        destroyed(){
+            console.log('destroyed');
+        }
+    })
+</script>
+```
+
+到此，整个销毁流程结束。
+
+销毁流程 - 图解：
+
+<img src="./images/image-20240922163820858.png" alt="image-20240922163820858" style="zoom:50%;" />
+
+### 生命周期_总结
+
+整个生命周期 - 图解：
+
+![image-20240922164458106](./images/image-20240922164458106.png)
+
+4对生命周期钩子：
+
+vm的一生(vm的生命周期):
+&emsp;&emsp;将要创建========>调用beforeCreate函数。
+
+&emsp;&emsp;创建完毕========>调用created函数。
+
+&emsp;&emsp;将要挂载========>调用beforeMount。
+
+&emsp;&emsp;(重要)挂载完毕==>调用mounted函数========>【重要的钩子】
+&emsp;&emsp;将要更新========>调用beforeUpdate数。
+
+&emsp;&emsp;更新完毕========>调用updated函数。
+
+&emsp;&emsp;(重要)将要销毁==>调用beforeDestroy函数。========>【重要的钩子】
+
+&emsp;&emsp;销毁完毕========>调用destroyed函数。
+这块流程中：主要阐述8个钩子。还有3个常用的钩子，需要在特殊的场景才能被调用，我们会在路由小节中进行详细描述。
+
+## 20.组件
+
+**Vue组件化编程**
+
+传统方式编写应用，存在2个问题：
+
+&emsp;1、依赖关系混乱不好维护（一堆html引用一堆js和css）；
+
+&emsp;2、代码复用率不高。
+
+**组件的定义**：
+
+&emsp;实现应用中**局部**功能**代码**(html、js、css)和**资源**(mp3、gif)的**集合**
+
+**模块化**：
+
+&emsp;当用js来写的，并且将一个大的js按照模块分成多个不同的js来编写应用，就称为一个模块化应用
+
+**组件化**：
+
+&emsp;当用组件来写，并且应用中的功能都是多个组件来编写的，就称为一个组件化的应用。
+
+&emsp;组件复用不需要复制粘贴，只需要引用即可。非常方便。
+
+
+
+### 非单文件组件
+
+一个文件中包含有n个组件。例如：a.html中有4个组件
+
+<img src="./images/image-20240922190503592.png" alt="image-20240922190503592" style="zoom:50%;" />
+
+### 单文件组件
+
+一个文件中只包含有1个组件。例如：a.vue中有且只有唯一一个组件
+
+<img src="./images/image-20240922190654374.png" alt="image-20240922190654374" style="zoom:50%;" />
+
+### Vue中使用组件的三步
+
+1、创建组件
+
+```vue
+ <script>
+        //创建school组件
+       const school = Vue.extend({
+        //组件定义时，一定不要写el配置项
+        //因为最终所有的组件都要被一个vm管理，由vm决定服务于哪个容器
+        //el:'#el',
+        //data这里必须写成函数形式
+        data(){
+            //在return中返回你要设置的data内容
+            //这个问题在el于data的写法小节有铺垫过
+            //原因就是：data对象式直接使用了同一个对象，导致多方调用时，相互影响。
+            //而data函数形式，每一次调用都是return创建的一个新的对象，解决了多方调用被相互影响的问题。
+            return{
+                name:'某学校',
+                address:'某地址'
+            }
+        },
+        template:`
+        <div>
+            <h2>学校名称：{{name}}</h2>
+            <h2>学校地址：{{address}}</h2>
+        </div>
+        `
+       })
+
+       //创建student组件
+       const student = Vue.extend({
+        data(){
+            return{
+                name:'张三',
+                age:'18'
+            }
+        },
+        template:`
+        <div>
+            <h2>学生名称：{{name}}</h2>
+            <h2>学生年龄：{{age}}</h2>
+        </div>
+        `
+       })
+
+    new Vue({
+        el:'#el',
+    })
+</script>
+```
+
+2、注册组件
+
+{{< admonition type=tip title="This is a tip" open=true >}}
+
+全局注册
+
+```vue
+Vue.component('school',school)
+```
+
+{{< /admonition >}}
+
+```vue
+<script>
+    new Vue({
+        el:'#el',
+        //全新配置项
+        //注册组件（局部注册）
+        components:{
+            school:school,
+            student:student
+        }
+    })
+</script>
+```
+
+3、编写组件标签，使用组件
+
+```vue
+<body>
+    <div id = "el">
+         <!-- 编写组件标签 -->
+        <school></school>
+        <student></student>
+    </div>
+</body>
+```
+
+实现效果以及Vue开发者工具节点体现如图：
+
+![image-20240922194733789](./images/image-20240922194733789.png)
+
+### 细节点注意
+
+&emsp;1.关于组件名:
+&emsp;&emsp;一个单词组成:
+&emsp;&emsp;&emsp;第一种写法(首字母小写):school
+&emsp;&emsp;&emsp;第二种写法(首字母大写):School
+
+&emsp;&emsp;多个单词组成:
+&emsp;&emsp;&emsp;第一种写法(kebab-case命名):my-school
+
+```vue
+<my-school></my-school>
+
+components:{
+	'my-school':school,
+}
+```
+
+&emsp;&emsp;&emsp;第二种写法(CamelCase命名):MySchool(需要Vue脚手架支持)
+
+```vue
+<!-- 不在Vue脚手架里会报错 -->
+<MySchool></MySchool>
+
+components:{
+	MySchool:school,
+}
+```
+
+&emsp;&emsp;备注:
+&emsp;&emsp;&emsp;(1).组件名尽可能回避HTML中已有的元素名称，例如:h2、H2都不行。
+&emsp;&emsp;&emsp;(2).可以使用name配置项指定组件在开发者工具中呈现的名字。
+
+```vue
+<script>
+       const student = Vue.extend({
+        //自定义组件名字 - 没有这个就取注册时候的key:value的key值
+        name:'student'
+        data(){
+            return{
+                ....
+            }
+        },
+        template:....
+       })
+</script>
+```
+
+&emsp;2.关于组件标签:
+
+&emsp;&emsp;第一种写法:`<school></school>`
+
+&emsp;&emsp;第二种写法:`<schoo1/>`
+
+&emsp;&emsp;备注:不用使用脚手架时，`<school/>`会导致后续组件不能渲染
+
+```vue
+<!-- 两种写法：页面均可正常渲染school组件 -->
+<myshool></myshool>
+<myshool/>
+
+<!-- 页面渲染三个school组件 -->
+<myshool></myshool>
+<myshool></myshool>
+<myshool></myshool>
+
+<!-- 页面只渲染一个school组件，后面的不再渲染 -->
+<myshool/>
+<myshool/>
+<myshool/>
+
+```
+
+&emsp;3.一个简写方式:
+&emsp;&emsp;const  school =Vue.extend(options)可简写为:const school = options
+
+```vue
+ <script>
+     //主动调用组件扩展方法extend
+       const student = Vue.extend({
+        data(){
+            return{
+              ...
+            }
+        },
+        template:....
+       })
+           
+     //简写
+     const student = {
+        data(){
+            return{
+              ...
+            }
+        },
+        template:....
+       } 
+     
+      new Vue({
+            el:'#el',
+            //注册组件时判断：有写extend直接使用组件，没有则帮忙调用extend之后使用组件
+            components:{
+                school:school,
+            }
+        })
+</script>
+```
+
+### 组件的嵌套
+
+下方是三个组件的嵌套。
+
+所有的组件都嵌在app组件中，app组件中有同级school组件、hello组件，school组件中含有student组件、
+
+代码如下：
+
+```vue
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <script src="../js/vue.js"></script>
+    </head>
+    <body>
+        <div id = "el">
+            <app></app>
+        </div>
+        <script>
+            //创建student组件
+            const student = Vue.extend({
+                data(){
+                    return{
+                        name:'张三',
+                        age:'18'
+                    }
+                },
+                template:`
+        <div>
+            <h2>学生名称：{{name}}</h2>
+            <h2>学生年龄：{{age}}</h2>
+            </div>
+        `
+            })
+
+            //创建school组件
+            const school = Vue.extend({
+                data(){
+                    return{
+                        name:'某学校',
+                        address:'某地址'
+                    }
+                },
+                template:`
+        <div>
+            <h2>学校名称：{{name}}</h2>
+            <h2>学校地址：{{address}}</h2>
+            <!-- 2在哪里注册的，在哪个模版中写 -->
+            <student></student>
+            </div>
+        `,
+                //注册组件
+                components:{
+                    //1定义组件的代码，要写在注册组件之前（比如这里的14~27行代码，必须在49行代码之前）
+                    //简写
+                    student
+                }
+            })
+
+
+            const hello = Vue.extend({
+                template:`<h1>你好鸭！欢迎来进行学习~</h1>`
+            })
+
+            const app = Vue.extend({
+                template:`
+        <div>
+            <hello></hello>
+            <school></school>
+            </div>
+        `,
+                components:{
+                    hello,
+                    school
+                }
+            })
+
+            new Vue({
+                el:'#el',
+                //注册组件
+                components:{
+                    //简写
+                    app
+                }
+            })
+        </script>
+    </body>
+</html>
+
+```
+
+页面及控制台运行效果：
+
+![image-20240924151136609](./images/image-20240924151136609.png)
+
+{{< admonition type=abstract title="This is a tip" open=true >}}
+
+1 定义组件的代码，要写在注册组件之前
+
+2 子组件只能写在，注册的父组件的模版template中
+
+{{< /admonition >}}
+
+### VueComponent结构函数
+
+关于VueComponent：
+1.school组件本质是一个名为VueComponent的构造函数，且不是程序员定义的，是Vue.extend生成的
+
+```js
+const school = Vue.extend({})
+//定义组件后，打印组件
+console.log("@",school);
+```
+
+控制台输出为：
+
+<img src="./images/image-20240924152810304.png" alt="image-20240924152810304" style="zoom: 67%;" />
+
+这里可以看出，其是一个函数。严谨上来讲，我们称其为构造函数，其调用方式应该为`new VueComponent()`
+
+我们打开Vue.js查找VueComponent函数，打印一段文字。我们会发现，当我们使用组件时候，使用一次就调一次该函数。即，有一个`<school></school>`调一次new，有三个，就调3次。
+
+
+
+2.我们只需要写`<school/>`或`<school></school>`，Vue解析时会帮我们创建school组件的实例对象，即Vue帮我们执行的：new VueComponent(options)。
+
+
+
+3.特别注意：每次调用Vue.extend，返回的都是一个全新的VueComponent！！！！
+
+```js
+const school = Vue.extend({})
+const student = Vue.extend({})
+//定义组件后，打印组件
+console.log("@",school);
+console.log("@",student);
+
+//打印出来的东西，看起来都是长一样的，都是VueComponent
+//但是是两个全新的，各自独立的，功能长相都一样的 VueComponent
+
+//-----------------验证-----------------
+console.log(school === student); //false
+
+school.a = 99
+console.log(school.a);  //99
+console.log(student.a); //undefind
+```
+
+
+
+4.关于this指向：
+
+&emsp;(1).组件配置中：
+
+&emsp;&emsp;data函数、methods中的函数、watch中的函数、computed中的函数它们的this均是【VueComponent实例对象】
+
+&emsp;(2).new Vue()配置中：
+
+&emsp;&emsp;data函数、methods中的函数、watch中的函数、computed中的函数 它们的this均是【Vue实例对象】
+
+5.VueComponent的实例对象，以后简称vc(也可称之为:组件实例对象)。
+
+&emsp;Vue的实例对象，以后简称vm。
+
+控制台输出vm，结构里面能通过$children很清晰的看见各个组件的 结构关系，和上下管理层级关系。
+
+<img src="./images/image-20240924155219872.png" alt="image-20240924155219872" style="zoom:50%;" />
+
+
+
+### Vue实例 & 组件实例
+
+vm和vc从结构上来看基本上一致，但并不是完全一致，并不是完全相等的两个东西。
+
+首先，vm是Vue创建实例的时候，生成的实例对象；vc是VueComponent创建实例的时候，生成的实例对象。
+
+Vue生成实例对象和VueComponent生成实例对象的缔造过程并不是一模一样的！所以他们两并不是完全一样的
+
+其次，vm中是可以使用el配置项的，用于指定服务于哪个容器；vc中是不能使用el的
+
+再有，vm中的data可以写成data:{}，也可以写成data(){}；但是vc中data只能写成data(){return }函数形式
+
+
+
+### 内置关系
+
+首先复习一个js上的属性概念：`.prototype` & `.__proto__` 
+
+```vue
+<script type="text/javascript">
+    //定义一个构造函数
+    function Demo(){
+        this.a = 1
+        this.b = 2
+    }
+
+    //创建一个Demo的实例对象
+    const d = new Demo()
+
+    //显式原型属性
+    //只有function函数才有这个属性，实例对象是没有的
+    //一般通过该条:程序员追加值
+    console.log(Demo.prototype); //打印输出为 原型对象{}
+
+
+    //隐式原型属性
+    //实例对象默认都带有这个属性
+    //一般通过该条程序自动访问值
+    console.log(d.__proto__);//也打印输出为 原型对象{} ,且与上面的长得一样
+
+    //通过 显式原型属性 操作原型对象，追加一个x属性
+    Demo.prototype.x = 99
+
+    //手动通过这种方式访问值
+    //发现是同步更新到值的
+    console.log(d.__proto__.x); //99
+
+    //验证两个原型对象是否是完全相同的
+    console.log(Demo.prototype === d.__proto__); //true 
+
+    //通过Demo的实例对象访问
+    console.log(d);  //Demo{a=1,b=2}  这里，Demo表示后面的{}里的对象内容，是由Demo缔造出来的
+    console.log(d.x); //99   
+
+    //为什么输出的d带着Demo
+    //表示这个{}对象是谁构造出来的
+    //例如
+    function school(){}
+    function student(){}
+    const s = new school()
+    const ss = new student()
+    console.log(s); //school{}
+    console.log(ss);//student{}
+    //这里如果没有前面的这个名字，则分不清对象来自于哪里
+</script>
+```
+
+由此引入一个重要的内置关系：
+
+`VueComponent.prototype.__proto__ === Vue.prototype`
+
+这个关系的作用：
+
+让组件实例对象vc可以访问到Vue原型上的属性、方法
+
+这是Vue独有的：增加了，vc原型对象的原型对象指向vm的原型对象。
+
+```vue
+<!-- 因为有这个内置关系：使得组件里this.x打印输出为99 得以实现 -->
+<body>
+    <div id = "el">
+        <school></school>
+    </div>
+    <script>
+     Vue.prototype.x = 99
+
+       //创建school组件
+       const school = Vue.extend({
+        data(){
+            return{
+                name:'某学校',
+                address:'某地址'
+            }
+        },
+        template:`
+        <div>
+            <h2>学校名称：{{name}}</h2>
+            <h2>学校地址：{{address}}</h2>
+            <button @click="onChange">点击获取x的值</button>
+        </div>
+        `,
+        methods:{
+            onchange(){
+                alert("当前x的值是"+this.x)
+            }
+        }
+       })
+
+       new Vue({
+            el:'#el',
+            components:{
+                school
+            }
+        })
+    </script>
+</body>
+```
+
+
+
+### 单文件组件
+
+单文件组件，均是以`xxxx.vue`的文件
+
+命名规范：
+
+一个单词的文件命名为：`school.vue`，`School.vue`
+
+多个单词的文件命名为：`my-school.vue`，`MySchool.vue`
+
+一般我们都使用大写字母开头进行命名，主要是为了和开发者工具那边的根节点结构展示的名字一样【这边写成小写开头，那边也会默认显示为大写】。
+
+#### 1新建一个单文件组件School.vue
+
+```vue
+<!-- .vue文件中主要是：页面资源的合集，即html、css、js 
+	为了迎合常见的前端三种资源显示的写法，vue提供了三个标签
+分别是：
+    1、组件的结构标签<template>
+    2、组件的交互标签<script>
+    3、组件的样式标签<style>
+-->
+<!-- 这里就能看出“非单文件”的一个弊端：
+组件的样式是不能单独写的，是公共写公共引用的
+“单文件”的样式，一个文件一个，是独立的    -->
+
+<!-- 组件的结构标签 -->
+<template>
+<div class="demo">
+    <h2>学校名称：{{name}}</h2>
+    <h2>学校地址：{{address}}</h2>
+    <button @click="onChange">点击获取x的值</button>
+    </div>
+</template>
+
+<!-- 组件的交互标签 -->
+<script>
+
+    //组件需要被引用，外部使用import
+    //这儿有三种暴露方式：
+    // export const school = Vue.extend({})//1分别暴露
+    // export{school}//2统一暴露
+    // export default school //3默认暴露
+
+    //我们一般使用默认暴露，因为引用时比较简单，只需要import 起名 from vue文件的位置；
+    //export default Vue.extend({})
+    //由于Vue.extend不写vue也会自动帮我们调用，所以这里可以简写
+    export default{
+        name:'School',//和文件名保持一致，开发者工具呈现的是这儿的名字
+        data(){
+            return{
+                name:'某学校',
+                address:'某地址',
+                x:1
+            }
+        },
+        methods:{
+            onchange(){
+                alert("当前x的值是"+this.x)
+            }
+        }
+    }
+</script>
+
+<!-- 组件的样式标签 -->
+<style>
+    .demo{
+        background-color: aqua;
+    }
+</style>
+```
+
+#### 2新建一个总体管理的顶级父组件App.vue
+
+```vue
+<template>
+<!-- 这儿的div必须有，保证根节点 -->
+ <div>
+    <School></School>
+ </div>
+</template>
+
+<script>
+//引入组件
+import School from './School.vue';
+import School from './School.vue';
+
+    export default{
+        name:'App',
+        //注册
+        components:{
+           School 
+        }
+    }
+</script>
+```
+
+#### 3新建一个入口文件main.js
+
+```js
+//vue脚手架选择了main.js用来调用new Vue()创建vm实例对象
+//引入App
+import App from "./App.vue";
+
+new Vue({
+    el:"#root",
+    componements:{App}
+}) 
+```
+
+#### 4新建一个根容器文件index.html
+
+```vue
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <!-- 指定容器 -->
+     <div id="root">
+        <!-- 引用App -->
+         <App></App>
+     </div>
+
+     <!-- 在模块加载完毕后引入 -->
+     <script type="text/javascript" src="../js/vue.js"></script>
+     <script type="text/javascript" src="./main.js"></script> <!-- main.js入口文件 -->
+</body>
+</html>
+```
+
+整个单文件组件引用流程和书写规范就结束了，主要的文件如图：
+
+<img src="./images/image-20240925044635221.png" alt="image-20240925044635221" style="zoom:50%;" />
+
+`xxxx.vue`文件运行，借助：
+
+1、自己单独使用webpack 搭建工作流，借助一些第三方插件和node将.vue文件转换 成 .html 文件使得浏览器能够运行
+
+2、Vue脚手架【vue官方团队，也是通过webpack经过一些node借助一些第三方插件打造的一个工作流，是一个搭建好的一个编译环境，可以直接使用】
+
+----------------------所以，我们这里阐述vue脚手架的内容-----------------------
+
+## 21.Vue脚手架
+
+### 创建Vue脚手架
+
+#### 1说明
+
+- Vue脚手架是Vue官方提供的标准化开发工具（开发平台）
+- 最新的版本是4.x
+- 官方文档：https://cli.vuejs.org/zh/。
+- CLI的全称是 command line interface 直译过来是：命令行接口工具
+
+#### 2具体步骤
+
+第一步（仅第一次执行）：全局安装@vue/cli
+
+```shell
+npm install -g @vue/cli
+```
+
+第二步：切换到你要创建项目的目录，然后使用命令创建项目
+
+```shell
+vue create xxxx
+```
+
+提示选择用哪个版本的Vue创建项目，这里移动光标，选择Vue2，回车
+
+<img src="./images/image-20240929225751625.png" alt="image-20240929225751625" style="zoom:50%;" />
+
+- babel：ES6转ES5需要用到的语法编译器
+- eslint：语法检查器
+- 等待创建
+
+<img src="./images/image-20240929230051839.png" alt="image-20240929230051839" style="zoom:50%;" />
+
+- 创建完成
+
+<img src="./images/image-20240929230146283.png" alt="image-20240929230146283" style="zoom:50%;" />
+
+第三步：启动项目
+
+```shell
+npm run serve
+```
+
+- 按步骤执行
+
+<img src="./images/image-20240929230433069.png" alt="image-20240929230433069" style="zoom:50%;" />
+
+- 启动成功
+
+<img src="./images/image-20240929230450281.png" alt="image-20240929230450281" style="zoom:50%;" />
+
+- 打开页面
+
+<img src="./images/image-20240929230656743.png" alt="image-20240929230656743" style="zoom:50%;" />
+
+- 停止程序
+- crtl+c 连续两次即可
+
+<img src="./images/image-20240929230952969.png" alt="image-20240929230952969" style="zoom:50%;" />
+
+{{< admonition type=tip title="This is a tip" open=true >}}
+
+备注：
+
+1、如果出现下载缓慢请配置npm淘宝镜像：
+
+```sh
+//该镜像已经过期
+npm config set registry https://registry.npm.taobao.org
+
+//请使用下面的最新的镜像
+npm config set registry https://registry.npmmirror.com
+```
+
+2、Vue脚手架隐藏了所有webpack相关的配置，若想查看具体的webpack配置，请执行
+
+```sh
+vue inspect > output.js
+```
+
+3、执行完install命令，退出命令窗口，重新cmd打开，再输入vue测试是否安装成功。
+
+```sh
+//退回到上一层目录
+cd 
+//清空上面所有记录
+cls
+//新建一个文件夹
+mkdir
+```
+
+4、vue create xxxx命令创建的项目中，包含
+
+- vue脚手架
+- 官方给你写好的HelloWord例子
+
+{{< /admonition >}}
+
+### 分析脚手架结构
+
+将项目用vscode打开，同样用终端启动。分析项目中对应文件的作用。
+
+![image-20240929231452099](./images/image-20240929231452099.png)
+
+#### .gitignore
+
+哪些文件或者文件夹不想接受git管理，在`.gitignore`这个文件中配置
+
+<img src="./images/image-20240929231632009.png" alt="image-20240929231632009" style="zoom:50%;" />
+
+#### babel.config.js
+
+demo的控制文件。配置一些ES6转ES5的规则。【不需要我们去修改】
+
+<img src="./images/image-20240929231929331.png" alt="image-20240929231929331" style="zoom:50%;" />
+
+#### package.json
+
+包的说明书。你的包叫什么名字，什么版本，使用的一些依赖，引入的一些库，一些短命令。
+
+![image-20240929232532554](./images/image-20240929232532554.png)
+
+#### package-lock.json
+
+包管理器。包版本控制文件。
+
+![image-20240929232758923](./images/image-20240929232758923.png)
+
+#### README.md
+
+对整个工程进行一个说明或者一个描述
+
+#### src
+
+下面的4个四个文件：
+
+- assets - 一般放前端的静态资源：例如图片
+- components 
+- App.vue - 顶级父组件
+- main.js - 入口文件
+
+![image-20240929234000016](./images/image-20240929234000016.png)
+
+#### public
+
+下面两个文件：
+
+- favicon.ico - 网站图标
+- index.html - 主页面
+
+![image-20240929235234843](./images/image-20240929235234843.png)
+
+## 22.render函数
+
 修改默认配置
 ref属性
 

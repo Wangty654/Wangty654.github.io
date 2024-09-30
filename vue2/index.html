@@ -39,7 +39,7 @@
                             "url": "https:\/\/Wangty654.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "vue","wordcount":  29453 ,
+                        }],"genre": "posts","keywords": "vue","wordcount":  40845 ,
         "url": "https:\/\/Wangty654.github.io\/vue2\/","datePublished": "2024-08-21T00:00:00+00:00","dateModified": "2024-09-14T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "TyNote","logo": {
@@ -133,8 +133,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">【Vue前端框架】Vue2.0全套教程</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%89%8D%E7%AB%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>前端</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-21">2024-08-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 29453 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 59 分钟&nbsp;<span id="/vue2/" class="leancloud_visitors" data-flag-title="【Vue前端框架】Vue2.0全套教程">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-21">2024-08-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 40845 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 82 分钟&nbsp;<span id="/vue2/" class="leancloud_visitors" data-flag-title="【Vue前端框架】Vue2.0全套教程">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;
 
@@ -260,9 +260,13 @@
                 <li><a href="#v-cloak指令">v-cloak指令</a></li>
                 <li><a href="#v-once指令">v-once指令</a></li>
                 <li><a href="#v-pre指令">v-pre指令</a></li>
-                <li><a href="#自定义指令-函数式">自定义指令 函数式</a></li>
-                <li><a href="#自走义指令-对象式">自走义指令 对象式</a></li>
-                <li><a href="#自定义指令-总结">自定义指令 总结</a></li>
+                <li><a href="#自定义指令">自定义指令</a>
+                  <ul>
+                    <li><a href="#自定义指令-函数式">自定义指令 函数式</a></li>
+                    <li><a href="#自走义指令-对象式">自走义指令 对象式</a></li>
+                    <li><a href="#自定义指令-总结">自定义指令 总结</a></li>
+                  </ul>
+                </li>
               </ul>
             </li>
           </ul>
@@ -319,7 +323,56 @@
         </li>
         <li><a href="#17表单数据收集">17.表单数据收集</a></li>
         <li><a href="#18过滤器">18.过滤器</a></li>
-        <li><a href="#19标题">19.标题</a></li>
+        <li><a href="#19生命周期">19.生命周期</a>
+          <ul>
+            <li><a href="#生命周期_挂载流程">生命周期_挂载流程</a></li>
+            <li><a href="#生命周期_更新流程">生命周期_更新流程</a></li>
+            <li><a href="#生命周期_销毁流程">生命周期_销毁流程</a></li>
+            <li><a href="#生命周期_总结">生命周期_总结</a></li>
+          </ul>
+        </li>
+        <li><a href="#20组件">20.组件</a>
+          <ul>
+            <li><a href="#非单文件组件">非单文件组件</a></li>
+            <li><a href="#单文件组件">单文件组件</a></li>
+            <li><a href="#vue中使用组件的三步">Vue中使用组件的三步</a></li>
+            <li><a href="#细节点注意">细节点注意</a></li>
+            <li><a href="#组件的嵌套">组件的嵌套</a></li>
+            <li><a href="#vuecomponent结构函数">VueComponent结构函数</a></li>
+            <li><a href="#vue实例--组件实例">Vue实例 &amp; 组件实例</a></li>
+            <li><a href="#内置关系">内置关系</a></li>
+            <li><a href="#单文件组件-1">单文件组件</a>
+              <ul>
+                <li><a href="#1新建一个单文件组件schoolvue">1新建一个单文件组件School.vue</a></li>
+                <li><a href="#2新建一个总体管理的顶级父组件appvue">2新建一个总体管理的顶级父组件App.vue</a></li>
+                <li><a href="#3新建一个入口文件mainjs">3新建一个入口文件main.js</a></li>
+                <li><a href="#4新建一个根容器文件indexhtml">4新建一个根容器文件index.html</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#21vue脚手架">21.Vue脚手架</a>
+          <ul>
+            <li><a href="#创建vue脚手架">创建Vue脚手架</a>
+              <ul>
+                <li><a href="#1说明">1说明</a></li>
+                <li><a href="#2具体步骤">2具体步骤</a></li>
+              </ul>
+            </li>
+            <li><a href="#分析脚手架结构">分析脚手架结构</a>
+              <ul>
+                <li><a href="#gitignore">.gitignore</a></li>
+                <li><a href="#babelconfigjs">babel.config.js</a></li>
+                <li><a href="#packagejson">package.json</a></li>
+                <li><a href="#package-lockjson">package-lock.json</a></li>
+                <li><a href="#readmemd">README.md</a></li>
+                <li><a href="#src">src</a></li>
+                <li><a href="#public">public</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#22render函数">22.render函数</a></li>
       </ul>
     </li>
   </ul>
@@ -2487,10 +2540,410 @@ new Vue({
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="自定义指令-函数式">自定义指令 函数式</h4>
+</div><h4 id="自定义指令">自定义指令</h4>
 <p>原始的Vue内置指令，就是对Dom的操作进行封装。由此我们也能相对应的操作dom来实现对Vue自定义指令。</p>
-<h4 id="自走义指令-对象式">自走义指令 对象式</h4>
-<h4 id="自定义指令-总结">自定义指令 总结</h4>
+<p>使用directives，进行自定义指令的设置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">el</span><span class="o">:</span><span class="s1">&#39;#el&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">data</span><span class="o">:</span><span class="p">{},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">directives</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">//自定义v-big
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="c1">// 两种写法（对象式）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">big</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    
+</span></span><span class="line"><span class="cl">                <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">//两种写法（函数式）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">big</span><span class="o">:</span><span class="kd">function</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="自定义指令-函数式">自定义指令 函数式</h5>
+<p>需求：定义一个v-big指令，和v-text功能类似，但会把绑定的数值放大10倍。</p>
+<img src="./images/image-20240919144126348.png" alt="image-20240919144126348" style="zoom:50%;" />
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!--</span> <span class="nx">需求1</span><span class="o">:</span><span class="nx">定义一个v</span><span class="o">-</span><span class="nx">big指令</span><span class="err">，</span><span class="nx">和v</span><span class="o">-</span><span class="nx">text功能类似</span><span class="err">，</span><span class="nx">但会把绑定的数值放大10倍</span><span class="err">。</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id </span><span class="o">=</span> <span class="s">&#34;el&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">{{</span><span class="nx">n</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span><span class="nx">当前的n值是</span><span class="err">：</span><span class="p">&lt;</span><span class="nt">span</span> <span class="nt">v-text</span><span class="o">=</span><span class="s">&#34;n&#34;</span><span class="p">&gt;{{</span><span class="na">n</span><span class="p">}}&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h3</span><span class="p">&gt;</span><span class="nx">放大10倍后的n值是</span><span class="err">：</span><span class="p">&lt;</span><span class="nt">span</span> <span class="nt">v-big</span><span class="o">=</span><span class="s">&#34;n&#34;</span><span class="p">&gt;{{</span><span class="na">n</span><span class="p">}}&lt;/</span><span class="nt">span</span><span class="p">&gt;&lt;/</span><span class="nt">h3</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="err">&lt;!--</span> <span class="na">触发n值的改变</span><span class="err">，</span><span class="na">同时引起v</span><span class="nt">-big指令的改变</span> <span class="err">--</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!--</span> <span class="nx">v</span><span class="o">-</span><span class="nx">big何时会调用big指令函数</span><span class="err">：</span>
+</span></span><span class="line"><span class="cl">                <span class="mi">1</span><span class="err">、</span><span class="nx">指令与元素成功绑定时</span>
+</span></span><span class="line"><span class="cl">                <span class="mi">2</span><span class="err">、</span><span class="nx">指令所在的模版被重新解析时</span><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">button</span> <span class="nt">@click</span><span class="s">=&#34;n++&#34;</span><span class="p">&gt;</span><span class="na">点击n</span><span class="err">+</span><span class="na">1</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">el</span><span class="o">:</span><span class="s1">&#39;#el&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">data</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">n</span><span class="o">:</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">directives</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">//element是当前指令所在的真实DOM元素  这里为&lt;span&gt;&lt;/span&gt;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="c1">//binding.value为当前指令传入的数据变量n的当前值  这里为1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">big</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span><span class="nx">binding</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">//操作DOM元素，修改元素值的内容
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="nx">element</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span> <span class="o">*</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">	<span class="c1">//题外话拓展：
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//console.dir(element) 可以打印显示当前元素的所有属性
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="c1">//element instanceof HTML 返回true能够验证：元素是否是HTML的实例对象，来判断是否是真实DOM
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="自走义指令-对象式">自走义指令 对象式</h5>
+<p>需求：定义一个v-fbind指令，和v-bind功能类似，但可以让其所绑定的input元素默认获取焦点。</p>
+<p>这里我们先按照函数式的正常写法，写这个需求</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">此段代码存在问题</span><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!--</span> <span class="nx">需求2</span><span class="o">:</span><span class="nx">定义一个v</span><span class="o">-</span><span class="nx">fbind指令</span><span class="err">，</span><span class="nx">和v</span><span class="o">-</span><span class="nx">bind功能类似</span><span class="err">，</span><span class="nx">但可以让其所绑定的input元素默认获取焦点</span><span class="err">。</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id </span><span class="o">=</span> <span class="s">&#34;el&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">v</span><span class="nt">-fbind:value</span><span class="o">=</span><span class="s">&#34;n&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">button</span> <span class="nt">@click</span><span class="s">=&#34;n++&#34;</span><span class="p">&gt;</span><span class="na">点击n</span><span class="err">++</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">el</span><span class="o">:</span><span class="s1">&#39;#el&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">data</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">n</span><span class="o">:</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">directives</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">fbind</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span><span class="nx">binding</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">element</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">element</span><span class="p">.</span><span class="nx">focus</span><span class="p">()</span>  <span class="c1">//改行代码执行了，但在初始化并不生效
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition bug open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-bug fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><strong>问题现象：</strong></p>
+<p>使用<strong>函数式写法</strong>，导致：初始化加载不生效，点击按钮之后生效。</p>
+<img src="./images/image-20240919145802988.png" alt="image-20240919145802988" style="zoom:50%;" />
+<p>原因：<strong>执行时机不对</strong>，元素未加载在页面上，就对元素进行了操作，导致操作语句执行无效，页面并不对应出现效果。</p>
+<p>这里我们用原生js模仿此处的操作，阐述此现象产生的逻辑</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;btn&#34;</span><span class="p">&gt;</span>点我创建一个输入框<span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="kr">const</span> <span class="nx">btn</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">getElementById</span><span class="p">(</span><span class="s1">&#39;btn&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">btn</span><span class="p">.</span><span class="nx">onclick</span><span class="o">=</span><span class="p">()=&gt;{</span>
+</span></span><span class="line"><span class="cl">        	<span class="kr">const</span> <span class="nx">input</span> <span class="o">=</span> <span class="nb">document</span><span class="p">.</span><span class="nx">createElement</span><span class="p">(</span><span class="s1">&#39;input&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">//执行且有效果
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        	<span class="nx">input</span><span class="p">.</span><span class="nx">className</span> <span class="o">=</span><span class="s1">&#39;demo
+</span></span></span><span class="line"><span class="cl"><span class="s1">        	input.value = 99
+</span></span></span><span class="line"><span class="cl"><span class="s1">            //下面这两行代码执行但没有效果
+</span></span></span><span class="line"><span class="cl"><span class="s1">            input.parentElement.style.backgroundColor =&#39;</span><span class="nx">skyblue</span><span class="s1">&#39;
+</span></span></span><span class="line"><span class="cl"><span class="s1">            input.focus()
+</span></span></span><span class="line"><span class="cl"><span class="s1"> 
+</span></span></span><span class="line"><span class="cl"><span class="s1">            document.body.appendchild(input)
+</span></span></span><span class="line"><span class="cl"><span class="s1">            
+</span></span></span><span class="line"><span class="cl"><span class="s1">             //放在元素加载完成后，执行且有效果
+</span></span></span><span class="line"><span class="cl"><span class="s1">            input.parentElement.style.backgroundColor =&#39;</span><span class="nx">skyblue</span><span class="err">&#39;</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">input</span><span class="p">.</span><span class="nx">focus</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<p>说明v-fbind不能像v-big一样在元素还在加载的时候就被调用。</p>
+<p>这里需要设置v-fbind在元素加载完成的时候调用用fbind指令函数。</p>
+<p>由此，我们引入自定义指令的对象式写法</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!--</span> <span class="nx">需求2</span><span class="o">:</span><span class="nx">定义一个v</span><span class="o">-</span><span class="nx">fbind指令</span><span class="err">，</span><span class="nx">和v</span><span class="o">-</span><span class="nx">bind功能类似</span><span class="err">，</span><span class="nx">但可以让其所绑定的input元素默认获取焦点</span><span class="err">。</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id </span><span class="o">=</span> <span class="s">&#34;el&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">input</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text&#34;</span> <span class="na">v</span><span class="nt">-fbind:value</span><span class="o">=</span><span class="s">&#34;n&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">button</span> <span class="nt">@click</span><span class="s">=&#34;n++&#34;</span><span class="p">&gt;</span><span class="na">点击n</span><span class="err">++</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">el</span><span class="o">:</span><span class="s1">&#39;#el&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">data</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">n</span><span class="o">:</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">directives</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">fbind</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">					<span class="c1">//Vue与我们约定俗成的在对象中规定了一些指定名称的函数，当Vue执行到某个时机时，会自动帮我们执行对应约定的名称的函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>					<span class="c1">//下面就是几个约定时机执行的函数（注意：名字不能敲错，也不能自定义，否则不会在对应时间默认执行），我们通常把这种类型的函数称为钩子，在生命周期小节会详细描述，这里不再过多阐述。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="c1">//时机：当指令与元素成功绑定时
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="nx">bind</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;bind&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">element</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">//时机：指令所在元素被插入页面时
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="nx">insterted</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;insterted&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">element</span><span class="p">.</span><span class="nx">focus</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">//时机：指令所在的模版被重新解析时
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="nx">update</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;update&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">element</span><span class="p">.</span><span class="nx">value</span> <span class="o">=</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">element</span><span class="p">.</span><span class="nx">focus</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="自定义指令-总结">自定义指令 总结</h5>
+<p>1、有个小问题：<strong>两个单词小驼峰命名指令报错</strong>问题 ， 如下图</p>
+<img src="./images/image-20240919153729399.png" alt="image-20240919153729399" style="zoom:50%;" />
+<p>这时候我们把函数名称改成小写：</p>
+<img src="./images/image-20240919154046230.png" alt="image-20240919154046230" style="zoom:50%;" />
+<p>这样是可以解决问题的，但很明显，不是很规范的</p>
+<p>正常来说，类似于directives 对象中的函数，我们都默认成了简写的形式，这是导致解析时候函数大小写反复横跳的根本原因，这里我们按照正常的完整写法就不会出现问题</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">span</span> <span class="na">v-big-nubmer</span><span class="o">=</span><span class="s">&#34;n&#34;</span><span class="p">&gt;</span>{{n}}<span class="p">&lt;/</span><span class="nt">span</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="nx">directives</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">//写全
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="s1">&#39;big-nubmer&#39;</span><span class="o">:</span><span class="kd">function</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span><span class="nx">binding</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">                
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">//或者 简写一半
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>	<span class="s1">&#39;big-nubmer&#39;</span><span class="p">(</span><span class="nx">element</span><span class="p">,</span><span class="nx">binding</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">     <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>2、指令函数里的<strong>this指向问题</strong>：</p>
+<p>注意所有指令函数都不维护vm，他们均对dom元素进行直接操作，他们的this指向也均为window</p>
+<img src="./images/image-20240919155214333.png" alt="image-20240919155214333" style="zoom:50%;" />
+<p>3、自定义的指令同过滤器一样，定义在Vue里的，都是<strong>局部指令</strong>，也不能跨vue使用。</p>
+<p>要是想跨Vue使用，同样的也需要通过Vue实体定义全局的</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!--</span><span class="nx">依旧是没有s只能一个指令一个指令的写</span>  <span class="nx">格式为</span><span class="err">（</span><span class="nx">指令名</span><span class="err">，</span><span class="nx">对象函数体</span><span class="err">）</span><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">Vue</span><span class="p">.</span><span class="nx">directive</span><span class="p">(</span><span class="s1">&#39;big-nubmer&#39;</span><span class="p">,{</span>
+</span></span><span class="line"><span class="cl">    	<span class="nx">bind</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        	<span class="nx">element</span><span class="p">.</span><span class="nx">innerText</span> <span class="o">=</span> <span class="nx">binding</span><span class="p">.</span><span class="nx">value</span> <span class="o">*</span> <span class="mi">10</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);}</span>  
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition abstract open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>This is a tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>几个注意的点</p>
+<p>一、定义语法:</p>
+<p> (1).局部指令:</p>
+<p>  new Vue({directives:(指令名:配置对象) }) 或者 new Vue({directives:(指令名:回调函数) })</p>
+<p> (2).全局指令:</p>
+<p>  Vue.directive(指令名，配置对象)    或   Vue.directive(指今名，回调喊函数)</p>
+<p>二、配置对象中常用的3个回调:</p>
+<p> (1).bind:指令与元素成功绑定时调用。</p>
+<p> (2).inserted:指今所在元素被插入页面时调用。</p>
+<p> (3).update:指今所在模版结构被重新解析时调用。
+三、备注:
+ 1.指今定义时不加<code>v-</code>。但使用时要加<code>v-</code></p>
+<p> 2.指令名如果是多个单词。要使用<code>kebab-case</code>命名方式(烤肉串)，不要用<code>camelCase</code>命名(驼峰)。</p>
+</div>
+        </div>
+    </div>
 <h2 id="7-el与data的两种写法">7. el与data的两种写法</h2>
 <p>我们知道，Vue实例和容器之间是通过el属性进行关联的，如果不写el，则标签引用的Vue数据不会被解析，如下面这段代码：</p>
 <div class="highlight"><div class="chroma">
@@ -4615,35 +5068,1949 @@ new Vue({
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>🏷小结：一般用于 对要显示的数据进行特定格式化后再显示（适用于一些简单逻辑的处理）</p>
-<h2 id="19标题">19.标题</h2>
-<p>总结Vue监视数据
-收集表单数据
-过滤器
-v-text指令
-v-html指令
-v-cloak指令
-v-once指令
-v-pre指令
-自定义指令 函数式
-自走义指令 对象式
-自定义指令 总结</p>
-<p>引出生命周期
-生命周期 挂载流程</p>
-<p>生命周期 更新流程
-生命周期 销毁流程
-生命周期 总结
-对组件的理解
-非单文件组件
-组件的几个注意点
-组件的嵌套</p>
-<p>VueComponent结构函数
-Vue实例与组件实例
-一个重要的内置关系
-单文件组件
-创建Vue脚手架
-分析脚手架结构
-render函数
-修改默认配置
+<h2 id="19生命周期">19.生命周期</h2>
+<div class="details admonition success open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-check-circle fa-fw" aria-hidden="true"></i>定义<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><strong>生命周期:</strong>
+  1.又名: 生命周期回调函数、生命周期函数、生命周期<strong>钩子</strong>。（只需要准备好函数，在特定的时间，将函数钩出来使用。）</p>
+<p>  2.是什么: Vue在关键时刻帮我们调用的一些特殊名称的函数。</p>
+<p>  3.生命周期函数的名字不可更改，但函数的具体内容是程序员根据需求编写的</p>
+<p>  4.生命周期函数中的this指向是vm或组件实例对象。</p>
+</div>
+        </div>
+    </div>
+<p>实现一个幻灯片渐隐渐现的效果</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c">&lt;!--</span> <span class="nx">定时器写在外部</span><span class="p">(</span><span class="nx">不推荐</span><span class="p">)</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id </span><span class="o">=</span> <span class="s">&#34;el&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!--</span> <span class="nx">此处为</span> <span class="o">:</span><span class="nx">style</span><span class="o">=</span><span class="s2">&#34;{opacity:opacity}&#34;</span> <span class="nx">因为style中为js函数体</span><span class="err">，</span><span class="nx">函数体同名可以省略</span><span class="err">，</span><span class="nx">由此写成下面的这种形式</span><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">h2</span> <span class="nt">:style</span><span class="o">=</span><span class="s">&#34;{opacity}&#34;</span><span class="p">&gt;</span><span class="nx">一个渐隐渐现的效果</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">       <span class="kr">const</span> <span class="nx">vm</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">el</span><span class="o">:</span><span class="s1">&#39;#el&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">data</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">opacity</span><span class="o">:</span><span class="mi">1</span>  <span class="c1">//初始化：默认透明度为1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">        <span class="c1">//再Vue外面写一个定时器，循环操作vm
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">setInterval</span><span class="p">(()=&gt;{</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">//每次透明度减小0.01
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>           <span class="nx">vm</span><span class="p">.</span><span class="nx">opacity</span> <span class="o">-=</span> <span class="mf">0.01</span>
+</span></span><span class="line"><span class="cl">           <span class="c1">//注意此处写成 &lt;=0 ,而不是写成 ==0 ，因为在js中 0.1 +0.1 不一定等于0.2 ，所以在-0.01的时候不一定会刚好减到0，有可能直接奔负数就去了
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>           <span class="c1">//一旦发现透明度减完了，就使其恢复到1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>           <span class="k">if</span><span class="p">(</span><span class="nx">vm</span><span class="p">.</span><span class="nx">opacity</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="nx">vm</span><span class="p">.</span><span class="nx">opacity</span> <span class="o">=</span><span class="mi">1</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">},</span><span class="mi">16</span><span class="p">)</span> <span class="c1">//每隔16毫秒就减一次透明度
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>使用声明周期函数，使得定时器能够自然的存在于Vue的内部</p>
+<p>原理：Vue在解析完模板，由虚拟DOM生成真实DOM之后，会默认调用的几个函数，帮我们完成在元素加载后，自动调用需要调用的函数 【在Vue整个干活过程中，特殊的时间点，去调用的函数，统称为生命周期函数】</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c">&lt;!--</span> <span class="nx">mounted</span><span class="p">()</span><span class="nx">生命周期函数</span> <span class="nx">写法</span><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id </span><span class="o">=</span> <span class="s">&#34;el&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">h2</span> <span class="nt">:style</span><span class="o">=</span><span class="s">&#34;{opacity}&#34;</span><span class="p">&gt;</span><span class="nx">一个渐隐渐现的效果</span><span class="p">&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">       <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">el</span><span class="o">:</span><span class="s1">&#39;#el&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">data</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">opacity</span><span class="o">:</span><span class="mi">1</span>  <span class="c1">//初始化：默认透明度为1
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">//Vue完成模版的解析并把真实的DOM元素放入页面后（挂载完成）调用mounted
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">//只在真DOM放入时调用一次，后面解析模板不会再被调用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">mounted</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">setInterval</span><span class="p">(()=&gt;{</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">this</span><span class="p">.</span><span class="nx">opacity</span> <span class="o">-=</span> <span class="mf">0.01</span>
+</span></span><span class="line"><span class="cl">                        <span class="k">if</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">opacity</span> <span class="o">&lt;=</span> <span class="mi">0</span><span class="p">)</span> <span class="k">this</span><span class="p">.</span><span class="nx">opacity</span> <span class="o">=</span><span class="mi">1</span> 
+</span></span><span class="line"><span class="cl">                    <span class="p">},</span><span class="mi">16</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">                
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>官方操作手册中给出了非常完整的Vue生命周期图示：<a href="https://v2.cn.vuejs.org/v2/guide/instance.html#%e7%94%9f%e5%91%bd%e5%91%a8%e6%9c%9f%e5%9b%be%e7%a4%ba" target="_blank" rel="noopener noreffer ">如这里</a> ， 同时也给了详细的解释。这里我们仅仅将图拿过来，进行简单的备注和阐述。</p>
+<img src="./images/image-20240921171301860.png" alt="image-20240921171301860" style="zoom:50%;" />
+<p>阅读此图注意：</p>
+<ul>
+<li><strong>实色填充图形</strong>均为 生命周期 <strong>流程</strong></li>
+<li><strong>红色圆角矩形框</strong> 均为 生命周期 <strong>函数</strong></li>
+<li>绿色填充和黄色填充圆角矩形框和菱形框 均为 生命周期  <strong>某环节</strong></li>
+</ul>
+<h3 id="生命周期_挂载流程">生命周期_挂载流程</h3>
+<ul>
+<li>
+<p>beforeCreate() 第一个生命周期函数：</p>
+</li>
+<li>
+<p>数据创建前</p>
+<p>首先打印函数名称，确定函数执行；其次验证vm上并没有data的数据代理</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id </span><span class="o">=</span> <span class="s">&#34;el&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="nx">当前的n值是</span><span class="err">：</span><span class="p">{{</span><span class="nx">n</span><span class="p">}}&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">button</span> <span class="err">@</span><span class="na">click </span><span class="o">=</span> <span class="s">&#34;add&#34;</span><span class="p">&gt;</span><span class="nx">点我n</span><span class="o">+</span><span class="mi">1</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">       <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">el</span><span class="o">:</span><span class="s1">&#39;#el&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">data</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">               <span class="nx">n</span><span class="o">:</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">           <span class="nx">methods</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">add</span><span class="p">(){</span> <span class="nx">n</span><span class="o">++</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">beforeCreate</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;beforeCreate&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="kr">debugger</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>控制台表现</p>
+<img src="./images/image-20240921175523577.png" alt="image-20240921175523577" style="zoom:80%;" />
+</li>
+<li>
+<p>created() 第二个生命周期函数：</p>
+</li>
+<li>
+<p>数据创建完毕</p>
+<p>首先打印函数名称，确定函数执行；其次验证vm上完成了data的数据代理</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">....</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">       <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">           <span class="p">.....</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">beforeCreate</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;beforeCreate&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">created</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;created&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>控制台表现</p>
+<img src="./images/image-20240921181158589.png" alt="image-20240921181158589" style="zoom:80%;" />
+</li>
+<li>
+<p>beforeMount() 第三个生命周期函数</p>
+</li>
+<li>
+<p>数据挂载前</p>
+<p>首先打印函数名称，确定函数执行；其次验证vm中有值，但此时并没有将解析结果（值）放入页面</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">....</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">       <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">           <span class="p">.....</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">beforeCreate</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;beforeCreate&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">created</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;created&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">beforeMount</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;beforeMount&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="kr">debugger</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>            
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>控制台表现</p>
+<img src="./images/image-20240922094903623.png" alt="image-20240922094903623" style="zoom:80%;" />
+<p>验证此处对DOM的所有操作，最终都不会有效</p>
+<img src="./images/image-20240922102320348.png" alt="image-20240922102320348" style="zoom:80%;" />
+</li>
+<li>
+<p>mounted() 第四个生命周期函数</p>
+</li>
+<li>
+<p>数据挂载完毕</p>
+<p>首先打印函数名称，确定函数执行；其次，确定页面上所有的元素都被解析完成，且挂载完毕</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">....</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">       <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">           <span class="p">.....</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">beforeCreate</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;beforeCreate&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">created</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;created&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">beforeMount</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;beforeMount&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">mounted</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;mounted&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="kr">debugger</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>控制台效果</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240922103138506.png"
+        data-srcset="./images/image-20240922103138506.png, ./images/image-20240922103138506.png 1.5x, ./images/image-20240922103138506.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240922103138506.png"
+        title="image-20240922103138506" /></p>
+<p>到此，整个挂载流程结束。</p>
+<p>挂载流程 - 图解：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240922105326834.png"
+        data-srcset="./images/image-20240922105326834.png, ./images/image-20240922105326834.png 1.5x, ./images/image-20240922105326834.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240922105326834.png"
+        title="image-20240922105326834" /></p>
+</li>
+</ul>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>在使用template模版对象时，有多个节点只能用<code>&lt;div&gt;</code>标签进行包裹，不能使用<code>&lt;template&gt;</code>标签。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">.....</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//只能使用div
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">template</span><span class="o">:</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">    &lt;div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">        &lt;h2&gt;当前的n值是：{{n}}&lt;/h2&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">        &lt;button @click = &#34;add&#34;&gt;点我n+1&lt;/button&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    &lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">......</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//不能使用template
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">template</span><span class="o">:</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">    &lt;template&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">        &lt;h2&gt;当前的n值是：{{n}}&lt;/h2&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">        &lt;button @click = &#34;add&#34;&gt;点我n+1&lt;/button&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">    &lt;/template&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">`</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>我们知道<code>&lt;template&gt;</code>标签，在页面解析的时候，会自动隐藏掉最外的一层，只显示<code>&lt;template&gt;</code>标签里面的内容。所以，容易产生<code>&lt;template&gt;</code>标签里面多根节点的问题。导致template模版对象编译失败报错</p>
+<img src="./images/image-20240922154650875.png" alt="image-20240922154650875" style="zoom:50%;" />
+</div>
+        </div>
+    </div>
+<h3 id="生命周期_更新流程">生命周期_更新流程</h3>
+<ul>
+<li>
+<p>beforeUpdate() 第五个生命周期函数</p>
+</li>
+<li>
+<p>在页面数据更新完成前</p>
+</li>
+<li>
+<p>首先打印函数名称，确定函数执行；其次，验证此环节：数据已经更改，但页面并未更新</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">....</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">       <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">           <span class="p">.....</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">beforeCreate</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;beforeCreate&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">created</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;created&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">beforeMount</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;beforeMount&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">mounted</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;mounted&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">beforeUpdate</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;beforeUpdate&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="kr">debugger</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>           
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>控制台效果</p>
+<img src="./images/image-20240922155821026.png" alt="image-20240922155821026" style="zoom:80%;" />
+</li>
+<li>
+<p>updated() 第六个生命周期函数</p>
+</li>
+<li>
+<p>在页面数据更新完毕</p>
+</li>
+<li>
+<p>首先打印函数名称，确定函数执行；其次，验证此环节：数据已经更改，页面完成更新</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">   <span class="p">....</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">       <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">           <span class="p">.....</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">beforeCreate</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;beforeCreate&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">created</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;created&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">beforeMount</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;beforeMount&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">mounted</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;mounted&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">beforeUpdate</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;beforeUpdate&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">updated</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;updated&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">n</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">                <span class="kr">debugger</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>控制台效果</p>
+  <img src="./images/image-20240922160534827.png" alt="image-20240922160534827" style="zoom:50%;" />
+</li>
+</ul>
+<p>到此，整个更新流程结束。</p>
+<p>更新流程 - 图解：</p>
+<img src="./images/image-20240922160645734.png" alt="image-20240922160645734" style="zoom:50%;" />
+<h3 id="生命周期_销毁流程">生命周期_销毁流程</h3>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>This is a tips<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>vm被销毁：</p>
+<p>  使得该vm不再工作（数据变化时，不再继续解析了）</p>
+<p>  但是原来工作的成果还在（即，已经被解析挂载的页面不会有变化）。</p>
+<p>官方解释：https://cn.vuejs.org/v2/api/#vm-destroy</p>
+<img src="./images/image-20240922162140663.png" alt="image-20240922162140663" style="zoom:50%;" />
+</div>
+        </div>
+    </div>
+<ul>
+<li>beforeDestroy() 第七个生命周期函数</li>
+<li>将要销毁前</li>
+<li>这里是可以访问所有的vm中的所有数据和方法的，但是此时所有对数据的修改都不会再返过去触发更新流程了。即，这里所有的数据修改操作，页面都不会有任何效果。（值可以随便用，方法可以随便调，页面不会有变化）</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.....</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">beforeDestroy</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;beforeDestroy&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="k">this</span><span class="p">.</span><span class="nx">n</span><span class="p">);</span> <span class="c1">//能正常拿到
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="k">this</span><span class="p">.</span><span class="nx">n</span> <span class="o">=</span> <span class="mi">99</span>  <span class="c1">//改行操作无用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    	<span class="p">},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>destroyed() 第八个生命周期函数</li>
+<li>销毁完毕</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="p">.....</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">beforeDestroy</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;beforeDestroy&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">    	<span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">destroyed</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;destroyed&#39;</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>到此，整个销毁流程结束。</p>
+<p>销毁流程 - 图解：</p>
+<img src="./images/image-20240922163820858.png" alt="image-20240922163820858" style="zoom:50%;" />
+<h3 id="生命周期_总结">生命周期_总结</h3>
+<p>整个生命周期 - 图解：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240922164458106.png"
+        data-srcset="./images/image-20240922164458106.png, ./images/image-20240922164458106.png 1.5x, ./images/image-20240922164458106.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240922164458106.png"
+        title="image-20240922164458106" /></p>
+<p>4对生命周期钩子：</p>
+<p>vm的一生(vm的生命周期):
+  将要创建========&gt;调用beforeCreate函数。</p>
+<p>  创建完毕========&gt;调用created函数。</p>
+<p>  将要挂载========&gt;调用beforeMount。</p>
+<p>  (重要)挂载完毕==&gt;调用mounted函数========&gt;【重要的钩子】
+  将要更新========&gt;调用beforeUpdate数。</p>
+<p>  更新完毕========&gt;调用updated函数。</p>
+<p>  (重要)将要销毁==&gt;调用beforeDestroy函数。========&gt;【重要的钩子】</p>
+<p>  销毁完毕========&gt;调用destroyed函数。
+这块流程中：主要阐述8个钩子。还有3个常用的钩子，需要在特殊的场景才能被调用，我们会在路由小节中进行详细描述。</p>
+<h2 id="20组件">20.组件</h2>
+<p><strong>Vue组件化编程</strong></p>
+<p>传统方式编写应用，存在2个问题：</p>
+<p> 1、依赖关系混乱不好维护（一堆html引用一堆js和css）；</p>
+<p> 2、代码复用率不高。</p>
+<p><strong>组件的定义</strong>：</p>
+<p> 实现应用中<strong>局部</strong>功能<strong>代码</strong>(html、js、css)和<strong>资源</strong>(mp3、gif)的<strong>集合</strong></p>
+<p><strong>模块化</strong>：</p>
+<p> 当用js来写的，并且将一个大的js按照模块分成多个不同的js来编写应用，就称为一个模块化应用</p>
+<p><strong>组件化</strong>：</p>
+<p> 当用组件来写，并且应用中的功能都是多个组件来编写的，就称为一个组件化的应用。</p>
+<p> 组件复用不需要复制粘贴，只需要引用即可。非常方便。</p>
+<h3 id="非单文件组件">非单文件组件</h3>
+<p>一个文件中包含有n个组件。例如：a.html中有4个组件</p>
+<img src="./images/image-20240922190503592.png" alt="image-20240922190503592" style="zoom:50%;" />
+<h3 id="单文件组件">单文件组件</h3>
+<p>一个文件中只包含有1个组件。例如：a.vue中有且只有唯一一个组件</p>
+<img src="./images/image-20240922190654374.png" alt="image-20240922190654374" style="zoom:50%;" />
+<h3 id="vue中使用组件的三步">Vue中使用组件的三步</h3>
+<p>1、创建组件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//创建school组件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>       <span class="kr">const</span> <span class="nx">school</span> <span class="o">=</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//组件定义时，一定不要写el配置项
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//因为最终所有的组件都要被一个vm管理，由vm决定服务于哪个容器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//el:&#39;#el&#39;,
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//data这里必须写成函数形式
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">data</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">//在return中返回你要设置的data内容
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">//这个问题在el于data的写法小节有铺垫过
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">//原因就是：data对象式直接使用了同一个对象，导致多方调用时，相互影响。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="c1">//而data函数形式，每一次调用都是return创建的一个新的对象，解决了多方调用被相互影响的问题。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="k">return</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;某学校&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">address</span><span class="o">:</span><span class="s1">&#39;某地址&#39;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">template</span><span class="o">:</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">        &lt;div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;h2&gt;学校名称：{{name}}&lt;/h2&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;h2&gt;学校地址：{{address}}&lt;/h2&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">        &lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">        `</span>
+</span></span><span class="line"><span class="cl">       <span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       <span class="c1">//创建student组件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>       <span class="kr">const</span> <span class="nx">student</span> <span class="o">=</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;张三&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">age</span><span class="o">:</span><span class="s1">&#39;18&#39;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">template</span><span class="o">:</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">        &lt;div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;h2&gt;学生名称：{{name}}&lt;/h2&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;h2&gt;学生年龄：{{age}}&lt;/h2&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">        &lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">        `</span>
+</span></span><span class="line"><span class="cl">       <span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">el</span><span class="o">:</span><span class="s1">&#39;#el&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>2、注册组件</p>
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>This is a tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>全局注册</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="nx">Vue</span><span class="p">.</span><span class="nx">component</span><span class="p">(</span><span class="s1">&#39;school&#39;</span><span class="p">,</span><span class="nx">school</span><span class="p">)</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div>
+        </div>
+    </div>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">el</span><span class="o">:</span><span class="s1">&#39;#el&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//全新配置项
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="c1">//注册组件（局部注册）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">components</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">school</span><span class="o">:</span><span class="nx">school</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">student</span><span class="o">:</span><span class="nx">student</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>3、编写组件标签，使用组件</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id </span><span class="o">=</span> <span class="s">&#34;el&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">         <span class="c">&lt;!--</span> <span class="nx">编写组件标签</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">school</span><span class="p">&gt;&lt;/</span><span class="nt">school</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">student</span><span class="p">&gt;&lt;/</span><span class="nt">student</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>实现效果以及Vue开发者工具节点体现如图：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240922194733789.png"
+        data-srcset="./images/image-20240922194733789.png, ./images/image-20240922194733789.png 1.5x, ./images/image-20240922194733789.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240922194733789.png"
+        title="image-20240922194733789" /></p>
+<h3 id="细节点注意">细节点注意</h3>
+<p> 1.关于组件名:
+  一个单词组成:
+   第一种写法(首字母小写):school
+   第二种写法(首字母大写):School</p>
+<p>  多个单词组成:
+   第一种写法(kebab-case命名):my-school</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">my-school</span><span class="p">&gt;&lt;/</span><span class="nt">my-school</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">components</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="s1">&#39;my-school&#39;</span><span class="o">:</span><span class="nx">school</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>   第二种写法(CamelCase命名):MySchool(需要Vue脚手架支持)</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c">&lt;!--</span> <span class="nx">不在Vue脚手架里会报错</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">MySchool</span><span class="p">&gt;&lt;/</span><span class="nt">MySchool</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">components</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">MySchool</span><span class="o">:</span><span class="nx">school</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>  备注:
+   (1).组件名尽可能回避HTML中已有的元素名称，例如:h2、H2都不行。
+   (2).可以使用name配置项指定组件在开发者工具中呈现的名字。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">       <span class="kr">const</span> <span class="nx">student</span> <span class="o">=</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//自定义组件名字 - 没有这个就取注册时候的key:value的key值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;student&#39;</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="p">....</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">template</span><span class="o">:</span><span class="p">....</span>
+</span></span><span class="line"><span class="cl">       <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p> 2.关于组件标签:</p>
+<p>  第一种写法:<code>&lt;school&gt;&lt;/school&gt;</code></p>
+<p>  第二种写法:<code>&lt;schoo1/&gt;</code></p>
+<p>  备注:不用使用脚手架时，<code>&lt;school/&gt;</code>会导致后续组件不能渲染</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c">&lt;!--</span> <span class="nx">两种写法</span><span class="err">：</span><span class="nx">页面均可正常渲染school组件</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">myshool</span><span class="p">&gt;&lt;/</span><span class="nt">myshool</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">myshool</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span> <span class="nx">页面渲染三个school组件</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">myshool</span><span class="p">&gt;&lt;/</span><span class="nt">myshool</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">myshool</span><span class="p">&gt;&lt;/</span><span class="nt">myshool</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">myshool</span><span class="p">&gt;&lt;/</span><span class="nt">myshool</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span> <span class="nx">页面只渲染一个school组件</span><span class="err">，</span><span class="nx">后面的不再渲染</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">myshool</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">myshool</span><span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">myshool</span><span class="p">/&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p> 3.一个简写方式:
+  const  school =Vue.extend(options)可简写为:const school = options</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="c1">//主动调用组件扩展方法extend
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>       <span class="kr">const</span> <span class="nx">student</span> <span class="o">=</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">              <span class="p">...</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">template</span><span class="o">:</span><span class="p">....</span>
+</span></span><span class="line"><span class="cl">       <span class="p">})</span>
+</span></span><span class="line"><span class="cl">           
+</span></span><span class="line"><span class="cl">     <span class="c1">//简写
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>     <span class="kr">const</span> <span class="nx">student</span> <span class="o">=</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">              <span class="p">...</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">template</span><span class="o">:</span><span class="p">....</span>
+</span></span><span class="line"><span class="cl">       <span class="p">}</span> 
+</span></span><span class="line"><span class="cl">     
+</span></span><span class="line"><span class="cl">      <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">el</span><span class="o">:</span><span class="s1">&#39;#el&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">//注册组件时判断：有写extend直接使用组件，没有则帮忙调用extend之后使用组件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">components</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">school</span><span class="o">:</span><span class="nx">school</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="组件的嵌套">组件的嵌套</h3>
+<p>下方是三个组件的嵌套。</p>
+<p>所有的组件都嵌在app组件中，app组件中有同级school组件、hello组件，school组件中含有student组件、</p>
+<p>代码如下：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span><span class="lnt">56
+</span><span class="lnt">57
+</span><span class="lnt">58
+</span><span class="lnt">59
+</span><span class="lnt">60
+</span><span class="lnt">61
+</span><span class="lnt">62
+</span><span class="lnt">63
+</span><span class="lnt">64
+</span><span class="lnt">65
+</span><span class="lnt">66
+</span><span class="lnt">67
+</span><span class="lnt">68
+</span><span class="lnt">69
+</span><span class="lnt">70
+</span><span class="lnt">71
+</span><span class="lnt">72
+</span><span class="lnt">73
+</span><span class="lnt">74
+</span><span class="lnt">75
+</span><span class="lnt">76
+</span><span class="lnt">77
+</span><span class="lnt">78
+</span><span class="lnt">79
+</span><span class="lnt">80
+</span><span class="lnt">81
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span><span class="nx">Document</span><span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">script</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;../js/vue.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id </span><span class="o">=</span> <span class="s">&#34;el&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">&lt;</span><span class="nt">app</span><span class="p">&gt;&lt;/</span><span class="nt">app</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">            <span class="c1">//创建student组件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kr">const</span> <span class="nx">student</span> <span class="o">=</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">data</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;张三&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">age</span><span class="o">:</span><span class="s1">&#39;18&#39;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">template</span><span class="o">:</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">        &lt;div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;h2&gt;学生名称：{{name}}&lt;/h2&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;h2&gt;学生年龄：{{age}}&lt;/h2&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">        `</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="c1">//创建school组件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="kr">const</span> <span class="nx">school</span> <span class="o">=</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">data</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                    <span class="k">return</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;某学校&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                        <span class="nx">address</span><span class="o">:</span><span class="s1">&#39;某地址&#39;</span>
+</span></span><span class="line"><span class="cl">                    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">                <span class="p">},</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">template</span><span class="o">:</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">        &lt;div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;h2&gt;学校名称：{{name}}&lt;/h2&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;h2&gt;学校地址：{{address}}&lt;/h2&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;!-- 2在哪里注册的，在哪个模版中写 --&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;student&gt;&lt;/student&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">        `</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">//注册组件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">components</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">//1定义组件的代码，要写在注册组件之前（比如这里的14~27行代码，必须在49行代码之前）
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="c1">//简写
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="nx">student</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="kr">const</span> <span class="nx">hello</span> <span class="o">=</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">template</span><span class="o">:</span><span class="sb">`&lt;h1&gt;你好鸭！欢迎来进行学习~&lt;/h1&gt;`</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">template</span><span class="o">:</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">        &lt;div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;hello&gt;&lt;/hello&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;school&gt;&lt;/school&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">        `</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">components</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">hello</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                    <span class="nx">school</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">            <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">el</span><span class="o">:</span><span class="s1">&#39;#el&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="c1">//注册组件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">components</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                    <span class="c1">//简写
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                    <span class="nx">app</span>
+</span></span><span class="line"><span class="cl">                <span class="p">}</span>
+</span></span><span class="line"><span class="cl">            <span class="p">})</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>页面及控制台运行效果：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240924151136609.png"
+        data-srcset="./images/image-20240924151136609.png, ./images/image-20240924151136609.png 1.5x, ./images/image-20240924151136609.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240924151136609.png"
+        title="image-20240924151136609" /></p>
+<div class="details admonition abstract open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>This is a tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>1 定义组件的代码，要写在注册组件之前</p>
+<p>2 子组件只能写在，注册的父组件的模版template中</p>
+</div>
+        </div>
+    </div>
+<h3 id="vuecomponent结构函数">VueComponent结构函数</h3>
+<p>关于VueComponent：
+1.school组件本质是一个名为VueComponent的构造函数，且不是程序员定义的，是Vue.extend生成的</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">school</span> <span class="o">=</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">extend</span><span class="p">({})</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//定义组件后，打印组件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;@&#34;</span><span class="p">,</span><span class="nx">school</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>控制台输出为：</p>
+<img src="./images/image-20240924152810304.png" alt="image-20240924152810304" style="zoom: 67%;" />
+<p>这里可以看出，其是一个函数。严谨上来讲，我们称其为构造函数，其调用方式应该为<code>new VueComponent()</code></p>
+<p>我们打开Vue.js查找VueComponent函数，打印一段文字。我们会发现，当我们使用组件时候，使用一次就调一次该函数。即，有一个<code>&lt;school&gt;&lt;/school&gt;</code>调一次new，有三个，就调3次。</p>
+<p>2.我们只需要写<code>&lt;school/&gt;</code>或<code>&lt;school&gt;&lt;/school&gt;</code>，Vue解析时会帮我们创建school组件的实例对象，即Vue帮我们执行的：new VueComponent(options)。</p>
+<p>3.特别注意：每次调用Vue.extend，返回的都是一个全新的VueComponent！！！！</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">school</span> <span class="o">=</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">extend</span><span class="p">({})</span>
+</span></span><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">student</span> <span class="o">=</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">extend</span><span class="p">({})</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//定义组件后，打印组件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;@&#34;</span><span class="p">,</span><span class="nx">school</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s2">&#34;@&#34;</span><span class="p">,</span><span class="nx">student</span><span class="p">);</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//打印出来的东西，看起来都是长一样的，都是VueComponent
+</span></span></span><span class="line"><span class="cl"><span class="c1">//但是是两个全新的，各自独立的，功能长相都一样的 VueComponent
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="c1">//-----------------验证-----------------
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">school</span> <span class="o">===</span> <span class="nx">student</span><span class="p">);</span> <span class="c1">//false
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl"><span class="nx">school</span><span class="p">.</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">99</span>
+</span></span><span class="line"><span class="cl"><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">school</span><span class="p">.</span><span class="nx">a</span><span class="p">);</span>  <span class="c1">//99
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">student</span><span class="p">.</span><span class="nx">a</span><span class="p">);</span> <span class="c1">//undefind
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>4.关于this指向：</p>
+<p> (1).组件配置中：</p>
+<p>  data函数、methods中的函数、watch中的函数、computed中的函数它们的this均是【VueComponent实例对象】</p>
+<p> (2).new Vue()配置中：</p>
+<p>  data函数、methods中的函数、watch中的函数、computed中的函数 它们的this均是【Vue实例对象】</p>
+<p>5.VueComponent的实例对象，以后简称vc(也可称之为:组件实例对象)。</p>
+<p> Vue的实例对象，以后简称vm。</p>
+<p>控制台输出vm，结构里面能通过$children很清晰的看见各个组件的 结构关系，和上下管理层级关系。</p>
+<img src="./images/image-20240924155219872.png" alt="image-20240924155219872" style="zoom:50%;" />
+<h3 id="vue实例--组件实例">Vue实例 &amp; 组件实例</h3>
+<p>vm和vc从结构上来看基本上一致，但并不是完全一致，并不是完全相等的两个东西。</p>
+<p>首先，vm是Vue创建实例的时候，生成的实例对象；vc是VueComponent创建实例的时候，生成的实例对象。</p>
+<p>Vue生成实例对象和VueComponent生成实例对象的缔造过程并不是一模一样的！所以他们两并不是完全一样的</p>
+<p>其次，vm中是可以使用el配置项的，用于指定服务于哪个容器；vc中是不能使用el的</p>
+<p>再有，vm中的data可以写成data:{}，也可以写成data(){}；但是vc中data只能写成data(){return }函数形式</p>
+<h3 id="内置关系">内置关系</h3>
+<p>首先复习一个js上的属性概念：<code>.prototype</code> &amp; <code>.__proto__</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//定义一个构造函数
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">function</span> <span class="nx">Demo</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="p">.</span><span class="nx">a</span> <span class="o">=</span> <span class="mi">1</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="p">.</span><span class="nx">b</span> <span class="o">=</span> <span class="mi">2</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//创建一个Demo的实例对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">const</span> <span class="nx">d</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Demo</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//显式原型属性
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//只有function函数才有这个属性，实例对象是没有的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//一般通过该条:程序员追加值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">Demo</span><span class="p">.</span><span class="nx">prototype</span><span class="p">);</span> <span class="c1">//打印输出为 原型对象{}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//隐式原型属性
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//实例对象默认都带有这个属性
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//一般通过该条程序自动访问值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">__proto__</span><span class="p">);</span><span class="c1">//也打印输出为 原型对象{} ,且与上面的长得一样
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//通过 显式原型属性 操作原型对象，追加一个x属性
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">Demo</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="mi">99</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//手动通过这种方式访问值
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//发现是同步更新到值的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">__proto__</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span> <span class="c1">//99
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//验证两个原型对象是否是完全相同的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">Demo</span><span class="p">.</span><span class="nx">prototype</span> <span class="o">===</span> <span class="nx">d</span><span class="p">.</span><span class="nx">__proto__</span><span class="p">);</span> <span class="c1">//true 
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//通过Demo的实例对象访问
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">d</span><span class="p">);</span>  <span class="c1">//Demo{a=1,b=2}  这里，Demo表示后面的{}里的对象内容，是由Demo缔造出来的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">d</span><span class="p">.</span><span class="nx">x</span><span class="p">);</span> <span class="c1">//99   
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//为什么输出的d带着Demo
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//表示这个{}对象是谁构造出来的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//例如
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kd">function</span> <span class="nx">school</span><span class="p">(){}</span>
+</span></span><span class="line"><span class="cl">    <span class="kd">function</span> <span class="nx">student</span><span class="p">(){}</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">s</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">school</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="kr">const</span> <span class="nx">ss</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">student</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">s</span><span class="p">);</span> <span class="c1">//school{}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">ss</span><span class="p">);</span><span class="c1">//student{}
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//这里如果没有前面的这个名字，则分不清对象来自于哪里
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>由此引入一个重要的内置关系：</p>
+<p><code>VueComponent.prototype.__proto__ === Vue.prototype</code></p>
+<p>这个关系的作用：</p>
+<p>让组件实例对象vc可以访问到Vue原型上的属性、方法</p>
+<p>这是Vue独有的：增加了，vc原型对象的原型对象指向vm的原型对象。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c">&lt;!--</span> <span class="nx">因为有这个内置关系</span><span class="err">：</span><span class="nx">使得组件里this</span><span class="p">.</span><span class="nx">x打印输出为99</span> <span class="nx">得以实现</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id </span><span class="o">=</span> <span class="s">&#34;el&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">school</span><span class="p">&gt;&lt;/</span><span class="nt">school</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="nx">Vue</span><span class="p">.</span><span class="nx">prototype</span><span class="p">.</span><span class="nx">x</span> <span class="o">=</span> <span class="mi">99</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       <span class="c1">//创建school组件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>       <span class="kr">const</span> <span class="nx">school</span> <span class="o">=</span> <span class="nx">Vue</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">data</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;某学校&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">address</span><span class="o">:</span><span class="s1">&#39;某地址&#39;</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">template</span><span class="o">:</span><span class="sb">`
+</span></span></span><span class="line"><span class="cl"><span class="sb">        &lt;div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;h2&gt;学校名称：{{name}}&lt;/h2&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;h2&gt;学校地址：{{address}}&lt;/h2&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">            &lt;button @click=&#34;onChange&#34;&gt;点击获取x的值&lt;/button&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">        &lt;/div&gt;
+</span></span></span><span class="line"><span class="cl"><span class="sb">        `</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">methods</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">onchange</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;当前x的值是&#34;</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">       <span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">       <span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">el</span><span class="o">:</span><span class="s1">&#39;#el&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">components</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">school</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="单文件组件-1">单文件组件</h3>
+<p>单文件组件，均是以<code>xxxx.vue</code>的文件</p>
+<p>命名规范：</p>
+<p>一个单词的文件命名为：<code>school.vue</code>，<code>School.vue</code></p>
+<p>多个单词的文件命名为：<code>my-school.vue</code>，<code>MySchool.vue</code></p>
+<p>一般我们都使用大写字母开头进行命名，主要是为了和开发者工具那边的根节点结构展示的名字一样【这边写成小写开头，那边也会默认显示为大写】。</p>
+<h4 id="1新建一个单文件组件schoolvue">1新建一个单文件组件School.vue</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span><span class="lnt">41
+</span><span class="lnt">42
+</span><span class="lnt">43
+</span><span class="lnt">44
+</span><span class="lnt">45
+</span><span class="lnt">46
+</span><span class="lnt">47
+</span><span class="lnt">48
+</span><span class="lnt">49
+</span><span class="lnt">50
+</span><span class="lnt">51
+</span><span class="lnt">52
+</span><span class="lnt">53
+</span><span class="lnt">54
+</span><span class="lnt">55
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c">&lt;!--</span> <span class="p">.</span><span class="nx">vue文件中主要是</span><span class="err">：</span><span class="nx">页面资源的合集</span><span class="err">，</span><span class="nx">即html</span><span class="err">、</span><span class="nx">css</span><span class="err">、</span><span class="nx">js</span> 
+</span></span><span class="line"><span class="cl">	<span class="nx">为了迎合常见的前端三种资源显示的写法</span><span class="err">，</span><span class="nx">vue提供了三个标签</span>
+</span></span><span class="line"><span class="cl"><span class="nx">分别是</span><span class="err">：</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">1</span><span class="err">、</span><span class="nx">组件的结构标签</span><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">2</span><span class="err">、</span><span class="nx">组件的交互标签</span><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="mi">3</span><span class="err">、</span><span class="nx">组件的样式标签</span><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span> <span class="nx">这里就能看出</span><span class="err">“</span><span class="nx">非单文件</span><span class="err">”</span><span class="nx">的一个弊端</span><span class="err">：</span>
+</span></span><span class="line"><span class="cl"><span class="nx">组件的样式是不能单独写的</span><span class="err">，</span><span class="nx">是公共写公共引用的</span>
+</span></span><span class="line"><span class="cl"><span class="err">“</span><span class="nx">单文件</span><span class="err">”</span><span class="nx">的样式</span><span class="err">，</span><span class="nx">一个文件一个</span><span class="err">，</span><span class="nx">是独立的</span>    <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span> <span class="nx">组件的结构标签</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">div</span> <span class="na">class</span><span class="o">=</span><span class="s">&#34;demo&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="nx">学校名称</span><span class="err">：</span><span class="p">{{</span><span class="nx">name</span><span class="p">}}&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">h2</span><span class="p">&gt;</span><span class="nx">学校地址</span><span class="err">：</span><span class="p">{{</span><span class="nx">address</span><span class="p">}}&lt;/</span><span class="nt">h2</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">button</span> <span class="nt">@click</span><span class="s">=&#34;onChange&#34;</span><span class="p">&gt;</span><span class="na">点击获取x的值</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="err">&lt;!--</span> <span class="na">组件的交互标签</span> <span class="err">--</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="c1">//组件需要被引用，外部使用import
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//这儿有三种暴露方式：
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// export const school = Vue.extend({})//1分别暴露
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// export{school}//2统一暴露
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">// export default school //3默认暴露
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//我们一般使用默认暴露，因为引用时比较简单，只需要import 起名 from vue文件的位置；
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//export default Vue.extend({})
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//由于Vue.extend不写vue也会自动帮我们调用，所以这里可以简写
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="kr">export</span> <span class="k">default</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;School&#39;</span><span class="p">,</span><span class="c1">//和文件名保持一致，开发者工具呈现的是这儿的名字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">data</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">            <span class="k">return</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;某学校&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">address</span><span class="o">:</span><span class="s1">&#39;某地址&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">x</span><span class="o">:</span><span class="mi">1</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">},</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">methods</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">            <span class="nx">onchange</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">alert</span><span class="p">(</span><span class="s2">&#34;当前x的值是&#34;</span><span class="o">+</span><span class="k">this</span><span class="p">.</span><span class="nx">x</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span> <span class="nx">组件的样式标签</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">.</span><span class="nx">demo</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">background</span><span class="o">-</span><span class="nx">color</span><span class="o">:</span> <span class="nx">aqua</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">style</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="2新建一个总体管理的顶级父组件appvue">2新建一个总体管理的顶级父组件App.vue</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span> <span class="nx">这儿的div必须有</span><span class="err">，</span><span class="nx">保证根节点</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">School</span><span class="p">&gt;&lt;/</span><span class="nt">School</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"> <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">template</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//引入组件
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="nx">School</span> <span class="nx">from</span> <span class="s1">&#39;./School.vue&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl"><span class="kr">import</span> <span class="nx">School</span> <span class="nx">from</span> <span class="s1">&#39;./School.vue&#39;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">    <span class="kr">export</span> <span class="k">default</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;App&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//注册
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">components</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">           <span class="nx">School</span> 
+</span></span><span class="line"><span class="cl">        <span class="p">}</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="3新建一个入口文件mainjs">3新建一个入口文件main.js</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//vue脚手架选择了main.js用来调用new Vue()创建vm实例对象
+</span></span></span><span class="line"><span class="cl"><span class="c1">//引入App
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">import</span> <span class="nx">App</span> <span class="nx">from</span> <span class="s2">&#34;./App.vue&#34;</span><span class="p">;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="k">new</span> <span class="nx">Vue</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">el</span><span class="o">:</span><span class="s2">&#34;#root&#34;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">componements</span><span class="o">:</span><span class="p">{</span><span class="nx">App</span><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span> 
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="4新建一个根容器文件indexhtml">4新建一个根容器文件index.html</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="o">&lt;!</span><span class="nx">DOCTYPE</span> <span class="nx">html</span><span class="o">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&#34;en&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&#34;UTF-8&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;viewport&#34;</span> <span class="na">content</span><span class="o">=</span><span class="s">&#34;width=device-width, initial-scale=1.0&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">title</span><span class="p">&gt;</span><span class="nx">Document</span><span class="p">&lt;/</span><span class="nt">title</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="c">&lt;!--</span> <span class="nx">指定容器</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">&lt;</span><span class="nt">div</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;root&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="c">&lt;!--</span> <span class="nx">引用App</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">         <span class="p">&lt;</span><span class="nt">App</span><span class="p">&gt;&lt;/</span><span class="nt">App</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">&lt;/</span><span class="nt">div</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">     <span class="c">&lt;!--</span> <span class="nx">在模块加载完毕后引入</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;../js/vue.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">     <span class="p">&lt;</span><span class="nt">script</span> <span class="na">type</span><span class="o">=</span><span class="s">&#34;text/javascript&#34;</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;./main.js&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">script</span><span class="p">&gt;</span> <span class="c">&lt;!--</span> <span class="nx">main</span><span class="p">.</span><span class="nx">js入口文件</span> <span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>整个单文件组件引用流程和书写规范就结束了，主要的文件如图：</p>
+<img src="./images/image-20240925044635221.png" alt="image-20240925044635221" style="zoom:50%;" />
+<p><code>xxxx.vue</code>文件运行，借助：</p>
+<p>1、自己单独使用webpack 搭建工作流，借助一些第三方插件和node将.vue文件转换 成 .html 文件使得浏览器能够运行</p>
+<p>2、Vue脚手架【vue官方团队，也是通过webpack经过一些node借助一些第三方插件打造的一个工作流，是一个搭建好的一个编译环境，可以直接使用】</p>
+<p>&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;-所以，我们这里阐述vue脚手架的内容&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&mdash;&ndash;</p>
+<h2 id="21vue脚手架">21.Vue脚手架</h2>
+<h3 id="创建vue脚手架">创建Vue脚手架</h3>
+<h4 id="1说明">1说明</h4>
+<ul>
+<li>Vue脚手架是Vue官方提供的标准化开发工具（开发平台）</li>
+<li>最新的版本是4.x</li>
+<li>官方文档：https://cli.vuejs.org/zh/。</li>
+<li>CLI的全称是 command line interface 直译过来是：命令行接口工具</li>
+</ul>
+<h4 id="2具体步骤">2具体步骤</h4>
+<p>第一步（仅第一次执行）：全局安装@vue/cli</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm install -g @vue/cli
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>第二步：切换到你要创建项目的目录，然后使用命令创建项目</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">vue create xxxx
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>提示选择用哪个版本的Vue创建项目，这里移动光标，选择Vue2，回车</p>
+<img src="./images/image-20240929225751625.png" alt="image-20240929225751625" style="zoom:50%;" />
+<ul>
+<li>babel：ES6转ES5需要用到的语法编译器</li>
+<li>eslint：语法检查器</li>
+<li>等待创建</li>
+</ul>
+<img src="./images/image-20240929230051839.png" alt="image-20240929230051839" style="zoom:50%;" />
+<ul>
+<li>创建完成</li>
+</ul>
+<img src="./images/image-20240929230146283.png" alt="image-20240929230146283" style="zoom:50%;" />
+<p>第三步：启动项目</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">npm run serve
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>按步骤执行</li>
+</ul>
+<img src="./images/image-20240929230433069.png" alt="image-20240929230433069" style="zoom:50%;" />
+<ul>
+<li>启动成功</li>
+</ul>
+<img src="./images/image-20240929230450281.png" alt="image-20240929230450281" style="zoom:50%;" />
+<ul>
+<li>打开页面</li>
+</ul>
+<img src="./images/image-20240929230656743.png" alt="image-20240929230656743" style="zoom:50%;" />
+<ul>
+<li>停止程序</li>
+<li>crtl+c 连续两次即可</li>
+</ul>
+<img src="./images/image-20240929230952969.png" alt="image-20240929230952969" style="zoom:50%;" />
+<div class="details admonition tip open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-lightbulb fa-fw" aria-hidden="true"></i>This is a tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>备注：</p>
+<p>1、如果出现下载缓慢请配置npm淘宝镜像：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">//该镜像已经过期
+</span></span><span class="line"><span class="cl">npm config <span class="nb">set</span> registry https://registry.npm.taobao.org
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">//请使用下面的最新的镜像
+</span></span><span class="line"><span class="cl">npm config <span class="nb">set</span> registry https://registry.npmmirror.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>2、Vue脚手架隐藏了所有webpack相关的配置，若想查看具体的webpack配置，请执行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">vue inspect &gt; output.js
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>3、执行完install命令，退出命令窗口，重新cmd打开，再输入vue测试是否安装成功。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">//退回到上一层目录
+</span></span><span class="line"><span class="cl"><span class="nb">cd</span> 
+</span></span><span class="line"><span class="cl">//清空上面所有记录
+</span></span><span class="line"><span class="cl">cls
+</span></span><span class="line"><span class="cl">//新建一个文件夹
+</span></span><span class="line"><span class="cl">mkdir
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>4、vue create xxxx命令创建的项目中，包含</p>
+<ul>
+<li>vue脚手架</li>
+<li>官方给你写好的HelloWord例子</li>
+</ul>
+</div>
+        </div>
+    </div>
+<h3 id="分析脚手架结构">分析脚手架结构</h3>
+<p>将项目用vscode打开，同样用终端启动。分析项目中对应文件的作用。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240929231452099.png"
+        data-srcset="./images/image-20240929231452099.png, ./images/image-20240929231452099.png 1.5x, ./images/image-20240929231452099.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240929231452099.png"
+        title="image-20240929231452099" /></p>
+<h4 id="gitignore">.gitignore</h4>
+<p>哪些文件或者文件夹不想接受git管理，在<code>.gitignore</code>这个文件中配置</p>
+<img src="./images/image-20240929231632009.png" alt="image-20240929231632009" style="zoom:50%;" />
+<h4 id="babelconfigjs">babel.config.js</h4>
+<p>demo的控制文件。配置一些ES6转ES5的规则。【不需要我们去修改】</p>
+<img src="./images/image-20240929231929331.png" alt="image-20240929231929331" style="zoom:50%;" />
+<h4 id="packagejson">package.json</h4>
+<p>包的说明书。你的包叫什么名字，什么版本，使用的一些依赖，引入的一些库，一些短命令。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240929232532554.png"
+        data-srcset="./images/image-20240929232532554.png, ./images/image-20240929232532554.png 1.5x, ./images/image-20240929232532554.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240929232532554.png"
+        title="image-20240929232532554" /></p>
+<h4 id="package-lockjson">package-lock.json</h4>
+<p>包管理器。包版本控制文件。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240929232758923.png"
+        data-srcset="./images/image-20240929232758923.png, ./images/image-20240929232758923.png 1.5x, ./images/image-20240929232758923.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240929232758923.png"
+        title="image-20240929232758923" /></p>
+<h4 id="readmemd">README.md</h4>
+<p>对整个工程进行一个说明或者一个描述</p>
+<h4 id="src">src</h4>
+<p>下面的4个四个文件：</p>
+<ul>
+<li>assets - 一般放前端的静态资源：例如图片</li>
+<li>components</li>
+<li>App.vue - 顶级父组件</li>
+<li>main.js - 入口文件</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240929234000016.png"
+        data-srcset="./images/image-20240929234000016.png, ./images/image-20240929234000016.png 1.5x, ./images/image-20240929234000016.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240929234000016.png"
+        title="image-20240929234000016" /></p>
+<h4 id="public">public</h4>
+<p>下面两个文件：</p>
+<ul>
+<li>favicon.ico - 网站图标</li>
+<li>index.html - 主页面</li>
+</ul>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240929235234843.png"
+        data-srcset="./images/image-20240929235234843.png, ./images/image-20240929235234843.png 1.5x, ./images/image-20240929235234843.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240929235234843.png"
+        title="image-20240929235234843" /></p>
+<h2 id="22render函数">22.render函数</h2>
+<p>修改默认配置
 ref属性</p>
 <p>props配置
 mixin混入

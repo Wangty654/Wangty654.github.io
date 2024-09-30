@@ -7,6 +7,8 @@ Hugo 依赖于 **Markdown** 文件，元数据字体 。用户可以从任意的
 
 <img src="./images/image-20240810202919284.png" alt="image-20240810202919284" style="zoom:50%;" />
 
+## HUGO下载安装
+
 ### 安装环境
 
 安装好Windows版本的 git：
@@ -69,7 +71,7 @@ hugo version
 
 ![image-20240810212845738](./images/image-20240810212845738.png)
 
-### 创建博客网站
+## 创建博客网站
 
 现在我们就可以使用hugo搭建一个属于自己的博客网站了。
 
@@ -203,9 +205,13 @@ hugo server --disableFastRender --gc --noHTTPCache --noBuildLock --logLevel debu
 
 这样我们就成功使用HUGO在Windows本地快速部署了一个静态博客网站。
 
+## 部署到公网
 
+{{< admonition type=info title="This is a tip" open=true >}}
 
-> 【下面是三种部署网站到公网的办法】
+下面是三种部署网站到公网的办法
+
+{{< /admonition >}}
 
 ### 安装内网穿透工具
 
@@ -390,15 +396,21 @@ ftp传文件 、shell 输入命令
 
 <img src="./images/fe423f94796e37fe9bf0064f26f04b6.png" alt="fe423f94796e37fe9bf0064f26f04b6" style="zoom:50%;" />
 
-### 网站样式自定义设置
+## 网站样式自定义设置
 
-#### 关于themes主题
+{{< admonition type=info title="This is a tip" open=true >}}
+
+一些基础样式调整，具体样式美化可以参考：Hugo的LoveIt主题美化（一、二、三、四）
+
+{{< /admonition >}}
+
+### 关于themes主题
 
 themes主题为git拉取下来用于整个静态网站的样式代码，均可按照需求进行修改
 
 <img src="./images/image-20240811094705788.png" alt="image-20240811094705788" style="zoom: 50%;" />
 
-##### 10.1.1头像设置
+#### 头像设置
 
 1、在layouts包下，有一个baseof.html文件，将其中的首页文件指向调整为你想要的图片
 
@@ -408,7 +420,7 @@ themes主题为git拉取下来用于整个静态网站的样式代码，均可�
 
 ![image-20240811095325698](./images/image-20240811095325698.png)
 
-##### 10.1.2 主题颜色设置
+#### 主题颜色设置
 
 1、拷取themes中配置文件config.toml里默认设置主题颜色的部分代码
 
@@ -422,13 +434,13 @@ themes主题为git拉取下来用于整个静态网站的样式代码，均可�
 
 <img src="./images/image-20240811095946846.png" alt="image-20240811095946846" style="zoom:50%;" />
 
-##### 10.1.3 主页文字设置
+#### 主页文字设置
 
 更改layouts包下，baseof.html文件中书写首页介绍文字的位置
 
 <img src="./images/image-20240811100259821.png" alt="image-20240811100259821" style="zoom:50%;" />
 
-##### 10.1.4 主页分类菜单设置
+#### 主页分类菜单设置
 
 1、配置文件hugo.html中配置菜单栏
 
@@ -440,13 +452,13 @@ themes主题为git拉取下来用于整个静态网站的样式代码，均可�
 
 <img src="./images/image-20240811100542974.png" alt="image-20240811100542974" style="zoom:50%;" />
 
-##### 10.1.5 主页关于菜单设置
+#### 主页关于菜单设置
 
 取主题中content包下的about文件放入myblog的content包根目录下。about内的内容可以自行定义
 
 <img src="./images/image-20240811100726234.png" alt="image-20240811100726234" style="zoom:50%;" />
 
-##### 10.1.6 关于代码块样式设置
+#### 关于代码块样式设置
 
 配置文件中写入设置样式的命令模块，根据需要更改其中style的值。
 

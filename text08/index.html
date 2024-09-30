@@ -39,7 +39,7 @@
                             "url": "https:\/\/Wangty654.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "Typora","wordcount":  583 ,
+                        }],"genre": "posts","keywords": "Typora","wordcount":  639 ,
         "url": "https:\/\/Wangty654.github.io\/text08\/","datePublished": "2024-08-11T00:00:00+00:00","dateModified": "2024-08-11T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "TyNote","logo": {
@@ -133,7 +133,7 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">【Typora】破解/安装激活 Typora 2024 教程</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/hugo%E7%B3%BB%E5%88%97/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Hugo系列</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-11">2024-08-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 583 字&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-11">2024-08-11</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 639 字&nbsp;
                 <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;<span id="/text08/" class="leancloud_visitors" data-flag-title="【Typora】破解/安装激活 Typora 2024 教程">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;
@@ -160,20 +160,27 @@
   <ul>
     <li>
       <ul>
-        <li>
+        <li><a href="#官网下载typora">官网下载Typora</a>
           <ul>
             <li>
               <ul>
-                <li><a href="#官网下载typora">官网下载Typora</a></li>
-                <li><a href="#安装typora">安装Typora</a></li>
-                <li><a href="#激活方法">激活方法</a></li>
-                <li><a href="#关闭软件每次启动时的已激活弹窗">关闭软件每次启动时的已激活弹窗</a></li>
-                <li><a href="#去除软件左下角未激活提示">去除软件左下角“未激活”提示</a></li>
-                <li><a href="#引用图片">引用图片</a></li>
+                <li><a href="#安装">安装</a></li>
               </ul>
             </li>
           </ul>
         </li>
+        <li><a href="#本地激活typora">本地激活Typora</a>
+          <ul>
+            <li>
+              <ul>
+                <li><a href="#激活方法">激活方法</a></li>
+                <li><a href="#关闭软件每次启动时的已激活弹窗">关闭软件每次启动时的已激活弹窗</a></li>
+                <li><a href="#去除软件左下角未激活提示">去除软件左下角“未激活”提示</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#引用图片">引用图片</a></li>
       </ul>
     </li>
   </ul>
@@ -182,11 +189,12 @@
 
 
 
-        <div class="content" id="content"><h4 id="官网下载typora">官网下载Typora</h4>
+        <div class="content" id="content"><h2 id="官网下载typora">官网下载Typora</h2>
+<h4 id="安装">安装</h4>
 <p>网址：<a href="https://typoraio.cn/" target="_blank" rel="noopener noreffer ">Typora 官方中文站 (typoraio.cn)</a></p>
 <img src="./images/image-20240811102353623.png" alt="image-20240811102353623" style="zoom: 33%;" />
-<h4 id="安装typora">安装Typora</h4>
-<p>双击Typora.exe 安装完成</p>
+<p>点立即下载，下载下来的安装包，双击Typora.exe 完成安装</p>
+<h2 id="本地激活typora">本地激活Typora</h2>
 <h4 id="激活方法">激活方法</h4>
 <p>安装路径下找到：Typora\resources\page-dist\static\js</p>
 <img src="./images/image-20240811102419899.png" alt="image-20240811102419899" style="zoom: 33%;" />
@@ -196,7 +204,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">e.hasActivated=&#34;true&#34;==e.hasActivated
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">e</span><span class="p">.</span><span class="nx">hasActivated</span><span class="o">=</span><span class="s2">&#34;true&#34;</span><span class="o">==</span><span class="nx">e</span><span class="p">.</span><span class="nx">hasActivated</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>替换为</p>
@@ -205,7 +213,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">e.hasActivated=&#34;true&#34;==&#34;true&#34;
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">e</span><span class="p">.</span><span class="nx">hasActivated</span><span class="o">=</span><span class="s2">&#34;true&#34;</span><span class="o">==</span><span class="s2">&#34;true&#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p>这样就已经后台激活完成，但是每次开软件开始会提醒激活。</p>
@@ -227,10 +235,22 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">οnlοad</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="nx">setTimeout</span><span class="p">(()=&gt;{</span><span class="nb">window</span><span class="p">.</span><span class="nx">close</span><span class="p">();},</span><span class="mi">5</span><span class="p">);}&lt;/</span><span class="nt">script</span><span class="p">&gt;&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
+<pre tabindex="0" class="chroma"><code class="language-html" data-lang="html"><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">body</span><span class="p">&gt;&lt;</span><span class="nt">script</span><span class="p">&gt;</span><span class="nb">window</span><span class="p">.</span><span class="nx">onload</span><span class="o">=</span><span class="kd">function</span><span class="p">(){</span><span class="nx">setTimeout</span><span class="p">(()=&gt;{</span><span class="nb">window</span><span class="p">.</span><span class="nx">close</span><span class="p">();},</span><span class="mi">5</span><span class="p">);}&lt;/</span><span class="nt">script</span><span class="p">&gt;&lt;/</span><span class="nt">html</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h4 id="去除软件左下角未激活提示">去除软件左下角“未激活”提示</h4>
+</div><div class="details admonition bug open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-bug fa-fw" aria-hidden="true"></i>特别注意！！！<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>复制粘贴上面这段代码的时候：</p>
+<p>有些系统会将window.onload 中onload的英文字母o和n变成其他希腊字母或其他Unicode字符（例如，ο是希腊字母omicron，而ο和o在视觉上非常相似）</p>
+<p><strong>这会导致这段代码没有起作用！！！！</strong></p>
+<p>如果这段代码替换后没反应，请务必手敲onload保存后再试。。。。</p>
+</div>
+        </div>
+    </div>
+<h4 id="去除软件左下角未激活提示">去除软件左下角“未激活”提示</h4>
 <p>按照安装路径，找到 resources\locales\zh-Hans.lproj\Panel.json
 <img src="./images/image-20240811102631359.png" alt="image-20240811102631359" style="zoom:33%;" /></p>
 <p><strong>文件中查找</strong>：</p>
@@ -239,7 +259,7 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;UNREGISTERED&#34;:&#34;未激活&#34;，
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;UNREGISTERED&#34;</span><span class="err">:</span><span class="s2">&#34;未激活&#34;</span><span class="err">，</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>替换为：</strong></p>
@@ -248,11 +268,11 @@
 <pre tabindex="0" class="chroma"><code><span class="lnt">1
 </span></code></pre></td>
 <td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">&#34;UNREGISTERED&#34;:&#34; &#34;
+<pre tabindex="0" class="chroma"><code class="language-json" data-lang="json"><span class="line"><span class="cl"><span class="s2">&#34;UNREGISTERED&#34;</span><span class="err">:</span><span class="s2">&#34; &#34;</span>
 </span></span></code></pre></td></tr></table>
 </div>
 </div><p><strong>最后，重新打开Typora，手动关掉激活窗口，之后就不会再出现。</strong></p>
-<h4 id="引用图片">引用图片</h4>
+<h2 id="引用图片">引用图片</h2>
 <p>注意：Typora 使用带图片的文件，使用相对路径，创建带图片的笔记时，.md文件命名需为index。自动访问路径中的index文件，剪切图片时自动生成image文件夹，使得图片相对路径访问正常</p>
 <img src="./images/1723342916837.jpg" alt="1723342916837" style="zoom:50%;" />
 <img src="./images/image-20240811102216967.png" alt="image-20240811102216967" style="zoom: 50%;" />

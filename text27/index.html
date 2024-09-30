@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>yhcms部署在tomcat上启动步骤 - TyNote</title><meta name="Description" content="你我一场唤不醒的梦……"><meta property="og:url" content="https://Wangty654.github.io/text27/">
+  <meta property="og:site_name" content="TyNote">
+  <meta property="og:title" content="yhcms部署在tomcat上启动步骤">
+  <meta property="og:description" content="因为该项目启动非常麻烦，该篇重点描述yhcms项目整个配置，已经部署在tomcat上的启动步骤">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-09-24T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-09-24T00:00:00+00:00">
+    <meta property="article:tag" content="Tomcat">
+    <meta property="article:tag" content="Java">
+    <meta property="og:image" content="https://Wangty654.github.io/images/avatar.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://Wangty654.github.io/images/avatar.png">
+  <meta name="twitter:title" content="yhcms部署在tomcat上启动步骤">
+  <meta name="twitter:description" content="因为该项目启动非常麻烦，该篇重点描述yhcms项目整个配置，已经部署在tomcat上的启动步骤">
+<meta name="application-name" content="TyNote">
+<meta name="apple-mobile-web-app-title" content="TyNote"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="msapplication-TileColor" href="/favicon-16x16.png" color="#da532c"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Wangty654.github.io/text27/" /><link rel="prev" href="https://Wangty654.github.io/text24/" /><link rel="stylesheet" href="/css/style.min.cafd7a15685d3295cb0c60c3cf7c0cde0632ba4dd2c8b6c34b35bf00ee9e8a08.css" integrity="sha256-yv16FWhdMpXLDGDDz3wM3gYyuk3SyLbDSzW/AO6eigg="><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "yhcms部署在tomcat上启动步骤",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/Wangty654.github.io\/text27\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/Wangty654.github.io\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "tomcat, java","wordcount":  1287 ,
+        "url": "https:\/\/Wangty654.github.io\/text27\/","datePublished": "2024-09-24T00:00:00+00:00","dateModified": "2024-09-24T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "TyNote","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/Wangty654.github.io\/images\/avatar.png",
+                    "width":  528 ,
+                    "height":  528 
+                }},"author": {
+                "@type": "Person",
+                "name": "wangty"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="normal" data-header-mobile="normal"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="TyNote"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/avatarico.png"
+        data-srcset="/images/avatarico.png, /images/avatarico.png 1.5x, /images/avatarico.png 2x"
+        data-sizes="auto"
+        alt="/images/avatarico.png"
+        title="/images/avatarico.png" />TyNote</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"><i class='fa fa-home' aria-hidden='true'></i> 首页 </a><a class="menu-item" href="/posts/"><i class='fa fa-quote-left' aria-hidden='true'></i> 所有文章 </a><a class="menu-item" href="/tags/"><i class='fa fa-tags' aria-hidden='true'></i> 标签 </a><a class="menu-item" href="/categories/"><i class='fa fa-list' aria-hidden='true'></i> 分类 </a><a class="menu-item" href="/about/"><i class='fa fa-window-restore' aria-hidden='true'></i> 关于 </a><a class="menu-item" href="/friend/" title="Friend"><i class='fa fa-paper-plane' aria-hidden='true'></i> 友链 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="TyNote"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/avatarico.png"
+        data-srcset="/images/avatarico.png, /images/avatarico.png 1.5x, /images/avatarico.png 2x"
+        data-sizes="auto"
+        alt="/images/avatarico.png"
+        title="/images/avatarico.png" />TyNote</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title=""><i class='fa fa-home' aria-hidden='true'></i>首页</a><a class="menu-item" href="/posts/" title=""><i class='fa fa-quote-left' aria-hidden='true'></i>所有文章</a><a class="menu-item" href="/tags/" title=""><i class='fa fa-tags' aria-hidden='true'></i>标签</a><a class="menu-item" href="/categories/" title=""><i class='fa fa-list' aria-hidden='true'></i>分类</a><a class="menu-item" href="/about/" title=""><i class='fa fa-window-restore' aria-hidden='true'></i>关于</a><a class="menu-item" href="/friend/" title="Friend"><i class='fa fa-paper-plane' aria-hidden='true'></i>友链</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto" >
+
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">yhcms部署在tomcat上启动步骤</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/java/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-09-24">2024-09-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1287 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/text27/" class="leancloud_visitors" data-flag-title="yhcms部署在tomcat上启动步骤">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;
+
+
+
+
+
+
+
+<span id="busuanzi_container_value_page_pv"><i class="far fa-eye fa-fw"></i>
+                
+                <span id="busuanzi_value_page_pv"></span>&nbsp;次阅读</span>
+
+
+
+</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#项目拉取">项目拉取</a></li>
+        <li><a href="#项目配置">项目配置</a>
+          <ul>
+            <li><a href="#1导入idea包">1、导入.idea包</a></li>
+            <li><a href="#2修改modulesxml配置文件">2、修改modules.xml配置文件</a></li>
+            <li><a href="#3修改yhcms2020iml配置文件">3、修改yhcms2020.iml配置文件</a></li>
+          </ul>
+        </li>
+        <li><a href="#project-structure配置">Project Structure配置</a>
+          <ul>
+            <li><a href="#1artifacts配置">1、Artifacts配置</a></li>
+            <li><a href="#2修改yhcms_web_explodedxml">2、修改yhcms_Web_exploded.xml</a></li>
+            <li><a href="#3所有配置项检查">3、所有配置项检查</a></li>
+          </ul>
+        </li>
+        <li><a href="#tomcat配置">tomcat配置</a>
+          <ul>
+            <li><a href="#1artifacts依赖">1、artifacts依赖</a></li>
+          </ul>
+        </li>
+        <li><a href="#引用前端">引用前端</a></li>
+        <li><a href="#启动项目">启动项目</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div>
+
+
+
+        <div class="content" id="content"><div class="details admonition bug open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-bug fa-fw" aria-hidden="true"></i>注意！！<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">不按操作步骤配置，起不起来自己想原因。。。</div>
+        </div>
+    </div>
+<h2 id="项目拉取">项目拉取</h2>
+<p>1.SVN地址：http://192.168.10.70:8090/svn/JY20CH00200/新网厅系统/程序</p>
+<p>后端项目名称：yhcms</p>
+<p>下文都是针对 <code>yhcms</code> 的配置描述</p>
+<h2 id="项目配置">项目配置</h2>
+<h3 id="1导入idea包">1、导入.idea包</h3>
+<p>用idea工具打开(open)后端项目以后，会在 <code>yhcms</code> 项目包的根下创建一个<code>.idea</code>文件。</p>
+<p>将U盘中已经配置好的<code>.idea</code>替换刚创建的<code>.idea</code>文件。</p>
+<p>（替换时候，特别注意：<code>.idea</code>文件夹中的<code>modules.xml</code>不替换，它需要手动修改）</p>
+<img src="./images/image-20240924111909959.png" alt="image-20240924111909959" style="zoom:50%;" />
+<br/>
+<h3 id="2修改modulesxml配置文件">2、修改modules.xml配置文件</h3>
+<p>打开modules.xml，ctrl+A全选，用下面这段代码全部替换。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;project</span> <span class="na">version=</span><span class="s">&#34;4&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&#34;ProjectModuleManager&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;modules&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;module</span> <span class="na">fileurl=</span><span class="s">&#34;file://$PROJECT_DIR$/yhcms2020.iml&#34;</span> <span class="na">filepath=</span><span class="s">&#34;$PROJECT_DIR$/yhcms2020.iml&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/modules&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/component&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/project&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这里注意，这段xml中有两个<code>yhcms2020.iml</code>，此名称应该与你打开idea工具后自动在根节点帮你创建的<code>.iml</code></p>
+<p>文件名一致</p>
+<img src="./images/image-20240924121010995.png" alt="image-20240924121010995" style="zoom:50%;" />
+<h3 id="3修改yhcms2020iml配置文件">3、修改yhcms2020.iml配置文件</h3>
+<p>打开yhcms2020.iml，同样的操作：ctrl+A全选，用下面这段代码全部替换。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;module</span> <span class="na">type=</span><span class="s">&#34;JAVA_MODULE&#34;</span> <span class="na">version=</span><span class="s">&#34;4&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&#34;FacetManager&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;facet</span> <span class="na">type=</span><span class="s">&#34;web&#34;</span> <span class="na">name=</span><span class="s">&#34;Web&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;configuration&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;descriptors&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&lt;deploymentDescriptor</span> <span class="na">name=</span><span class="s">&#34;web.xml&#34;</span> <span class="na">url=</span><span class="s">&#34;file://$MODULE_DIR$/webapp/WEB-INF/web.xml&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/descriptors&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;webroots&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="nt">&lt;root</span> <span class="na">url=</span><span class="s">&#34;file://$MODULE_DIR$/webapp&#34;</span> <span class="na">relative=</span><span class="s">&#34;/&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/webroots&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;/configuration&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/facet&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/component&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&#34;NewModuleRootManager&#34;</span> <span class="na">LANGUAGE_LEVEL=</span><span class="s">&#34;JDK_1_8&#34;</span> <span class="na">inherit-compiler-output=</span><span class="s">&#34;true&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;exclude-output</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;content</span> <span class="na">url=</span><span class="s">&#34;file://$MODULE_DIR$&#34;</span><span class="nt">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;sourceFolder</span> <span class="na">url=</span><span class="s">&#34;file://$MODULE_DIR$/javacode/cms&#34;</span> <span class="na">isTestSource=</span><span class="s">&#34;false&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;sourceFolder</span> <span class="na">url=</span><span class="s">&#34;file://$MODULE_DIR$/javacode/config&#34;</span> <span class="na">isTestSource=</span><span class="s">&#34;false&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="nt">&lt;sourceFolder</span> <span class="na">url=</span><span class="s">&#34;file://$MODULE_DIR$/javacode/sysdev&#34;</span> <span class="na">isTestSource=</span><span class="s">&#34;false&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/content&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;orderEntry</span> <span class="na">type=</span><span class="s">&#34;inheritedJdk&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;orderEntry</span> <span class="na">type=</span><span class="s">&#34;sourceFolder&#34;</span> <span class="na">forTests=</span><span class="s">&#34;false&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;orderEntry</span> <span class="na">type=</span><span class="s">&#34;library&#34;</span> <span class="na">exported=</span><span class="s">&#34;&#34;</span> <span class="na">name=</span><span class="s">&#34;admin-auxiliary-default-app-3.0.0-SNAPSHOT&#34;</span> <span class="na">level=</span><span class="s">&#34;project&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;orderEntry</span> <span class="na">type=</span><span class="s">&#34;library&#34;</span> <span class="na">exported=</span><span class="s">&#34;&#34;</span> <span class="na">name=</span><span class="s">&#34;caLib&#34;</span> <span class="na">level=</span><span class="s">&#34;project&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="nt">&lt;orderEntry</span> <span class="na">type=</span><span class="s">&#34;library&#34;</span> <span class="na">exported=</span><span class="s">&#34;&#34;</span> <span class="na">name=</span><span class="s">&#34;ddlogin&#34;</span> <span class="na">level=</span><span class="s">&#34;project&#34;</span> <span class="nt">/&gt;</span>
+</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/component&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="nt">&lt;/module&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h2 id="project-structure配置">Project Structure配置</h2>
+<h3 id="1artifacts配置">1、Artifacts配置</h3>
+<p><code>Project Structure</code>中配置<code>Artifacts</code>，弹出框选确认</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240924114112089.png"
+        data-srcset="./images/image-20240924114112089.png, ./images/image-20240924114112089.png 1.5x, ./images/image-20240924114112089.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240924114112089.png"
+        title="image-20240924114112089" /></p>
+<p>修改名称，注意大小写</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240924114158808.png"
+        data-srcset="./images/image-20240924114158808.png, ./images/image-20240924114158808.png 1.5x, ./images/image-20240924114158808.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240924114158808.png"
+        title="image-20240924114158808" /></p>
+<h3 id="2修改yhcms_web_explodedxml">2、修改yhcms_Web_exploded.xml</h3>
+<p>修改<code>.idea</code>中的<code>artifacts</code>包下的<code>yhcms_Web_exploded.xml</code>文件</p>
+<p>将<code>&lt;root&gt;&lt;/root&gt;</code>节点之间的内容换成下面的代码</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">root</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;root&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;javaee-facet-resources&#34;</span> <span class="na">facet</span><span class="o">=</span><span class="s">&#34;yhcms2020/web/Web&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;directory&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;WEB-INF&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;directory&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;classes&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;javaee-facet-classes&#34;</span> <span class="na">facet</span><span class="o">=</span><span class="s">&#34;yhcms2020/web/Web&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;module-output&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;yhcms2020&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">element</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;directory&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;lib&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;library&#34;</span> <span class="na">level</span><span class="o">=</span><span class="s">&#34;project&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;caLib&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;library&#34;</span> <span class="na">level</span><span class="o">=</span><span class="s">&#34;project&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;ddlogin&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;library&#34;</span> <span class="na">level</span><span class="o">=</span><span class="s">&#34;project&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;admin-auxiliary-default-app-3.0.0-SNAPSHOT&#34;</span> <span class="p">/&gt;</span>
+</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">element</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">element</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">root</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>这里注意，这段xml中有多个<code>yhcms2020</code>，此名称应该与你打开idea工具后自动在根节点现实的<code>.iml</code></p>
+<p>文件名一致</p>
+<h3 id="3所有配置项检查">3、所有配置项检查</h3>
+<p>虽然我们导入的<code>.idea</code>会帮我们自动配置好剩余的Project Structure，但是这个地方最好还是认真检测比对一下。</p>
+<p>从上到下检查配置：</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240924114958473.png"
+        data-srcset="./images/image-20240924114958473.png, ./images/image-20240924114958473.png 1.5x, ./images/image-20240924114958473.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240924114958473.png"
+        title="image-20240924114958473" /></p>
+<p>注意这儿的三个源节点</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240924115024211.png"
+        data-srcset="./images/image-20240924115024211.png, ./images/image-20240924115024211.png 1.5x, ./images/image-20240924115024211.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240924115024211.png"
+        title="image-20240924115024211" /></p>
+<p>module如果有报红或者多引用的，需要手动删除。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240924115049421.png"
+        data-srcset="./images/image-20240924115049421.png, ./images/image-20240924115049421.png 1.5x, ./images/image-20240924115049421.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240924115049421.png"
+        title="image-20240924115049421" /></p>
+<p>web.xml一定是引用的项目中webapp中的，而不是idea自动给你生成的</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240924115105667.png"
+        data-srcset="./images/image-20240924115105667.png, ./images/image-20240924115105667.png 1.5x, ./images/image-20240924115105667.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240924115105667.png"
+        title="image-20240924115105667" /></p>
+<p>这里如果是空的需要手动从lib中引入。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240924115123679.png"
+        data-srcset="./images/image-20240924115123679.png, ./images/image-20240924115123679.png 1.5x, ./images/image-20240924115123679.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240924115123679.png"
+        title="image-20240924115123679" /></p>
+<p>如果module那里配置了，这里应该是和那边一致的。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240924115146987.png"
+        data-srcset="./images/image-20240924115146987.png, ./images/image-20240924115146987.png 1.5x, ./images/image-20240924115146987.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240924115146987.png"
+        title="image-20240924115146987" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240924115154825.png"
+        data-srcset="./images/image-20240924115154825.png, ./images/image-20240924115154825.png 1.5x, ./images/image-20240924115154825.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240924115154825.png"
+        title="image-20240924115154825" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240924115203279.png"
+        data-srcset="./images/image-20240924115203279.png, ./images/image-20240924115203279.png 1.5x, ./images/image-20240924115203279.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240924115203279.png"
+        title="image-20240924115203279" /></p>
+<p>务必检查全部对上。</p>
+<h2 id="tomcat配置">tomcat配置</h2>
+<h3 id="1artifacts依赖">1、artifacts依赖</h3>
+<p>tomcat处注意这两处，依赖一定要选这个Web的，下面需要改成<code>yhcms2020</code>：</p>
+<div class="details admonition bug open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-bug fa-fw" aria-hidden="true"></i>千万注意！！<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">这儿不叫yhcms2020，则所有<code>config.properties</code>都需要将yhcms2020改成你这儿取的名字，否则资源加载不正常</div>
+        </div>
+    </div>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240924114730287.png"
+        data-srcset="./images/image-20240924114730287.png, ./images/image-20240924114730287.png 1.5x, ./images/image-20240924114730287.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240924114730287.png"
+        title="image-20240924114730287" /></p>
+<p>端口改成8081，这儿不用8081端口的，则所有<code>config.properties</code>都需要将8081改成你这儿的端口，否则资源加载不正常<img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240924114824667.png"
+        data-srcset="./images/image-20240924114824667.png, ./images/image-20240924114824667.png 1.5x, ./images/image-20240924114824667.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240924114824667.png"
+        title="image-20240924114824667" /></p>
+<h2 id="引用前端">引用前端</h2>
+<p>前端静态文件引用路径修改</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240924115332992.png"
+        data-srcset="./images/image-20240924115332992.png, ./images/image-20240924115332992.png 1.5x, ./images/image-20240924115332992.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240924115332992.png"
+        title="image-20240924115332992" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240924115404327.png"
+        data-srcset="./images/image-20240924115404327.png, ./images/image-20240924115404327.png 1.5x, ./images/image-20240924115404327.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240924115404327.png"
+        title="image-20240924115404327" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20240924115440441.png"
+        data-srcset="./images/image-20240924115440441.png, ./images/image-20240924115440441.png 1.5x, ./images/image-20240924115440441.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20240924115440441.png"
+        title="image-20240924115440441" /></p>
+<h2 id="启动项目">启动项目</h2>
+<p>到这儿没问题就配置完了，点tomcat启动</p>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-09-24</span>
+            </div></div>
+
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/tomcat/">Tomcat</a>,&nbsp;<a href="/tags/java/">Java</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/text24/" class="prev" rel="prev" title="【HUGO】Hugo的LoveIt主题美化（二）"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>【HUGO】Hugo的LoveIt主题美化（二）</a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line">欢迎来到wangty的笔记博客空间</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">wangty</a></span></div>
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">
+                  <i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span> 次
+              </span> |
+                        <span id="busuanzi_container_site_uv">
+                  <i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span> 位
+              </span>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.5.0/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"Wangty654.github.io"},"valine":{"appId":"QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI","appKey":"WBmoGyJtbqUswvfLh6L8iEBr","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-CN","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://leancloud.hugoloveit.com","visitor":true}},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.d7121d72cd85153ec9d35a888cee3eb28c2700ca763f649a538f6c772d750021.js" integrity="sha256-1xIdcs2FFT7J01qIjO4+sownAMp2P2SaU49sdy11ACE="></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/js/custom.js"></script></body>
+</html>

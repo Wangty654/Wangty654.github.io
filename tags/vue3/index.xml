@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Vue3 - 标签 - TyNote</title>
-        <link>https://Wangty654.github.io/tags/vue3/</link>
+        <link>http://localhost:1313/tags/vue3/</link>
         <description>Vue3 - 标签 - TyNote</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
-            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 01 Jul 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/vue3/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 01 Jul 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/vue3/" rel="self" type="application/rss+xml" /><item>
     <title>【Vue前端框架】尚硅谷Vue2.0&#43;Vue3.0全套教程</title>
-    <link>https://Wangty654.github.io/text20/</link>
+    <link>http://localhost:1313/text20/</link>
     <pubDate>Mon, 01 Jul 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/text20/</guid>
+    <guid>http://localhost:1313/text20/</guid>
     <description><![CDATA[尚硅谷Vue2.0+Vue3.0全套教程]]></description>
 </item>
 </channel>
