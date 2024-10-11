@@ -5,12 +5,12 @@
         <description>后端 - 分类 - TyNote</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
             <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 11 Oct 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/categories/%E5%90%8E%E7%AB%AF/" rel="self" type="application/rss+xml" /><item>
-    <title></title>
+    <title>【Spring-boot】启动报错注入bean失败Mapper找不到</title>
     <link>https://Wangty654.github.io/text28/</link>
     <pubDate>Fri, 11 Oct 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
     <guid>https://Wangty654.github.io/text28/</guid>
-    <description><![CDATA[【Spring-boot】启动报错注入bean失败Mapper找不到 报错信息： A component required a bean of type ‘com...Mapper‘ that could not be found. Consider defining a bean of]]></description>
+    <description><![CDATA[启动报错注入bean失败Mapper找不到A component required a bean of type ‘com.<em>.</em>.Mapper‘ that could not be found.]]></description>
 </item>
 </channel>
 </rss>
