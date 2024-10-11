@@ -1,0 +1,16 @@
+<rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
+    <channel>
+        <title>Office - 标签 - TyNote</title>
+        <link>https://Wangty654.github.io/tags/office/</link>
+        <description>Office - 标签 - TyNote</description>
+        <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 08 Oct 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/office/" rel="self" type="application/rss+xml" /><item>
+    <title>【word文档】word页脚页码不连续解决办法</title>
+    <link>https://Wangty654.github.io/text27/</link>
+    <pubDate>Tue, 08 Oct 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/text27/</guid>
+    <description><![CDATA[记录项目中编写文档，遇到纵向文档引用横向文档后，目录顺序及页码不连贯的问题，word页脚页码不连续解决办法]]></description>
+</item>
+</channel>
+</rss>

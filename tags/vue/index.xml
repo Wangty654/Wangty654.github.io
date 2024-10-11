@@ -10,7 +10,7 @@
     <pubDate>Wed, 21 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
     <guid>https://Wangty654.github.io/vue2/</guid>
-    <description><![CDATA[本章节记录vue2的所涉及的一些语法和使用场景，记录的流程顺序为：1.vue基础；2.vue-cli 脚手架-专门用于工程开发；3.vue-router；4.vuex；5.element-ui：饿了么团队，做UI组件库的；6.vue3]]></description>
+    <description><![CDATA[本章节记录vue2的所涉及的一些语法和使用场景，记录的流程顺序为：1.vue基础核心；2.vue-cli 脚手架-专门用于工程开发；3.vue-router；4.vuex；5.element-ui：饿了么团队，做UI组件库的；6.vue3]]></description>
 </item>
 <item>
     <title>【Vue前端框架】vue子组件向父组件相互传参的方式</title>

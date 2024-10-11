@@ -4,33 +4,32 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>yhcms部署在tomcat上启动步骤 - TyNote</title><meta name="Description" content="你我一场唤不醒的梦……"><meta property="og:url" content="https://Wangty654.github.io/text27/">
+        <title>【word文档】word页脚页码不连续解决办法 - TyNote</title><meta name="Description" content="你我一场唤不醒的梦……"><meta property="og:url" content="https://Wangty654.github.io/text27/">
   <meta property="og:site_name" content="TyNote">
-  <meta property="og:title" content="yhcms部署在tomcat上启动步骤">
-  <meta property="og:description" content="因为该项目启动非常麻烦，该篇重点描述yhcms项目整个配置，已经部署在tomcat上的启动步骤">
+  <meta property="og:title" content="【word文档】word页脚页码不连续解决办法">
+  <meta property="og:description" content="记录项目中编写文档，遇到纵向文档引用横向文档后，目录顺序及页码不连贯的问题，word页脚页码不连续解决办法">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
-    <meta property="article:published_time" content="2024-09-24T00:00:00+00:00">
-    <meta property="article:modified_time" content="2024-09-24T00:00:00+00:00">
-    <meta property="article:tag" content="Tomcat">
-    <meta property="article:tag" content="Java">
+    <meta property="article:published_time" content="2024-10-08T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-10-08T00:00:00+00:00">
+    <meta property="article:tag" content="Office">
     <meta property="og:image" content="https://Wangty654.github.io/images/avatar.png">
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:image" content="https://Wangty654.github.io/images/avatar.png">
-  <meta name="twitter:title" content="yhcms部署在tomcat上启动步骤">
-  <meta name="twitter:description" content="因为该项目启动非常麻烦，该篇重点描述yhcms项目整个配置，已经部署在tomcat上的启动步骤">
+  <meta name="twitter:title" content="【word文档】word页脚页码不连续解决办法">
+  <meta name="twitter:description" content="记录项目中编写文档，遇到纵向文档引用横向文档后，目录顺序及页码不连贯的问题，word页脚页码不连续解决办法">
 <meta name="application-name" content="TyNote">
 <meta name="apple-mobile-web-app-title" content="TyNote"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="msapplication-TileColor" href="/favicon-16x16.png" color="#da532c"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Wangty654.github.io/text27/" /><link rel="prev" href="https://Wangty654.github.io/text24/" /><link rel="stylesheet" href="/css/style.min.cafd7a15685d3295cb0c60c3cf7c0cde0632ba4dd2c8b6c34b35bf00ee9e8a08.css" integrity="sha256-yv16FWhdMpXLDGDDz3wM3gYyuk3SyLbDSzW/AO6eigg="><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="msapplication-TileColor" href="/favicon-16x16.png" color="#da532c"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Wangty654.github.io/text27/" /><link rel="prev" href="https://Wangty654.github.io/text24/" /><link rel="next" href="https://Wangty654.github.io/text28/" /><link rel="stylesheet" href="/css/style.min.cafd7a15685d3295cb0c60c3cf7c0cde0632ba4dd2c8b6c34b35bf00ee9e8a08.css" integrity="sha256-yv16FWhdMpXLDGDDz3wM3gYyuk3SyLbDSzW/AO6eigg="><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
         <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
-        "headline": "yhcms部署在tomcat上启动步骤",
+        "headline": "【word文档】word页脚页码不连续解决办法",
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
@@ -40,8 +39,8 @@
                             "url": "https:\/\/Wangty654.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "tomcat, java","wordcount":  1287 ,
-        "url": "https:\/\/Wangty654.github.io\/text27\/","datePublished": "2024-09-24T00:00:00+00:00","dateModified": "2024-09-24T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords": "office","wordcount":  463 ,
+        "url": "https:\/\/Wangty654.github.io\/text27\/","datePublished": "2024-10-08T00:00:00+00:00","dateModified": "2024-10-08T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "TyNote","logo": {
                     "@type": "ImageObject",
@@ -132,10 +131,10 @@
 
             <h2 class="toc-title">目录</h2>
             <div class="toc-content" id="toc-content-auto"></div>
-        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">yhcms部署在tomcat上启动步骤</h1><div class="post-meta">
-            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/java/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-09-24">2024-09-24</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1287 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 3 分钟&nbsp;<span id="/text27/" class="leancloud_visitors" data-flag-title="yhcms部署在tomcat上启动步骤">
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">【word文档】word页脚页码不连续解决办法</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/office%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Office基本操作</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-10-08">2024-10-08</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 463 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 1 分钟&nbsp;<span id="/text27/" class="leancloud_visitors" data-flag-title="【word文档】word页脚页码不连续解决办法">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;
 
@@ -157,354 +156,84 @@
                     <span></span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
-  <ul>
-    <li>
-      <ul>
-        <li><a href="#项目拉取">项目拉取</a></li>
-        <li><a href="#项目配置">项目配置</a>
-          <ul>
-            <li><a href="#1导入idea包">1、导入.idea包</a></li>
-            <li><a href="#2修改modulesxml配置文件">2、修改modules.xml配置文件</a></li>
-            <li><a href="#3修改yhcms2020iml配置文件">3、修改yhcms2020.iml配置文件</a></li>
-          </ul>
-        </li>
-        <li><a href="#project-structure配置">Project Structure配置</a>
-          <ul>
-            <li><a href="#1artifacts配置">1、Artifacts配置</a></li>
-            <li><a href="#2修改yhcms_web_explodedxml">2、修改yhcms_Web_exploded.xml</a></li>
-            <li><a href="#3所有配置项检查">3、所有配置项检查</a></li>
-          </ul>
-        </li>
-        <li><a href="#tomcat配置">tomcat配置</a>
-          <ul>
-            <li><a href="#1artifacts依赖">1、artifacts依赖</a></li>
-          </ul>
-        </li>
-        <li><a href="#引用前端">引用前端</a></li>
-        <li><a href="#启动项目">启动项目</a></li>
-      </ul>
-    </li>
-  </ul>
-</nav></div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
             </div>
 
 
 
-        <div class="content" id="content"><div class="details admonition bug open">
+        <div class="content" id="content"><div class="details admonition abstract open">
         <div class="details-summary admonition-title">
-            <i class="icon fas fa-bug fa-fw" aria-hidden="true"></i>注意！！<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>This is a tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
         </div>
         <div class="details-content">
-            <div class="admonition-content">不按操作步骤配置，起不起来自己想原因。。。</div>
+            <div class="admonition-content">word 页码不连续可通过以下步骤解决：1. 检查并删除分节符；2. 更改页码格式为连续编号；3. 更新整篇文档页码；4. 检查页眉或页脚中的页码设置，确保与正文一致；5. 取消页眉或页脚之间的链接。</div>
         </div>
     </div>
-<h2 id="项目拉取">项目拉取</h2>
-<p>1.SVN地址：http://192.168.10.70:8090/svn/JY20CH00200/新网厅系统/程序</p>
-<p>后端项目名称：yhcms</p>
-<p>下文都是针对 <code>yhcms</code> 的配置描述</p>
-<h2 id="项目配置">项目配置</h2>
-<h3 id="1导入idea包">1、导入.idea包</h3>
-<p>用idea工具打开(open)后端项目以后，会在 <code>yhcms</code> 项目包的根下创建一个<code>.idea</code>文件。</p>
-<p>将U盘中已经配置好的<code>.idea</code>替换刚创建的<code>.idea</code>文件。</p>
-<p>（替换时候，特别注意：<code>.idea</code>文件夹中的<code>modules.xml</code>不替换，它需要手动修改）</p>
-<img src="./images/image-20240924111909959.png" alt="image-20240924111909959" style="zoom:50%;" />
-<br/>
-<h3 id="2修改modulesxml配置文件">2、修改modules.xml配置文件</h3>
-<p>打开modules.xml，ctrl+A全选，用下面这段代码全部替换。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&lt;project</span> <span class="na">version=</span><span class="s">&#34;4&#34;</span><span class="nt">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&#34;ProjectModuleManager&#34;</span><span class="nt">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;modules&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&lt;module</span> <span class="na">fileurl=</span><span class="s">&#34;file://$PROJECT_DIR$/yhcms2020.iml&#34;</span> <span class="na">filepath=</span><span class="s">&#34;$PROJECT_DIR$/yhcms2020.iml&#34;</span> <span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/modules&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/component&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&lt;/project&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>这里注意，这段xml中有两个<code>yhcms2020.iml</code>，此名称应该与你打开idea工具后自动在根节点帮你创建的<code>.iml</code></p>
-<p>文件名一致</p>
-<img src="./images/image-20240924121010995.png" alt="image-20240924121010995" style="zoom:50%;" />
-<h3 id="3修改yhcms2020iml配置文件">3、修改yhcms2020.iml配置文件</h3>
-<p>打开yhcms2020.iml，同样的操作：ctrl+A全选，用下面这段代码全部替换。</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span><span class="lnt">15
-</span><span class="lnt">16
-</span><span class="lnt">17
-</span><span class="lnt">18
-</span><span class="lnt">19
-</span><span class="lnt">20
-</span><span class="lnt">21
-</span><span class="lnt">22
-</span><span class="lnt">23
-</span><span class="lnt">24
-</span><span class="lnt">25
-</span><span class="lnt">26
-</span><span class="lnt">27
-</span><span class="lnt">28
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-xml" data-lang="xml"><span class="line"><span class="cl"><span class="cp">&lt;?xml version=&#34;1.0&#34; encoding=&#34;UTF-8&#34;?&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&lt;module</span> <span class="na">type=</span><span class="s">&#34;JAVA_MODULE&#34;</span> <span class="na">version=</span><span class="s">&#34;4&#34;</span><span class="nt">&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&#34;FacetManager&#34;</span><span class="nt">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;facet</span> <span class="na">type=</span><span class="s">&#34;web&#34;</span> <span class="na">name=</span><span class="s">&#34;Web&#34;</span><span class="nt">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&lt;configuration&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;descriptors&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&lt;deploymentDescriptor</span> <span class="na">name=</span><span class="s">&#34;web.xml&#34;</span> <span class="na">url=</span><span class="s">&#34;file://$MODULE_DIR$/webapp/WEB-INF/web.xml&#34;</span> <span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/descriptors&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;webroots&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="nt">&lt;root</span> <span class="na">url=</span><span class="s">&#34;file://$MODULE_DIR$/webapp&#34;</span> <span class="na">relative=</span><span class="s">&#34;/&#34;</span> <span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="nt">&lt;/webroots&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&lt;/configuration&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/facet&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/component&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&lt;component</span> <span class="na">name=</span><span class="s">&#34;NewModuleRootManager&#34;</span> <span class="na">LANGUAGE_LEVEL=</span><span class="s">&#34;JDK_1_8&#34;</span> <span class="na">inherit-compiler-output=</span><span class="s">&#34;true&#34;</span><span class="nt">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;exclude-output</span> <span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;content</span> <span class="na">url=</span><span class="s">&#34;file://$MODULE_DIR$&#34;</span><span class="nt">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&lt;sourceFolder</span> <span class="na">url=</span><span class="s">&#34;file://$MODULE_DIR$/javacode/cms&#34;</span> <span class="na">isTestSource=</span><span class="s">&#34;false&#34;</span> <span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&lt;sourceFolder</span> <span class="na">url=</span><span class="s">&#34;file://$MODULE_DIR$/javacode/config&#34;</span> <span class="na">isTestSource=</span><span class="s">&#34;false&#34;</span> <span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="nt">&lt;sourceFolder</span> <span class="na">url=</span><span class="s">&#34;file://$MODULE_DIR$/javacode/sysdev&#34;</span> <span class="na">isTestSource=</span><span class="s">&#34;false&#34;</span> <span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;/content&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;orderEntry</span> <span class="na">type=</span><span class="s">&#34;inheritedJdk&#34;</span> <span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;orderEntry</span> <span class="na">type=</span><span class="s">&#34;sourceFolder&#34;</span> <span class="na">forTests=</span><span class="s">&#34;false&#34;</span> <span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;orderEntry</span> <span class="na">type=</span><span class="s">&#34;library&#34;</span> <span class="na">exported=</span><span class="s">&#34;&#34;</span> <span class="na">name=</span><span class="s">&#34;admin-auxiliary-default-app-3.0.0-SNAPSHOT&#34;</span> <span class="na">level=</span><span class="s">&#34;project&#34;</span> <span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;orderEntry</span> <span class="na">type=</span><span class="s">&#34;library&#34;</span> <span class="na">exported=</span><span class="s">&#34;&#34;</span> <span class="na">name=</span><span class="s">&#34;caLib&#34;</span> <span class="na">level=</span><span class="s">&#34;project&#34;</span> <span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="nt">&lt;orderEntry</span> <span class="na">type=</span><span class="s">&#34;library&#34;</span> <span class="na">exported=</span><span class="s">&#34;&#34;</span> <span class="na">name=</span><span class="s">&#34;ddlogin&#34;</span> <span class="na">level=</span><span class="s">&#34;project&#34;</span> <span class="nt">/&gt;</span>
-</span></span><span class="line"><span class="cl">  <span class="nt">&lt;/component&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="nt">&lt;/module&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h2 id="project-structure配置">Project Structure配置</h2>
-<h3 id="1artifacts配置">1、Artifacts配置</h3>
-<p><code>Project Structure</code>中配置<code>Artifacts</code>，弹出框选确认</p>
+<p><strong>1. 检查分节符：</strong></p>
+<ul>
+<li>分节符可以将文档分成不同的部分，每个部分可以有自己的页码。</li>
+<li>将光标放在页码中断处，然后转到“布局”选项卡 &gt; “分隔符”组。</li>
+<li>如果有分节符插入，请删除它。</li>
+</ul>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="./images/image-20240924114112089.png"
-        data-srcset="./images/image-20240924114112089.png, ./images/image-20240924114112089.png 1.5x, ./images/image-20240924114112089.png 2x"
+        data-src="./images/image-20241008100129542.png"
+        data-srcset="./images/image-20241008100129542.png, ./images/image-20241008100129542.png 1.5x, ./images/image-20241008100129542.png 2x"
         data-sizes="auto"
-        alt="./images/image-20240924114112089.png"
-        title="image-20240924114112089" /></p>
-<p>修改名称，注意大小写</p>
+        alt="./images/image-20241008100129542.png"
+        title="image-20241008100129542" /></p>
+<p><strong>2. 更改页码格式：</strong></p>
+<ul>
+<li>转到“插入”选项卡 &gt; “页码”组。</li>
+<li>选择“页码格式”选项，然后选择连续页码选项。</li>
+<li>确保“页码起始编号”设置为 1。</li>
+</ul>
 <p><img
         class="lazyload"
         src="/svg/loading.min.svg"
-        data-src="./images/image-20240924114158808.png"
-        data-srcset="./images/image-20240924114158808.png, ./images/image-20240924114158808.png 1.5x, ./images/image-20240924114158808.png 2x"
+        data-src="./images/image-20241008100245926.png"
+        data-srcset="./images/image-20241008100245926.png, ./images/image-20241008100245926.png 1.5x, ./images/image-20241008100245926.png 2x"
         data-sizes="auto"
-        alt="./images/image-20240924114158808.png"
-        title="image-20240924114158808" /></p>
-<h3 id="2修改yhcms_web_explodedxml">2、修改yhcms_Web_exploded.xml</h3>
-<p>修改<code>.idea</code>中的<code>artifacts</code>包下的<code>yhcms_Web_exploded.xml</code>文件</p>
-<p>将<code>&lt;root&gt;&lt;/root&gt;</code>节点之间的内容换成下面的代码</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
-</span><span class="lnt"> 2
-</span><span class="lnt"> 3
-</span><span class="lnt"> 4
-</span><span class="lnt"> 5
-</span><span class="lnt"> 6
-</span><span class="lnt"> 7
-</span><span class="lnt"> 8
-</span><span class="lnt"> 9
-</span><span class="lnt">10
-</span><span class="lnt">11
-</span><span class="lnt">12
-</span><span class="lnt">13
-</span><span class="lnt">14
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">root</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;root&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;javaee-facet-resources&#34;</span> <span class="na">facet</span><span class="o">=</span><span class="s">&#34;yhcms2020/web/Web&#34;</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;directory&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;WEB-INF&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;directory&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;classes&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;javaee-facet-classes&#34;</span> <span class="na">facet</span><span class="o">=</span><span class="s">&#34;yhcms2020/web/Web&#34;</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;module-output&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;yhcms2020&#34;</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">element</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;directory&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;lib&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;library&#34;</span> <span class="na">level</span><span class="o">=</span><span class="s">&#34;project&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;caLib&#34;</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;library&#34;</span> <span class="na">level</span><span class="o">=</span><span class="s">&#34;project&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;ddlogin&#34;</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">          <span class="p">&lt;</span><span class="nt">element</span> <span class="na">id</span><span class="o">=</span><span class="s">&#34;library&#34;</span> <span class="na">level</span><span class="o">=</span><span class="s">&#34;project&#34;</span> <span class="na">name</span><span class="o">=</span><span class="s">&#34;admin-auxiliary-default-app-3.0.0-SNAPSHOT&#34;</span> <span class="p">/&gt;</span>
-</span></span><span class="line"><span class="cl">        <span class="p">&lt;/</span><span class="nt">element</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">      <span class="p">&lt;/</span><span class="nt">element</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">    <span class="p">&lt;/</span><span class="nt">root</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><p>这里注意，这段xml中有多个<code>yhcms2020</code>，此名称应该与你打开idea工具后自动在根节点现实的<code>.iml</code></p>
-<p>文件名一致</p>
-<h3 id="3所有配置项检查">3、所有配置项检查</h3>
-<p>虽然我们导入的<code>.idea</code>会帮我们自动配置好剩余的Project Structure，但是这个地方最好还是认真检测比对一下。</p>
-<p>从上到下检查配置：</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="./images/image-20240924114958473.png"
-        data-srcset="./images/image-20240924114958473.png, ./images/image-20240924114958473.png 1.5x, ./images/image-20240924114958473.png 2x"
-        data-sizes="auto"
-        alt="./images/image-20240924114958473.png"
-        title="image-20240924114958473" /></p>
-<p>注意这儿的三个源节点</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="./images/image-20240924115024211.png"
-        data-srcset="./images/image-20240924115024211.png, ./images/image-20240924115024211.png 1.5x, ./images/image-20240924115024211.png 2x"
-        data-sizes="auto"
-        alt="./images/image-20240924115024211.png"
-        title="image-20240924115024211" /></p>
-<p>module如果有报红或者多引用的，需要手动删除。</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="./images/image-20240924115049421.png"
-        data-srcset="./images/image-20240924115049421.png, ./images/image-20240924115049421.png 1.5x, ./images/image-20240924115049421.png 2x"
-        data-sizes="auto"
-        alt="./images/image-20240924115049421.png"
-        title="image-20240924115049421" /></p>
-<p>web.xml一定是引用的项目中webapp中的，而不是idea自动给你生成的</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="./images/image-20240924115105667.png"
-        data-srcset="./images/image-20240924115105667.png, ./images/image-20240924115105667.png 1.5x, ./images/image-20240924115105667.png 2x"
-        data-sizes="auto"
-        alt="./images/image-20240924115105667.png"
-        title="image-20240924115105667" /></p>
-<p>这里如果是空的需要手动从lib中引入。</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="./images/image-20240924115123679.png"
-        data-srcset="./images/image-20240924115123679.png, ./images/image-20240924115123679.png 1.5x, ./images/image-20240924115123679.png 2x"
-        data-sizes="auto"
-        alt="./images/image-20240924115123679.png"
-        title="image-20240924115123679" /></p>
-<p>如果module那里配置了，这里应该是和那边一致的。</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="./images/image-20240924115146987.png"
-        data-srcset="./images/image-20240924115146987.png, ./images/image-20240924115146987.png 1.5x, ./images/image-20240924115146987.png 2x"
-        data-sizes="auto"
-        alt="./images/image-20240924115146987.png"
-        title="image-20240924115146987" /></p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="./images/image-20240924115154825.png"
-        data-srcset="./images/image-20240924115154825.png, ./images/image-20240924115154825.png 1.5x, ./images/image-20240924115154825.png 2x"
-        data-sizes="auto"
-        alt="./images/image-20240924115154825.png"
-        title="image-20240924115154825" /></p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="./images/image-20240924115203279.png"
-        data-srcset="./images/image-20240924115203279.png, ./images/image-20240924115203279.png 1.5x, ./images/image-20240924115203279.png 2x"
-        data-sizes="auto"
-        alt="./images/image-20240924115203279.png"
-        title="image-20240924115203279" /></p>
-<p>务必检查全部对上。</p>
-<h2 id="tomcat配置">tomcat配置</h2>
-<h3 id="1artifacts依赖">1、artifacts依赖</h3>
-<p>tomcat处注意这两处，依赖一定要选这个Web的，下面需要改成<code>yhcms2020</code>：</p>
-<div class="details admonition bug open">
-        <div class="details-summary admonition-title">
-            <i class="icon fas fa-bug fa-fw" aria-hidden="true"></i>千万注意！！<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
-        </div>
-        <div class="details-content">
-            <div class="admonition-content">这儿不叫yhcms2020，则所有<code>config.properties</code>都需要将yhcms2020改成你这儿取的名字，否则资源加载不正常</div>
-        </div>
-    </div>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="./images/image-20240924114730287.png"
-        data-srcset="./images/image-20240924114730287.png, ./images/image-20240924114730287.png 1.5x, ./images/image-20240924114730287.png 2x"
-        data-sizes="auto"
-        alt="./images/image-20240924114730287.png"
-        title="image-20240924114730287" /></p>
-<p>端口改成8081，这儿不用8081端口的，则所有<code>config.properties</code>都需要将8081改成你这儿的端口，否则资源加载不正常<img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="./images/image-20240924114824667.png"
-        data-srcset="./images/image-20240924114824667.png, ./images/image-20240924114824667.png 1.5x, ./images/image-20240924114824667.png 2x"
-        data-sizes="auto"
-        alt="./images/image-20240924114824667.png"
-        title="image-20240924114824667" /></p>
-<h2 id="引用前端">引用前端</h2>
-<p>前端静态文件引用路径修改</p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="./images/image-20240924115332992.png"
-        data-srcset="./images/image-20240924115332992.png, ./images/image-20240924115332992.png 1.5x, ./images/image-20240924115332992.png 2x"
-        data-sizes="auto"
-        alt="./images/image-20240924115332992.png"
-        title="image-20240924115332992" /></p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="./images/image-20240924115404327.png"
-        data-srcset="./images/image-20240924115404327.png, ./images/image-20240924115404327.png 1.5x, ./images/image-20240924115404327.png 2x"
-        data-sizes="auto"
-        alt="./images/image-20240924115404327.png"
-        title="image-20240924115404327" /></p>
-<p><img
-        class="lazyload"
-        src="/svg/loading.min.svg"
-        data-src="./images/image-20240924115440441.png"
-        data-srcset="./images/image-20240924115440441.png, ./images/image-20240924115440441.png 1.5x, ./images/image-20240924115440441.png 2x"
-        data-sizes="auto"
-        alt="./images/image-20240924115440441.png"
-        title="image-20240924115440441" /></p>
-<h2 id="启动项目">启动项目</h2>
-<p>到这儿没问题就配置完了，点tomcat启动</p>
+        alt="./images/image-20241008100245926.png"
+        title="image-20241008100245926" /></p>
+<img src="./images/image-20241008100322752.png" alt="image-20241008100322752" style="zoom:50%;" />
+<p><strong>3. 更新页码：</strong></p>
+<ul>
+<li>更新页码后，需要更新整个文档的页码。</li>
+<li>转到“插入”选项卡 &gt; “页码”组，然后单击“更新页码”。</li>
+<li>选择“更新整篇文档”选项。</li>
+</ul>
+<p><strong>4. 检查页眉或页脚：</strong></p>
+<ul>
+<li>有时，页眉或页脚中的页码设置可能与文档正文不匹配。</li>
+<li>双击页眉或页脚区域进行编辑。</li>
+<li>检查页码设置是否正确，并将其与文档正文中的页码保持一致。</li>
+</ul>
+<p><strong>5. 取消链接页眉或页脚：</strong></p>
+<ul>
+<li>如果页眉或页脚之间存在链接，可能会导致页码不连续。</li>
+<li>双击要更改页眉或页脚的页面。</li>
+<li>转到“设计”选项卡 &gt; “页眉和页脚”组，然后取消选中“链接到前一节”复选框。</li>
+</ul>
 </div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
-                <span>更新于 2024-09-24</span>
+                <span>更新于 2024-10-08</span>
             </div></div>
 
     </div>
 
     <div class="post-info-more">
-        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/tomcat/">Tomcat</a>,&nbsp;<a href="/tags/java/">Java</a></section>
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/office/">Office</a></section>
         <section>
             <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
         </section>
     </div>
 
-    <div class="post-nav"><a href="/text24/" class="prev" rel="prev" title="【HUGO】Hugo的LoveIt主题美化（二）"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>【HUGO】Hugo的LoveIt主题美化（二）</a></div>
+    <div class="post-nav"><a href="/text24/" class="prev" rel="prev" title="【HUGO】Hugo的LoveIt主题美化（二）"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>【HUGO】Hugo的LoveIt主题美化（二）</a>
+            <a href="/text28/" class="next" rel="next" title=""><i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
 <div id="comments"><div id="valine" class="comment"></div><noscript>
                 Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.

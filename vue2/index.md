@@ -1,6 +1,8 @@
 # 【Vue前端框架】Vue2.0全套教程
 
 
+# 第1章：Vue核心
+
 ## 1.vue简介：
 
 vue是一套用于**构建用户界面**的**渐进式**javaScript框架
@@ -3813,6 +3815,8 @@ vm的一生(vm的生命周期):
 &emsp;&emsp;销毁完毕========>调用destroyed函数。
 这块流程中：主要阐述8个钩子。还有3个常用的钩子，需要在特殊的场景才能被调用，我们会在路由小节中进行详细描述。
 
+# 第2章：Vue组件化编程
+
 ## 20.组件
 
 **Vue组件化编程**
@@ -4491,6 +4495,8 @@ new Vue({
 
 ----------------------所以，我们这里阐述vue脚手架的内容-----------------------
 
+# 第3章：使用Vue脚手架
+
 ## 21.Vue脚手架
 
 ### 创建Vue脚手架
@@ -4647,126 +4653,1271 @@ demo的控制文件。配置一些ES6转ES5的规则。【不需要我们去修�
 
 ## 22.render函数
 
-修改默认配置
-ref属性
+```js
+new Vue({
+  render: h => h(App),
+}).$mount('#app')
+```
 
-props配置
-mixin混入
-插件
-scoped样式
-TodoLisl案例 静态
-TodoList案例 初始
-TodoList案例 添加
-TodoList案例 勾选
-TodoList案例 删除
+替换成
 
-TodoList案例 底部统计
-TodoList案例 底部交互 
-TodoList案例 总结
+```js
+new Vue({
+  render(createElement){
+    return createElement('h1','你好啊')
+  }
+}).$mount('#app')
+```
 
-浏览器本地存储
-TodoList 本地存储
-组件自定义事件 绑定
-组件自定义事件 解绑
-组件自定义事件 总结
-TodoList案例 自定义事件
-全局事件总线1
-全局事件总线2
+发现页面正常显示：
 
-TodoList案例 事件总线
+<img src="./images/image-20241001114506556.png" alt="image-20241001114506556" style="zoom:50%;" />
 
-消息订阅与发布_pubsub
+由此可以知道，render：是vue帮我们调用的，且利用入参createElement函数帮我们编译模板。
 
-TodoList案例 编辑
-$nextTick
-动画效果
-过度效果
-多个元素过度
-集成第三方动画
+上面的代码：
 
-总结过度与动画
-配置代理 方式一
-配置代理 方式二
-github案例 静态组件
-github案例 列表展示
-github案例 完善案例
+```js
+render(createElement){
+    return createElement('h1','你好啊')
+  }
+```
 
-vue-resource
-默认插槽
-具名插槽
-作用域插槽
-Vuex简介
-求和案例 纯vue版
-Vuex工作原理图
-搭建Vuex环境
+简化可以写成：
 
-求和案例 vuex版
-vuex开发者工具的使用
-getters配置项
-mapState与mapGetters
-mapActions与mapMutations
-多组件共享数据
-vuex模块化+namespace_1
-wuex模块化+namespace_2
+```js
+//函数写成箭头函数
+//render:(createElement) =>{return createElement('h1','你好啊')}
 
-路由的简介
-路由基本使用
-几个注意点
-嵌套路由
-路由的query参数
-命名路由
-路由的params参数
-路由的props配置
-router-link的replace属性
+//一个入参，可以去掉括号
+//render:createElement =>{return createElement('h1','你好啊')}
 
-编程式路由导航
-缓存路由组件
-两个新的生命周期钩子
-全局前置 路由守卫
-全局后置 路由守卫
-独享路由守卫
+//一个唯一返参，可以去掉return
+render:createElement =>createElement('h1','你好啊')
 
-组件内路由守卫
-history模式与hash模式
-element-ui基本使用
-element-ui按需引入
-vue3简介
-使用vue-cli创建工程
+//这便是main.js中写入模版精简的形式
+render: h => h(App)
+```
 
-使用vite创建工程
-分析工程结构
-安装开发者工具
-初识setup
-re数 处理基本类型
-re函数 处理对象类型
-reactive函数
-回顾Vue2的响应式原理
+讨论main.js中的render函数的作用
 
-Vue3响应式原理proxy
-Vue3响应式原理reflect
-reactive对比ref
-setup的两个注意点
-computed计算属性
-watch监视re定义的数据
+<img src="./images/image-20241001105750317.png" alt="image-20241001105750317" style="zoom:50%;" />
 
-watch监视reactive定义的数据
+我们之前独自写过main.js，格式是这样的：
 
-watch时value的问题
+```js
+import App from "./App.vue";
 
-watchEffect函数
-Vue3生命周期
-自定义hook
-toRef与toRefs
-shallowReactive与shallowRef
-readonly与shallowReadonly
-toRaw与markRaw
-customRef
-provide与inject
+new Vue({
+    el:"#root",
+    template:`<App></App>`,
+    componements:{App}
+})
+```
 
-响应式数据的判断
-CompositionAPl的优势
-Fragment组件
-Teleport组件
-Suspense组件
-Vue3中其他的改变
+那为什么vue创建的main.js不这么写呢。
+
+我们将上面这段代码copy后，放入脚手架中，编译项目，可以看见控制台报错：
+
+![image-20241001110446581](./images/image-20241001110446581.png)
+
+我们去调查，为什么vue不完整
+
+在Es6引入第三方库的时候，我们一般写到某个路径下具体某个文件`xxx.js`
+
+在vue引入第三方库的时候，我们一般只写到它的名字。
+
+那么它具体引入的是哪个js，按住ctrl键，点击：
+
+<img src="./images/image-20241001111013725.png" alt="image-20241001111013725" style="zoom:50%;" />
+
+点击引用的vue文件，可以看到来到了node_moudles中
+
+<img src="./images/image-20241001111812948.png" alt="image-20241001111812948" style="zoom:50%;" />
+
+这儿能看见整个vue包含的文件。其实，`main.js`中`import Vue from 'vue'`只写到了这个vue包文件夹，具体指向的哪个js文件，需要依赖配置项：
+
+`package.json`中的`module`的配置js。
+
+这里可以看到是`dist/vue.runtime.esm.js`。这个js是个精简版的vuejs，它将模版解析器精简掉了，所以他没办法解析`template`配置项，产生报错。
+
+<img src="./images/image-20241001112144246.png" alt="image-20241001112144246" style="zoom:50%;" />
+
+打开`dist`文件夹，我们可以看见他下方有很多个vuejs，但是只有`Vue.js`是完整版的，其余的都是在它的基础上精简或者稍加改变的。
+
+<img src="./images/image-20241001113054685.png" alt="image-20241001113054685" style="zoom:50%;" />
+
+那么问题找到了，我们将`main.js`包中的引入换成完整版的：
+
+```js
+import Vue from 'vue'
+```
+
+替换为：
+
+```js
+import Vue from 'vue/dist/vue'
+```
+
+重新编译后，页面和控制台：
+
+<img src="./images/image-20241001113419710.png" alt="image-20241001113419710" style="zoom:50%;" />
+
+模版编译成功，控制台无报错。
+
+为什么不使用这个完整版的vue呢。
+
+`vue.runtime.esm.js`体积小，打包以后体积还能更小一点。且模版编译器最终，不应该出现在我们最终打包好的文件内。
+
+<img src="./images/image-20241001121512606.png" alt="image-20241001121512606" style="zoom:50%;" />
+
+{{< admonition type=abstract title="This is a tip" open=true >}}
+
+**注意：**
+
+组件中也有template标签，但是不用render函数去编译解析。
+
+在`package.json`中专门引入了依赖包，去解析组件中的模版标签。
+
+- **只有vm中的模版标签它解析不了，需要使用render函数**
+- **脚手架中一般只有一个vm，render也只会在vm中出现一次**
+
+<img src="./images/image-20241001122251468.png" alt="image-20241001122251468" style="zoom:50%;" />
+
+{{< /admonition >}}
+
+## 23.修改默认配置
+
+**脚手架的默认配置**
+
+为了安全Vue将配置的文件隐藏起来，使用下面的这个命令可以将隐藏的文件形成一个.js文件显示在项目的根目录：
+
+```sh
+Vue inspect > output.js
+```
+
+虽然`output.js`是可以看见默认配置的，但是对这个文件的修改是无效果的。
+
+如果要自定义配置，可以在项目的根目录下，新建一个文件`vue.config.js`
+
+**修改脚手架默认配置**
+
+官方文档解释位置：https://cli.vuejs.org/zh
+
+![image-20241001181644250](./images/image-20241001181644250.png)
+
+例如，我们把main入口文件的名字改成自定义
+
+<img src="./images/image-20241001182021930.png" alt="image-20241001182021930" style="zoom:80%;" />
+
+原理：
+
+- Vue底层基于webpack，webpack基于node
+- 使用文件`vue.config.js`中的这块，重写webpack中修改的这一部分
+- 使得核心部分能有修改入口，且不会对基本核心内部进行破坏造成影响
+
+## 24.ref属性
+
+{{< admonition type=abstract title="This is a tip" open=true >}}
+
+**ref属性**
+
+- 1.被用来给元素或子组件注册引用信息(id的替代者)
+
+- 2.应用在htmi标签上获取的是真实DOM元素，应用在组件标签上是组件实例对象(vc)
+
+- 3.使用方式:
+
+  打标识:`<h1 ref="xxx">.....</h1>`或`<School ref="xxx"></School>`获取:`this.$refs.xxx`
+
+{{< /admonition >}}
+
+获取Dom元素，原始写法：
+
+```js
+document.getElementById("text")
+```
+
+用ref写法
+
+```vue
+<div>
+    <h1 ref="text" id="text">text</h1>
+    <School ref="sch" id="sch"/>
+</div>
+
+<script>
+....
+methods:{
+    showDOM(){
+        //组件里的this都是vc
+        //输出的是h1的整个DOM元素 - 基本标签ref可以当id用
+        console.log(this.$refs.text)
+        console.log(document.getElementById("text"))//结果同上
+        
+        //输出的是组件school的vc实例对象
+        console.log(this.$refs.sch)
+        //输出的是组件模版解析后的真实DOM
+        console.log(document.getElementById("sch"))
+    }
+}
+</script>
+```
+
+看一下输出ref：
+
+<img src="./images/image-20241001185145083.png" alt="image-20241001185145083" style="zoom:50%;" />
+
+看一下输出id：
+
+<img src="./images/image-20241001185116235.png" alt="image-20241001185116235" style="zoom:50%;" />
+
+## 25._props配置
+
+**props的作用**：让组件接收外部传过来的数据
+
+组件外属性传值：
+
+```vue
+<student name="张三" sex="男" age="18">
+```
+
+组件内接受，三种写法：
+
+```js
+//简单接受
+props:['name','age','sex']
+
+//接受的同时对数据进行类型限制
+props:{
+    name:String,
+    sex:String,
+    age:Number
+}
+
+//接受时限制是否必传、默认值以及类型
+props:{
+    name:{
+        type:String, //限制name类型为String
+        required:true //且为必传
+    },
+    sex:{
+        type:Number,
+        default:99 //不必传，没传时默认99
+    },
+    age:{
+        type:String, 
+        required:true
+    },
+}
+```
+
+{{< admonition type=abstract title="This is a tip" open=true >}}
+
+备注:props是只读的，Vue底层会监测你对props的修改，如果进行了修改，就会发出警告，若业务需求确实需要修改，那么请复制props的内容到data中一份，然后去修改data中的数据。
+
+例如：
+
+```js
+this.age = 19; //页面有效果，控制台有警告
+```
+
+Vue不建议在组件内部，修改外部传入的属性的属性值。
+
+一般做法：
+
+```js
+//使用一个中间变量
+data(){
+return{
+    changeAge:this.age
+}
+}
+
+//修改中间变量，并使用中间变量
+this.changeAge = 19
+```
+
+{{< /admonition >}}
+
+## 26.mixin混入
+
+两个组件共享一个配置 ，实现复用方法的效果
+
+```js
+//新建一个共有.js文件
+《hunhe.js》
+
+//该文件中暴露共用配置方法
+//export const为分别暴露，引入的时候需要带{}
+export const hunhe ={
+    methods:{
+        ......
+    }
+}
+    
+//需要的组件中引入.js文件
+import {hunhe} from '../hunhe.js'   
+
+//组件中使用mixins配置项
+mixins:[hunhe]
+```
+
+ {{< admonition type=abstract title="This is a tip" open=true >}}
+
+混合中data中的数据以及methods冲突，以组件为主，例如：
+
+```js
+//《hunhe.js》中
+export const hunhe ={
+    data(){
+        return{
+            a:1
+        }
+	}
+}
+
+//《组件student中》
+	data(){
+        return{
+            a:99
+        }
+	},mixins:[hunhe]
+	
+	
+console.log(this.a) //输出为99，以组件为准	
+```
+
+**但是！！！**
+
+生命周期冲突，不以任何为主，都会执行
+
+```js
+//《hunhe.js》中
+export const hunhe ={
+    ...,
+    mounted(){
+    	console.log("11")
+    }
+}
+
+//《组件student中》
+	...,
+    mounted(){
+    	console.log("22")
+    },mixins:[hunhe]
+	
+	
+//启动后控制台输出：
+//11
+//22
+```
+
+{{< /admonition >}}
+
+## 27.插件
+
+插件实际上是一个{ }对象
+
+自定义插件必须有有个install函数
+
+```js
+//新建《plugins.js》
+export default{
+    install(Vue){
+        ...
+        //install的入参是Vue。
+        //此函数中可以设定所有全局Vue能够设定的方法，并且让组件均能使用
+    }
+}
+
+//main.js中引入插件
+import pligins from './pligins.js'
+    
+//main.js中使用插件
+Vue.use(pligins) //这句话或默认帮我们调用《plugins.js》中的install方法
+```
+
+{{< admonition type=abstract title="This is a tip" open=true >}}
+
+插件功能:用于增强Vue
+本质：包含install方法的一个对象，install的第一个参数是Vue，第二个以后的参数是插件使用者传递的数据。
+
+{{< /admonition >}}
+
+## 28.scoped样式
+
+scoped作用：让样式在局部生效，防止冲突
+
+先看一个冲突
+
+![image-20241002115053906](./images/image-20241002115053906.png)
+
+解决这个问题
+
+在style标签里加上scoped属性
+
+```vue
+<style scoped>
+    ....
+</style>
+```
+
+原理：scoped原本就有作用域的意思，它在每个负责的标签样式后面都随机生成一个属性，配合样式选择器完成每个组件中引用同名样式的区分
+
+<img src="./images/image-20241002125134307.png" alt="image-20241002125134307" style="zoom:50%;" />
+
+## 29.浏览器本地存储
+
+在浏览器打开某网页，未登录情况下搜索某关键字，发现能够有对应的历史记录。
+
+此历史记录是浏览器将信息存在了本机的硬盘上，也叫浏览器本地存储
+
+浏览器本地存储统称webStorage
+
+1、存储内容大小一般支持5MB左右(不同浏览器可能还不一样)
+2、浏览器端通过 Window.sessionStorage 和 Window.localStorage 属性来实现本地存储机制。
+
+- localStorage
+- sessionStorage
+
+### localStorage.setItem
+
+该方法接受一个键和值作为参数，会把键值对添加到存储中，如果键名存在，则更新其对应的值。
+
+浏览器本地存储不是Vue独有的，是js就有的，用`.html`文件就可以实现编译。
+
+- 保存本地存储
+
+```html
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>localStorage</title>
+</head>
+<body>
+    <h2>localStorage</h2>
+    <button onclick="s()">点击保存一个数据</button>
+
+    <script type="text/javascript">
+        function s(){
+            //第一个API叫setItem，两个入参必须为字符串
+            //重复添加同名的，会覆盖之前的值
+            localStorage.setItem('msg','hello!') //msg hello!
+            localStorage.setItem('msg2',666)     //msg2 666 
+            localStorage.setItem('msg3',{'id':'001'})//不是字符串的会自动调toString，对象会存成[Object object]
+            localStorage.setItem('msg4',JOSN.stringify(对象))
+        }
+    </script>
+</body>
+</html>
+```
+
+<img src="./images/image-20241002173834704.png" alt="image-20241002173834704" style="zoom:50%;" />
+
+### localStorage.getItem
+
+该方法接受一个键名作为参数，返回键名对应的值
+
+- 读取本地存储
+
+```html
+    <script type="text/javascript">
+        function s(){
+        //第二个API叫getItem,会给一个字符串的返回值
+          localStorage.getItem('msg')
+            
+         console.log(localStorage.getItem('msg')); //hello!
+         console.log(JSON.parse(对象字符串));//对象的需要手动转换一下
+        }
+    </script>
+```
+
+### localStorage.removeItem
+
+该方法接受一个键名作为参数，并把该键名从存储中删除
+
+- 删除本地存储
+
+```html
+    <script type="text/javascript">
+        function s(){
+        //第三个API叫removeItem
+         localStorage.removeItem('msg')
+        }
+    </script>
+```
+
+### localStorage.clear
+
+该方法会清空存储中的所有数据。
+
+- 清空本地存储
+
+```html
+    <script type="text/javascript">
+        function s(){
+        //第四个API叫clear
+         localStorage.clear()
+        }
+    </script>
+```
+
+{{< admonition type=abstract title="This is a tip" open=true >}}
+
+关闭浏览器，并不会自动清空浏览器本地存储。
+
+但是！！！清除缓存，会清空浏览器本地存储。
+
+{{< /admonition >}}
+
+### sessionStorage
+
+sessionStorage的4个API和localStorage使用和功能效果是一样的。
+
+控制台位置，在localStorage下面
+
+<img src="./images/image-20241002175756430.png" alt="image-20241002175756430" style="zoom:50%;" />
+
+{{< admonition type=abstract title="This is a tip" open=true >}}
+
+**备注:**
+1、SessionStorage存储的内容会随着浏览器窗口关闭而消失。
+2、LocalStorage存储的内容，需要手动清除才会消失。
+3、`xxxxxstorage.getItem(xxx)`如果xxx对应的value获取不到，那么getltem的返回值是null.
+4、`JSON.parse(null)`的结果依然是null。
+
+{{< /admonition >}}
+
+## 30.组件自定义事件
+
+### 绑定【子传父】
+
+子组件给父组件传值，三个写法：
+
+- function
+
+```vue
+<!--父组件App.vue-->
+<School :getSchoolName="getSchoolName"/>
+
+props:['getSchoolName'],
+methods:{
+	getSchoolName(name){
+		console.log("学校名："+name)
+	}
+}
+
+<!--子组件School.vue-->
+this.getSchoolName(this.name)
+```
+
+
+
+- $emit （自定义事件）
+
+```vue
+<!--父组件App.vue-->
+<Student v-on:student="getStudentName"/>
+<Student @student="getStudentName"/><!--简写-->
+
+methods:{
+	getStudentName(name){
+		console.log("学生名："+name)
+	}
+}
+
+<!--子组件Student.vue-->
+this.$emit('student',this.name)
+```
+
+
+
+- ref （自定义事件）
+
+```vue
+<!--父组件App.vue-->
+<Student ref="student"/>
+
+methods:{
+	getStudentName(name){
+		console.log("学生名："+name)
+	}
+},
+mounted:{
+	this.$refs.student.$on('studentTest',this.getStudentName)
+}
+
+<!--子组件Student.vue-->
+this.$emit('studentTest',this.name)
+```
+
+{{< admonition type=abstract title="This is a tip" open=true >}}
+
+如果子传父的参数很多，三个办法：
+
+- 挨个写入参
+
+```js
+this.$emit('demo',x,y,z,p...)
+
+this.$refs.组件名.$on('demo',x,y,z,p...)
+```
+
+- 写成一个对象
+
+```js
+this.$emit('demo',{params})
+
+this.$refs.组件名.$on('demo',{params})
+```
+
+- ES6写法，...a
+
+```js
+this.$emit('demo',this.name,...params)
+
+this.$refs.组件名.$on('demo',this.name,...params)
+```
+
+{{< /admonition >}}
+
+### 解绑
+
+解绑一个自定义事件
+
+- $off
+
+```vue
+<!--父组件App.vue-->
+<Student @student="getStudentName"/>
+
+<!--子组件Student.vue-->
+
+this.$off('student')
+```
+
+解绑多个自定义事件
+
+- $off([事件名])
+
+```vue
+<!--父组件App.vue-->
+<Student @student="getStudentName" @demo="getDemo"/>
+
+<!--子组件Student.vue-->
+this.$off(['student','demo'])
+```
+
+解绑所有的自定义事件
+
+- $off()
+
+```vue
+<!--父组件App.vue-->
+<Student @student="getStudentName" @demo="getDemo"/>
+
+<!--子组件Student.vue-->
+this.$off()
+```
+
+{{< admonition type=abstract title="This is a tip" open=true >}}
+
+- 组件上也可以绑定原生DOM事件，需要使用`native`修饰符.
+
+不使用`native`修饰符.会默认`@click`为自定义事件
+
+```vue
+<Student @student="getStudentName" @click.native="getDemo"/>
+```
+
+- `this.$refs.组件名.$on('事件名',回调函数)`里的回调函数需要写成箭头函数，或者直接定义在当前组件的methods中。否则this指向会有问题
+
+```js
+this.$refs.组件名.$on('事件名',()=>{})
+
+//或者
+methods:{
+	demo(){}
+}
+this.$refs.组件名.$on('事件名',this.demo)
+```
+
+{{< /admonition >}}
+
+## 31.全局事件总线
+
+### GlobalEventBus
+
+一种组件间通讯的方式，适用于**任意组件间的通讯**
+
+- 安装全局事件总线
+
+```js
+//《main.js》
+new Vue({
+	....
+	beforeCreate(){
+		Vue.prototype.$bus = this  //定义全局事件总线
+	},
+    ......
+})
+```
+
+- 使用事件总线：
+
+1、接受数据
+
+```js
+//《School.vue》
+this.$bus.$on("事件名",回调函数)
+```
+
+2、提供数据
+
+```js
+//《Student.vue》
+this.$bus.$emit("事件名",传递入参数据)
+```
+
+3、关闭总线中不用的自定义事件
+
+```js
+//《School.vue》
+beforeDestroy(){
+    this.$bus.$off('demo')
+}
+```
+
+
+
+## 32.消息订阅与发布
+
+### _pubsub
+
+`pubsub.js`是一个第三方库，引用这个库可以在任意框架实现消息的订阅和发布。
+
+```sh
+npm i pubsub-js
+```
+
+`pubsub`是`publish`发布和`subscribe`订阅的组合简写
+
+- 在组件中引入
+
+```
+import pubsub from 'pubsub-js'
+```
+
+- 订阅消息
+
+```js
+pubsub.subscribe('事件名'，回调函数(事件名，收到的数据){})
+```
+
+- 发布消息
+
+```js
+pubsub.publish('事件名'，事件名，传递入参数据)
+```
+
+- 销毁消息（ 取消订阅）
+
+```js
+//在订阅的组件内,通过id取消订阅
+this.pubId = pubsub.subscribe('事件名'，回调函数(事件名，收到的数据){})
+
+beforeDestroy(){
+    pubsub.unsubscribe(this.pubId)
+}
+```
+
+## 33.$nextTick
+
+1. 语法`this.$nextTick(回调函数)`
+2. 作用：在下一次DOM更新结束后执行其指定的回调
+3. 什么时候用：当改变数据后，要基于更新后的新DOM进行某些操作时，要在$nextTick所指定的回调函数中执行
+
+{{< admonition type=abstract title="This is a tip" open=true >}}
+
+不写$nextTick，用定时器也是可以解决，等待DOM更新结束后执行的操作。
+
+setTimeout(( )=>{ 基于更新后的新DOM进行某些操作 },2000)
+
+只是官方推荐使用$nextTick
+
+{{< /admonition >}}
+
+## 34.动画效果
+
+实现一块元素从左边缓缓进入再离开的动画效果
+
+- 原始css3的写法：
+
+```vue
+<!-- 合适时候换成go -->
+<h1 class="come"></h1>
+
+<style scoped>
+    h1{
+        background-color: burlywood;
+    }
+
+    .come{
+        /* 播放这个动画 持续1s钟 */
+        animation: demo 1s;
+    }
+
+    .go{
+        /* 反转播放这个动画 持续1s钟 */
+        animation: demo 1s reverse;
+    }
+
+    /* 动画：定义一个关键帧 起名叫demo */
+    @keyframes demo {
+        /* 左右来回变换 */
+        from{
+            /* 从左边 */
+            transform: translateX(-100%);
+        }
+        to{
+            transform: translateX(0px);
+        }
+    }
+</style>
+```
+
+- Vue的实现写法
+
+```vue
+<!--transition标签包裹的就是过度动画  -->
+<transition>
+    <h1></h1>
+</transition>
+
+<style scoped>
+    h1{
+       background-color: burlywood;
+    }
+
+    /* 进入时激活：来 */
+    .v-enter-active{
+        /* 播放这个动画 持续1s钟 */
+        animation: demo 1s;
+    }
+
+    /* 离开时激活：离开 */
+    .v-leave-active{
+        /* 反转播放这个动画 持续1s钟 */
+        animation: demo 1s reverse;
+    }
+
+    /* 动画：定义一个关键帧 起名叫demo */
+    @keyframes demo {
+        /* 左右来回变换 */
+        from{
+            /* 从左边 */
+            transform: translateX(-100%);
+        }
+        to{
+            transform: translateX(0px);
+        }
+    }
+</style>
+```
+
+{{< admonition type=abstract title="This is a tip" open=true >}}
+
+如果`<transition>`有名字，则`.v-enter-active`开头需要将`v`替换成取的名字
+
+```vue
+<transition name="aaa"></transition>
+
+<style scoped>
+    .aaa-enter-active{
+    }
+
+    .aaa-leave-active{
+    }
+</style>
+```
+
+如果要第一次页面就显示动画，需要加上`appear`属性
+
+```vue
+<transition name="aaa" :appear="true"></transition>
+```
+
+{{< /admonition >}}
+
+- Vue的实现第二种写法
+
+```vue
+<transition>
+    <h1></h1>
+</transition>
+
+<style scoped>
+    h1{
+       background-color: burlywood;
+    }
+
+    .v-enter-active,.v-leave-active{
+        transition: 0.5s linear; /* 动画持续0.5s 匀速 */
+    }
+    /* 进入起点，离开终点 */
+    .v-enter,.v-leave-to{
+        transform: translateX(-100%);
+    }
+    /* 进入终点，离开起点 */
+    .v-leave,.v-enter-to{
+        transform: translateX(-100%);
+    }
+</style>
+```
+
+- 多个元素过度
+
+```vue
+<!-- 多个元素使用transition-group -->
+<transition-group>
+    <!-- 且每个元素必须有key值 -->
+    <h1 key="1"></h1>
+    <h1 key="2"></h1>
+</transition-group>
+```
+
+- 集成第三方动画
+
+有时候我们也集成一些好用的第三方库来帮我们完成好看的动画效果，npm网站：https://npmjs.com 上有这么这一个库，叫`animate.css`
+
+![image-20241003160318756](./images/image-20241003160318756.png)
+
+这是一个成型的动画库，只需要引入，就能直接使用这个链接里的动画
+
+![image-20241003160437939](./images/image-20241003160437939.png)
+
+用一个简单的例子：
+
+- 安装这个库
+
+```sh
+npm install animate.css --save
+```
+
+- 组件里引入这个库
+
+```js
+import 'animate.css'
+```
+
+- 使用这个库
+- 先选一个样式动画，复制
+- <img src="./images/image-20241003161350692.png" alt="image-20241003161350692" style="zoom:50%;" />
+
+```vue
+<transition-group
+                  apper
+                  name="animate__animated animate__bounce"
+                  enter-active-class="animate__swing"
+                  >
+</transition-group>
+```
+
+## 35.插槽
+
+1. 作用：让父组件可以向子组件指定位置插入html结构，也是一种组件间通信的方式，适用于 父组件 ====>子组件
+2. 分类：默认插槽、具名插槽、作用域插槽
+3. 使用方式：
+
+- **默认插槽**
+
+```vue
+父组件中:
+    <Category>
+        <div>html结构1</div>
+    </Category>
+子组件中:
+<template>
+	<div>
+		<!--定义插槽 -->
+        <slot>插槽默认内容...</slot>
+	</div>
+</template>
+```
+
+- **具名插槽**
+
+```vue
+父组件中:
+<Category>
+    <!-- 基本写法 -->
+	<div slot="center">
+		<div>html结构1</div>
+    </div>
+    
+    <!-- 只有template可以这样写 -->
+	<template v-slot:footer>
+		<div>htm1结构2</div>
+    </template>
+</Category>
+
+子组件中:
+<template>
+	<div>
+		<!--定义插槽 -->
+        <slot name="center">插槽默认内容...</slot>
+        <slot name="footer">插槽默认内容...</slot>
+	</div>
+</template>
+```
+
+- **作用域插槽**
+
+1. 理解：数据在组件的自身，但根据数据生成的结构需要组件的使用者来决定。
+2. 具体编码：
+
+```vue
+父组件中:
+<Category>
+    <!-- scope没有d，注意和style那块区分-->
+    <!-- scope收到传来的整个插槽对象的数据 -->
+    <!-- scope里面入参scopeData包含有多个属性的值，如solt :a="11" :b="11" -->
+    <!-- 引用则写成scopeData.a 或者scopeData.b -->
+  <template scope="scopeData">
+	<!-- 生成的是u1列表-->
+	<u1>
+        <li v-for="g in scopeData.games" :key="g">{{g}}</li>
+    </u1>
+  </template>
+</Category>
+
+<Category>
+  <template slot-scope="scopeData">
+	<!--生成的是h4标题 -->
+	<h4 v-for="g in scopeData.games" :key="g">{{g}}</h4>   		   </template>
+</Category>
+
+子组件中:
+<template>
+	<div>
+		<slot :games="games"></slot>
+    </div>
+</template>
+
+<script>
+....
+data(){
+    return{
+       games:['1','2','3'] 
+    }
+}
+</script>
+```
+
+最新写法
+
+```vue
+<!-- 旧的写法，现在还能用 -->
+<!-- scope里面入参有多个，如solt :a="11" :b="11" -->
+<template scope="{dataList}">
+
+<!-- 最新写成 -->
+<template solt-scope="{dataList}">
+```
+
+
+
+# 第四章：Vue中的ajax
+
+## 配置代理
+
+在开发的过程中，如何借助Vue脚手架，去解决ajax跨域的问题。
+
+发送一个ajax的方法：
+
+1. xhr    `new XMLHttpRequest()`  ： `xhr.open()` 和 `xhr.send()`
+2. jQuery   对xhr进行封装   `$.get`  和  `$.post`   【因为jQuery中80%内容都是用于对DOM操作的封装，Vue避免对DOM进行操作，所以它不常用在Vue中】
+3. axios     【Vue推荐使用】
+4. fetch
+
+我们这里选择使用axios
+
+- 安装axios库
+
+```sh
+npm i axios
+```
+
+- 引入axios库
+
+```js
+import axios from 'axios'
+```
+
+- 使用
+
+```js
+methods:{
+	demo(){
+		//服务器地址
+		axios.get('http://localhost:5000/demo').then(
+			//成功回调
+			response =>{ console.log(response.data)},
+			//失败回调
+			error =>{ console.log(error.message)}
+		)
+	}
+}
+```
+
+{{< admonition type=failure title="跨域报错警告" open=true >}}
+
+`Access to XMLHttpRequest at 'http://localhost:5000/demo' from origin 'http://localhost:8080' has been blocked by CORS policy: No 'Access-Control-Allow-Origin' header is present on the requested resource.`
+
+访问规定：协议名，主机名，端口号 。三个一致，允许访问。
+
+不一致，会请求，会查到数据，但是返回给请求方的时候报跨域错误。
+
+解决跨域：
+
+1. 服务器位置：通过配置cors，允许某部分请求头能够访问，解决跨域的问题。
+2. jsonp ：借助script标签里的src属性，在引入外部资源的时候，不受同源策略限制的特点实现的。【只能解决get请求，post解决不了】
+3. 配置代理服务器
+
+{{< /admonition >}}
+
+### 4.1 配置代理 方式一
+
+请求方 <======> 代理服务器 <=======> 目标服务器
+
+1. niginx 反向代理服务器
+
+2. vue-cli 借助vue脚手架帮我们开启一个服务器
+
+   官方文档位置：https://cli.vuejs.org/zh/config/#devserver-proxy
+
+   ![image-20241003172344336](./images/image-20241003172344336.png)
+
+- 写法：
+
+在`vue.config.js`里添加下面的代码：
+
+```js
+//开启代理服务器
+devServer:{
+	proxy:'http://localhost:5000' //指向目标服务器
+}
+```
+
+- 调用
+
+这里只能找代理服务器发请求，代理服务器端口是8080
+
+```
+methods:{
+	demo(){
+		//服务器地址
+		axios.get('http://localhost:8080/demo').then(
+			//成功回调
+			response =>{ console.log(response.data)},
+			//失败回调
+			error =>{ console.log(error.message)}
+		)
+	}
+}
+```
+
+{{< admonition type=abstract title="注意！！！" open=true >}}
+
+这样的代理配置有两个缺点：
+
+1. 只能配置一个目标服务器
+2. 如果`public`根文件夹下有静态资源，则直接返回了静态资源，不会请求代理服务器，如：
+
+`http://localhost:8080/demo`会直接请求`demo.txt`文件，没有才请求代理服务器，有就直接返回`demo.txt`的信息。
+
+{{< /admonition >}}
+
+### 4.2 配置代理 方式二
+
+- 写法：
+
+在`vue.config.js`里添加下面的代码：
+
+```js
+devServer: {
+    proxy: {
+      '/api': {
+        target: '<url>',
+        ws: true,
+        changeOrigin: true
+      },
+      '/foo': {
+        target: '<other_url>'
+      }
+    }
+  }
+```
+
+- 先看第一部分
+
+```js
+devServer: {
+    proxy: {
+      '/api': {  //请求前缀，如果是以这个名字为前缀的，代理就转发
+        target: 'http://localhost:5000', //请求的目标服务器
+        ws: true,  //支持：websocket客户端与服务器间的一种通讯方式
+        changeOrigin: true,//用于控制请求头重host的值。请求来源 返回成和目标服务器一致
+        pathRewrite:{'^/api':''}  //重写路径，正则匹配以api开头的路径，全部替换成空。不然，访问目标服务器时也会带着请求前缀，导致接口404
+      },
+  }
+ 
+ //前缀写在端口号后，方法名称前
+ axios.get('http://localhost:8080/api/demo').then()
+    
+```
+
+### 4.3 vue-resource
+
+vue-resource也是一个发送ajax请求的库，也是对xhr进行封装的，vue1.0使用广泛，现在官方已不再维护。
+
+- 安装vue-resource
+
+```sh
+npm i vue-resource
+```
+
+- main.js中引入插件
+
+```js
+import vueResource from 'vue-resource'
+
+Vue.use(vueResource)
+```
+
+- 使用同axios
+
+```js
+this.$http.get('http://localhost:8080/demo').then(
+			//成功回调
+			response =>{ console.log(response.data)},
+			//失败回调
+			error =>{ console.log(error.message)}
+		)
+```
+
+## 
+
+# 第五章：Vuex
+
+
+
+# 第六章：Vue UI组件库
+
+
+
+# 第七章：vue-router
+
 

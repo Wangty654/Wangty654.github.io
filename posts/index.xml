@@ -4,13 +4,21 @@
         <link>https://Wangty654.github.io/posts/</link>
         <description>所有文章 | TyNote</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
-            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 24 Sep 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/posts/" rel="self" type="application/rss+xml" /><item>
-    <title>yhcms部署在tomcat上启动步骤</title>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 11 Oct 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title></title>
+    <link>https://Wangty654.github.io/text28/</link>
+    <pubDate>Fri, 11 Oct 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/text28/</guid>
+    <description><![CDATA[【Spring-boot】启动报错注入bean失败Mapper找不到 报错信息： A component required a bean of type ‘com...Mapper‘ that could not be found. Consider defining a bean of]]></description>
+</item>
+<item>
+    <title>【word文档】word页脚页码不连续解决办法</title>
     <link>https://Wangty654.github.io/text27/</link>
-    <pubDate>Tue, 24 Sep 2024 00:00:00 &#43;0000</pubDate>
+    <pubDate>Tue, 08 Oct 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
     <guid>https://Wangty654.github.io/text27/</guid>
-    <description><![CDATA[因为该项目启动非常麻烦，该篇重点描述yhcms项目整个配置，已经部署在tomcat上的启动步骤]]></description>
+    <description><![CDATA[记录项目中编写文档，遇到纵向文档引用横向文档后，目录顺序及页码不连贯的问题，word页脚页码不连续解决办法]]></description>
 </item>
 <item>
     <title>【HUGO】Hugo的LoveIt主题美化（二）</title>
@@ -50,7 +58,7 @@
     <pubDate>Wed, 21 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
     <guid>https://Wangty654.github.io/vue2/</guid>
-    <description><![CDATA[本章节记录vue2的所涉及的一些语法和使用场景，记录的流程顺序为：1.vue基础；2.vue-cli 脚手架-专门用于工程开发；3.vue-router；4.vuex；5.element-ui：饿了么团队，做UI组件库的；6.vue3]]></description>
+    <description><![CDATA[本章节记录vue2的所涉及的一些语法和使用场景，记录的流程顺序为：1.vue基础核心；2.vue-cli 脚手架-专门用于工程开发；3.vue-router；4.vuex；5.element-ui：饿了么团队，做UI组件库的；6.vue3]]></description>
 </item>
 <item>
     <title>【Typora】破解/安装激活 Typora 2024 教程</title>
@@ -75,14 +83,6 @@
     <author>wangty</author>
     <guid>https://Wangty654.github.io/text16/</guid>
     <description><![CDATA[腾讯云直播推流代码]]></description>
-</item>
-<item>
-    <title>【git】git克隆失败解决办法</title>
-    <link>https://Wangty654.github.io/text09/</link>
-    <pubDate>Sat, 03 Aug 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/text09/</guid>
-    <description><![CDATA[git克隆失败解决办法]]></description>
 </item>
 </channel>
 </rss>
