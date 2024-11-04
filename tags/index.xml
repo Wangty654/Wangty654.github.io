@@ -1,87 +1,87 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Tags - 标签 - TyNote</title>
-        <link>http://localhost:1313/tags/</link>
+        <link>https://Wangty654.github.io/tags/</link>
         <description>Tags - 标签 - TyNote</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
-            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/" rel="self" type="application/rss+xml" /><item>
     <title>Java</title>
-    <link>http://localhost:1313/tags/java/</link>
+    <link>https://Wangty654.github.io/tags/java/</link>
     <pubDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/tags/java/</guid>
+    <guid>https://Wangty654.github.io/tags/java/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Pdf</title>
+    <link>https://Wangty654.github.io/tags/pdf/</link>
+    <pubDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/tags/pdf/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Hugo</title>
-    <link>http://localhost:1313/tags/hugo/</link>
+    <link>https://Wangty654.github.io/tags/hugo/</link>
     <pubDate>Fri, 01 Nov 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/tags/hugo/</guid>
+    <guid>https://Wangty654.github.io/tags/hugo/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Spring-Boot</title>
-    <link>http://localhost:1313/tags/spring-boot/</link>
+    <link>https://Wangty654.github.io/tags/spring-boot/</link>
     <pubDate>Fri, 11 Oct 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/tags/spring-boot/</guid>
+    <guid>https://Wangty654.github.io/tags/spring-boot/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Office</title>
-    <link>http://localhost:1313/tags/office/</link>
+    <link>https://Wangty654.github.io/tags/office/</link>
     <pubDate>Tue, 08 Oct 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/tags/office/</guid>
+    <guid>https://Wangty654.github.io/tags/office/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Vue</title>
-    <link>http://localhost:1313/tags/vue/</link>
+    <link>https://Wangty654.github.io/tags/vue/</link>
     <pubDate>Wed, 21 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/tags/vue/</guid>
+    <guid>https://Wangty654.github.io/tags/vue/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Typora</title>
-    <link>http://localhost:1313/tags/typora/</link>
+    <link>https://Wangty654.github.io/tags/typora/</link>
     <pubDate>Sun, 11 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/tags/typora/</guid>
+    <guid>https://Wangty654.github.io/tags/typora/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>GitHub</title>
-    <link>http://localhost:1313/tags/github/</link>
+    <link>https://Wangty654.github.io/tags/github/</link>
     <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/tags/github/</guid>
+    <guid>https://Wangty654.github.io/tags/github/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>本地服务器</title>
-    <link>http://localhost:1313/tags/%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
+    <link>https://Wangty654.github.io/tags/%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</link>
     <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/tags/%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
+    <guid>https://Wangty654.github.io/tags/%E6%9C%AC%E5%9C%B0%E6%9C%8D%E5%8A%A1%E5%99%A8/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>内网穿透</title>
-    <link>http://localhost:1313/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+    <link>https://Wangty654.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
     <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>腾讯云直播</title>
-    <link>http://localhost:1313/tags/%E8%85%BE%E8%AE%AF%E4%BA%91%E7%9B%B4%E6%92%AD/</link>
-    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>http://localhost:1313/tags/%E8%85%BE%E8%AE%AF%E4%BA%91%E7%9B%B4%E6%92%AD/</guid>
+    <guid>https://Wangty654.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>
