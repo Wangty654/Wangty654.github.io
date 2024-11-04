@@ -31,7 +31,7 @@ function randomColor() {
 var a_idx = 0;
 var a_click = 1;
 /* 生成的字符内容 */
-var a = new Array("♥","♣","˘ᗜ˘","♬","✈","❤","｡◕‿◕｡","✿","(◔◡◔)","⚝");
+var a = new Array("♥","˘ᗜ˘","♬","❤");
 jQuery(document).ready(function($) {
     $("body").click(function(e) {
         /* 点击频率，点击几次就换文字 */
@@ -78,12 +78,12 @@ window.onload = function() {
         if(document.hidden) {
             $('[rel="icon"]').attr('href', "/failure.ico");
             $('[rel="shortcut icon"]').attr('href', "/failure.ico");
-            document.title = '回来噜~不能离开你';
+            document.title = '(つェ⊂)我藏好了哦~';
             clearTimeout(titleTime);
         } else {
             $('[rel="icon"]').attr('href', "/favicon.ico");
             $('[rel="shortcut icon"]').attr('href', "/favicon.ico");
-            document.title = '想你啦~和从前一样';
+            document.title = '(⁎˃ᴗ˂⁎)被你发现啦~';
             titleTime = setTimeout(function() {
                 document.title = OriginTitile;
             }, 2000);

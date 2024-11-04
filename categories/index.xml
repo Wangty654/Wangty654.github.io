@@ -1,87 +1,87 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Categories - 分类 - TyNote</title>
-        <link>https://Wangty654.github.io/categories/</link>
+        <link>http://localhost:1313/categories/</link>
         <description>Categories - 分类 - TyNote</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
-            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 11 Oct 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/categories/" rel="self" type="application/rss+xml" /><item>
-    <title>后端</title>
-    <link>https://Wangty654.github.io/categories/%E5%90%8E%E7%AB%AF/</link>
-    <pubDate>Fri, 11 Oct 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/categories/%E5%90%8E%E7%AB%AF/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Office基本操作</title>
-    <link>https://Wangty654.github.io/categories/office%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</link>
-    <pubDate>Tue, 08 Oct 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/categories/office%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>Hugo系列</title>
-    <link>https://Wangty654.github.io/categories/hugo%E7%B3%BB%E5%88%97/</link>
-    <pubDate>Fri, 13 Sep 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/categories/hugo%E7%B3%BB%E5%88%97/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>前端</title>
-    <link>https://Wangty654.github.io/categories/%E5%89%8D%E7%AB%AF/</link>
-    <pubDate>Wed, 21 Aug 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/categories/%E5%89%8D%E7%AB%AF/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>腾讯云</title>
-    <link>https://Wangty654.github.io/categories/%E8%85%BE%E8%AE%AF%E4%BA%91/</link>
-    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/categories/%E8%85%BE%E8%AE%AF%E4%BA%91/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
-    <title>版本控制工具</title>
-    <link>https://Wangty654.github.io/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/</link>
-    <pubDate>Sat, 03 Aug 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/</guid>
-    <description><![CDATA[]]></description>
-</item>
-<item>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/categories/" rel="self" type="application/rss+xml" /><item>
     <title>Idea</title>
-    <link>https://Wangty654.github.io/categories/idea/</link>
-    <pubDate>Mon, 03 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <link>http://localhost:1313/categories/idea/</link>
+    <pubDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/categories/idea/</guid>
+    <guid>http://localhost:1313/categories/idea/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Java</title>
-    <link>https://Wangty654.github.io/categories/java/</link>
-    <pubDate>Mon, 03 Apr 2023 00:00:00 &#43;0000</pubDate>
+    <link>http://localhost:1313/categories/java/</link>
+    <pubDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/categories/java/</guid>
+    <guid>http://localhost:1313/categories/java/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Hugo系列</title>
+    <link>http://localhost:1313/categories/hugo%E7%B3%BB%E5%88%97/</link>
+    <pubDate>Fri, 01 Nov 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>http://localhost:1313/categories/hugo%E7%B3%BB%E5%88%97/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>后端</title>
+    <link>http://localhost:1313/categories/%E5%90%8E%E7%AB%AF/</link>
+    <pubDate>Fri, 11 Oct 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>http://localhost:1313/categories/%E5%90%8E%E7%AB%AF/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>Office基本操作</title>
+    <link>http://localhost:1313/categories/office%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</link>
+    <pubDate>Tue, 08 Oct 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>http://localhost:1313/categories/office%E5%9F%BA%E6%9C%AC%E6%93%8D%E4%BD%9C/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>前端</title>
+    <link>http://localhost:1313/categories/%E5%89%8D%E7%AB%AF/</link>
+    <pubDate>Wed, 21 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>http://localhost:1313/categories/%E5%89%8D%E7%AB%AF/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>腾讯云</title>
+    <link>http://localhost:1313/categories/%E8%85%BE%E8%AE%AF%E4%BA%91/</link>
+    <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>http://localhost:1313/categories/%E8%85%BE%E8%AE%AF%E4%BA%91/</guid>
+    <description><![CDATA[]]></description>
+</item>
+<item>
+    <title>版本控制工具</title>
+    <link>http://localhost:1313/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/</link>
+    <pubDate>Sat, 03 Aug 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>http://localhost:1313/categories/%E7%89%88%E6%9C%AC%E6%8E%A7%E5%88%B6%E5%B7%A5%E5%85%B7/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>Python</title>
-    <link>https://Wangty654.github.io/categories/python/</link>
+    <link>http://localhost:1313/categories/python/</link>
     <pubDate>Tue, 12 Jul 2022 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/categories/python/</guid>
+    <guid>http://localhost:1313/categories/python/</guid>
     <description><![CDATA[]]></description>
 </item>
 <item>
     <title>读卡器驱动</title>
-    <link>https://Wangty654.github.io/categories/%E8%AF%BB%E5%8D%A1%E5%99%A8%E9%A9%B1%E5%8A%A8/</link>
+    <link>http://localhost:1313/categories/%E8%AF%BB%E5%8D%A1%E5%99%A8%E9%A9%B1%E5%8A%A8/</link>
     <pubDate>Wed, 18 May 2022 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/categories/%E8%AF%BB%E5%8D%A1%E5%99%A8%E9%A9%B1%E5%8A%A8/</guid>
+    <guid>http://localhost:1313/categories/%E8%AF%BB%E5%8D%A1%E5%99%A8%E9%A9%B1%E5%8A%A8/</guid>
     <description><![CDATA[]]></description>
 </item>
 </channel>

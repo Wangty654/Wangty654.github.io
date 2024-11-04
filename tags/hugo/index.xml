@@ -1,47 +1,63 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Hugo - 标签 - TyNote</title>
-        <link>https://Wangty654.github.io/tags/hugo/</link>
+        <link>http://localhost:1313/tags/hugo/</link>
         <description>Hugo - 标签 - TyNote</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
-            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 13 Sep 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 01 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/hugo/" rel="self" type="application/rss+xml" /><item>
+    <title>【HUGO】Hugo的LoveIt主题美化（五）</title>
+    <link>http://localhost:1313/text29/</link>
+    <pubDate>Fri, 01 Nov 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>http://localhost:1313/text29/</guid>
+    <description><![CDATA[image画廊效果、typeit打字机效果、禁止代码块解析]]></description>
+</item>
+<item>
+    <title>【HUGO】测试</title>
+    <link>http://localhost:1313/text30/</link>
+    <pubDate>Fri, 01 Nov 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>http://localhost:1313/text30/</guid>
+    <description><![CDATA[xx]]></description>
+</item>
+<item>
     <title>【HUGO】Hugo的LoveIt主题美化（二）</title>
-    <link>https://Wangty654.github.io/text24/</link>
+    <link>http://localhost:1313/text24/</link>
     <pubDate>Fri, 13 Sep 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/text24/</guid>
+    <guid>http://localhost:1313/text24/</guid>
     <description><![CDATA[hugo访问统计功能、Permalinks 参数修改、自定义404页面、添加文章数量统计、添加文章密码]]></description>
 </item>
 <item>
     <title>【HUGO】Hugo的LoveIt主题美化（三）</title>
-    <link>https://Wangty654.github.io/text25/</link>
+    <link>http://localhost:1313/text25/</link>
     <pubDate>Fri, 13 Sep 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/text25/</guid>
+    <guid>http://localhost:1313/text25/</guid>
     <description><![CDATA[自定义css样式、自定义js、网站运行时间、文章过期提醒、双击生成颜表情、离开进入网站标题变化]]></description>
 </item>
 <item>
     <title>【HUGO】Hugo的LoveIt主题美化（四）</title>
-    <link>https://Wangty654.github.io/text26/</link>
+    <link>http://localhost:1313/text26/</link>
     <pubDate>Fri, 13 Sep 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/text26/</guid>
+    <guid>http://localhost:1313/text26/</guid>
     <description><![CDATA[修改二级标题、行内代码和分割线样式、更新时间、友情链接]]></description>
 </item>
 <item>
     <title>【HUGO】Hugo的LoveIt主题美化（一）</title>
-    <link>https://Wangty654.github.io/text23/</link>
+    <link>http://localhost:1313/text23/</link>
     <pubDate>Fri, 13 Sep 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/text23/</guid>
+    <guid>http://localhost:1313/text23/</guid>
     <description><![CDATA[hugo网站自定义图标、文章头部参数、链接的写法、不同样式的提示框、关于页面]]></description>
 </item>
 <item>
     <title>【HUGO】HUGO博客网站搭建</title>
-    <link>https://Wangty654.github.io/text07/</link>
+    <link>http://localhost:1313/text07/</link>
     <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/text07/</guid>
+    <guid>http://localhost:1313/text07/</guid>
     <description><![CDATA[从零开始搭建一个Hugo静态博客网站]]></description>
 </item>
 </channel>

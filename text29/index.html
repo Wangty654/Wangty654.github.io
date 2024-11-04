@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>【HUGO】Hugo的LoveIt主题美化（五） - TyNote</title><meta name="Description" content="你我一场唤不醒的梦……"><meta property="og:url" content="http://localhost:1313/text29/">
+  <meta property="og:site_name" content="TyNote">
+  <meta property="og:title" content="【HUGO】Hugo的LoveIt主题美化（五）">
+  <meta property="og:description" content="image画廊效果、typeit打字机效果、禁止代码块解析">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-01T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-11-01T00:00:00+00:00">
+    <meta property="article:tag" content="Hugo">
+    <meta property="og:image" content="http://localhost:1313/images/avatar.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/avatar.png">
+  <meta name="twitter:title" content="【HUGO】Hugo的LoveIt主题美化（五）">
+  <meta name="twitter:description" content="image画廊效果、typeit打字机效果、禁止代码块解析">
+<meta name="application-name" content="TyNote">
+<meta name="apple-mobile-web-app-title" content="TyNote"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="msapplication-TileColor" href="/favicon-16x16.png" color="#da532c"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/text29/" /><link rel="prev" href="http://localhost:1313/text30/" /><link rel="next" href="http://localhost:1313/text31/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "【HUGO】Hugo的LoveIt主题美化（五）",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/text29\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "http:\/\/localhost:1313\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "hugo","wordcount":  634 ,
+        "url": "http:\/\/localhost:1313\/text29\/","datePublished": "2024-11-01T00:00:00+00:00","dateModified": "2024-11-01T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "TyNote","logo": {
+                    "@type": "ImageObject",
+                    "url": "http:\/\/localhost:1313\/images\/avatar.png",
+                    "width":  528 ,
+                    "height":  528 
+                }},"author": {
+                "@type": "Person",
+                "name": "wangty"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="normal" data-header-mobile="normal"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="TyNote"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/avatarico.png"
+        data-srcset="/images/avatarico.png, /images/avatarico.png 1.5x, /images/avatarico.png 2x"
+        data-sizes="auto"
+        alt="/images/avatarico.png"
+        title="/images/avatarico.png" />TyNote</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"><i class='fa fa-home' aria-hidden='true'></i> 首页 </a><a class="menu-item" href="/posts/"><i class='fa fa-quote-left' aria-hidden='true'></i> 所有文章 </a><a class="menu-item" href="/tags/"><i class='fa fa-tags' aria-hidden='true'></i> 标签 </a><a class="menu-item" href="/categories/"><i class='fa fa-list' aria-hidden='true'></i> 分类 </a><a class="menu-item" href="/about/"><i class='fa fa-window-restore' aria-hidden='true'></i> 关于 </a><a class="menu-item" href="/friend/" title="Friend"><i class='fa fa-paper-plane' aria-hidden='true'></i> 友链 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="TyNote"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/avatarico.png"
+        data-srcset="/images/avatarico.png, /images/avatarico.png 1.5x, /images/avatarico.png 2x"
+        data-sizes="auto"
+        alt="/images/avatarico.png"
+        title="/images/avatarico.png" />TyNote</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title=""><i class='fa fa-home' aria-hidden='true'></i>首页</a><a class="menu-item" href="/posts/" title=""><i class='fa fa-quote-left' aria-hidden='true'></i>所有文章</a><a class="menu-item" href="/tags/" title=""><i class='fa fa-tags' aria-hidden='true'></i>标签</a><a class="menu-item" href="/categories/" title=""><i class='fa fa-list' aria-hidden='true'></i>分类</a><a class="menu-item" href="/about/" title=""><i class='fa fa-window-restore' aria-hidden='true'></i>关于</a><a class="menu-item" href="/friend/" title="Friend"><i class='fa fa-paper-plane' aria-hidden='true'></i>友链</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto" >
+
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">【HUGO】Hugo的LoveIt主题美化（五）</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/hugo%E7%B3%BB%E5%88%97/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Hugo系列</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-11-01">2024-11-01</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 634 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 2 分钟&nbsp;
+
+
+
+
+
+
+
+<span id="busuanzi_container_value_page_pv"><i class="far fa-eye fa-fw"></i>
+                
+                <span id="busuanzi_value_page_pv"></span>&nbsp;次阅读</span>
+
+
+
+</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#image画廊">image画廊</a></li>
+        <li><a href="#typeit打字动画">typeit打字动画</a>
+          <ul>
+            <li><a href="#1-简单内容">1 简单内容</a></li>
+            <li><a href="#2-代码内容">2 代码内容</a></li>
+          </ul>
+        </li>
+        <li><a href="#禁止解析代码块">禁止解析代码块</a></li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div>
+
+
+
+        <div class="content" id="content"><h2 id="image画廊">image画廊</h2>
+<p>一个 <code>image</code> 示例:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">image</span> <span class="na">src</span><span class="o">=</span><span class="s">&#34;./images/lighthouse.jpg&#34;</span> <span class="na">caption</span><span class="o">=</span><span class="s">&#34;Lighthouse (`image`)&#34;</span> <span class="na">src_s</span><span class="o">=</span><span class="s">&#34;./images/lighthouse-small.jpg&#34;</span> <span class="na">src_l</span><span class="o">=</span><span class="s">&#34;./images/lighthouse-large.jpg&#34;</span> <span class="p">&gt;</span>}}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>呈现的输出效果如下:</p>
+<figure><a class="lightgallery" href="/images/lighthouse-large.jpg" title="/images/lighthouse.jpg" data-thumbnail="/images/lighthouse-small.jpg" data-sub-html="<h2>Lighthouse (image)</h2>">
+        <img
+            class="lazyload"
+            src="/svg/loading.min.svg"
+            data-src="/images/lighthouse.jpg"
+            data-srcset="/images/lighthouse-small.jpg, /images/lighthouse.jpg 1.5x, /images/lighthouse-large.jpg 2x"
+            data-sizes="auto"
+            alt="/images/lighthouse.jpg" width="1972" height="1315" />
+    </a><figcaption class="image-caption">Lighthouse (<code>image</code>)</figcaption>
+    </figure>
+<p><code>image</code> shortcode 有以下命名参数:</p>
+<ul>
+<li>
+<p><strong>src</strong> <em>[必需]</em> (<strong>第一个</strong>位置参数)</p>
+<p>图片的 URL.</p>
+</li>
+<li>
+<p><strong>alt</strong> <em>[可选]</em> (<strong>第二个</strong>位置参数)</p>
+<p>图片无法显示时的替代文本, 默认值是 <strong>src</strong> 参数的值.</p>
+<p><em>支持 Markdown 或者 HTML 格式.</em></p>
+</li>
+<li>
+<p><strong>caption</strong> <em>[可选]</em> (<strong>第三个</strong>位置参数)</p>
+<p>图片标题.</p>
+<p><em>支持 Markdown 或者 HTML 格式.</em></p>
+</li>
+<li>
+<p><strong>title</strong> <em>[可选]</em></p>
+<p>当悬停在图片上会显示的提示.</p>
+</li>
+<li>
+<p><strong>class</strong> <em>[可选]</em></p>
+<p>HTML <code>figure</code> 标签的 <code>class</code> 属性.</p>
+</li>
+<li>
+<p><strong>src_s</strong> <em>[可选]</em></p>
+<p>图片缩略图的 URL, 用在画廊模式中, 默认值是 <strong>src</strong> 参数的值.</p>
+</li>
+<li>
+<p><strong>src_l</strong> <em>[可选]</em></p>
+<p>高清图片的 URL, 用在画廊模式中, 默认值是 <strong>src</strong> 参数的值.</p>
+</li>
+<li>
+<p><strong>height</strong> <em>[可选]</em></p>
+<p>图片的 <code>height</code> 属性.</p>
+</li>
+<li>
+<p><strong>width</strong> <em>[可选]</em></p>
+<p>图片的 <code>width</code> 属性.</p>
+</li>
+<li>
+<p><strong>linked</strong> <em>[可选]</em></p>
+<p>图片是否需要被链接, 默认值是 <code>true</code>.</p>
+</li>
+<li>
+<p><strong>rel</strong> <em>[可选]</em></p>
+<p>HTML <code>a</code> 标签 的 <code>rel</code> 补充属性, 仅在 <strong>linked</strong> 属性设置成 <code>true</code> 时有效.</p>
+</li>
+</ul>
+<h2 id="typeit打字动画">typeit打字动画</h2>
+<p><code>typeit</code> shortcode 基于 <a href="https://typeitjs.com/" target="_blank" rel="noopener noreffer ">TypeIt</a> 库提供了打字动画.</p>
+<p>只需将你需要打字动画的内容插入 <code>typeit</code> shortcode 中即可.</p>
+<h3 id="1-简单内容">1 简单内容</h3>
+<p>允许使用 <code>Markdown</code> 格式的简单内容, 并且 <strong>不包含</strong> 富文本的块内容, 例如图像等等…</p>
+<p>一个 <code>typeit</code> 示例:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">typeit</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">这一个带有基于 [<span class="nt">TypeIt</span>](<span class="na">https://typeitjs.com/</span>) 的 <span class="gs">**打字动画**</span> 的 <span class="ge">*段落*</span>...
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">typeit</span> <span class="p">&gt;</span>}}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>呈现的输出效果如下:</p>
+<div class="typeit"><div id="id-1"></div></div>
+
+<p>另外, 你也可以自定义 <strong>HTML 标签</strong>.</p>
+<p>一个带有 <code>h4</code> 标签的 <code>typeit</code> 示例:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">typeit</span> <span class="na">tag</span><span class="o">=</span><span class="s">h4</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">这一个带有基于 [<span class="nt">TypeIt</span>](<span class="na">https://typeitjs.com/</span>) 的 <span class="gs">**打字动画**</span> 的 <span class="ge">*段落*</span>...
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">typeit</span> <span class="p">&gt;</span>}}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>呈现的输出效果如下:</p>
+<div class="typeit"><h4 id="id-2"></h4></div>
+
+<h3 id="2-代码内容">2 代码内容</h3>
+<p>代码内容也是允许的, 并且通过使用参数 <code>code</code> 指定语言类型可以实习语法高亮.</p>
+<p>一个带有 <code>code</code> 参数的 <code>typeit</code> 示例:</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-markdown" data-lang="markdown"><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="nt">typeit</span> <span class="na">code</span><span class="o">=</span><span class="s">java</span> <span class="p">&gt;</span>}}
+</span></span><span class="line"><span class="cl">public class HelloWorld {
+</span></span><span class="line"><span class="cl">    public static void main(String []args) {
+</span></span><span class="line"><span class="cl">        System.out.println(&#34;Hello World&#34;);
+</span></span><span class="line"><span class="cl">    }
+</span></span><span class="line"><span class="cl">}
+</span></span><span class="line"><span class="cl">{{<span class="p">&lt;</span> <span class="p">/</span><span class="nt">typeit</span> <span class="p">&gt;</span>}}
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>呈现的输出效果如下:</p>
+<div class="typeit"><div id="id-3" class="highlight"></div></div>
+
+<h2 id="禁止解析代码块">禁止解析代码块</h2>
+<p>使用<code>/*...*/</code>包裹禁止解析的代码，<a href="https://gohugo.io/content-management/syntax-highlighting/" target="_blank" rel="noopener noreffer ">Hugo官方文档- 代码高亮</a>.</p>
+<img src="./images/image-20241101145932690.png" alt="image-20241101145932690" style="zoom: 50%;" />
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-11-01</span>
+            </div></div>
+
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/hugo/">Hugo</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/text30/" class="prev" rel="prev" title="【HUGO】测试"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>【HUGO】测试</a>
+            <a href="/text31/" class="next" rel="next" title="【Java】反射的基本使用及API">【Java】反射的基本使用及API<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line">欢迎来到wangty的笔记博客空间</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">wangty</a></span></div>
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">
+                  <i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span> 次
+              </span> |
+                        <span id="busuanzi_container_site_uv">
+                  <i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span> 位
+              </span>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/js/custom.js"></script></body>
+</html>

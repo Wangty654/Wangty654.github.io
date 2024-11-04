@@ -5729,9 +5729,11 @@ data(){
 
 
 
-# 第四章：Vue中的ajax
+# 第四章：Vue拓展
 
-## 配置代理
+## 36.Vue中的ajax请求
+
+### 跨域配置代理
 
 在开发的过程中，如何借助Vue脚手架，去解决ajax跨域的问题。
 
@@ -5788,7 +5790,7 @@ methods:{
 
 {{< /admonition >}}
 
-### 4.1 配置代理 方式一
+#### 1. 配置代理 方式一
 
 请求方 <======> 代理服务器 <=======> 目标服务器
 
@@ -5840,7 +5842,7 @@ methods:{
 
 {{< /admonition >}}
 
-### 4.2 配置代理 方式二
+#### 2. 配置代理 方式二
 
 - 写法：
 
@@ -5879,7 +5881,7 @@ devServer: {
     
 ```
 
-### 4.3 vue-resource
+#### 3. vue-resource
 
 vue-resource也是一个发送ajax请求的库，也是对xhr进行封装的，vue1.0使用广泛，现在官方已不再维护。
 
@@ -5908,16 +5910,436 @@ this.$http.get('http://localhost:8080/demo').then(
 		)
 ```
 
-## 
-
-# 第五章：Vuex
 
 
+## 37.Vuex插件
 
-# 第六章：Vue UI组件库
+### Vuex简介
+
+概念：专门在 Vue 中实现**集中式**状态(数据)管理的一个 Vue 插件，对 vue 应用中
+多个组件的共享状态进行集中式的管理(读/写)，也是一种组件间通信的方式，且适用于任意组件间通信。
+Github 地址: https://github.com/vuejs/vuex
+
+{{< admonition type=abstract title="This is a tip" open=true >}}
+
+**集中式：**将所有接受方集中起来，发送一次，都能接受。
+
+**分布式：**分成多个相同的，同时发送，都能接受。
+
+{{< /admonition >}}
+
+### Vuex工作原理图
+
+![image-20241013174409088](./images/image-20241013174409088.png)
+
+### 搭建Vuex环境
+
+1. 安装插件：npm i vuex
+2. 使用插件：Vue.use(Vuex)
+3. 弄出来一个 store
+4. 让所有组件都能看见 store ：vc ==> store
+
+```sh
+npm i vuex@3
+```
+
+```js
+import Vuex from 'vuex'
+Vue.use(Vuex)
+```
+
+```js
+//创建vm
+const vm = new Vue({
+el:'#app',
+render:h=>h(App),
+store:'hello', //使用store配置项
+})
+```
+
+{{< admonition type=bug title="注意哦" open=true >}}
+
+在2022年2月7日，vue3成为了默认版本。也就是说，我们现在去执行`npm i vue`安装的就直接是vue3了。
+
+vue3成为默认版本的同时，vuex也更新到了4版本。也就是说，我们现在去执行`npm i vuex`安装的是vuex4了。
+
+而vuex的4版本，只能在vue3中使用。如果在vue2版本中使用vuex的4版本，就会出现报错。
+
+- vue2中，只能用vuex的3版本
+- vue3中，只能用vuex的4版本
+
+我们现在用的vue2的框架环境，所以我们这里要引入3版本的vuex，命令为`npm i vuex@3`
+
+{{< /admonition >}}
+
+App.vue同级创建store文件夹，文件夹内里创建index.js。index.js中代码：
+
+```js
+//该文件用于创建Vuex中最为核心的store
+//引入Vue
+import Vue from 'vue'
+//引入Vuex
+import Vuex from 'vuex'
+Vue.use(Vuex)
+
+//准备actions-用于响应组件中的动作
+const actions={}
+//准备mutations-用于操作数据(state)
+const mutations ={}
+//准备state-用于存储数据
+const state ={}
+
+//创建并暴露store
+export default new Vuex.Store({
+	actions,
+	mutations,
+	state,
+})
+```
+
+ main.js中引入store
+
+```js
+import store from './store'
+
+//创建vm
+const vm = new Vue({
+el:'#app',
+render:h=>h(App),
+store, //配置store直接简写
+})
+```
+
+### 求和案例用vuex的写法
+
+vuex开发者工具的使用
+getters配置项
+mapState与mapGetters
+mapActions与mapMutations
+多组件共享数据
+vuex模块化+namespace_1
+wuex模块化+namespace_2
+
+## 38.路由
+
+###  路由的简介
+
+<img src="./images/image-20241023093739601.png" alt="image-20241023093739601" style="zoom:50%;" />
+
+1. 路由就是一组key-value的对应关系  =>route
+2. 多个路由，需要经过路由器的管理  =>router
+
+编码中的**路由**，**为了实现**SPA应用(single page web application)，也称**单页面应用**
+
+- 单页面应用，指：只有一个`.html`文件的应用。如下图：
+
+<img src="./images/image-20241031093125415.png" alt="image-20241031093125415" style="zoom:50%;" />
+
+- 多页面应用，指：有很多个`.html`文件的来回跳转切换的应用。
+
+<img src="./images/image-20241031093516163.png" alt="image-20241031093516163" style="zoom:50%;" />
+
+#### 路由**使用原理**：
+
+1. 点击左边侧边栏某菜单
+2. 改变 地址栏 端口号后面的路径
+3. 路由器router寻找配置的路由route规则
+4. 根据对应的 路径=>组件 的配置规则
+5. 更新显示页面，致绿色的内容模块中
+
+如下图：
+
+<img src="./images/image-20241031095532717.png" alt="image-20241031095532717" style="zoom:50%;" />
+
+{{< admonition type=abstract title="小tips" open=true >}}
+
+- 生活中：路由器的作用，是：为了实现多台电脑上网
+- 代码中：路由器的作用，是：为了实现单页面应用的页面跳转
+
+{{< /admonition >}}
+
+**vue-router**：
+
+vue的一个插件库，专门用来实现SAP应用。
+
+#### SPA 应用：
+
+单页Web应用(single page web application，SPA)
+
+1. 整个应用**只有一个**完整的页面。
+2. 点击页面中的导航链接不会刷新页面，只会做页面的**局部更新**。
+3. 数据需要通过 ajax 请求获取
+
+#### 路由的理解：
+
+**什么是路由?**
+
+1. 一个路由就是一组映射关系(key-value)
+2. key为路径,value 可能是 function 或componente
+
+**路由分类：**
+
+- 后端路由：
+  1. 理解：value 是 function,用于处理客户端提交的请求。
+  2. 工作过程：服务器接收到一个请求时，根据**请求路径**找到匹配的**函数**来处理请求，返回响应数据。
+
+- 前端路由:
+  1. 理解：value 是 component，用于展示页面内容。
+  2. 工作过程：当浏览器的路径改变时，对应的组件就会显示。
+
+{{< admonition type=abstract title="方便记忆" open=true >}}
+
+**路由：根据你的路径，由我决定展示对应的组件**
+
+{{< /admonition >}}
+
+### 路由基本使用
+
+在vue项目中使用路由，引入vue-router插件
+
+```sh
+npm i vue-router
+```
+
+{{< admonition type=warning title="注意" open=true >}}
+
+**2022年2月7日以后，vue-router的默认版本，为4版本**
+
+**vue-router4，只能用在vue3中**
+
+**vue-router3，才能用在vue2中**
+
+我们现在使用的是vue2，所以需要指定引入版本
+
+```sh
+npm i vue-router@3
+```
+
+{{< /admonition >}}
+
+安装完成后，在`main.js`中引入，并应用
+
+```js
+//引入插件
+import VueRouter from 'vue-router'
+//应用插件
+Vue.use(VueRouter)
+```
+
+此时，在vm中，可以使用一个全新的配置项`router`
+
+```js
+new Vue(){
+	...
+	router:'' //router中的内容格式被严格控制，不允许随意写入字符串
+	...
+}
+```
+
+`main.js`同级位置，新建文件夹`router`文件夹。在该文件夹下，新增文件`index.js`。
+
+`index.js`中拷入下方代码，用于创建整个应用的路由器。
+
+```js
+//该文件专门用于创建整个应用的路由器
+import VueRouter from 'vue-router'
+//引入组件
+import About from'../components/About
+import Home from'../components/Home
+
+//创建并暴露一个路由器
+export default new VueRouter({
+    routes:[ //一组组key-value对儿
+        {   path:'/about',
+            component:About
+		},
+        {   path:'/home'
+			component:Home
+		},
+	]
+})
+```
+
+此时在`main.js`中赋值router配置项为刚创建的服务器
+
+```js
+//引入路由器
+import router from./router
+
+//创建vm
+new Vue({
+    ....
+    router:router  //赋值配置项
+})
+```
+
+保存所有文件，此时路由器已经配置完成，并开始工作。
+
+地址导航栏能够看见`/#/`的符号。
+
+路由器以及路由规则配置完成。
+
+------
+
+现在需要处理两个组件，能够触发路由跳转：
+
+```html
+<!--原始htm1中我们使用a标签实现页面的跳转-->
+<a href="./about.htm">About</a>
+<a href="./home.html">Home</a>
+```
+
+在路由中，我们使用vue-router库中，提供给我们开发者的一个标签`<router-link>`，触发跳转
+
+```html
+<!--to指想把路径后面改成什么样子-->
+<!--active-class指想点击了哪一个菜单，哪个就高亮显示。直接修改地址栏，也可以对应触发高亮-->
+<router-link to="/about"  active-class="active">About</router-link> 
+<router-link to="/home" active-class="active">Home</router-link>
+```
+
+`<router-view>`设置页面内容展示的位置
+
+```vue
+<div class="panel">
+    <div class="panel-body">
+        <!--指定组件的呈现位置-->
+        <router-view></router-view>
+    </div>
+</div>
+```
+
+{{< admonition type=abstract title="几个注意点" open=true >}}
+
+- **一般组件 & 路由组件**
+
+  正常写的，如`<Banner/>`为一般组件，在项目中我们通常放在components包下，进行管理
+
+  通过`<router-link to="/ ">`写的为路由组件，在项目中我们通常放在pages包下，进行管理
+
+- **路由组件的显示与隐藏**
+
+  通过切换，“隐藏”了的路由组件，默认是被销毁掉的，需要的时候再去挂载。
+
+​	在菜单间切换的时候，路由组件是被频繁的挂载和销毁的。
+
+​	一个路由组件内容，在点击另一个菜单的时候，切换为另一个路由组件内容，该路由组件则被销毁
+
+​	<img src="./images/image-20241031143300076.png" alt="image-20241031143300076" style="zoom:50%;" />
+
+- 每个路由组件中的`this`，多了两个属性`$route`，`$router`
+
+​	每个组件都有自己的` $route`属性，里面存储着自己的路由信息。整个应用只有一个router，可以通过组件的 `$router` 属性获取到。
+
+​	<img src="./images/image-20241031144025592.png" alt="image-20241031144025592" style="zoom:50%;" />
+
+这里注意：
+
+​	哪个组件的this，打印出来的`$route`就是哪个组件的`path`，如下图
+
+<img src="./images/image-20241031144204582.png" alt="image-20241031144204582" style="zoom:50%;" />
+
+​	但是每个组件的this中，打印出来的`$router`是同一个
+
+{{< /admonition >}}
+
+### 嵌套路由
+
+嵌套路由的实现效果：
+
+​	点击左侧的菜单，其右下的内容中有新的菜单，点击新的菜单，更改下方的内容。
+
+如下图：
+
+​	<img src="./images/image-20241031145448753.png" alt="image-20241031145448753" style="zoom:50%;" />
+
+`嵌套路由`，有时候我们也叫它`多级路由`，路径上体现为多级路径：`xxx/xxx`
+
+嵌套路由的配置，使用`children`配置项：
+
+```js
+{
+	path:'/home',
+	component:Home,
+	children:[
+        {
+            path:'new', //子路由路径前方不写斜杠'/',底层路由处理中会对子路径自动加上'/'
+			component:New,
+        }
+    ]
+}
+```
+
+组件中的配置，`to`路径注意写成完整路径
+
+```vue
+<router-link to="/home/news" active-class="active">New</router-link>
+```
 
 
 
-# 第七章：vue-router
+路由的query参数
+命名路由
+路由的params参数
+路由的props配置
+router-link的replace属性
+
+编程式路由导航
+缓存路由组件
+两个新的生命周期钩子
+全局前置 路由守卫
+全局后置 路由守卫
+独享路由守卫
+
+组件内路由守卫
+history模式与hash模式
+
+## 39.Vue UI组件库(element-ui)
+
+element-ui基本使用
+element-ui按需引入
+
+# 第五章：vue3
+
+使用vue-cli创建工程
+
+使用vite创建工程
+分析工程结构
+安装开发者工具
+初识setup
+re数 处理基本类型
+re函数 处理对象类型
+reactive函数
+回顾Vue2的响应式原理
+
+Vue3响应式原理proxy
+Vue3响应式原理reflect
+reactive对比ref
+setup的两个注意点
+computed计算属性
+watch监视re定义的数据
+
+watch监视reactive定义的数据
+
+watch时value的问题
+
+watchEffect函数
+Vue3生命周期
+自定义hook
+toRef与toRefs
+shallowReactive与shallowRef
+readonly与shallowReadonly
+toRaw与markRaw
+customRef
+provide与inject
+
+响应式数据的判断
+CompositionAPl的优势
+Fragment组件
+Teleport组件
+Suspense组件
+Vue3中其他的改变
+
+
 
 

@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Html - 标签 - TyNote</title>
-        <link>https://Wangty654.github.io/tags/html/</link>
+        <link>http://localhost:1313/tags/html/</link>
         <description>Html - 标签 - TyNote</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
-            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 01 Jul 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/html/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Thu, 01 Jul 2021 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/html/" rel="self" type="application/rss+xml" /><item>
     <title>【html】网页设计笔记（html&#43;css&#43;javaScript基础）</title>
-    <link>https://Wangty654.github.io/text22/</link>
+    <link>http://localhost:1313/text22/</link>
     <pubDate>Thu, 01 Jul 2021 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/text22/</guid>
+    <guid>http://localhost:1313/text22/</guid>
     <description><![CDATA[本篇记录了网页设计课程所涉及的一些简单定义]]></description>
 </item>
 </channel>
