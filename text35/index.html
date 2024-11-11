@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>【VMware】VMware虚拟机安装Windows11系统教程 - TyNote</title><meta name="Description" content="你我一场唤不醒的梦……"><meta property="og:url" content="http://localhost:1313/text35/">
+  <meta property="og:site_name" content="TyNote">
+  <meta property="og:title" content="【VMware】VMware虚拟机安装Windows11系统教程">
+  <meta property="og:description" content="VMware虚拟机安装Windows11系统教程">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-11-06T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-11-06T00:00:00+00:00">
+    <meta property="article:tag" content="VMware">
+    <meta property="og:image" content="http://localhost:1313/images/avatar.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="http://localhost:1313/images/avatar.png">
+  <meta name="twitter:title" content="【VMware】VMware虚拟机安装Windows11系统教程">
+  <meta name="twitter:description" content="VMware虚拟机安装Windows11系统教程">
+<meta name="application-name" content="TyNote">
+<meta name="apple-mobile-web-app-title" content="TyNote"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="msapplication-TileColor" href="/favicon-16x16.png" color="#da532c"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/text35/" /><link rel="prev" href="http://localhost:1313/text34/" /><link rel="next" href="http://localhost:1313/text37/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "【VMware】VMware虚拟机安装Windows11系统教程",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "http:\/\/localhost:1313\/text35\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "http:\/\/localhost:1313\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "VMware","wordcount":  1726 ,
+        "url": "http:\/\/localhost:1313\/text35\/","datePublished": "2024-11-06T00:00:00+00:00","dateModified": "2024-11-06T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "TyNote","logo": {
+                    "@type": "ImageObject",
+                    "url": "http:\/\/localhost:1313\/images\/avatar.png",
+                    "width":  528 ,
+                    "height":  528 
+                }},"author": {
+                "@type": "Person",
+                "name": "wangty"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="normal" data-header-mobile="normal"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="TyNote"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/avatarico.png"
+        data-srcset="/images/avatarico.png, /images/avatarico.png 1.5x, /images/avatarico.png 2x"
+        data-sizes="auto"
+        alt="/images/avatarico.png"
+        title="/images/avatarico.png" />TyNote</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"><i class='fa fa-home' aria-hidden='true'></i> 首页 </a><a class="menu-item" href="/posts/"><i class='fa fa-quote-left' aria-hidden='true'></i> 所有文章 </a><a class="menu-item" href="/tags/"><i class='fa fa-tags' aria-hidden='true'></i> 标签 </a><a class="menu-item" href="/categories/"><i class='fa fa-list' aria-hidden='true'></i> 分类 </a><a class="menu-item" href="/about/"><i class='fa fa-window-restore' aria-hidden='true'></i> 关于 </a><a class="menu-item" href="/friend/" title="Friend"><i class='fa fa-paper-plane' aria-hidden='true'></i> 友链 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="TyNote"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/avatarico.png"
+        data-srcset="/images/avatarico.png, /images/avatarico.png 1.5x, /images/avatarico.png 2x"
+        data-sizes="auto"
+        alt="/images/avatarico.png"
+        title="/images/avatarico.png" />TyNote</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title=""><i class='fa fa-home' aria-hidden='true'></i>首页</a><a class="menu-item" href="/posts/" title=""><i class='fa fa-quote-left' aria-hidden='true'></i>所有文章</a><a class="menu-item" href="/tags/" title=""><i class='fa fa-tags' aria-hidden='true'></i>标签</a><a class="menu-item" href="/categories/" title=""><i class='fa fa-list' aria-hidden='true'></i>分类</a><a class="menu-item" href="/about/" title=""><i class='fa fa-window-restore' aria-hidden='true'></i>关于</a><a class="menu-item" href="/friend/" title="Friend"><i class='fa fa-paper-plane' aria-hidden='true'></i>友链</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto" >
+
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">【VMware】VMware虚拟机安装Windows11系统教程</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>虚拟机</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-11-06">2024-11-06</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 1726 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 4 分钟&nbsp;
+
+
+
+
+
+
+
+<span id="busuanzi_container_value_page_pv"><i class="far fa-eye fa-fw"></i>
+                
+                <span id="busuanzi_value_page_pv"></span>&nbsp;次阅读</span>
+
+
+
+</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li>
+          <ul>
+            <li><a href="#新建一个虚拟机">新建一个虚拟机</a></li>
+            <li><a href="#设置虚拟机屏幕全屏">设置虚拟机屏幕全屏</a></li>
+            <li><a href="#虚拟机内win11系统激活">虚拟机内win11系统激活</a></li>
+            <li><a href="#操作习惯设置">操作习惯设置</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div>
+
+
+
+        <div class="content" id="content"><h3 id="新建一个虚拟机">新建一个虚拟机</h3>
+<p><strong>1、打开虚拟机主页面，点击“创建新的虚拟机”</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241106154418235.png"
+        data-srcset="./images/image-20241106154418235.png, ./images/image-20241106154418235.png 1.5x, ./images/image-20241106154418235.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241106154418235.png"
+        title="image-20241106154418235" /></p>
+<p><strong>2、该页面建议选择”自定义“，并点击”下一步“</strong></p>
+<img src="./images/image-20241106154622351.png" alt="image-20241106154622351" style="zoom:50%;" />
+<p><strong>3、这里选最大<code>16.2.x</code>，并点击“下一步”</strong></p>
+<img src="./images/image-20241106154858449.png" alt="image-20241106154858449" style="zoom:50%;" />
+<p><strong>4、选择“稍后安装操作系统”，并点击“下一步”</strong></p>
+<img src="./images/image-20241106154951829.png" alt="image-20241106154951829" style="zoom:50%;" />
+<p><strong>5、没有win11的名称，就选择<code>win10 x64</code>版本，并点击“下一步”</strong></p>
+<img src="./images/image-20241106155102240.png" alt="image-20241106155102240" style="zoom:50%;" />
+<p><strong>6、根据自己具体的情况，选择虚拟机存放的位置</strong></p>
+<img src="./images/image-20241106155448988.png" alt="image-20241106155448988" style="zoom:50%;" />
+<p><strong>7、修改虚拟机的名称，用于区别自己创建的其他虚拟机。并点击“下一步”</strong></p>
+<img src="./images/image-20241106155622443.png" alt="image-20241106155622443" style="zoom:50%;" />
+<p><strong>8、该页面，点击“下一步”</strong></p>
+<img src="./images/image-20241106155718887.png" alt="image-20241106155718887" style="zoom:50%;" />
+<p><strong>9、根据情况和需求，配置处理器数量。并点击“下一步”</strong></p>
+<img src="./images/image-20241106155845290.png" alt="image-20241106155845290" style="zoom:50%;" />
+<p><strong>10、根据情况和需求，配置内存大小。并点击“下一步”</strong></p>
+<img src="./images/image-20241106160051335.png" alt="image-20241106160051335" style="zoom:50%;" />
+<p><strong>11、选择“使用桥接网络”，并点击“下一步”</strong></p>
+<img src="./images/image-20241106160159224.png" alt="image-20241106160159224" style="zoom:50%;" />
+<p><strong>12、点击“下一步”</strong></p>
+<img src="./images/image-20241106160231937.png" alt="image-20241106160231937" style="zoom:50%;" />
+<p><strong>13、点击“下一步”</strong></p>
+<img src="./images/image-20241106160314173.png" alt="image-20241106160314173" style="zoom:50%;" />
+<p><strong>14、点击“下一步”</strong></p>
+<img src="./images/image-20241106160343219.png" alt="image-20241106160343219" style="zoom:50%;" />
+<p><strong>15、根据情况和需求，配置磁盘大小。并点击“下一步”</strong></p>
+<img src="./images/image-20241106160446472.png" alt="image-20241106160446472" style="zoom:50%;" />
+<p><strong>16、根据自己具体的情况，选择虚拟机存放的位置，并点击“下一步”</strong></p>
+<img src="./images/image-20241106160600610.png" alt="image-20241106160600610" style="zoom:50%;" />
+<img src="./images/image-20241106162623875.png" alt="image-20241106162623875" style="zoom:50%;" />
+<p><strong>17、在浏览器使用搜索引擎</strong>（这里使用的是：百度搜索引擎），搜索<code>Windows11</code>。选择<a href="https://www.microsoft.com/zh-cn/software-download/windows11?774b232c-a48d-452a-a8fb-3906dc168d5c=True&amp;9d47a9e1-e53b-49a1-92ca-a647d62dc410=True" target="_blank" rel="noopener noreffer ">微软官网</a>。</p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241106161608837.png"
+        data-srcset="./images/image-20241106161608837.png, ./images/image-20241106161608837.png 1.5x, ./images/image-20241106161608837.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241106161608837.png"
+        title="image-20241106161608837" /></p>
+<p><strong>18、在官网找到“win11磁盘映像”</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241106161946653.png"
+        data-srcset="./images/image-20241106161946653.png, ./images/image-20241106161946653.png 1.5x, ./images/image-20241106161946653.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241106161946653.png"
+        title="image-20241106161946653" /></p>
+<p><strong>19、选择ISO版本，语言“简体中文”，点击<code>64-bit Download</code></strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241106162210834.png"
+        data-srcset="./images/image-20241106162210834.png, ./images/image-20241106162210834.png 1.5x, ./images/image-20241106162210834.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241106162210834.png"
+        title="image-20241106162210834" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241106162344478.png"
+        data-srcset="./images/image-20241106162344478.png, ./images/image-20241106162344478.png 1.5x, ./images/image-20241106162344478.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241106162344478.png"
+        title="image-20241106162344478" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241106162410776.png"
+        data-srcset="./images/image-20241106162410776.png, ./images/image-20241106162410776.png 1.5x, ./images/image-20241106162410776.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241106162410776.png"
+        title="image-20241106162410776" /></p>
+<p><strong>20、找到下载完成后保存的位置</strong></p>
+<img src="./images/image-20241106162523263.png" alt="image-20241106162523263" style="zoom:50%;" />
+<p><strong>21、继续回到虚拟机安装导向，点击自定义硬件</strong></p>
+<img src="./images/image-20241106162657483.png" alt="image-20241106162657483" style="zoom:50%;" />
+<p><strong>22、选择<code>新CD/DVD</code>，选择使用ISO映像文件，配置刚刚下载的文件的位置，点击“关闭”。</strong></p>
+<img src="./images/image-20241106162729828.png" alt="image-20241106162729828" style="zoom:50%;" />
+<p><strong>23、点击“完成”</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241106165803089.png"
+        data-srcset="./images/image-20241106165803089.png, ./images/image-20241106165803089.png 1.5x, ./images/image-20241106165803089.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241106165803089.png"
+        title="image-20241106165803089" /></p>
+<p><strong>24、点击“编辑虚拟机设置”，选择“选项”卡，选择“访问控制”，点击“加密”</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241108094317500.png"
+        data-srcset="./images/image-20241108094317500.png, ./images/image-20241108094317500.png 1.5x, ./images/image-20241108094317500.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241108094317500.png"
+        title="image-20241108094317500" /></p>
+<p><strong>25、根据自己的情况，设置加密密码，两次密码保持一致。并点击“加密”</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">--随机生成密码
+</span></span><span class="line"><span class="cl">spoHLT2b
+</span></span></code></pre></td></tr></table>
+</div>
+</div><img src="./images/image-20241108094339872.png" alt="image-20241108094339872" style="zoom:50%;" />
+<p><strong>26、选择“硬件选项卡”，点击“添加，”选择“可信平台模块”，并点击完成</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241108094529374.png"
+        data-srcset="./images/image-20241108094529374.png, ./images/image-20241108094529374.png 1.5x, ./images/image-20241108094529374.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241108094529374.png"
+        title="image-20241108094529374" /></p>
+<p><strong>27、点击“开启此虚拟机”。</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241108094756320.png"
+        data-srcset="./images/image-20241108094756320.png, ./images/image-20241108094756320.png 1.5x, ./images/image-20241108094756320.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241108094756320.png"
+        title="image-20241108094756320" /></p>
+<p><strong>28、进入时，如卡住，按<code>enter</code>回车键，继续。<code>ctrl+alt</code>可以实现鼠标光标在虚拟机内外来回切换</strong></p>
+<img src="./images/image-20241108094937122.png" alt="image-20241108094937122" style="zoom:50%;" />
+<p><strong>29、出现“安装系统界面”，点击&quot;下一步&quot;</strong></p>
+<img src="./images/image-20241108094958473.png" alt="image-20241108094958473"  />
+<img src="./images/image-20241108095119543.png" alt="image-20241108095119543"  />
+<p><strong>30、点击&quot;下一步&quot;</strong></p>
+<img src="./images/image-20241108095222229.png" alt="image-20241108095222229"  />
+<p><strong>31、选择&quot;我没有产品密钥&quot;</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241108095311165.png"
+        data-srcset="./images/image-20241108095311165.png, ./images/image-20241108095311165.png 1.5x, ./images/image-20241108095311165.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241108095311165.png"
+        title="image-20241108095311165" /></p>
+<p><strong>32、选择&quot;win11专业版&quot;，并点击&quot;下一步&quot;</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241108095451651.png"
+        data-srcset="./images/image-20241108095451651.png, ./images/image-20241108095451651.png 1.5x, ./images/image-20241108095451651.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241108095451651.png"
+        title="image-20241108095451651" /></p>
+<p><strong>33、勾选&quot;我接受&quot;，并点击&quot;下一步&quot;</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241108095604612.png"
+        data-srcset="./images/image-20241108095604612.png, ./images/image-20241108095604612.png 1.5x, ./images/image-20241108095604612.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241108095604612.png"
+        title="image-20241108095604612" /></p>
+<p><strong>34、新建磁盘空间，点击&quot;新建&quot;，大小为1024的倍数。例如50G就是50*1024即可。点击&quot;应用&quot;</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241108095805007.png"
+        data-srcset="./images/image-20241108095805007.png, ./images/image-20241108095805007.png 1.5x, ./images/image-20241108095805007.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241108095805007.png"
+        title="image-20241108095805007" /></p>
+<p><strong>35、其余自动的硬盘分区，也应用，并点击&quot;下一步&quot;</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241108100102671.png"
+        data-srcset="./images/image-20241108100102671.png, ./images/image-20241108100102671.png 1.5x, ./images/image-20241108100102671.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241108100102671.png"
+        title="image-20241108100102671" /></p>
+<p><strong>39、点击&quot;安装&quot;</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241108100248846.png"
+        data-srcset="./images/image-20241108100248846.png, ./images/image-20241108100248846.png 1.5x, ./images/image-20241108100248846.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241108100248846.png"
+        title="image-20241108100248846" /></p>
+<p><strong>40、等待安装进度条</strong></p>
+<img src="./images/image-20241108100747655.png" alt="image-20241108100747655" style="zoom: 67%;" />
+<p><strong>41、可以等待他自动重启，也可以点击&quot;立即重启&quot;</strong></p>
+<img src="./images/image-20241108101149418.png" alt="image-20241108101149418" style="zoom: 67%;" />
+<p><strong>42、等待重启</strong></p>
+<img src="./images/image-20241108101517149.png" alt="image-20241108101517149" style="zoom: 67%;" />
+<p><strong>43、安装准备界面，根据提示和导向，一路点&quot;是&quot;</strong></p>
+<img src="./images/image-20241108101622278.png" alt="image-20241108101622278" style="zoom: 67%;" />
+<img src="./images/image-20241108101659726.png" alt="image-20241108101659726" style="zoom: 67%;" />
+<img src="./images/image-20241108101909977.png" alt="image-20241108101909977" style="zoom: 67%;" />
+<img src="./images/image-20241108101931598.png" alt="image-20241108101931598" style="zoom: 67%;" />
+<img src="./images/image-20241108102212182.png" alt="image-20241108102212182" style="zoom: 67%;" />
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">--pin
+</span></span><span class="line"><span class="cl">1437059026@qq.com
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>48、等待桌面加载</strong></p>
+<img src="./images/image-20241108104951788.png" alt="image-20241108104951788" style="zoom:67%;" />
+<p><strong>49、进入到win11系统桌面界面</strong></p>
+<img src="./images/image-20241108105047010.png" alt="image-20241108105047010" style="zoom:67%;" />
+<h3 id="设置虚拟机屏幕全屏">设置虚拟机屏幕全屏</h3>
+<p><strong>1、选择&quot;虚拟机&quot;，选择&quot;安装VMware Tools&quot;</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241108105314913.png"
+        data-srcset="./images/image-20241108105314913.png, ./images/image-20241108105314913.png 1.5x, ./images/image-20241108105314913.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241108105314913.png"
+        title="image-20241108105314913" /></p>
+<p><strong>2、右下角弹出窗，表示安装完成</strong></p>
+<img src="./images/image-20241108105400118.png" alt="image-20241108105400118" style="zoom:67%;" />
+<p><strong>3、进入资源管理器，选择&quot;此电脑&quot;，双击打开&quot;DVD驱动器&quot;</strong></p>
+<img src="./images/image-20241108105437642.png" alt="image-20241108105437642" style="zoom:67%;" />
+<p><strong>4、选择&quot;是&quot;，等待安装</strong></p>
+<img src="./images/image-20241108105503993.png" alt="image-20241108105503993" style="zoom:67%;" />
+<img src="./images/image-20241108105526913.png" alt="image-20241108105526913" style="zoom:67%;" />
+<p><strong>5、弹出&quot;安装向导&quot;，点击&quot;下一步&quot;</strong></p>
+<img src="./images/image-20241108105543348.png" alt="image-20241108105543348" style="zoom:67%;" />
+<p><strong>6、继续点击&quot;下一步&quot;</strong></p>
+<img src="./images/image-20241108105555281.png" alt="image-20241108105555281" style="zoom:67%;" />
+<p><strong>7、点击&quot;安装&quot;</strong></p>
+<img src="./images/image-20241108105606399.png" alt="image-20241108105606399" style="zoom:67%;" />
+<p><strong>8、等待安装进度</strong></p>
+<img src="./images/image-20241108105626737.png" alt="image-20241108105626737" style="zoom:67%;" />
+<p><strong>9、安装完成后就自动适配了全屏，点击&quot;完成&quot;</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241108105723545.png"
+        data-srcset="./images/image-20241108105723545.png, ./images/image-20241108105723545.png 1.5x, ./images/image-20241108105723545.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241108105723545.png"
+        title="image-20241108105723545" /></p>
+<p><strong>10、弹出窗，选择&quot;是&quot;</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241108105750642.png"
+        data-srcset="./images/image-20241108105750642.png, ./images/image-20241108105750642.png 1.5x, ./images/image-20241108105750642.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241108105750642.png"
+        title="image-20241108105750642" /></p>
+<h3 id="虚拟机内win11系统激活">虚拟机内win11系统激活</h3>
+<p><strong>打开个性化有下面这个标识，标识win11系统未激活</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241108110140756.png"
+        data-srcset="./images/image-20241108110140756.png, ./images/image-20241108110140756.png 1.5x, ./images/image-20241108110140756.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241108110140756.png"
+        title="image-20241108110140756" /></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241108110237671.png"
+        data-srcset="./images/image-20241108110237671.png, ./images/image-20241108110237671.png 1.5x, ./images/image-20241108110237671.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241108110237671.png"
+        title="image-20241108110237671" /></p>
+<p><strong>1、激活脚本拷贝进虚拟机</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://www.123pan.com/s/g520Vv-rgRid
+</span></span></code></pre></td></tr></table>
+</div>
+</div><img src="./images/image-20241108110958306.png" alt="image-20241108110958306" style="zoom:67%;" />
+<p><strong>2、连接上网络，双击激活脚本，选择&quot;是&quot;</strong></p>
+<img src="./images/image-20241108111049621.png" alt="image-20241108111049621" style="zoom:67%;" />
+<p><strong>3、根据该网址激活教程操作</strong></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">https://massgrave.dev/
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241108112151013.png"
+        data-srcset="./images/image-20241108112151013.png, ./images/image-20241108112151013.png 1.5x, ./images/image-20241108112151013.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241108112151013.png"
+        title="image-20241108112151013" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-shell" data-lang="shell"><span class="line"><span class="cl">irm https://get.activated.win <span class="p">|</span> iex
+</span></span></code></pre></td></tr></table>
+</div>
+</div><img src="./images/image-20241108112256769.png" alt="image-20241108112256769" style="zoom: 67%;" />
+<img src="./images/image-20241108112329149.png" alt="image-20241108112329149" style="zoom:67%;" />
+<p>​	<strong>到此，关闭所有黑窗口</strong></p>
+<p><strong>6、桌面空白处，右键，选择&quot;个性化&quot;。若激活提示消失，说明激活成功。</strong></p>
+<img src="./images/image-20241108112435948.png" alt="image-20241108112435948" style="zoom:67%;" />
+<h3 id="操作习惯设置">操作习惯设置</h3>
+<p><strong>1、个性化 - 主题 - 桌面图标设置</strong></p>
+<img src="./images/image-20241108112543165.png" alt="image-20241108112543165" style="zoom:67%;" />
+<img src="./images/image-20241108112610821.png" alt="image-20241108112610821" style="zoom:67%;" />
+<p><strong>2、勾选&quot;计算机&quot;、&ldquo;回收站&rdquo;、&ldquo;控制面板&rdquo;，点击&quot;应用&quot;</strong></p>
+<img src="./images/image-20241108112646161.png" alt="image-20241108112646161" style="zoom:67%;" />
+<p><strong>3、系统 - 显示 - 缩放 ， 大小改为&quot;125%&quot;</strong></p>
+<img src="./images/image-20241108112752720.png" alt="image-20241108112752720" style="zoom:67%;" />
+<img src="./images/image-20241108112819502.png" alt="image-20241108112819502" style="zoom:67%;" />
+<p><strong>4、虚拟机这个图标可以全屏，全屏后顶部同样点这个图标可以退出全屏</strong></p>
+<p><img
+        class="lazyload"
+        src="/svg/loading.min.svg"
+        data-src="./images/image-20241108112925816.png"
+        data-srcset="./images/image-20241108112925816.png, ./images/image-20241108112925816.png 1.5x, ./images/image-20241108112925816.png 2x"
+        data-sizes="auto"
+        alt="./images/image-20241108112925816.png"
+        title="image-20241108112925816" /></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-fallback" data-lang="fallback"><span class="line"><span class="cl">开机密码--
+</span></span><span class="line"><span class="cl">1437059026
+</span></span></code></pre></td></tr></table>
+</div>
+</div></div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-11-06</span>
+            </div></div>
+
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/vmware/">VMware</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/text34/" class="prev" rel="prev" title="【VMware】VMware虚拟机下载安装激活教程"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>【VMware】VMware虚拟机下载安装激活教程</a>
+            <a href="/text37/" class="next" rel="next" title="【JS】闭包">【JS】闭包<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+</article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line">欢迎来到wangty的笔记博客空间</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2024</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">wangty</a></span></div>
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">
+                  <i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span> 次
+              </span> |
+                        <span id="busuanzi_container_site_uv">
+                  <i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span> 位
+              </span>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/js/custom.js"></script></body>
+</html>

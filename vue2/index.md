@@ -5914,7 +5914,7 @@ this.$http.get('http://localhost:8080/demo').then(
 
 ## 37.Vuex插件
 
-### Vuex简介
+#### Vuex简介
 
 概念：专门在 Vue 中实现**集中式**状态(数据)管理的一个 Vue 插件，对 vue 应用中
 多个组件的共享状态进行集中式的管理(读/写)，也是一种组件间通信的方式，且适用于任意组件间通信。
@@ -5928,34 +5928,14 @@ Github 地址: https://github.com/vuejs/vuex
 
 {{< /admonition >}}
 
-### Vuex工作原理图
+#### Vuex工作原理图
 
 ![image-20241013174409088](./images/image-20241013174409088.png)
 
-### 搭建Vuex环境
+#### 搭建Vuex环境
 
-1. 安装插件：npm i vuex
-2. 使用插件：Vue.use(Vuex)
-3. 弄出来一个 store
-4. 让所有组件都能看见 store ：vc ==> store
-
-```sh
-npm i vuex@3
-```
-
-```js
-import Vuex from 'vuex'
-Vue.use(Vuex)
-```
-
-```js
-//创建vm
-const vm = new Vue({
-el:'#app',
-render:h=>h(App),
-store:'hello', //使用store配置项
-})
-```
+1. 安装插件：`npm i vuex`
+2. 使用插件：`Vue.use(Vuex)`
 
 {{< admonition type=bug title="注意哦" open=true >}}
 
@@ -5972,53 +5952,299 @@ vue3成为默认版本的同时，vuex也更新到了4版本。也就是说，�
 
 {{< /admonition >}}
 
-App.vue同级创建store文件夹，文件夹内里创建index.js。index.js中代码：
+**vuex安装后，存在一个store配置项，所有组件均能看见store：vc ==> store**
+
+1. 创建文件：`src/store/index.js`，store文件夹与App.vue同级
+
+   ```js
+   //该文件用于创建Vuex中最为核心的store
+   //引入Vue核心库
+   import Vue from 'vue'
+   //引入Vuex
+   import Vuex from 'vuex'
+   Vue.use(Vuex)
+   
+   //准备actions-用于响应组件中的动作
+   const actions={}
+   //准备mutations-用于操作修改数据(state)
+   const mutations ={}
+   //准备state-用于保存存储数据
+   const state ={}
+   
+   //创建并暴露store
+   export default new Vuex.Store({
+   	actions,
+   	mutations,
+   	state,
+   })
+   ```
+
+2.  在`main.js`中创建vm时引入`store`配置项
 
 ```js
-//该文件用于创建Vuex中最为核心的store
-//引入Vue
-import Vue from 'vue'
-//引入Vuex
-import Vuex from 'vuex'
-Vue.use(Vuex)
-
-//准备actions-用于响应组件中的动作
-const actions={}
-//准备mutations-用于操作数据(state)
-const mutations ={}
-//准备state-用于存储数据
-const state ={}
-
-//创建并暴露store
-export default new Vuex.Store({
-	actions,
-	mutations,
-	state,
-})
-```
-
- main.js中引入store
-
-```js
+.....
+//引入store
 import store from './store'
+.....
 
 //创建vm
 const vm = new Vue({
-el:'#app',
-render:h=>h(App),
-store, //配置store直接简写
+    el:'#app',
+    render:h=>h(App),
+    store, //配置store直接简写
 })
 ```
 
-### 求和案例用vuex的写法
+#### 基本使用
 
-vuex开发者工具的使用
-getters配置项
-mapState与mapGetters
-mapActions与mapMutations
-多组件共享数据
-vuex模块化+namespace_1
-wuex模块化+namespace_2
+1. 初始化数据、配置 `actions`、配置`mutations`、操作文件`store.js`
+
+   ```js
+   ....
+   //准备actions-用于响应组件中的动作
+   const actions={
+       jia(context,value){
+           // console.1og('actions中的jia被调用了',ministore,value)
+           context.commit('JIA',value)
+       }
+   }
+   //准备mutations-用于操作修改数据(state)
+   const mutations ={
+       //执行加
+   	JIA(state,value){
+           // console.log('mutations中的JIA被调用了'state,value)
+           state.sum += value
+       }
+   }
+   //准备state-用于保存存储数据
+   const state ={
+       sum:0
+   }
+   ....
+   ```
+
+   
+
+2. 组件中读取vuex中的数据：`$store.state.sum`
+
+3. 组件中修改vuex中的数据：`$store.dispatch('action中的方法名',数据)`或`$store.commit('mutation中的方法名',数据)`
+
+{{< admonition type=abstract title="备注" open=true >}}
+
+若没有网络请求或其他业务逻辑，组件中也可以越过actions，即，不写`dispatch`，直接编写`commit`
+
+{{< /admonition >}}
+
+
+
+#### vuex开发者工具的使用
+
+
+
+#### getters的使用
+
+1. 概念：当state中的数据需要经过加工后再使用时，可以使用getters加工。
+
+2. 在`store.js`中追加`getters`配置
+
+   ```js
+   .....
+   const getters = {
+       bigSum(state){
+           return state.sum = 10
+       }
+   }
+   
+   //创建并暴露store
+   export default new Vuex.Stroe({
+       ......
+       getters
+   }) 
+   ```
+
+3. 组件中读取数据：`$store.getters.bigSum`
+
+#### 四个map方法的使用
+
+1. **mapState方法：**用于帮助我们映射`state`中的数据为计算属性
+
+   ```js
+   import {mapState} from 'vuex'
+   
+   computed:{
+       //借助mapState生成计算属性:sum、schoo1、subject(对象写法)
+       ...mapState({sum:'sum',school:'school',subjeCT:'subject')),
+   	//借助mapstate生成计算属性:sum、schoO1、subject(数组写法)
+       ...mapState([ 'sum','school','subjact']),
+   },
+   ```
+
+   
+
+2. **mapGetters方法：**用于帮助我们映射`getters`中的数据为计算属性
+
+   ```JS
+   import {mapGetters} from 'vuex'
+   
+   computed:{
+       //借助mapGetters生成计算属性:bigsum(对象写法)
+       ...mapGetters({bigSum:'bigSum'}),
+   	//借助mapGetters生成计算属性:bigSum(数组写法)
+       ...mapGetters(['bigSum'])
+   },
+   ```
+
+   
+
+3.  **mapActions方法：**用于帮助我们生成与`actions`对话的方法，即:包含` $store.dispatch(xxx)`的函数
+
+   ```js
+   import {mapActions} from 'vuex'
+   
+   methods: {
+       //靠mapActions生成:incrementOdd、incrementwait(对象形式)
+       ...mapActions({incrementOdd:'jia0dd',incrementWait:'jiaWait'})
+   	//靠mapActions生成:incrementOdd、incrementWait(数组形式)
+       ...mapActions(['jiaodd','jiawait'])
+   },
+   ```
+
+   
+
+4. **mapMutations方法：**用于帮助我们生成与`mutations`对话的方法，即:包含`$store.commit(xxx)`的函数
+
+   ```js
+   import {mapMutations} from 'vuex'
+   
+   methods:{
+       //靠mapMutations生成:increment、decrement(对象形式)
+       ...mapMutations({increment:'JIA',decrement:'JIAN'}),
+   	//靠mapMutations生成:JIA、JIAN(数组形式)
+       ...mapMutations(['JIA','JIAN']),
+   },
+   ```
+
+   {{< admonition type=abstract title="备注" open=true >}}
+
+   mapActions与mapMutaions使用时，若需要传递参数需要：在模板中绑定事件时传递好参数，否则参数是事件对象。
+
+   {{< /admonition >}}
+
+   
+
+**一个前端随机生成唯一id的方法**
+
+```js
+import {nanoid} from 'nanoid'
+
+Const id = nanoid();
+```
+
+**ajax调用接口**
+
+```js
+import axios from 'axios'
+
+axios.get('接口').then(
+	response =>{},
+    error => { alert(error.message) }
+)
+```
+
+
+
+#### 模块化&命名空间
+
+`store`包下，`index.js`
+
+```js
+//求和相关的配置,开启命名空间
+const countOptions={actions:{},mutations:{},state:{},getters:{},namespaced:true}
+//人员管理相关的配置,开启命名空间
+const personOptions={actions:{},mutations:{},state:{},getters:{},namespaced:true}
+
+//创建并暴露store
+export default new Vuex.Store({
+    modules:{
+        a:countOptions,
+        b:personOptions
+    }
+})
+```
+
+模块化则分别将`index.js`中的两个部分，分成`count.js` `person.js`两个js，并精简`index.js`中的代码
+
+```js
+....
+import countOptions from './count'
+import personOptions from './person'
+
+...
+export default new Vuex.Store({
+    modules:{
+        countAbout:countOptions,
+        personAbout:personOptions
+    }
+})
+```
+
+`xxx.vue`组件中
+
+```js
+computed:{
+    //借助mapState生成计算属性，从state中取数据。(数组写法)
+    ...mapState('countAbout',['sum','school','subject']),
+    ...mapState('personAbout',['personList']),
+    //借助mapGetters生成计算属性，从getters中读取数据。(数组写法)
+    ...mapGetters('countAbout',['bigSum'])    
+},
+methods:{
+    //借助mapMutations生成对应的方法，方法中会调用commit去联系mutations(对象写法)
+    ...mapMutations('countAbout',{increment:'JIA',decrement:'JIAN'}),
+    //借助mapActions生成对应的方法，方法中会调用dispatch去联系actions(对象写法)
+    ...mapActions('countAbout',{incrementOdd:'jia0dd',incrementWait:'jiaWait'})
+}
+```
+
+目的：让代码更好维护，让多种数据分类更加明确。
+
+1. 开启命名空间后，组件中读取`state`数据:
+
+   ```js
+   //方式一：自己直接读取
+   this.$store.state.personAbout.list
+   //方式二：借助mapState读取
+   ...mapState('countAbout',['sum','school','subject']),
+   ```
+
+2. 开启命名空间后，组件中读取`getters`数据:
+
+   ```js
+   //方式一:自己直接读取
+   this.$store.getters['personAbout/firstPersonName']
+   //方式二:借助mapGetters读取
+   ...mapGetters('countAbout',['bigSum'])
+   ```
+
+3. 开启命名空间后，组件中调用`dispatch`
+
+   ```js
+   //方式一:自己直接dispatch
+   this.$store.dispatch('personAbout/addPersonWang',person)
+   //方式二:借助mapActions
+   ...mapActions('countAbout',{incrementOdd: 'jia0dd',incrementWait:'jiawait'})
+   ```
+
+4. 开启命名空间后，组件中调用`commit`
+
+   ```js
+   //方式一:自己直接commit
+   this.$store.commit('personAbout/ADD_PERSON',person)
+   //方式二:借助mapMutations
+   ...mapMutations('countAbout',{increment: 'JIA',decrement:'JIAN' }),
+   ```
+
+   
 
 ## 38.路由
 
@@ -6276,13 +6502,245 @@ new Vue({
 <router-link to="/home/news" active-class="active">New</router-link>
 ```
 
+### 路由传参
+
+**路由的query参数**
+
+路由嵌套极限一般都在4-5层为极限，一般都在2-3层
+
+只写一个组件Detail路由组件，通过传参来实现多个路由被点击使用时，对应显示的组件内容不同
+
+路由组件有两个参数，其中`query`参数，和`ajax`中的`query`参数传参类似：
+
+```vue
+//路径后面用问号?的形式，多个参数之间用&间隔，例如：
+<router-link to="/home/message/detail?id=666&title=hello">跳转
+</router-link>
+```
+
+在唯一的Detail组件中，有一个属性`this.$route`能够得到这个组件相关的所有路由配置信息。在配置信息中，有一个属性`query`包含所有传递过来的参数及参数值。
+
+在组件中获取参数，并页面显示渲染：
+
+```vue
+<ul>
+	<li>消息编号：{{$route.query.id}}</li>
+	<li>消息内容：{{$route.query.title}}</li>
+</ul>
+```
+
+注意：
+
+```vue
+<!--要使参数值为变量，需要使用模版字符串标识符``，并且使用${}包裹变量-->
+<router-link to="/home/message/detail?id=666&title=hello">
+</router-link>
+
+<!--例如，下面的写法：(字符串写法)-->
+<router-link :to="`/home/message/detail?id=${m.id}&title=${m.title}`">
+</router-link>
+
+<!--或者，下面的写法：(对象写法)-->
+<router-link :to="{
+  path:'/home/message/detail',
+      query:{
+        id:m.id,
+        title:m.title
+      }
+  }">
+</router-link>
+```
+
+**路由的params参数**
+
+路由组件的第二个参数，`params`参数，和`ajax`中的`params`参数传参也类似：
+
+```js
+//path配置项，路径后面，使用传参占位符
+name:'about',
+path:'/about/:id/:title',
+component:About,
+children:[{...}]
+```
+
+```vue
+<!--跳转时传参紧跟路径-->
+<router-link to="/home/message/about/666/hello"></router-link>
+```
+
+此时参数及参数值，出现在`this.$route`的`params`中
+
+在组件中获取参数，并页面显示渲染：
+
+```vue
+<ul>
+	<li>消息编号：{{$route.params.id}}</li>
+	<li>消息内容：{{$route.params.title}}</li>
+</ul>
+```
+
+同样的，将写死的传递参数位置改为变量取值的方式：
+
+```vue
+<!--传参写死-->
+<router-link to="/home/message/about/666/hello"></router-link>
+
+<!--传参改为变量：(字符串写法)-->
+<router-link :to="`/home/message/about/${m.id}/${m.title}`"></router-link>
+
+<!--或者，下面的写法：(对象写法)-->
+<router-link :to="{
+  	  name:'about',
+      params:{
+        id:m.id,
+        title:m.title
+      }
+  }">
+</router-link>
+
+<!--注：params的对象传参写法，只能使用name来确定路由跳转位置，不能使用path-->
+```
 
 
-路由的query参数
-命名路由
-路由的params参数
-路由的props配置
-router-link的replace属性
+
+### 命名路由
+
+给路由器取名字
+
+1、作用：可以简化路由的跳转写法
+
+2、示例：
+
+```js
+//命名使用name配置项
+name:'about',
+path:'/about',
+component:About,
+children:[{...}]
+```
+
+```vue
+<!--简化跳转-->
+<!--简化前：完整路径的2种写法-->
+<router-link to="/home/message/about"></router-link>
+<router-link :to="{path:'/home/message/about'}"></router-link>
+
+<!--简化后：直接使用命名-->
+<router-link :to="{name:'about'}"></router-link>
+<!--这里注意，to属性，不注明使用name，默认是使用的path-->
+```
+
+```vue
+<!--简化传递参数-->
+<router-link :to="{
+  	  name:'about',
+      query:{
+        id:m.id,
+        title:m.title
+      }
+  }">
+</router-link>
+```
+
+### 路由的props配置
+
+路由中的一个全新的配置项`props`，用于路由更加方便的接受参数
+
+**props的第一种写法：值为对象**
+
+该对象中的所有key-value都会以props的形式传给Detail组件
+
+```js
+name:'...',
+path:'...',
+component:...,
+children:[{...}],
+//props的第一种写法：值为对象--------------------------------------------------
+//该对象中的所有key-value都会以props的形式传给Detail组件
+props:{  
+   a:666,
+   b:'hello'
+}
+```
+
+在组件中接受并使用：
+
+```vue
+<ul>
+	<li>消息编号：{{a}}</li>
+	<li>消息内容：{{b}}</li>
+</ul>
+<script>
+{
+    ...,
+    porps:['a','b']
+}
+</script>
+```
+
+这种写法比较少用，一般情况下，我们不直接在路由配置中写死数据进行传参。
+
+所以我们了解第二种props的写法
+
+**props的第二种写法：值为布尔值**
+
+若布尔值为真，就会把该路由组件收到的所有params参数，以props的形式传递给Detail组件
+
+```js
+name:'...',
+path:'/about/:id/:title',
+component:...,
+children:[{...}],
+//props的第二种写法：值为布尔值--------------------------------------------------
+props:true
+```
+
+在组件中接受并使用：
+
+```vue
+<ul>
+	<li>消息编号：{{id}}</li>
+	<li>消息内容：{{title}}</li>
+</ul>
+<script>
+{
+    ...,
+    porps:['id','title']
+}
+</script>
+```
+
+**props的第三种写法：值为函数**
+
+依赖return，返回的一定是一个对象，对象内的数据都会以props的形式传递给Detail组件
+
+```js
+name:'...',
+path:'/about',
+component:...,
+children:[{...}],
+//props的第三种写法：值为函数--------------------------------------------------
+props:function(){}
+//简写为
+props(){
+    return {id:'666',title:'hello'}
+}
+//路由的回调函数带有$route参数
+props($route){
+    return {id:$route.query.id,title:$route.query.title}
+}
+//通过解构赋值，可以简写为
+props(query){
+    return {id:query.id,title:query.title}
+}
+//或者
+props(query:{id,title}){
+    return {id:id,title:title}
+}
+//不过一般情况下，解构赋值的语句语义可读性和理解性不是很清楚，所以一般还是写回调函数$route的写法
+```
+
+### router-link的replace属性
 
 编程式路由导航
 缓存路由组件

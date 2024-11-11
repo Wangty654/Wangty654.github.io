@@ -1,88 +1,88 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>所有文章 - TyNote</title>
-        <link>https://Wangty654.github.io/posts/</link>
+        <link>http://localhost:1313/posts/</link>
         <description>所有文章 | TyNote</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
-            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 11 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>【bat批处理】提取多文件夹下的文件名称</title>
+    <link>http://localhost:1313/text36/</link>
+    <pubDate>Mon, 11 Nov 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>http://localhost:1313/text36/</guid>
+    <description><![CDATA[快速的一键提取文件下的文件名称]]></description>
+</item>
+<item>
+    <title>【idea】IDEA现有项目连接SVN</title>
+    <link>http://localhost:1313/text38/</link>
+    <pubDate>Mon, 11 Nov 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>http://localhost:1313/text38/</guid>
+    <description><![CDATA[IDEA现有项目连接SVN]]></description>
+</item>
+<item>
+    <title>【JS】闭包</title>
+    <link>http://localhost:1313/text37/</link>
+    <pubDate>Mon, 11 Nov 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>http://localhost:1313/text37/</guid>
+    <description><![CDATA[如果一个函数访问了此函数的父级及父级以上的作用域变量，那么这个函数就是一个闭包]]></description>
+</item>
+<item>
+    <title>【VMware】VMware虚拟机安装Windows11系统教程</title>
+    <link>http://localhost:1313/text35/</link>
+    <pubDate>Wed, 06 Nov 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>http://localhost:1313/text35/</guid>
+    <description><![CDATA[VMware虚拟机安装Windows11系统教程]]></description>
+</item>
+<item>
+    <title>【VMware】VMware虚拟机下载安装激活教程</title>
+    <link>http://localhost:1313/text34/</link>
+    <pubDate>Wed, 06 Nov 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>http://localhost:1313/text34/</guid>
+    <description><![CDATA[VMware虚拟机下载安装激活教程]]></description>
+</item>
+<item>
     <title>【idea】IDEA显示侧边文件的最后修改时间以及文件大小</title>
-    <link>https://Wangty654.github.io/text32/</link>
+    <link>http://localhost:1313/text32/</link>
     <pubDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/text32/</guid>
+    <guid>http://localhost:1313/text32/</guid>
     <description><![CDATA[idea可以显示侧边文件的最后修改时间以及文件大小，该功能同时可以显示idea侧边栏Database中数据库表备注的库表名称]]></description>
 </item>
 <item>
+    <title>【Java】Java中正则的使用</title>
+    <link>http://localhost:1313/regex/</link>
+    <pubDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</pubDate>
+    <author>lei</author>
+    <guid>http://localhost:1313/regex/</guid>
+    <description><![CDATA[Java中正则的使用 正则简介 非常常见的问题： 如何判断字符串是否是有效的电话号码？例如：010-1234567，123ABC456，13510]]></description>
+</item>
+<item>
     <title>【Java】反射的基本使用及API</title>
-    <link>https://Wangty654.github.io/text31/</link>
+    <link>http://localhost:1313/text31/</link>
     <pubDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/text31/</guid>
+    <guid>http://localhost:1313/text31/</guid>
     <description><![CDATA[对Java反射的基本使用和相应API进行记录]]></description>
 </item>
 <item>
     <title>【PDF文档】将网页转换为pdf文件并下载</title>
-    <link>https://Wangty654.github.io/text33/</link>
+    <link>http://localhost:1313/text33/</link>
     <pubDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/text33/</guid>
+    <guid>http://localhost:1313/text33/</guid>
     <description><![CDATA[网页题库下载另存为pdf保存的办法]]></description>
 </item>
 <item>
     <title>【HUGO】Hugo的LoveIt主题美化（五）</title>
-    <link>https://Wangty654.github.io/text29/</link>
+    <link>http://localhost:1313/text29/</link>
     <pubDate>Fri, 01 Nov 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/text29/</guid>
+    <guid>http://localhost:1313/text29/</guid>
     <description><![CDATA[image画廊效果、typeit打字机效果、禁止代码块解析]]></description>
-</item>
-<item>
-    <title>【Spring-boot】启动报错注入bean失败Mapper找不到</title>
-    <link>https://Wangty654.github.io/text28/</link>
-    <pubDate>Fri, 11 Oct 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/text28/</guid>
-    <description><![CDATA[启动报错注入bean失败Mapper找不到A component required a bean of type ‘com.<em>.</em>.Mapper‘ that could not be found.]]></description>
-</item>
-<item>
-    <title>【word文档】word页脚页码不连续解决办法</title>
-    <link>https://Wangty654.github.io/text27/</link>
-    <pubDate>Tue, 08 Oct 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/text27/</guid>
-    <description><![CDATA[记录项目中编写文档，遇到纵向文档引用横向文档后，目录顺序及页码不连贯的问题，word页脚页码不连续解决办法]]></description>
-</item>
-<item>
-    <title>【HUGO】Hugo的LoveIt主题美化（二）</title>
-    <link>https://Wangty654.github.io/text24/</link>
-    <pubDate>Fri, 13 Sep 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/text24/</guid>
-    <description><![CDATA[hugo访问统计功能、Permalinks 参数修改、自定义404页面、添加文章数量统计、添加文章密码]]></description>
-</item>
-<item>
-    <title>【HUGO】Hugo的LoveIt主题美化（三）</title>
-    <link>https://Wangty654.github.io/text25/</link>
-    <pubDate>Fri, 13 Sep 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/text25/</guid>
-    <description><![CDATA[自定义css样式、自定义js、网站运行时间、文章过期提醒、双击生成颜表情、离开进入网站标题变化]]></description>
-</item>
-<item>
-    <title>【HUGO】Hugo的LoveIt主题美化（四）</title>
-    <link>https://Wangty654.github.io/text26/</link>
-    <pubDate>Fri, 13 Sep 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/text26/</guid>
-    <description><![CDATA[修改二级标题、行内代码和分割线样式、更新时间、友情链接]]></description>
-</item>
-<item>
-    <title>【HUGO】Hugo的LoveIt主题美化（一）</title>
-    <link>https://Wangty654.github.io/text23/</link>
-    <pubDate>Fri, 13 Sep 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/text23/</guid>
-    <description><![CDATA[hugo网站自定义图标、文章头部参数、链接的写法、不同样式的提示框、关于页面]]></description>
 </item>
 </channel>
 </rss>

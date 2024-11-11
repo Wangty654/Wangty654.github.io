@@ -1,23 +1,23 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Python - 分类 - TyNote</title>
-        <link>https://Wangty654.github.io/categories/python/</link>
+        <link>http://localhost:1313/categories/python/</link>
         <description>Python - 分类 - TyNote</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
-            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 12 Jul 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/categories/python/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Tue, 12 Jul 2022 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/categories/python/" rel="self" type="application/rss+xml" /><item>
     <title>【Python】Python的WebDriver问题</title>
-    <link>https://Wangty654.github.io/text19/</link>
+    <link>http://localhost:1313/text19/</link>
     <pubDate>Tue, 12 Jul 2022 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/text19/</guid>
+    <guid>http://localhost:1313/text19/</guid>
     <description><![CDATA[Python的WebDriver驱动问题]]></description>
 </item>
 <item>
     <title>【Python】Python下载与安装操作步骤</title>
-    <link>https://Wangty654.github.io/text04/</link>
+    <link>http://localhost:1313/text04/</link>
     <pubDate>Fri, 08 Jul 2022 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>https://Wangty654.github.io/text04/</guid>
+    <guid>http://localhost:1313/text04/</guid>
     <description><![CDATA[Python下载与安装操作步骤]]></description>
 </item>
 </channel>
