@@ -1,31 +1,31 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Idea - 标签 - TyNote</title>
-        <link>http://localhost:1313/tags/idea/</link>
+        <link>https://Wangty654.github.io/tags/idea/</link>
         <description>Idea - 标签 - TyNote</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
-            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 11 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/idea/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 11 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/idea/" rel="self" type="application/rss+xml" /><item>
     <title>【idea】IDEA现有项目连接SVN</title>
-    <link>http://localhost:1313/text38/</link>
+    <link>https://Wangty654.github.io/text38/</link>
     <pubDate>Mon, 11 Nov 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/text38/</guid>
+    <guid>https://Wangty654.github.io/text38/</guid>
     <description><![CDATA[IDEA现有项目连接SVN]]></description>
 </item>
 <item>
     <title>【idea】idea导入ta404前端项目代码后js文件中注释报红色波浪线解决办法</title>
-    <link>http://localhost:1313/text05/</link>
+    <link>https://Wangty654.github.io/text05/</link>
     <pubDate>Mon, 03 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/text05/</guid>
+    <guid>https://Wangty654.github.io/text05/</guid>
     <description><![CDATA[idea导入ta404前端项目代码后js文件中注释报红色波浪线解决办法]]></description>
 </item>
 <item>
     <title>【读卡器驱动】dcrf32.dll</title>
-    <link>http://localhost:1313/text03/</link>
+    <link>https://Wangty654.github.io/text03/</link>
     <pubDate>Wed, 18 May 2022 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/text03/</guid>
+    <guid>https://Wangty654.github.io/text03/</guid>
     <description><![CDATA[dcrf32.dll引用报错问题]]></description>
 </item>
 </channel>

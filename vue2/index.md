@@ -100,7 +100,7 @@ list.innerHTML = htmlStr
 vue就直接将旧的真实dom直接拿到页面渲染出来，再处理不同的部分
 {{< /admonition >}}
 
-
+​          
 
 #### 原生js
 
@@ -121,13 +121,13 @@ axios：
 
 promise：异步请求
 
-
+​          
 
 ## 2. vue官网使用指南
 
 地址：[vue官网操作手册](https://v2.cn.vuejs.org/)
 
-
+​          
 
 ## 3.搭建vue开发环境
 
@@ -305,7 +305,7 @@ Vue开发者工具扩展链接：
 
 开端开发编辑工具vscode下载地址：[开端开发编辑工具vscode下载地址](https://code.visualstudio.com/)
 
-
+​          
 
 ## 4. Hello小案例
 
@@ -464,7 +464,7 @@ vsCode中装`Live Server`插件。
 
 2、把Vue解析后的html片段，指定位置放置
 
-
+​          
 
 ## 5. 分析Hello案例
 
@@ -6244,7 +6244,7 @@ methods:{
    ...mapMutations('countAbout',{increment: 'JIA',decrement:'JIAN' }),
    ```
 
-   
+   ​    
 
 ## 38.路由
 
@@ -6288,6 +6288,8 @@ methods:{
 
 vue的一个插件库，专门用来实现SAP应用。
 
+   
+
 #### SPA 应用：
 
 单页Web应用(single page web application，SPA)
@@ -6295,6 +6297,8 @@ vue的一个插件库，专门用来实现SAP应用。
 1. 整个应用**只有一个**完整的页面。
 2. 点击页面中的导航链接不会刷新页面，只会做页面的**局部更新**。
 3. 数据需要通过 ajax 请求获取
+
+   
 
 #### 路由的理解：
 
@@ -6318,6 +6322,8 @@ vue的一个插件库，专门用来实现SAP应用。
 **路由：根据你的路径，由我决定展示对应的组件**
 
 {{< /admonition >}}
+
+​    
 
 ### 路由基本使用
 
@@ -6469,6 +6475,8 @@ new Vue({
 
 {{< /admonition >}}
 
+​    
+
 ### 嵌套路由
 
 嵌套路由的实现效果：
@@ -6502,9 +6510,11 @@ new Vue({
 <router-link to="/home/news" active-class="active">New</router-link>
 ```
 
+​    
+
 ### 路由传参
 
-**路由的query参数**
+#### **路由的query参数**
 
 路由嵌套极限一般都在4-5层为极限，一般都在2-3层
 
@@ -6551,7 +6561,9 @@ new Vue({
 </router-link>
 ```
 
-**路由的params参数**
+   
+
+#### **路由的params参数**
 
 路由组件的第二个参数，`params`参数，和`ajax`中的`params`参数传参也类似：
 
@@ -6601,48 +6613,9 @@ children:[{...}]
 <!--注：params的对象传参写法，只能使用name来确定路由跳转位置，不能使用path-->
 ```
 
+   
 
-
-### 命名路由
-
-给路由器取名字
-
-1、作用：可以简化路由的跳转写法
-
-2、示例：
-
-```js
-//命名使用name配置项
-name:'about',
-path:'/about',
-component:About,
-children:[{...}]
-```
-
-```vue
-<!--简化跳转-->
-<!--简化前：完整路径的2种写法-->
-<router-link to="/home/message/about"></router-link>
-<router-link :to="{path:'/home/message/about'}"></router-link>
-
-<!--简化后：直接使用命名-->
-<router-link :to="{name:'about'}"></router-link>
-<!--这里注意，to属性，不注明使用name，默认是使用的path-->
-```
-
-```vue
-<!--简化传递参数-->
-<router-link :to="{
-  	  name:'about',
-      query:{
-        id:m.id,
-        title:m.title
-      }
-  }">
-</router-link>
-```
-
-### 路由的props配置
+#### 路由的props配置
 
 路由中的一个全新的配置项`props`，用于路由更加方便的接受参数
 
@@ -6740,22 +6713,540 @@ props(query:{id,title}){
 //不过一般情况下，解构赋值的语句语义可读性和理解性不是很清楚，所以一般还是写回调函数$route的写法
 ```
 
-### router-link的replace属性
+  
 
-编程式路由导航
-缓存路由组件
-两个新的生命周期钩子
-全局前置 路由守卫
-全局后置 路由守卫
-独享路由守卫
+### 命名路由
 
-组件内路由守卫
-history模式与hash模式
+给路由器取名字
 
-## 39.Vue UI组件库(element-ui)
+1、作用：可以简化路由的跳转写法
 
-element-ui基本使用
-element-ui按需引入
+2、示例：
+
+```js
+//命名使用name配置项
+name:'about',
+path:'/about',
+component:About,
+children:[{...}]
+```
+
+```vue
+<!--简化跳转-->
+<!--简化前：完整路径的2种写法-->
+<router-link to="/home/message/about"></router-link>
+<router-link :to="{path:'/home/message/about'}"></router-link>
+
+<!--简化后：直接使用命名-->
+<router-link :to="{name:'about'}"></router-link>
+<!--这里注意，to属性，不注明使用name，默认是使用的path-->
+```
+
+```vue
+<!--简化传递参数-->
+<router-link :to="{
+  	  name:'about',
+      query:{
+        id:m.id,
+        title:m.title
+      }
+  }">
+</router-link>
+```
+
+ 
+
+### **`<router-link>`的replace属性**
+
+1. 作用：控制路由跳转时操作浏览器历史记录的模式
+2. 浏览器的历史记录有两种写入方式：分别为`push`和` replace`，`push`是追加历史记录，`replace` 是替换当前记录。路由跳转时候默认为 `push`
+3. 如何开启`replace`模式：`<router-link replace.......>News</router-link>`
+
+**路由对浏览器历史记录的影响**：
+
+1. 浏览器中有两个按钮，`←` `→`，一个是前进一个是后退，这两个按钮都是依赖浏览器的历史记录在工作
+
+2. 浏览器的历史记录的操作模式是栈push模式：根据点击，不停的往栈中**追加**信息。
+
+   我们通常将这种追加信息的方式，称为push方式（与数组身上的push类似，不破坏任意一个元素，只往后面追加一个元素。在官方他有一个好听名字，叫**压栈**）
+
+3. 浏览器的前进与后退，就是操作历史记录列表中的指针进行移动
+
+4. 对历史记录的操作，除了`push`，还有另外一种方式，`replace`
+
+5. `replace`最大的特点就是**替换**掉当前栈点那一个元素
+
+6. 默认`router-link`所开起的模式是`push模式`，如果要开启`replace模式`，写法如下：
+
+```vue
+<!--追加replace属性-->
+<!--完整写法-->
+<router-link :replace="true" ></router-link>
+
+<!--可简写为-->
+<router-link replace ></router-link>
+```
+
+ 
+
+### 编程式路由导航
+
+- 作用：不借助`<route-link>`实现路由跳转，让路由跳转更加灵活
+
+如果不使用`<route-link>`标签进行路由跳转的实现，路由器中的缔造者提供了`$router.push`
+
+```vue
+<button click="pushShow(i)">按钮1</button>
+
+<script>
+.....
+methods:{
+    pushShow(i){
+        this.$router.push({ //push对象中的写法，同route-link中的to中内容一摸一样
+            name:'about', //跳转以改命名路由为目标路由的界面
+            query:{  //正常传参
+                id:i.id,
+                title:i.title
+            }
+        })
+    }
+}
+</script>
+```
+
+同理，对应`$router.push`也有`$router.replace`，以实现操作历史记录的方式为替换型。写法：
+
+```vue
+<button click="replaceShow(i)">按钮2</button>
+
+<script>
+.....
+methods:{
+    replaceShow(i){
+        this.$router.replace({ //replace和push写法一样
+            name:'about', //跳转以改命名路由为目标路由的界面
+            query:{  //正常传参
+                id:i.id,
+                title:i.title
+            }
+        })
+    }
+}
+</script>
+```
+
+路由器中也提供了操作历史记录的方法，：后退`$router.back()`、前进`$router.forward()`、`$router.go(入参)`
+
+```js
+//后退一步
+this.$router.back()
+
+//前进一步
+this.$router.forward()
+
+//前进或者后退多少步
+//入参必须是数字
+this.$router.go(3) //入参是正数，则前进。这里表示前进3步
+this.$router.go(-2) //入参是负数，则后退。这里表示后退2步
+```
+
+  
+
+### 缓存路由组件
+
+作用：让不展示的路由组件保持挂载，不被销毁。
+
+- 我们每切换一个路由，切换前的路由组件就会被销毁。
+
+当用户在一个路由页面输入信息后，切换致另一个路由浏览信息再切回输入的路由页面进行继续输入时，我们发现，原路由已经被销毁，该路由页面重新渲染，导致了用户输入内容丢失。
+
+在该需求下，我们需要一个缓存原路由组件的办法。由此，我们引入缓存路由组件标签`<keep-alive>`
+
+```vue
+<!--该标签包裹住的路由，均不被销毁，均保持缓存-->
+<keep-alive>
+    <router-view></router-view>
+</keep-alive>
+
+<!--include属性,设定只缓存哪一个路由-->
+<!--特别注意：About为组件名称，要缓存哪个组件，就写哪个组件的组件名称-->
+<keep-alive include="About">
+<!--如果是缓存多个，则用数组形式-->
+<keep-alive :include="['About','News']">
+```
+
+   
+
+### 两个新的生命周期钩子
+
+作用：用于捕获路由组件的激活状态
+
+- 定时器开启后，必须在组件即将销毁的生命周期函数`beforeDestroy`中关闭
+- 当路由组件被缓存时，销毁生命周期函数不会被触发。
+
+上面两个限制，导致了定时器无法被关闭，并会在浏览者中持续一直调用。针对该需求，引出，路由组件独有的两个生命周期钩子：激活`activated()`、失活`deactivated()`
+
+当页面切换在当前组件，则当前组件被激活。activated在被激活时候触发
+
+当页面切换至其他组件，则当前组件失活。deactivated再失活时触发
+
+```js
+activated(){
+	console.log('该组件被激活了')
+	//这里可以开启定时器
+}
+
+deactivated(){
+	console.log('该组件失活了')
+	//这里关闭定时器   
+}
+```
+
+{{< admonition type=abstract title="This is a tip" open=true >}}
+
+**3个不在生命周期图示里面的生命周期构子：**这里的2个路由生命周期构子 + `nextTick`
+
+`this.nextTick(function(){ ... })`该钩子，当你操作完数据之后，Vue把真实Dom放入页面了以后，Vue再帮你调用该函数里面的内容。
+
+{{< /admonition >}}
+
+​     
+
+### 路由守卫
+
+1. 作用：对路由进行权限控制。【主要作用：权限校验】
+
+   当某个人登陆时，我们将此人对于各个路由所对应的路由组件是否可见，称为对其鉴权。
+
+2. 分类：全局守卫、独享守卫、组件内守卫
+
+3. 代码位置：在router文件夹下的`index.js`中，在暴露一个创建的路由器对象之前，添加路由守卫。
+
+  
+
+#### 全局前置 路由守卫
+
+`router.beforeEach `全局前置 路由守卫：页面切换前调用
+
+```js
+//创建一个路由器
+const router = new VueRouter({...})
+                              
+//--------------全局前置路由守卫--------------
+//在每一次路由切换之前，都会调用该函数，进行权限校验;
+//在初始化到时候，也被调用。
+router.beforeEach((to,from,next)=>{
+    ...
+    //to：【要去哪里】目标路径路由对象
+    //from：【从哪里去】当前所在路径路由对象
+    //next()：【放行】没有这条就都不会继续往下走了，需要手动抛出'无权限'异常
+    next()
+})
+
+//暴露路由
+export default router
+```
+
+判断去哪里是否有权限时我们通常会使用目标路径`path`属性来进行判定，例如：
+
+```js
+if(to.path === '/about'){
+	next()
+}
+```
+
+当设置需要权限的路由较多时，这样判定就变得不可取了。
+
+此时，我们想要在每个路由申明时，设置某个配置项，以简洁路由权限的判定。
+
+在路由对象中Vue提供了`meta`这个对象，用于设置一些自定义的配置项。
+
+`meta`在官方有个好听的名字，叫`路由元`。我们通常在其中设置一个配置项`isAuth`(是否被授权)，用来进行路由守卫的判定。
+
+```js
+//哪个路由需要鉴权，meta:{isAuth:true}就写在哪里
+routes:[
+    {name:'about',path:'/about',meta:{isAuth:false}},
+    {name:'home',path:'/home',meta:{isAuth:true}}
+]
+
+//路由守卫判定:需要鉴权就往下走。没有设置的默认为undefined，该处判定为假，就不进行鉴权
+if(to.meta.isAuth){
+    if('满足鉴权放行的条件：例如登录账号满足超级管理员'){
+        next()//放行
+    }else{ 
+        console.log('该账号无权限')
+    }
+}else{
+    next()//不参与鉴权的路由均放行
+}
+```
+
+​    
+
+#### 全局后置 路由守卫
+
+`router.afterRach`全局后置 路由守卫：页面切换后调用。
+
+```js
+//创建一个路由器
+const router = new VueRouter({...})
+                              
+//--------------全局后置路由守卫--------------
+//在每一次路由切换之后，都会调用该函数，进行资源操作;
+router.afterRach((to,from)=>{
+	//注意该API就没有next入参了，因为是切换后调用，是不用进行放行操作的
+    //此处通常用来修改：需要页面有权限显示之后，一些页面信息，如：
+    document.title = '对应跳转页面的标题' //修改网页标签名称为跳转页面名称
+})
+
+//暴露路由
+export default router
+```
+
+
+
+#### 独享 路由守卫
+
+独享路由守卫：顾名思义指，某一个路由单独使用的路由守卫。
+
+```js
+//某route路由申明中
+{
+    name:'',
+    ....,
+    //进入该路由之前，调用该函数中内容
+    beforeEnter:(to,from,next) => {
+        ....
+        //写法和前置路由一样
+    }
+}
+```
+
+注意：和全局路由守卫不同的是，独享路由守卫只有前置，没有后置。如果想要使用后置，可以独享守卫和全局后置守卫搭配使用。
+
+​    
+
+#### 组件内 路由守卫
+
+组件内路由守卫：指在具体的某一个组件中去写路由守卫，而不是在这个路由器配置 文件中编写。
+
+```js
+//进入守卫：通过路由规则，进入该组件时被调用
+beforeRouteEnter(to,from,next){
+    next() //都得放行才能往下走
+},
+//离开守卫：通过路由规则，离开该组件时被调用
+beforeRouteLeave(to,from,next){
+    next() //都得放行才能往下走
+}
+```
+
+{{< admonition type=abstract title="注意" open=true >}}
+
+**通过路由规则**：通过导航栏点击，改变地址栏路由，引起路由组件展示，则是经过了路由规则。
+
+如果是直接放在其他组件中引用该路由组件，引起路由组件展示，这种方式是不会触发组件内路由守卫的。
+
+{{< /admonition >}}
+
+​      
+
+### 路由器的两种工作模式
+
+#### hash模式
+
+- 在地址栏，我们分析地址：`localhost:8080/#/home/message`。我们发现，从路由访问开始，地址就一直存在的一个符号：`/#/`，我们把它称作`hash`。
+- 这里提到的所有的`hash`与数据加密无关，只是站在前端的角度，对路径进行分析。
+- 路径中，所有的从`#`开始，到结束的内容，都称作：路径中的`hash`值。
+
+**hash值的作用**：hash最大的特点就是不会随着http的请求发给服务器。
+
+所以路径中属于hash值的内容，不会作为路径发给服务器，进行请求。例如：
+
+```sh
+--请求117服务器5000端口的student资源信息
+10.10.10.117:5000/student
+
+--添加hash值
+10.10.10.117:5000/student/#/xjdsdldfj/sdjfs/2342432/wasdf
+```
+
+ 以上这两个地址在浏览器地址栏中的请求，返回是一模一样的。因为`#/xjdsdldfj/sdjfs/2342432/wasdf`不会作为地址发送给服务器。
+
+#### history模式
+
+在router文件夹下的配置文件`index.js`中，设置路由器中的`mode`的配置项。如果不设置，默认使用`hash`模式。写法：
+
+```js
+const router = new VueRouter({
+	mode:'history', //该配置项只有两种值：history、hash。不写该配置项，则默认使用hash模式
+    routes:[...],
+})
+export default router
+```
+
+{{< admonition type=abstract title="这里注意" open=true >}}
+
+Vue脚手架的特性是**修改代码**以后，在**当前路径下**进行刷新。
+
+所以如果地址栏路径为`localhost:8080/#/home/message/detail`时，此时修改了`mode`属性为`history`，页面刷新依旧默认使用当前路径，导致没有任何效果。
+
+此时，需要将地址栏路径**手动改**成基本根路径`localhost:8080`，再进行路由访问。
+
+{{< /admonition >}}
+
+访问符合路由规则，实现路由组件正常跳转。地址栏路径中`#`标识符消失，地址格式为`localhost:8080/home/message/detail`
+
+**符合路由规则：**点击路由，经过路由器，根据路由规则rules，匹配路由组件进行展示。
+
+所以符合路由规则是没有进行服务器请求的，此时如果在地址栏点击刷新`localhost:8080/home/message/detail`该地址会全部作为路径请求服务器，导致404
+
+##### **解决history模式刷新404问题**
+
+404问题出现在服务器无法请求访问不存在的地址路径接口。
+
+所以该问题，由后端出面解决。
+
+nodejs服务器有个专门解决这个问题的中间件插件，java也有专门的库（这里只演示nodejs的处理）
+
+在https://www.npmjs.com/官方网站搜索插件`connect-history-api-fallback`
+
+<img src="./images/image-20241114105802724.png" alt="image-20241114105802724" style="zoom:50%;" />
+
+<img src="./images/image-20241114110030391.png" alt="image-20241114110030391" style="zoom: 67%;" />
+
+在服务器控制台，输入下面代码，安装这个中间件：
+
+```sh
+C:Users\wangty\Desktop\demo>npm i connect-history-api-fallback
+```
+
+安装完成后，在`server.js`中引入中间件：
+
+```js
+//在“const express = ...”的代码后面 添加这一句
+var history = require('connect-history-api-fallback');
+```
+
+并在`server.js`中使用中间件：
+
+```js
+//在“const app = .......”的代码后面 添加这一句
+app.use(history())
+//在“app.use(express.......”的代码钱面 添加这一句
+```
+
+   
+
+##### **history模式 VS hash模式**
+
+| hash模式                       | history模式                |
+| ------------------------------ | -------------------------- |
+| 浏览器(路由跳转)兼容性更好     | 浏览器(路由跳转)兼容性略差 |
+| 地址不够美观，带#              | 地址美观，不带#            |
+| 上线部署不影响后端请求         | 上线部署需要后端配置配合   |
+| 地址校验严格时，会被标记不合法 | 地址校验合法               |
+
+   
+
+#### 项目上线的基本流程
+
+所有的`.vue`文件，通过`npm run build`命令打包之后形成`.html`文件放置在服务器中供用户使用。
+
+打包之后形成一个新的`dist`文件夹，该文件夹只有一个单文件页面`index.html`。直接访问无效果。
+
+打包的所有文件，需要放置在服务器上，进行部署。
+
+这里使用nodejs的express搭建一个微型的服务器，并将前端打包文件部署上去
+
+只记录**简单操作步骤**，不解释原理：
+
+1. 桌面新建一个`demo`文件夹，用`vscode`打开
+
+2.  `vscode`中打开控制台，运行`npm init`
+
+3.  `package name`设置为：`wangty_test_server`（随便起个服务器名字）
+
+4.  一路回车
+
+5.  控制台路径回到`demo`时，运行`npm i express`
+
+6.  `demo`文件夹下新建一个`server.js`，里面代码如下：
+
+   ```js
+   const express =require('express') //引入express
+   const app = express()             //创建一个app服务实例对象
+   app·get('/person',(req,res)=>{    //配置一个后端路由，person，返回一个人员信息  
+       res.send({                    //req - 请求 ， res - 返回
+           name:"tom',
+           age:18
+       })
+   })
+   app.listen(5005,(err)=>{          //app开启一个端口监听，开在5005端口
+       if(!err)console.log('服务器启动成功了!') //没有错误对象信息，就提示启动成功
+   })
+   ```
+
+7.  控制台运行`node server`，控制台打印`服务器启动成功了`表示该微型服务器已经启动成功。
+
+8.  打开浏览器地址栏访问`localhost:5005/person`，可以成功返回人员信息。
+
+9.  `demo`文件夹下新建一个`static`文件夹（有时候也叫`public`文件夹），在其中放入`.html`文件
+
+10.  这里为了测试是否成功展示，我们手动新建一个`demo.html`放入`static`文件夹下：
+
+    ```html
+    <!DOCTYPE html>
+    <html>
+    <head>
+        <meta charset="utf-8">
+        <title>test</title>
+    </head>
+    <body>
+    <div><h1>你好！</h1></div>
+    </body>
+    </html>
+    ```
+
+11. 回到`server.js`，添加代码：
+
+    ```js
+    //在“const app = ...”的代码后面 添加这一句
+    app.use(express.static(__dirname+'/static'))   //使用插件,读取当前static文件下的页面
+    ```
+
+12.  `ctrl+c`停掉服务器，重新启动服务器
+
+13.  打开浏览器地址栏访问`localhost:5005/demo.html`，可以成功展示`demo.html`的你好页面。
+
+14.  我们知道默认浏览器访问`index.html`页面，所以我们可以将其改得更简化一点。将`demo.html`文件名称修改为`index.html`，并且地址栏访问`localhost:5005`，即可成功展示你好页面。
+
+15.  此时，即可对前端打包文件进行部署。
+
+16.  拷贝所有的`dist`文件夹中内容，放入`static`文件夹中，重复的文件点击替换覆盖即可。
+
+17.   `ctrl+c`停掉服务器，重新启动服务器
+
+18.  地址栏访问`localhost:5005`，打包的项目即可以正常运行。
+
+19.   部署上线完成。
+
+
+
+## 39.Vue UI组件库
+
+移动端常用UI组件库：[Vant ](https://youzan.github.io/vant)、[Cube Ul]( https://didi.github.io/cube-ui)、[Mint Ul](http://mint-ui.github.io)
+PC端常用UI组件库：[Element Ul]( https://element.eleme.cne)、[IView Ul](https://www.iviewui.come)、
+京东也有一个组件库：[NUTUI](nutui.jd.com)
+
+element-ui举例：
+element-ui是一个饿了么团队打造的，pc端基于Vue基本使用的一个组件样式库。
+引入 Element：完整引入、按需引入 https://element.eleme.cn/#/zh-CN/component/quickstart
+
+【完整引入会导致前端js文件过大，如果引入使用的部分较少，推荐使用按需引入的方式】
+
+​        
 
 # 第五章：vue3
 

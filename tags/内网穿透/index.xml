@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>内网穿透 - 标签 - TyNote</title>
-        <link>http://localhost:1313/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
+        <link>https://Wangty654.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/</link>
         <description>内网穿透 - 标签 - TyNote</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
-            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/%E5%86%85%E7%BD%91%E7%A9%BF%E9%80%8F/" rel="self" type="application/rss+xml" /><item>
     <title>【HUGO】HUGO博客网站搭建</title>
-    <link>http://localhost:1313/text07/</link>
+    <link>https://Wangty654.github.io/text07/</link>
     <pubDate>Fri, 09 Aug 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/text07/</guid>
+    <guid>https://Wangty654.github.io/text07/</guid>
     <description><![CDATA[从零开始搭建一个Hugo静态博客网站]]></description>
 </item>
 </channel>

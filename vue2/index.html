@@ -1,31 +1,31 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
-    <head><script src="/livereload.js?mindelay=10&amp;v=2&amp;port=1313&amp;path=livereload" data-no-instant defer></script>
+    <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <meta name="robots" content="noodp" />
-        <title>【Vue前端框架】Vue2.0全套教程 - TyNote</title><meta name="Description" content="你我一场唤不醒的梦……"><meta property="og:url" content="http://localhost:1313/vue2/">
+        <title>【Vue前端框架】Vue2.0全套教程 - TyNote</title><meta name="Description" content="你我一场唤不醒的梦……"><meta property="og:url" content="https://Wangty654.github.io/vue2/">
   <meta property="og:site_name" content="TyNote">
   <meta property="og:title" content="【Vue前端框架】Vue2.0全套教程">
-  <meta property="og:description" content="本章节记录vue2的所涉及的一些语法和使用场景，记录的流程顺序为：1.vue基础核心；2.vue-cli 脚手架-专门用于工程开发；3.vue-router；4.vuex；5.element-ui：饿了么团队，做UI组件库的；6.vue3">
+  <meta property="og:description" content="本章节记录vue2的所涉及的一些语法和使用场景，记录的流程顺序为：1.vue基础核心；2.vue-cli 脚手架-专门用于工程开发；3.vue-router；4.vuex；5.element-ui：饿了么团队，做UI组件库">
   <meta property="og:locale" content="zh_CN">
   <meta property="og:type" content="article">
     <meta property="article:section" content="posts">
     <meta property="article:published_time" content="2024-08-21T00:00:00+00:00">
     <meta property="article:modified_time" content="2024-09-14T00:00:00+00:00">
     <meta property="article:tag" content="Vue">
-    <meta property="og:image" content="http://localhost:1313/images/avatar.png">
+    <meta property="og:image" content="https://Wangty654.github.io/images/avatar.png">
 
   <meta name="twitter:card" content="summary_large_image">
-  <meta name="twitter:image" content="http://localhost:1313/images/avatar.png">
+  <meta name="twitter:image" content="https://Wangty654.github.io/images/avatar.png">
   <meta name="twitter:title" content="【Vue前端框架】Vue2.0全套教程">
-  <meta name="twitter:description" content="本章节记录vue2的所涉及的一些语法和使用场景，记录的流程顺序为：1.vue基础核心；2.vue-cli 脚手架-专门用于工程开发；3.vue-router；4.vuex；5.element-ui：饿了么团队，做UI组件库的；6.vue3">
+  <meta name="twitter:description" content="本章节记录vue2的所涉及的一些语法和使用场景，记录的流程顺序为：1.vue基础核心；2.vue-cli 脚手架-专门用于工程开发；3.vue-router；4.vuex；5.element-ui：饿了么团队，做UI组件库">
 <meta name="application-name" content="TyNote">
 <meta name="apple-mobile-web-app-title" content="TyNote"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
         <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="msapplication-TileColor" href="/favicon-16x16.png" color="#da532c"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="http://localhost:1313/vue2/" /><link rel="prev" href="http://localhost:1313/text08/" /><link rel="next" href="http://localhost:1313/text23/" /><link rel="stylesheet" href="/css/style.min.css"><link rel="preload" href="/lib/fontawesome-free/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/fontawesome-free/all.min.css"></noscript><link rel="preload" href="/lib/animate/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
-        <noscript><link rel="stylesheet" href="/lib/animate/animate.min.css"></noscript><script type="application/ld+json">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="msapplication-TileColor" href="/favicon-16x16.png" color="#da532c"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Wangty654.github.io/vue2/" /><link rel="prev" href="https://Wangty654.github.io/text08/" /><link rel="next" href="https://Wangty654.github.io/text23/" /><link rel="stylesheet" href="/css/style.min.cafd7a15685d3295cb0c60c3cf7c0cde0632ba4dd2c8b6c34b35bf00ee9e8a08.css" integrity="sha256-yv16FWhdMpXLDGDDz3wM3gYyuk3SyLbDSzW/AO6eigg="><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
     {
         "@context": "http://schema.org",
         "@type": "BlogPosting",
@@ -33,18 +33,18 @@
         "inLanguage": "zh-CN",
         "mainEntityOfPage": {
             "@type": "WebPage",
-            "@id": "http:\/\/localhost:1313\/vue2\/"
+            "@id": "https:\/\/Wangty654.github.io\/vue2\/"
         },"image": [{
                             "@type": "ImageObject",
-                            "url": "http:\/\/localhost:1313\/images\/Apple-Devices-Preview.png",
+                            "url": "https:\/\/Wangty654.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "vue","wordcount":  55991 ,
-        "url": "http:\/\/localhost:1313\/vue2\/","datePublished": "2024-08-21T00:00:00+00:00","dateModified": "2024-09-14T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+                        }],"genre": "posts","keywords": "vue","wordcount":  61815 ,
+        "url": "https:\/\/Wangty654.github.io\/vue2\/","datePublished": "2024-08-21T00:00:00+00:00","dateModified": "2024-09-14T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "TyNote","logo": {
                     "@type": "ImageObject",
-                    "url": "http:\/\/localhost:1313\/images\/avatar.png",
+                    "url": "https:\/\/Wangty654.github.io\/images\/avatar.png",
                     "width":  528 ,
                     "height":  528 
                 }},"author": {
@@ -133,8 +133,10 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">【Vue前端框架】Vue2.0全套教程</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/%E5%89%8D%E7%AB%AF/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>前端</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-21">2024-08-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 55991 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 112 分钟&nbsp;
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-08-21">2024-08-21</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 61815 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 124 分钟&nbsp;<span id="/vue2/" class="leancloud_visitors" data-flag-title="【Vue前端框架】Vue2.0全套教程">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;
 
 
 
@@ -455,13 +457,41 @@
             </li>
             <li><a href="#路由基本使用">路由基本使用</a></li>
             <li><a href="#嵌套路由">嵌套路由</a></li>
-            <li><a href="#路由传参">路由传参</a></li>
+            <li><a href="#路由传参">路由传参</a>
+              <ul>
+                <li><a href="#路由的query参数"><strong>路由的query参数</strong></a></li>
+                <li><a href="#路由的params参数"><strong>路由的params参数</strong></a></li>
+                <li><a href="#路由的props配置">路由的props配置</a></li>
+              </ul>
+            </li>
             <li><a href="#命名路由">命名路由</a></li>
-            <li><a href="#路由的props配置">路由的props配置</a></li>
-            <li><a href="#router-link的replace属性">router-link的replace属性</a></li>
+            <li><a href="#router-link的replace属性"><strong><code>&lt;router-link&gt;</code>的replace属性</strong></a></li>
+            <li><a href="#编程式路由导航">编程式路由导航</a></li>
+            <li><a href="#缓存路由组件">缓存路由组件</a></li>
+            <li><a href="#两个新的生命周期钩子">两个新的生命周期钩子</a></li>
+            <li><a href="#路由守卫">路由守卫</a>
+              <ul>
+                <li><a href="#全局前置-路由守卫">全局前置 路由守卫</a></li>
+                <li><a href="#全局后置-路由守卫">全局后置 路由守卫</a></li>
+                <li><a href="#独享-路由守卫">独享 路由守卫</a></li>
+                <li><a href="#组件内-路由守卫">组件内 路由守卫</a></li>
+              </ul>
+            </li>
+            <li><a href="#路由器的两种工作模式">路由器的两种工作模式</a>
+              <ul>
+                <li><a href="#hash模式">hash模式</a></li>
+                <li><a href="#history模式">history模式</a>
+                  <ul>
+                    <li><a href="#解决history模式刷新404问题"><strong>解决history模式刷新404问题</strong></a></li>
+                    <li><a href="#history模式-vs-hash模式"><strong>history模式 VS hash模式</strong></a></li>
+                  </ul>
+                </li>
+                <li><a href="#项目上线的基本流程">项目上线的基本流程</a></li>
+              </ul>
+            </li>
           </ul>
         </li>
-        <li><a href="#39vue-ui组件库element-ui">39.Vue UI组件库(element-ui)</a></li>
+        <li><a href="#39vue-ui组件库">39.Vue UI组件库</a></li>
       </ul>
     </li>
     <li><a href="#第五章vue3">第五章：vue3</a></li>
@@ -592,6 +622,7 @@
 </div>
         </div>
     </div>
+<p>​</p>
 <h4 id="原生js">原生js</h4>
 <p>4.学习vue之前需要掌握的javaScript基础知识</p>
 <p><strong>ES6语法规范</strong>：结构赋值、模板字符串、箭头函数等。<a href="http://172.20.23.216/website/docs/docs/learn/es6/es6%e5%9f%ba%e7%a1%80.html" target="_blank" rel="noopener noreffer ">ES6基础-久远银海内部链接</a></p>
@@ -601,8 +632,10 @@
 <p>数组常用方法：过滤一个数组、加工一个数组、筛选最值</p>
 <p>axios：</p>
 <p>promise：异步请求</p>
+<p>​</p>
 <h2 id="2-vue官网使用指南">2. vue官网使用指南</h2>
 <p>地址：<a href="https://v2.cn.vuejs.org/" target="_blank" rel="noopener noreffer ">vue官网操作手册</a></p>
+<p>​</p>
 <h2 id="3搭建vue开发环境">3.搭建vue开发环境</h2>
 <p>在没有脚手架的情况下，最原始的使用vue框架，就是在<code>.html</code> 文件中，引入<code>vue.js</code>包</p>
 <div class="highlight"><div class="chroma">
@@ -772,6 +805,7 @@
 </div><p>【注意：上方代码如果失效，则进入vue.js文件，直接对productionTip属性进行修改为false】</p>
 <img src="./images/image-20240823103932262.png" alt="image-20240823103932262" style="zoom:50%;" />
 <p>开端开发编辑工具vscode下载地址：<a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreffer ">开端开发编辑工具vscode下载地址</a></p>
+<p>​</p>
 <h2 id="4-hello小案例">4. Hello小案例</h2>
 <h3 id="html的基础写法">html的基础写法</h3>
 <p>hello代码示例 【注意：此段代码是html的基础写法，并没有用到vue】</p>
@@ -975,6 +1009,7 @@
 <p><strong>容器的作用：</strong></p>
 <p>1、为Vue提供模板</p>
 <p>2、把Vue解析后的html片段，指定位置放置</p>
+<p>​</p>
 <h2 id="5-分析hello案例">5. 分析Hello案例</h2>
 <h3 id="一对一关系">一对一关系</h3>
 <p>演示说明：容器和实例是一对一，一一对应关系</p>
@@ -9635,7 +9670,8 @@ Github 地址: <a href="https://github.com/vuejs/vuex" target="_blank" rel="noop
 </span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">...</span><span class="nx">mapMutations</span><span class="p">(</span><span class="s1">&#39;countAbout&#39;</span><span class="p">,{</span><span class="nx">increment</span><span class="o">:</span> <span class="s1">&#39;JIA&#39;</span><span class="p">,</span><span class="nx">decrement</span><span class="o">:</span><span class="s1">&#39;JIAN&#39;</span> <span class="p">}),</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div></li>
+</div><p>​</p>
+</li>
 </ol>
 <h2 id="38路由">38.路由</h2>
 <h3 id="路由的简介">路由的简介</h3>
@@ -9715,6 +9751,7 @@ Github 地址: <a href="https://github.com/vuejs/vuex" target="_blank" rel="noop
             <div class="admonition-content"><strong>路由：根据你的路径，由我决定展示对应的组件</strong></div>
         </div>
     </div>
+<p>​</p>
 <h3 id="路由基本使用">路由基本使用</h3>
 <p>在vue项目中使用路由，引入vue-router插件</p>
 <div class="highlight"><div class="chroma">
@@ -9924,6 +9961,7 @@ Github 地址: <a href="https://github.com/vuejs/vuex" target="_blank" rel="noop
 </div>
         </div>
     </div>
+<p>​</p>
 <h3 id="嵌套路由">嵌套路由</h3>
 <p>嵌套路由的实现效果：</p>
 <p>​	点击左侧的菜单，其右下的内容中有新的菜单，点击新的菜单，更改下方的内容。</p>
@@ -9966,8 +10004,9 @@ Github 地址: <a href="https://github.com/vuejs/vuex" target="_blank" rel="noop
 <pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">router-link</span> <span class="na">to</span><span class="o">=</span><span class="s">&#34;/home/news&#34;</span> <span class="na">active</span><span class="nt">-class</span><span class="err">=&#34;</span><span class="na">active</span><span class="err">&#34;</span><span class="p">&gt;</span><span class="nx">New</span><span class="p">&lt;/</span><span class="nt">router-link</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="路由传参">路由传参</h3>
-<p><strong>路由的query参数</strong></p>
+</div><p>​</p>
+<h3 id="路由传参">路由传参</h3>
+<h4 id="路由的query参数"><strong>路由的query参数</strong></h4>
 <p>路由嵌套极限一般都在4-5层为极限，一般都在2-3层</p>
 <p>只写一个组件Detail路由组件，通过传参来实现多个路由被点击使用时，对应显示的组件内容不同</p>
 <p>路由组件有两个参数，其中<code>query</code>参数，和<code>ajax</code>中的<code>query</code>参数传参类似：</p>
@@ -10040,7 +10079,7 @@ Github 地址: <a href="https://github.com/vuejs/vuex" target="_blank" rel="noop
 </span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">router-link</span><span class="p">&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><p><strong>路由的params参数</strong></p>
+</div><h4 id="路由的params参数"><strong>路由的params参数</strong></h4>
 <p>路由组件的第二个参数，<code>params</code>参数，和<code>ajax</code>中的<code>params</code>参数传参也类似：</p>
 <div class="highlight"><div class="chroma">
 <table class="lntable"><tr><td class="lntd">
@@ -10125,73 +10164,7 @@ Github 地址: <a href="https://github.com/vuejs/vuex" target="_blank" rel="noop
 </span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">注</span><span class="err">：</span><span class="nx">params的对象传参写法</span><span class="err">，</span><span class="nx">只能使用name来确定路由跳转位置</span><span class="err">，</span><span class="nx">不能使用path</span><span class="o">--&gt;</span>
 </span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="命名路由">命名路由</h3>
-<p>给路由器取名字</p>
-<p>1、作用：可以简化路由的跳转写法</p>
-<p>2、示例：</p>
-<div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//命名使用name配置项
-</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;about&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="nx">path</span><span class="o">:</span><span class="s1">&#39;/about&#39;</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="nx">component</span><span class="o">:</span><span class="nx">About</span><span class="p">,</span>
-</span></span><span class="line"><span class="cl"><span class="nx">children</span><span class="o">:</span><span class="p">[{...}]</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">简化跳转</span><span class="o">--&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">简化前</span><span class="err">：</span><span class="nx">完整路径的2种写法</span><span class="o">--&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">router-link</span> <span class="na">to</span><span class="o">=</span><span class="s">&#34;/home/message/about&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">router-link</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">router-link</span> <span class="nt">:to</span><span class="o">=</span><span class="s">&#34;{path:&#39;/home/message/about&#39;}&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">router-link</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl">
-</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">简化后</span><span class="err">：</span><span class="nx">直接使用命名</span><span class="o">--&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">router-link</span> <span class="nt">:to</span><span class="o">=</span><span class="s">&#34;{name:&#39;about&#39;}&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">router-link</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">这里注意</span><span class="err">，</span><span class="nx">to属性</span><span class="err">，</span><span class="nx">不注明使用name</span><span class="err">，</span><span class="nx">默认是使用的path</span><span class="o">--&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><div class="highlight"><div class="chroma">
-<table class="lntable"><tr><td class="lntd">
-<pre tabindex="0" class="chroma"><code><span class="lnt">1
-</span><span class="lnt">2
-</span><span class="lnt">3
-</span><span class="lnt">4
-</span><span class="lnt">5
-</span><span class="lnt">6
-</span><span class="lnt">7
-</span><span class="lnt">8
-</span><span class="lnt">9
-</span></code></pre></td>
-<td class="lntd">
-<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">简化传递参数</span><span class="o">--&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">router-link</span> <span class="o">:</span><span class="na">to</span><span class="o">=</span><span class="s">&#34;{
-</span></span></span><span class="line"><span class="cl"><span class="s">  	  name:&#39;about&#39;,
-</span></span></span><span class="line"><span class="cl"><span class="s">      query:{
-</span></span></span><span class="line"><span class="cl"><span class="s">        id:m.id,
-</span></span></span><span class="line"><span class="cl"><span class="s">        title:m.title
-</span></span></span><span class="line"><span class="cl"><span class="s">      }
-</span></span></span><span class="line"><span class="cl"><span class="s">  }&#34;</span><span class="p">&gt;</span>
-</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">router-link</span><span class="p">&gt;</span>
-</span></span></code></pre></td></tr></table>
-</div>
-</div><h3 id="路由的props配置">路由的props配置</h3>
+</div><h4 id="路由的props配置">路由的props配置</h4>
 <p>路由中的一个全新的配置项<code>props</code>，用于路由更加方便的接受参数</p>
 <p><strong>props的第一种写法：值为对象</strong></p>
 <p>该对象中的所有key-value都会以props的形式传给Detail组件</p>
@@ -10351,18 +10324,766 @@ Github 地址: <a href="https://github.com/vuejs/vuex" target="_blank" rel="noop
 </span></span><span class="line"><span class="cl"><span class="c1">//不过一般情况下，解构赋值的语句语义可读性和理解性不是很清楚，所以一般还是写回调函数$route的写法
 </span></span></span></code></pre></td></tr></table>
 </div>
-</div><h3 id="router-link的replace属性">router-link的replace属性</h3>
-<p>编程式路由导航
-缓存路由组件
-两个新的生命周期钩子
-全局前置 路由守卫
-全局后置 路由守卫
-独享路由守卫</p>
-<p>组件内路由守卫
-history模式与hash模式</p>
-<h2 id="39vue-ui组件库element-ui">39.Vue UI组件库(element-ui)</h2>
-<p>element-ui基本使用
-element-ui按需引入</p>
+</div><h3 id="命名路由">命名路由</h3>
+<p>给路由器取名字</p>
+<p>1、作用：可以简化路由的跳转写法</p>
+<p>2、示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//命名使用name配置项
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;about&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nx">path</span><span class="o">:</span><span class="s1">&#39;/about&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nx">component</span><span class="o">:</span><span class="nx">About</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl"><span class="nx">children</span><span class="o">:</span><span class="p">[{...}]</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">简化跳转</span><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">简化前</span><span class="err">：</span><span class="nx">完整路径的2种写法</span><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">router-link</span> <span class="na">to</span><span class="o">=</span><span class="s">&#34;/home/message/about&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">router-link</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">router-link</span> <span class="nt">:to</span><span class="o">=</span><span class="s">&#34;{path:&#39;/home/message/about&#39;}&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">router-link</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">简化后</span><span class="err">：</span><span class="nx">直接使用命名</span><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">router-link</span> <span class="nt">:to</span><span class="o">=</span><span class="s">&#34;{name:&#39;about&#39;}&#34;</span><span class="p">&gt;&lt;/</span><span class="nt">router-link</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">这里注意</span><span class="err">，</span><span class="nx">to属性</span><span class="err">，</span><span class="nx">不注明使用name</span><span class="err">，</span><span class="nx">默认是使用的path</span><span class="o">--&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">简化传递参数</span><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">router-link</span> <span class="o">:</span><span class="na">to</span><span class="o">=</span><span class="s">&#34;{
+</span></span></span><span class="line"><span class="cl"><span class="s">  	  name:&#39;about&#39;,
+</span></span></span><span class="line"><span class="cl"><span class="s">      query:{
+</span></span></span><span class="line"><span class="cl"><span class="s">        id:m.id,
+</span></span></span><span class="line"><span class="cl"><span class="s">        title:m.title
+</span></span></span><span class="line"><span class="cl"><span class="s">      }
+</span></span></span><span class="line"><span class="cl"><span class="s">  }&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">router-link</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="router-link的replace属性"><strong><code>&lt;router-link&gt;</code>的replace属性</strong></h3>
+<ol>
+<li>作用：控制路由跳转时操作浏览器历史记录的模式</li>
+<li>浏览器的历史记录有两种写入方式：分别为<code>push</code>和<code> replace</code>，<code>push</code>是追加历史记录，<code>replace</code> 是替换当前记录。路由跳转时候默认为 <code>push</code></li>
+<li>如何开启<code>replace</code>模式：<code>&lt;router-link replace.......&gt;News&lt;/router-link&gt;</code></li>
+</ol>
+<p><strong>路由对浏览器历史记录的影响</strong>：</p>
+<ol>
+<li>
+<p>浏览器中有两个按钮，<code>←</code> <code>→</code>，一个是前进一个是后退，这两个按钮都是依赖浏览器的历史记录在工作</p>
+</li>
+<li>
+<p>浏览器的历史记录的操作模式是栈push模式：根据点击，不停的往栈中<strong>追加</strong>信息。</p>
+<p>我们通常将这种追加信息的方式，称为push方式（与数组身上的push类似，不破坏任意一个元素，只往后面追加一个元素。在官方他有一个好听名字，叫<strong>压栈</strong>）</p>
+</li>
+<li>
+<p>浏览器的前进与后退，就是操作历史记录列表中的指针进行移动</p>
+</li>
+<li>
+<p>对历史记录的操作，除了<code>push</code>，还有另外一种方式，<code>replace</code></p>
+</li>
+<li>
+<p><code>replace</code>最大的特点就是<strong>替换</strong>掉当前栈点那一个元素</p>
+</li>
+<li>
+<p>默认<code>router-link</code>所开起的模式是<code>push模式</code>，如果要开启<code>replace模式</code>，写法如下：</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">追加replace属性</span><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">完整写法</span><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">router-link</span> <span class="nt">:replace</span><span class="o">=</span><span class="s">&#34;true&#34;</span> <span class="p">&gt;&lt;/</span><span class="nt">router-link</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">可简写为</span><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">router-link</span> <span class="na">replace</span> <span class="p">&gt;&lt;/</span><span class="nt">router-link</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="编程式路由导航">编程式路由导航</h3>
+<ul>
+<li>作用：不借助<code>&lt;route-link&gt;</code>实现路由跳转，让路由跳转更加灵活</li>
+</ul>
+<p>如果不使用<code>&lt;route-link&gt;</code>标签进行路由跳转的实现，路由器中的缔造者提供了<code>$router.push</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">click</span><span class="o">=</span><span class="s">&#34;pushShow(i)&#34;</span><span class="p">&gt;</span><span class="nx">按钮1</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">.....</span>
+</span></span><span class="line"><span class="cl"><span class="nx">methods</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">pushShow</span><span class="p">(</span><span class="nx">i</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="p">.</span><span class="nx">$router</span><span class="p">.</span><span class="nx">push</span><span class="p">({</span> <span class="c1">//push对象中的写法，同route-link中的to中内容一摸一样
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;about&#39;</span><span class="p">,</span> <span class="c1">//跳转以改命名路由为目标路由的界面
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">query</span><span class="o">:</span><span class="p">{</span>  <span class="c1">//正常传参
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">id</span><span class="o">:</span><span class="nx">i</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">title</span><span class="o">:</span><span class="nx">i</span><span class="p">.</span><span class="nx">title</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>同理，对应<code>$router.push</code>也有<code>$router.replace</code>，以实现操作历史记录的方式为替换型。写法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">button</span> <span class="na">click</span><span class="o">=</span><span class="s">&#34;replaceShow(i)&#34;</span><span class="p">&gt;</span><span class="nx">按钮2</span><span class="p">&lt;/</span><span class="nt">button</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">.....</span>
+</span></span><span class="line"><span class="cl"><span class="nx">methods</span><span class="o">:</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">replaceShow</span><span class="p">(</span><span class="nx">i</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="k">this</span><span class="p">.</span><span class="nx">$router</span><span class="p">.</span><span class="nx">replace</span><span class="p">({</span> <span class="c1">//replace和push写法一样
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;about&#39;</span><span class="p">,</span> <span class="c1">//跳转以改命名路由为目标路由的界面
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>            <span class="nx">query</span><span class="o">:</span><span class="p">{</span>  <span class="c1">//正常传参
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>                <span class="nx">id</span><span class="o">:</span><span class="nx">i</span><span class="p">.</span><span class="nx">id</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">                <span class="nx">title</span><span class="o">:</span><span class="nx">i</span><span class="p">.</span><span class="nx">title</span>
+</span></span><span class="line"><span class="cl">            <span class="p">}</span>
+</span></span><span class="line"><span class="cl">        <span class="p">})</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">script</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>路由器中也提供了操作历史记录的方法，：后退<code>$router.back()</code>、前进<code>$router.forward()</code>、<code>$router.go(入参)</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//后退一步
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">this</span><span class="p">.</span><span class="nx">$router</span><span class="p">.</span><span class="nx">back</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//前进一步
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">this</span><span class="p">.</span><span class="nx">$router</span><span class="p">.</span><span class="nx">forward</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//前进或者后退多少步
+</span></span></span><span class="line"><span class="cl"><span class="c1">//入参必须是数字
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">this</span><span class="p">.</span><span class="nx">$router</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1">//入参是正数，则前进。这里表示前进3步
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">this</span><span class="p">.</span><span class="nx">$router</span><span class="p">.</span><span class="nx">go</span><span class="p">(</span><span class="o">-</span><span class="mi">2</span><span class="p">)</span> <span class="c1">//入参是负数，则后退。这里表示后退2步
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="缓存路由组件">缓存路由组件</h3>
+<p>作用：让不展示的路由组件保持挂载，不被销毁。</p>
+<ul>
+<li>我们每切换一个路由，切换前的路由组件就会被销毁。</li>
+</ul>
+<p>当用户在一个路由页面输入信息后，切换致另一个路由浏览信息再切回输入的路由页面进行继续输入时，我们发现，原路由已经被销毁，该路由页面重新渲染，导致了用户输入内容丢失。</p>
+<p>在该需求下，我们需要一个缓存原路由组件的办法。由此，我们引入缓存路由组件标签<code>&lt;keep-alive&gt;</code></p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-vue" data-lang="vue"><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">该标签包裹住的路由</span><span class="err">，</span><span class="nx">均不被销毁</span><span class="err">，</span><span class="nx">均保持缓存</span><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">keep-alive</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">    <span class="p">&lt;</span><span class="nt">router-view</span><span class="p">&gt;&lt;/</span><span class="nt">router-view</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;/</span><span class="nt">keep-alive</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">include属性</span><span class="p">,</span><span class="nx">设定只缓存哪一个路由</span><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">特别注意</span><span class="err">：</span><span class="nx">About为组件名称</span><span class="err">，</span><span class="nx">要缓存哪个组件</span><span class="err">，</span><span class="nx">就写哪个组件的组件名称</span><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">keep-alive</span> <span class="na">include</span><span class="o">=</span><span class="s">&#34;About&#34;</span><span class="p">&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="c">&lt;!--</span><span class="nx">如果是缓存多个</span><span class="err">，</span><span class="nx">则用数组形式</span><span class="o">--&gt;</span>
+</span></span><span class="line"><span class="cl"><span class="p">&lt;</span><span class="nt">keep-alive</span> <span class="nt">:include</span><span class="o">=</span><span class="s">&#34;[&#39;About&#39;,&#39;News&#39;]&#34;</span><span class="p">&gt;</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="两个新的生命周期钩子">两个新的生命周期钩子</h3>
+<p>作用：用于捕获路由组件的激活状态</p>
+<ul>
+<li>定时器开启后，必须在组件即将销毁的生命周期函数<code>beforeDestroy</code>中关闭</li>
+<li>当路由组件被缓存时，销毁生命周期函数不会被触发。</li>
+</ul>
+<p>上面两个限制，导致了定时器无法被关闭，并会在浏览者中持续一直调用。针对该需求，引出，路由组件独有的两个生命周期钩子：激活<code>activated()</code>、失活<code>deactivated()</code></p>
+<p>当页面切换在当前组件，则当前组件被激活。activated在被激活时候触发</p>
+<p>当页面切换至其他组件，则当前组件失活。deactivated再失活时触发</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span><span class="lnt">9
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="nx">activated</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;该组件被激活了&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//这里可以开启定时器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="nx">deactivated</span><span class="p">(){</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;该组件失活了&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//这里关闭定时器   
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition abstract open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>This is a tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>**3个不在生命周期图示里面的生命周期构子：**这里的2个路由生命周期构子 + <code>nextTick</code></p>
+<p><code>this.nextTick(function(){ ... })</code>该钩子，当你操作完数据之后，Vue把真实Dom放入页面了以后，Vue再帮你调用该函数里面的内容。</p>
+</div>
+        </div>
+    </div>
+<p>​</p>
+<h3 id="路由守卫">路由守卫</h3>
+<ol>
+<li>
+<p>作用：对路由进行权限控制。【主要作用：权限校验】</p>
+<p>当某个人登陆时，我们将此人对于各个路由所对应的路由组件是否可见，称为对其鉴权。</p>
+</li>
+<li>
+<p>分类：全局守卫、独享守卫、组件内守卫</p>
+</li>
+<li>
+<p>代码位置：在router文件夹下的<code>index.js</code>中，在暴露一个创建的路由器对象之前，添加路由守卫。</p>
+</li>
+</ol>
+<h4 id="全局前置-路由守卫">全局前置 路由守卫</h4>
+<p><code>router.beforeEach </code>全局前置 路由守卫：页面切换前调用</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//创建一个路由器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VueRouter</span><span class="p">({...})</span>
+</span></span><span class="line"><span class="cl">                              
+</span></span><span class="line"><span class="cl"><span class="c1">//--------------全局前置路由守卫--------------
+</span></span></span><span class="line"><span class="cl"><span class="c1">//在每一次路由切换之前，都会调用该函数，进行权限校验;
+</span></span></span><span class="line"><span class="cl"><span class="c1">//在初始化到时候，也被调用。
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">router</span><span class="p">.</span><span class="nx">beforeEach</span><span class="p">((</span><span class="nx">to</span><span class="p">,</span><span class="nx">from</span><span class="p">,</span><span class="nx">next</span><span class="p">)=&gt;{</span>
+</span></span><span class="line"><span class="cl">    <span class="p">...</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//to：【要去哪里】目标路径路由对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//from：【从哪里去】当前所在路径路由对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//next()：【放行】没有这条就都不会继续往下走了，需要手动抛出&#39;无权限&#39;异常
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">next</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//暴露路由
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="k">default</span> <span class="nx">router</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>判断去哪里是否有权限时我们通常会使用目标路径<code>path</code>属性来进行判定，例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="nx">to</span><span class="p">.</span><span class="nx">path</span> <span class="o">===</span> <span class="s1">&#39;/about&#39;</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">next</span><span class="p">()</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>当设置需要权限的路由较多时，这样判定就变得不可取了。</p>
+<p>此时，我们想要在每个路由申明时，设置某个配置项，以简洁路由权限的判定。</p>
+<p>在路由对象中Vue提供了<code>meta</code>这个对象，用于设置一些自定义的配置项。</p>
+<p><code>meta</code>在官方有个好听的名字，叫<code>路由元</code>。我们通常在其中设置一个配置项<code>isAuth</code>(是否被授权)，用来进行路由守卫的判定。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//哪个路由需要鉴权，meta:{isAuth:true}就写在哪里
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">routes</span><span class="o">:</span><span class="p">[</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;about&#39;</span><span class="p">,</span><span class="nx">path</span><span class="o">:</span><span class="s1">&#39;/about&#39;</span><span class="p">,</span><span class="nx">meta</span><span class="o">:</span><span class="p">{</span><span class="nx">isAuth</span><span class="o">:</span><span class="kc">false</span><span class="p">}},</span>
+</span></span><span class="line"><span class="cl">    <span class="p">{</span><span class="nx">name</span><span class="o">:</span><span class="s1">&#39;home&#39;</span><span class="p">,</span><span class="nx">path</span><span class="o">:</span><span class="s1">&#39;/home&#39;</span><span class="p">,</span><span class="nx">meta</span><span class="o">:</span><span class="p">{</span><span class="nx">isAuth</span><span class="o">:</span><span class="kc">true</span><span class="p">}}</span>
+</span></span><span class="line"><span class="cl"><span class="p">]</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//路由守卫判定:需要鉴权就往下走。没有设置的默认为undefined，该处判定为假，就不进行鉴权
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="k">if</span><span class="p">(</span><span class="nx">to</span><span class="p">.</span><span class="nx">meta</span><span class="p">.</span><span class="nx">isAuth</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="k">if</span><span class="p">(</span><span class="s1">&#39;满足鉴权放行的条件：例如登录账号满足超级管理员&#39;</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">        <span class="nx">next</span><span class="p">()</span><span class="c1">//放行
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span><span class="k">else</span><span class="p">{</span> 
+</span></span><span class="line"><span class="cl">        <span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="s1">&#39;该账号无权限&#39;</span><span class="p">)</span>
+</span></span><span class="line"><span class="cl">    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span><span class="k">else</span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">next</span><span class="p">()</span><span class="c1">//不参与鉴权的路由均放行
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h4 id="全局后置-路由守卫">全局后置 路由守卫</h4>
+<p><code>router.afterRach</code>全局后置 路由守卫：页面切换后调用。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//创建一个路由器
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VueRouter</span><span class="p">({...})</span>
+</span></span><span class="line"><span class="cl">                              
+</span></span><span class="line"><span class="cl"><span class="c1">//--------------全局后置路由守卫--------------
+</span></span></span><span class="line"><span class="cl"><span class="c1">//在每一次路由切换之后，都会调用该函数，进行资源操作;
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">router</span><span class="p">.</span><span class="nx">afterRach</span><span class="p">((</span><span class="nx">to</span><span class="p">,</span><span class="nx">from</span><span class="p">)=&gt;{</span>
+</span></span><span class="line"><span class="cl">	<span class="c1">//注意该API就没有next入参了，因为是切换后调用，是不用进行放行操作的
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="c1">//此处通常用来修改：需要页面有权限显示之后，一些页面信息，如：
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nb">document</span><span class="p">.</span><span class="nx">title</span> <span class="o">=</span> <span class="s1">&#39;对应跳转页面的标题&#39;</span> <span class="c1">//修改网页标签名称为跳转页面名称
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl"><span class="c1">//暴露路由
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">export</span> <span class="k">default</span> <span class="nx">router</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="独享-路由守卫">独享 路由守卫</h4>
+<p>独享路由守卫：顾名思义指，某一个路由单独使用的路由守卫。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//某route路由申明中
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">{</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">name</span><span class="o">:</span><span class="s1">&#39;&#39;</span><span class="p">,</span>
+</span></span><span class="line"><span class="cl">    <span class="p">....,</span>
+</span></span><span class="line"><span class="cl">    <span class="c1">//进入该路由之前，调用该函数中内容
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">beforeEnter</span><span class="o">:</span><span class="p">(</span><span class="nx">to</span><span class="p">,</span><span class="nx">from</span><span class="p">,</span><span class="nx">next</span><span class="p">)</span> <span class="p">=&gt;</span> <span class="p">{</span>
+</span></span><span class="line"><span class="cl">        <span class="p">....</span>
+</span></span><span class="line"><span class="cl">        <span class="c1">//写法和前置路由一样
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="p">}</span>
+</span></span><span class="line"><span class="cl"><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>注意：和全局路由守卫不同的是，独享路由守卫只有前置，没有后置。如果想要使用后置，可以独享守卫和全局后置守卫搭配使用。</p>
+<p>​</p>
+<h4 id="组件内-路由守卫">组件内 路由守卫</h4>
+<p>组件内路由守卫：指在具体的某一个组件中去写路由守卫，而不是在这个路由器配置 文件中编写。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//进入守卫：通过路由规则，进入该组件时被调用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">beforeRouteEnter</span><span class="p">(</span><span class="nx">to</span><span class="p">,</span><span class="nx">from</span><span class="p">,</span><span class="nx">next</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">next</span><span class="p">()</span> <span class="c1">//都得放行才能往下走
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">},</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//离开守卫：通过路由规则，离开该组件时被调用
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">beforeRouteLeave</span><span class="p">(</span><span class="nx">to</span><span class="p">,</span><span class="nx">from</span><span class="p">,</span><span class="nx">next</span><span class="p">){</span>
+</span></span><span class="line"><span class="cl">    <span class="nx">next</span><span class="p">()</span> <span class="c1">//都得放行才能往下走
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">}</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition abstract open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><strong>通过路由规则</strong>：通过导航栏点击，改变地址栏路由，引起路由组件展示，则是经过了路由规则。</p>
+<p>如果是直接放在其他组件中引用该路由组件，引起路由组件展示，这种方式是不会触发组件内路由守卫的。</p>
+</div>
+        </div>
+    </div>
+<p>​</p>
+<h3 id="路由器的两种工作模式">路由器的两种工作模式</h3>
+<h4 id="hash模式">hash模式</h4>
+<ul>
+<li>在地址栏，我们分析地址：<code>localhost:8080/#/home/message</code>。我们发现，从路由访问开始，地址就一直存在的一个符号：<code>/#/</code>，我们把它称作<code>hash</code>。</li>
+<li>这里提到的所有的<code>hash</code>与数据加密无关，只是站在前端的角度，对路径进行分析。</li>
+<li>路径中，所有的从<code>#</code>开始，到结束的内容，都称作：路径中的<code>hash</code>值。</li>
+</ul>
+<p><strong>hash值的作用</strong>：hash最大的特点就是不会随着http的请求发给服务器。</p>
+<p>所以路径中属于hash值的内容，不会作为路径发给服务器，进行请求。例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">--请求117服务器5000端口的student资源信息
+</span></span><span class="line"><span class="cl">10.10.10.117:5000/student
+</span></span><span class="line"><span class="cl">
+</span></span><span class="line"><span class="cl">--添加hash值
+</span></span><span class="line"><span class="cl">10.10.10.117:5000/student/#/xjdsdldfj/sdjfs/2342432/wasdf
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>以上这两个地址在浏览器地址栏中的请求，返回是一模一样的。因为<code>#/xjdsdldfj/sdjfs/2342432/wasdf</code>不会作为地址发送给服务器。</p>
+<h4 id="history模式">history模式</h4>
+<p>在router文件夹下的配置文件<code>index.js</code>中，设置路由器中的<code>mode</code>的配置项。如果不设置，默认使用<code>hash</code>模式。写法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">router</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">VueRouter</span><span class="p">({</span>
+</span></span><span class="line"><span class="cl">	<span class="nx">mode</span><span class="o">:</span><span class="s1">&#39;history&#39;</span><span class="p">,</span> <span class="c1">//该配置项只有两种值：history、hash。不写该配置项，则默认使用hash模式
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">routes</span><span class="o">:</span><span class="p">[...],</span>
+</span></span><span class="line"><span class="cl"><span class="p">})</span>
+</span></span><span class="line"><span class="cl"><span class="kr">export</span> <span class="k">default</span> <span class="nx">router</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition abstract open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>这里注意<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Vue脚手架的特性是<strong>修改代码</strong>以后，在<strong>当前路径下</strong>进行刷新。</p>
+<p>所以如果地址栏路径为<code>localhost:8080/#/home/message/detail</code>时，此时修改了<code>mode</code>属性为<code>history</code>，页面刷新依旧默认使用当前路径，导致没有任何效果。</p>
+<p>此时，需要将地址栏路径<strong>手动改</strong>成基本根路径<code>localhost:8080</code>，再进行路由访问。</p>
+</div>
+        </div>
+    </div>
+<p>访问符合路由规则，实现路由组件正常跳转。地址栏路径中<code>#</code>标识符消失，地址格式为<code>localhost:8080/home/message/detail</code></p>
+<p>**符合路由规则：**点击路由，经过路由器，根据路由规则rules，匹配路由组件进行展示。</p>
+<p>所以符合路由规则是没有进行服务器请求的，此时如果在地址栏点击刷新<code>localhost:8080/home/message/detail</code>该地址会全部作为路径请求服务器，导致404</p>
+<h5 id="解决history模式刷新404问题"><strong>解决history模式刷新404问题</strong></h5>
+<p>404问题出现在服务器无法请求访问不存在的地址路径接口。</p>
+<p>所以该问题，由后端出面解决。</p>
+<p>nodejs服务器有个专门解决这个问题的中间件插件，java也有专门的库（这里只演示nodejs的处理）</p>
+<p>在https://www.npmjs.com/官方网站搜索插件<code>connect-history-api-fallback</code></p>
+<img src="./images/image-20241114105802724.png" alt="image-20241114105802724" style="zoom:50%;" />
+<img src="./images/image-20241114110030391.png" alt="image-20241114110030391" style="zoom: 67%;" />
+<p>在服务器控制台，输入下面代码，安装这个中间件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-sh" data-lang="sh"><span class="line"><span class="cl">C:Users<span class="se">\w</span>angty<span class="se">\D</span>esktop<span class="se">\d</span>emo&gt;npm i connect-history-api-fallback
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>安装完成后，在<code>server.js</code>中引入中间件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//在“const express = ...”的代码后面 添加这一句
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kd">var</span> <span class="nx">history</span> <span class="o">=</span> <span class="nx">require</span><span class="p">(</span><span class="s1">&#39;connect-history-api-fallback&#39;</span><span class="p">);</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><p>并在<code>server.js</code>中使用中间件：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//在“const app = .......”的代码后面 添加这一句
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">history</span><span class="p">())</span>
+</span></span><span class="line"><span class="cl"><span class="c1">//在“app.use(express.......”的代码钱面 添加这一句
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="history模式-vs-hash模式"><strong>history模式 VS hash模式</strong></h5>
+<table>
+<thead>
+<tr>
+<th>hash模式</th>
+<th>history模式</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>浏览器(路由跳转)兼容性更好</td>
+<td>浏览器(路由跳转)兼容性略差</td>
+</tr>
+<tr>
+<td>地址不够美观，带#</td>
+<td>地址美观，不带#</td>
+</tr>
+<tr>
+<td>上线部署不影响后端请求</td>
+<td>上线部署需要后端配置配合</td>
+</tr>
+<tr>
+<td>地址校验严格时，会被标记不合法</td>
+<td>地址校验合法</td>
+</tr>
+</tbody>
+</table>
+<h4 id="项目上线的基本流程">项目上线的基本流程</h4>
+<p>所有的<code>.vue</code>文件，通过<code>npm run build</code>命令打包之后形成<code>.html</code>文件放置在服务器中供用户使用。</p>
+<p>打包之后形成一个新的<code>dist</code>文件夹，该文件夹只有一个单文件页面<code>index.html</code>。直接访问无效果。</p>
+<p>打包的所有文件，需要放置在服务器上，进行部署。</p>
+<p>这里使用nodejs的express搭建一个微型的服务器，并将前端打包文件部署上去</p>
+<p>只记录<strong>简单操作步骤</strong>，不解释原理：</p>
+<ol>
+<li>
+<p>桌面新建一个<code>demo</code>文件夹，用<code>vscode</code>打开</p>
+</li>
+<li>
+<p><code>vscode</code>中打开控制台，运行<code>npm init</code></p>
+</li>
+<li>
+<p><code>package name</code>设置为：<code>wangty_test_server</code>（随便起个服务器名字）</p>
+</li>
+<li>
+<p>一路回车</p>
+</li>
+<li>
+<p>控制台路径回到<code>demo</code>时，运行<code>npm i express</code></p>
+</li>
+<li>
+<p><code>demo</code>文件夹下新建一个<code>server.js</code>，里面代码如下：</p>
+</li>
+</ol>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="kr">const</span> <span class="nx">express</span> <span class="o">=</span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;express&#39;</span><span class="p">)</span> <span class="c1">//引入express
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="kr">const</span> <span class="nx">app</span> <span class="o">=</span> <span class="nx">express</span><span class="p">()</span>             <span class="c1">//创建一个app服务实例对象
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="err">·</span><span class="nx">get</span><span class="p">(</span><span class="s1">&#39;/person&#39;</span><span class="p">,(</span><span class="nx">req</span><span class="p">,</span><span class="nx">res</span><span class="p">)=&gt;{</span>    <span class="c1">//配置一个后端路由，person，返回一个人员信息  
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>    <span class="nx">res</span><span class="p">.</span><span class="nx">send</span><span class="p">({</span>                    <span class="c1">//req - 请求 ， res - 返回
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span>        <span class="nx">name</span><span class="o">:</span><span class="err">&#34;</span><span class="nx">tom</span><span class="s1">&#39;,
+</span></span></span><span class="line"><span class="cl"><span class="s1">        age:18
+</span></span></span><span class="line"><span class="cl"><span class="s1">    })
+</span></span></span><span class="line"><span class="cl"><span class="s1">})
+</span></span></span><span class="line"><span class="cl"><span class="s1">app.listen(5005,(err)=&gt;{          //app开启一个端口监听，开在5005端口
+</span></span></span><span class="line"><span class="cl"><span class="s1">    if(!err)console.log(&#39;</span><span class="nx">服务器启动成功了</span><span class="o">!</span><span class="err">&#39;</span><span class="p">)</span> <span class="c1">//没有错误对象信息，就提示启动成功
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="p">})</span>
+</span></span></code></pre></td></tr></table>
+</div>
+</div><ol start="7">
+<li>
+<p>控制台运行<code>node server</code>，控制台打印<code>服务器启动成功了</code>表示该微型服务器已经启动成功。</p>
+</li>
+<li>
+<p>打开浏览器地址栏访问<code>localhost:5005/person</code>，可以成功返回人员信息。</p>
+</li>
+<li>
+<p><code>demo</code>文件夹下新建一个<code>static</code>文件夹（有时候也叫<code>public</code>文件夹），在其中放入<code>.html</code>文件</p>
+</li>
+<li>
+<p>这里为了测试是否成功展示，我们手动新建一个<code>demo.html</code>放入<code>static</code>文件夹下：</p>
+</li>
+</ol>
+<pre><code>```html
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+    &lt;meta charset=&quot;utf-8&quot;&gt;
+    &lt;title&gt;test&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+&lt;div&gt;&lt;h1&gt;你好！&lt;/h1&gt;&lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+```
+</code></pre>
+<ol start="11">
+<li>
+<p>回到<code>server.js</code>，添加代码：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-js" data-lang="js"><span class="line"><span class="cl"><span class="c1">//在“const app = ...”的代码后面 添加这一句
+</span></span></span><span class="line"><span class="cl"><span class="c1"></span><span class="nx">app</span><span class="p">.</span><span class="nx">use</span><span class="p">(</span><span class="nx">express</span><span class="p">.</span><span class="kr">static</span><span class="p">(</span><span class="nx">__dirname</span><span class="o">+</span><span class="s1">&#39;/static&#39;</span><span class="p">))</span>   <span class="c1">//使用插件,读取当前static文件下的页面
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><code>ctrl+c</code>停掉服务器，重新启动服务器</p>
+</li>
+<li>
+<p>打开浏览器地址栏访问<code>localhost:5005/demo.html</code>，可以成功展示<code>demo.html</code>的你好页面。</p>
+</li>
+<li>
+<p>我们知道默认浏览器访问<code>index.html</code>页面，所以我们可以将其改得更简化一点。将<code>demo.html</code>文件名称修改为<code>index.html</code>，并且地址栏访问<code>localhost:5005</code>，即可成功展示你好页面。</p>
+</li>
+<li>
+<p>此时，即可对前端打包文件进行部署。</p>
+</li>
+<li>
+<p>拷贝所有的<code>dist</code>文件夹中内容，放入<code>static</code>文件夹中，重复的文件点击替换覆盖即可。</p>
+</li>
+<li>
+<p><code>ctrl+c</code>停掉服务器，重新启动服务器</p>
+</li>
+<li>
+<p>地址栏访问<code>localhost:5005</code>，打包的项目即可以正常运行。</p>
+</li>
+<li>
+<p>部署上线完成。</p>
+</li>
+</ol>
+<h2 id="39vue-ui组件库">39.Vue UI组件库</h2>
+<p>移动端常用UI组件库：<a href="https://youzan.github.io/vant" target="_blank" rel="noopener noreffer ">Vant </a>、<a href="https://didi.github.io/cube-ui" target="_blank" rel="noopener noreffer ">Cube Ul</a>、<a href="http://mint-ui.github.io" target="_blank" rel="noopener noreffer ">Mint Ul</a>
+PC端常用UI组件库：<a href="https://element.eleme.cne" target="_blank" rel="noopener noreffer ">Element Ul</a>、<a href="https://www.iviewui.come" target="_blank" rel="noopener noreffer ">IView Ul</a>、
+京东也有一个组件库：<a href="nutui.jd.com" rel="">NUTUI</a></p>
+<p>element-ui举例：
+element-ui是一个饿了么团队打造的，pc端基于Vue基本使用的一个组件样式库。
+引入 Element：完整引入、按需引入 <a href="https://element.eleme.cn/#/zh-CN/component/quickstart" target="_blank" rel="noopener noreffer ">https://element.eleme.cn/#/zh-CN/component/quickstart</a></p>
+<p>【完整引入会导致前端js文件过大，如果引入使用的部分较少，推荐使用按需引入的方式】</p>
+<p>​</p>
 <h1 id="第五章vue3">第五章：vue3</h1>
 <p>使用vue-cli创建工程</p>
 <p>使用vite创建工程
@@ -10415,7 +11136,11 @@ Vue3中其他的改变</p>
     <div class="post-nav"><a href="/text08/" class="prev" rel="prev" title="【Typora】破解/安装激活 Typora 2024 教程"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>【Typora】破解/安装激活 Typora 2024 教程</a>
             <a href="/text23/" class="next" rel="next" title="【HUGO】Hugo的LoveIt主题美化（一）">【HUGO】Hugo的LoveIt主题美化（一）<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
 </div>
-</article></div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
             </main><footer class="footer">
         <div class="footer-container">
             <div class="footer-line">
@@ -10436,6 +11161,6 @@ Vue3中其他的改变</p>
             </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
                 <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
             </a>
-        </div><link rel="stylesheet" href="/lib/lightgallery/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="/lib/katex/katex.min.css"><script type="text/javascript" src="/lib/autocomplete/autocomplete.min.js"></script><script type="text/javascript" src="/lib/algoliasearch/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="/lib/lazysizes/lazysizes.min.js"></script><script type="text/javascript" src="/lib/lightgallery/lightgallery.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="/lib/lightgallery/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="/lib/clipboard/clipboard.min.js"></script><script type="text/javascript" src="/lib/sharer/sharer.min.js"></script><script type="text/javascript" src="/lib/katex/katex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/auto-render.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/copy-tex.min.js"></script><script type="text/javascript" src="/lib/katex/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.5.0/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"Wangty654.github.io"},"valine":{"appId":"QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI","appKey":"WBmoGyJtbqUswvfLh6L8iEBr","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-CN","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://leancloud.hugoloveit.com","visitor":true}},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.d7121d72cd85153ec9d35a888cee3eb28c2700ca763f649a538f6c772d750021.js" integrity="sha256-1xIdcs2FFT7J01qIjO4+sownAMp2P2SaU49sdy11ACE="></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
 <script type="text/javascript" src="/js/custom.js"></script></body>
 </html>

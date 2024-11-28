@@ -1,15 +1,15 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>JavaSE - 标签 - TyNote</title>
-        <link>http://localhost:1313/tags/javase/</link>
+        <link>https://Wangty654.github.io/tags/javase/</link>
         <description>JavaSE - 标签 - TyNote</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
-            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/javase/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/javase/" rel="self" type="application/rss+xml" /><item>
     <title>【Java】Java中正则的使用</title>
-    <link>http://localhost:1313/regex/</link>
+    <link>https://Wangty654.github.io/regex/</link>
     <pubDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</pubDate>
     <author>lei</author>
-    <guid>http://localhost:1313/regex/</guid>
+    <guid>https://Wangty654.github.io/regex/</guid>
     <description><![CDATA[Java中正则的使用 正则简介 非常常见的问题： 如何判断字符串是否是有效的电话号码？例如：010-1234567，123ABC456，13510]]></description>
 </item>
 </channel>

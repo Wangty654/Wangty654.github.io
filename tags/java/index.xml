@@ -1,39 +1,39 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>Java - 标签 - TyNote</title>
-        <link>http://localhost:1313/tags/java/</link>
+        <link>https://Wangty654.github.io/tags/java/</link>
         <description>Java - 标签 - TyNote</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
-            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/tags/java/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/tags/java/" rel="self" type="application/rss+xml" /><item>
     <title>【idea】IDEA显示侧边文件的最后修改时间以及文件大小</title>
-    <link>http://localhost:1313/text32/</link>
+    <link>https://Wangty654.github.io/text32/</link>
     <pubDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/text32/</guid>
+    <guid>https://Wangty654.github.io/text32/</guid>
     <description><![CDATA[idea可以显示侧边文件的最后修改时间以及文件大小，该功能同时可以显示idea侧边栏Database中数据库表备注的库表名称]]></description>
 </item>
 <item>
     <title>【Java】反射的基本使用及API</title>
-    <link>http://localhost:1313/text31/</link>
+    <link>https://Wangty654.github.io/text31/</link>
     <pubDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/text31/</guid>
+    <guid>https://Wangty654.github.io/text31/</guid>
     <description><![CDATA[对Java反射的基本使用和相应API进行记录]]></description>
 </item>
 <item>
     <title>【Java】转义StringEscapeUtils的使用</title>
-    <link>http://localhost:1313/text15/</link>
+    <link>https://Wangty654.github.io/text15/</link>
     <pubDate>Mon, 03 Apr 2023 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/text15/</guid>
+    <guid>https://Wangty654.github.io/text15/</guid>
     <description><![CDATA[转义StringEscapeUtils的使用]]></description>
 </item>
 <item>
     <title>【Java】Java中int与String互相转换方法</title>
-    <link>http://localhost:1313/text02/</link>
+    <link>https://Wangty654.github.io/text02/</link>
     <pubDate>Wed, 01 Mar 2023 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/text02/</guid>
+    <guid>https://Wangty654.github.io/text02/</guid>
     <description><![CDATA[Java中int与String互相转换方法]]></description>
 </item>
 </channel>

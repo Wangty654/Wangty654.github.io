@@ -1,23 +1,23 @@
 <rss xmlns:atom="http://www.w3.org/2005/Atom" version="2.0">
     <channel>
         <title>虚拟机 - 分类 - TyNote</title>
-        <link>http://localhost:1313/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
+        <link>https://Wangty654.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/</link>
         <description>虚拟机 - 分类 - TyNote</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
-            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 06 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="http://localhost:1313/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 06 Nov 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/categories/%E8%99%9A%E6%8B%9F%E6%9C%BA/" rel="self" type="application/rss+xml" /><item>
     <title>【VMware】VMware虚拟机安装Windows11系统教程</title>
-    <link>http://localhost:1313/text35/</link>
+    <link>https://Wangty654.github.io/text35/</link>
     <pubDate>Wed, 06 Nov 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/text35/</guid>
+    <guid>https://Wangty654.github.io/text35/</guid>
     <description><![CDATA[VMware虚拟机安装Windows11系统教程]]></description>
 </item>
 <item>
     <title>【VMware】VMware虚拟机下载安装激活教程</title>
-    <link>http://localhost:1313/text34/</link>
+    <link>https://Wangty654.github.io/text34/</link>
     <pubDate>Wed, 06 Nov 2024 00:00:00 &#43;0000</pubDate>
     <author>wangty</author>
-    <guid>http://localhost:1313/text34/</guid>
+    <guid>https://Wangty654.github.io/text34/</guid>
     <description><![CDATA[VMware虚拟机下载安装激活教程]]></description>
 </item>
 </channel>
