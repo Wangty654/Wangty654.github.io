@@ -1,7 +1,9 @@
 # 【腾讯云】腾讯云直播前端
 
 
-腾讯云直播推流器TXLivePusher ：https://webrtc-demo.myqcloud.com/push-sdk/v2/docs/TXLivePusher.html
+腾讯云直播推流器TXLivePusher ：[文档地址](https://webrtc-demo.myqcloud.com/push-sdk/v2/docs/TXLivePusher.html)
+
+腾讯云Web端超级播放器体验：[tcplayer Demo](https://tcplayer.vcube.tencent.com/)
 
 这里是：直播和点播播放的 [Web 播放器（ TCPlayer ）](https://cloud.tencent.com/document/product/881/30818)的相关参数以及 API
 
@@ -48,6 +50,10 @@
 
 ##### 2.直播拉流
 
+这里是：腾讯云官方直播拉流的[API文档](https://cloud.tencent.com/document/product/266/63004)，其中详细阐述了拉流的调用方式和对应参数。
+
+第三方库：腾讯云音视频SDK下载[地址](https://video.sdk.qcloudecdn.com/)
+
 直播拉流所需第三方库
 
 ```js
@@ -81,7 +87,6 @@ var player = TCPlayer('player-container-id', {}); // player-container-id 为播�
 
 {{< admonition type=warning title="This is a warning" open=true >}}
 **直播视频全屏canvas元素无法在最上层**
-
 
 直播弹幕无法在最上层，将z-index设置为最大也没效果，那是因为第三方库用了一个toplayer的东西将播放视频的元素放到最顶层了，用css设置的东西没效果，解决方案就是设置个延时器，等到第三方库把元素放置到页面之后dom操作canvas元素，将其放置到设置toplayer的盒子里边，这样就可以了
 {{< /admonition >}}
