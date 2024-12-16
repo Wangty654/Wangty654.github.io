@@ -4,7 +4,15 @@
         <link>https://Wangty654.github.io/posts/</link>
         <description>所有文章 | TyNote</description>
         <generator>Hugo -- gohugo.io</generator><language>zh-CN</language><managingEditor>1437059026@qq.com (wangty)</managingEditor>
-            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Wed, 11 Dec 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+            <webMaster>1437059026@qq.com (wangty)</webMaster><copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright><lastBuildDate>Sat, 14 Dec 2024 00:00:00 &#43;0000</lastBuildDate><atom:link href="https://Wangty654.github.io/posts/" rel="self" type="application/rss+xml" /><item>
+    <title>【Java】Java语言基础（二）</title>
+    <link>https://Wangty654.github.io/text40/</link>
+    <pubDate>Sat, 14 Dec 2024 00:00:00 &#43;0000</pubDate>
+    <author>wangty</author>
+    <guid>https://Wangty654.github.io/text40/</guid>
+    <description><![CDATA[本篇记录黑马官网部分教程关于Java语言基础的学习笔记]]></description>
+</item>
+<item>
     <title>【Java】Java语言基础（一）</title>
     <link>https://Wangty654.github.io/text39/</link>
     <pubDate>Wed, 11 Dec 2024 00:00:00 &#43;0000</pubDate>
@@ -75,14 +83,6 @@
     <author>lei</author>
     <guid>https://Wangty654.github.io/regex/</guid>
     <description><![CDATA[Java中正则的使用 正则简介 非常常见的问题： 如何判断字符串是否是有效的电话号码？例如：010-1234567，123ABC456，13510]]></description>
-</item>
-<item>
-    <title>【Java】反射的基本使用及API</title>
-    <link>https://Wangty654.github.io/text31/</link>
-    <pubDate>Mon, 04 Nov 2024 00:00:00 &#43;0000</pubDate>
-    <author>wangty</author>
-    <guid>https://Wangty654.github.io/text31/</guid>
-    <description><![CDATA[对Java反射的基本使用和相应API进行记录]]></description>
 </item>
 </channel>
 </rss>
