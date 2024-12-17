@@ -39,7 +39,7 @@
                             "url": "https:\/\/Wangty654.github.io\/images\/Apple-Devices-Preview.png",
                             "width":  3200 ,
                             "height":  2048 
-                        }],"genre": "posts","keywords": "Java","wordcount":  0 ,
+                        }],"genre": "posts","keywords": "Java","wordcount":  6043 ,
         "url": "https:\/\/Wangty654.github.io\/text40\/","datePublished": "2024-12-14T00:00:00+00:00","dateModified": "2024-12-14T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
             "@type": "Organization",
             "name": "TyNote","logo": {
@@ -133,8 +133,8 @@
             <div class="toc-content" id="toc-content-auto"></div>
         </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">【Java】Java语言基础（二）</h1><div class="post-meta">
             <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/java/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div>
-            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-12-14">2024-12-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 0 字&nbsp;
-                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 0 分钟&nbsp;<span id="/text40/" class="leancloud_visitors" data-flag-title="【Java】Java语言基础（二）">
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-12-14">2024-12-14</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 6043 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 13 分钟&nbsp;<span id="/text40/" class="leancloud_visitors" data-flag-title="【Java】Java语言基础（二）">
                         <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
                     </span>&nbsp;
 
@@ -156,12 +156,1364 @@
                     <span></span>
                     <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
                 </div>
-                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents"></nav></div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#一基础部分">一、基础部分</a>
+          <ul>
+            <li><a href="#1-关键字keyword">1. 关键字keyword</a></li>
+            <li><a href="#2标识符">2.标识符</a></li>
+            <li><a href="#3注释">3.注释</a></li>
+            <li><a href="#4常量">4.常量</a></li>
+            <li><a href="#5进制">5.进制</a>
+              <ul>
+                <li><a href="#1-定义">1) 定义</a></li>
+                <li><a href="#2-进制转换">2) 进制转换</a>
+                  <ul>
+                    <li><a href="#x--10">X → 10</a></li>
+                    <li><a href="#8421码">8421码</a></li>
+                    <li><a href="#10--x">10 → X</a></li>
+                    <li><a href="#x--y">X → Y</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#6有符号数据表示法">6.有符号数据表示法</a></li>
+            <li><a href="#7变量">7.变量</a></li>
+            <li><a href="#8默认类型转换">8.默认类型转换</a></li>
+            <li><a href="#9运算符">9.运算符</a>
+              <ul>
+                <li><a href="#1-算术运算符operator">1) 算术运算符（Operator）</a></li>
+                <li><a href="#2赋值运算符">2）赋值运算符</a></li>
+                <li><a href="#3比较运算符关系运算符">3）比较运算符（关系运算符）</a></li>
+                <li><a href="#4逻辑运算符">4）逻辑运算符</a></li>
+                <li><a href="#5位运算符2进制">5）位运算符（2进制）</a></li>
+              </ul>
+            </li>
+            <li><a href="#10键盘录入数据scanner">10.键盘录入数据（Scanner）</a></li>
+            <li><a href="#11流程控制语句">11.流程控制语句</a>
+              <ul>
+                <li><a href="#1顺序结构">1）顺序结构</a></li>
+                <li><a href="#2选择结构ifswitch">2）选择结构（if/switch）</a></li>
+                <li><a href="#3循环结构fordo-while">3）循环结构（for/do-while）</a>
+                  <ul>
+                    <li><a href="#for循环语句">for循环语句</a></li>
+                    <li><a href="#while循环语句">while循环语句</a></li>
+                    <li><a href="#do-while循环语句">do-while循环语句</a></li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
+            <li><a href="#12跳转控制语句">12.跳转控制语句</a>
+              <ul>
+                <li><a href="#1break中断">1）break中断</a></li>
+                <li><a href="#2continue继续">2）continue继续</a></li>
+                <li><a href="#3return返回">3）return返回</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#二核心部分">二、核心部分</a>
+          <ul>
+            <li><a href="#1方法函数">1.方法（函数）</a></li>
+            <li><a href="#2重载">2.重载</a></li>
+            <li><a href="#3数组">3.数组</a></li>
+            <li><a href="#4">4.</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
             </div>
 
 
 
-        <div class="content" id="content"></div><div class="post-footer" id="post-footer">
+        <div class="content" id="content"><h2 id="一基础部分">一、基础部分</h2>
+<h3 id="1-关键字keyword">1. 关键字keyword</h3>
+<p>全是小写，能被虚拟机识别。<code>goto</code> 和 <code>const</code>  是保留字（现在保留，可能会成为关键字）。</p>
+<h3 id="2标识符">2.标识符</h3>
+<p>作用：起名字。</p>
+<p>组成：<code>$</code> <code>_</code> <code>数字</code> <code>英文大小写</code>  （不能以数字开头）</p>
+<p>常见的命名规则：</p>
+<ol>
+<li>见名知意</li>
+<li>包：其实就是文件夹，用于把相同的类名进行区分
+<ul>
+<li>单级包（全部小写）：wangty</li>
+<li>多级包（用<code>.</code>隔开）：cn.wangty   &ndash;指cn包下的wangty包</li>
+</ul>
+</li>
+<li>类/接口
+<ul>
+<li>一个单词组成，首字母大写：Student、Dog</li>
+<li>多个单词组成，大驼峰：HelloWorld</li>
+</ul>
+</li>
+<li>方法/变量
+<ul>
+<li>一个单词，首字母小写：main方法、name变量</li>
+<li>多个单词，小驼峰：studentAge</li>
+</ul>
+</li>
+<li>常量
+<ul>
+<li>一个单词，全部大写：PI 圆周率</li>
+<li>多个单词，全部大写，以<code>_</code> 隔开：STUDENT_MAX_AGE</li>
+</ul>
+</li>
+</ol>
+<div class="details admonition abstract open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>This is a tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content">类：为java基本底层，一切以其为开始，<code>{ }</code>中可以写：结构定义语句、功能执行语句</div>
+        </div>
+    </div>
+<h3 id="3注释">3.注释</h3>
+<p>用于解释说明程序，调试排错</p>
+<ul>
+<li>单行注释：<code>//</code></li>
+<li>多行注释：<code>/*   */</code>  （不能嵌套使用）</li>
+<li>文档注释：<code>/**   */</code>  （被javadoc工具解析，生成一个说明书，面向对象部分讲解）</li>
+</ul>
+<h3 id="4常量">4.常量</h3>
+<p>执行过程中，其值不可发生改变。</p>
+<p>使用<code>final</code>关键字申明（前端一般使用<code>const</code>申明），只能进行一次赋值</p>
+<ul>
+<li>字面值常量
+<ol>
+<li>字符串常量：双引号括起来的内容，例： <code>&quot;Hello&quot;</code></li>
+<li>整数常量：所有整数，例：<code>100</code></li>
+<li>小数常量：所有小数，例：<code>0.11111</code></li>
+<li>字符常量：单引号括起来的内容，例：<code>'A'</code></li>
+<li>布尔常量：真/假，例：<code>true</code> <code>false</code></li>
+<li>空常量：<code>null</code></li>
+</ol>
+</li>
+<li>自定义常量</li>
+</ul>
+<p>​</p>
+<h3 id="5进制">5.进制</h3>
+<h4 id="1-定义">1) 定义</h4>
+<p>表示进位的方式。（X进制：逢x进一）</p>
+<p>计算机的电子原件状态：<code>开/关</code> ，用数字<code>1/0</code> 表示</p>
+<p>表达数据的时候，国际化标准组织规定，用8个这样的信号来表示一个数据，单位为<strong>字节</strong></p>
+<ul>
+<li>ob开头：2进制</li>
+<li>o开头：8进制</li>
+<li>ox开头：16进制</li>
+</ul>
+<p>​</p>
+<h4 id="2-进制转换">2) 进制转换</h4>
+<h5 id="x--10">X → 10</h5>
+<p><strong>进制的转换</strong>：（任意进制 → 十进制）</p>
+<ol>
+<li>系数：每一个位上的数值本身，成为系数</li>
+<li>基数：X进制，基数为X</li>
+<li>权：从右开始，以0开始编号，即为该位上权值</li>
+</ol>
+<img src="./images/image-20241216113842473.png" alt="image-20241216113842473" style="zoom:50%;" />
+<p>示例：2进制 转 10进制</p>
+<img src="./images/image-20241216114324790.png" alt="image-20241216114324790" style="zoom:50%;" />
+<p>示例：8进制 转 10进制</p>
+<img src="./images/image-20241216114420588.png" alt="image-20241216114420588" style="zoom:50%;" />
+<p>示例：16进制 转 10进制</p>
+<img src="./images/image-20241216114508048.png" alt="image-20241216114508048" style="zoom:50%;" />
+<h5 id="8421码">8421码</h5>
+<p><strong>8421码</strong>：用于2进制与10进制的快速转换</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">2</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">1</th>
+<th style="text-align:center">1</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">128</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+</tr>
+</tbody>
+</table>
+<p>示例：2进制 转 10进制</p>
+<p>将不同权位上为1的，对应位置上的数值相加</p>
+<img src="./images/image-20241216115021945.png" alt="image-20241216115021945" style="zoom:50%;" />
+<p>示例：10进制 转 2进制</p>
+<p>左添0，从高位寻起，有则为1；相减，无则为0。去掉左0，添ob标识</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">10</th>
+<th style="text-align:center">100</th>
+<th style="text-align:center">100</th>
+<th style="text-align:center">36</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">4</th>
+<th style="text-align:center">0</th>
+<th style="text-align:center">0</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">10</td>
+<td style="text-align:center">128</td>
+<td style="text-align:center">64</td>
+<td style="text-align:center">32</td>
+<td style="text-align:center">16</td>
+<td style="text-align:center">8</td>
+<td style="text-align:center">4</td>
+<td style="text-align:center">2</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td style="text-align:center">2</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0</td>
+</tr>
+</tbody>
+</table>
+<img src="./images/image-20241216115421307.png" alt="image-20241216115421307" style="zoom:50%;" />
+<h5 id="10--x">10 → X</h5>
+<p><strong>进制的转换</strong>：（十进制 → 任意进制）</p>
+<p>商为0时结束，倒写余数。<strong>除基取余，直到商为0，余数反转。</strong></p>
+<p>示例：10进制 转 2进制</p>
+<img src="./images/image-20241216142841290.png" alt="image-20241216142841290" style="zoom:50%;" />
+<p>示例：10进制 转 8进制</p>
+<img src="./images/image-20241216143338685.png" alt="image-20241216143338685" style="zoom:50%;" />
+<p>示例：10进制 转 16进制</p>
+<img src="./images/image-20241216143607853.png" alt="image-20241216143607853" style="zoom:50%;" />
+<h5 id="x--y">X → Y</h5>
+<p><strong>任意进制之间转换</strong>：（X → Y）</p>
+<p>以10进制做桥梁，X → 10，10 → Y</p>
+<p>​</p>
+<h3 id="6有符号数据表示法">6.有符号数据表示法</h3>
+<p>在计算机内，有符号数有3中表示法：<strong>原码、补码、反码</strong></p>
+<p>在计算机操作的时候，都是采用数据对应的二进制补码来计算的。</p>
+<p><strong>原码</strong>：二进制定点表示法，最高位为符号位，<code>&quot;0&quot;</code>表示正，<code>&quot;1&quot;</code>表示负，其余表数值的大小</p>
+<p>示例：<code>±7</code>。首先得到7的二进制为<code>111</code></p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">原码</th>
+<th style="text-align:center">符号位</th>
+<th style="text-align:center">数值位</th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+7</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center"><strong>0000</strong>111</td>
+<td style="text-align:center">总共8为，不为1的补0</td>
+</tr>
+<tr>
+<td style="text-align:center">-7</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">0000111</td>
+<td style="text-align:center">总共8为，不为1的补0</td>
+</tr>
+</tbody>
+</table>
+<p><strong>反码</strong>：正数的反码与其原码相同。负数的反码，对其原码逐为取反，但符号位除外。</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">反码</th>
+<th style="text-align:center">符号位</th>
+<th style="text-align:center">数值位</th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+7</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0000111</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">-7</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center"><strong>1111</strong>000</td>
+<td style="text-align:center">对应取反</td>
+</tr>
+</tbody>
+</table>
+<p><strong>补码</strong>：正数的补码与其原码相同。负数的补码，是在反码的基础上加1</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">反码</th>
+<th style="text-align:center">符号位</th>
+<th style="text-align:center">数值位</th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">+7</td>
+<td style="text-align:center">0</td>
+<td style="text-align:center">0000111</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td style="text-align:center">-7</td>
+<td style="text-align:center">1</td>
+<td style="text-align:center">111100<strong>1</strong></td>
+<td style="text-align:center">加在尾部，若要进位则进</td>
+</tr>
+</tbody>
+</table>
+<p><strong>2个练习加深印象</strong>：</p>
+<ol>
+<li>已知X的原码10110100B，求补/反码
+<ul>
+<li>第一个符号位，为1，该数为负数</li>
+<li>原码B表示二进制</li>
+<li>反码：0 1001011</li>
+<li>补码：0 1001100 （注意进位）</li>
+</ul>
+</li>
+<li>已知X补码11101110B，求原码
+<ul>
+<li>补码减1，注意借位，不够往前借</li>
+<li>补码：1 1101110</li>
+<li>反码：1 1101101</li>
+<li>原码：1 0010010</li>
+</ul>
+</li>
+</ol>
+<h3 id="7变量">7.变量</h3>
+<p>内存中的一小块区域。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//强制转换</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">byte</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>变量相加：先提升数据，再计算运行</li>
+<li>常量相加：先计算结果（调试、编译），再赋值。再检测数据类型范围，超出则报错</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//示例：</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">byte</span><span class="w"> </span><span class="n">b1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">3</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">byte</span><span class="w"> </span><span class="n">b2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">4</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">byte</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//byte的范围 -128 ~ 127</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b2</span><span class="w">   </span><span class="c1">//报错,数据提升。（先提升成int 3，int4，才会进行相加赋值 7是int）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">3</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">4</span><span class="w">     </span><span class="c1">//b = 7 （7是byte）</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//&#39;a&#39; = 97</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//&#39;A&#39; = 65</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//&#39;o&#39; = 48   </span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>字符串相加：其<code>+</code>表示为连接符。结果为：字符串</li>
+<li>数值相加：其<code>+</code>表示为运算符。结果为：计算结果</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//示例</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="err">&#39;</span><span class="n">hello</span><span class="err">&#39;</span><span class="w">  </span><span class="c1">//98hello</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="err">&#39;</span><span class="n">hello</span><span class="err">&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;a&#39;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="sc">&#39;1&#39;</span><span class="w"> </span><span class="c1">//helloa1    </span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><ul>
+<li>定义Long类型变量，<code>1L</code>。</li>
+<li>定义Float类型变量，<code>1f</code>。</li>
+<li>整数默认为int，浮点默认为Double</li>
+<li>byte、short在定义时，他们接受的其实是一个int类型的值。（做了一个数据检测，如果不再它们的范围内，就报错）</li>
+<li>byte值的问题</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//byte的范围 -128 ~ 127</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">byte</span><span class="w"> </span><span class="n">b1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">127</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">byte</span><span class="w"> </span><span class="n">b2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)</span><span class="w"> </span><span class="n">128</span><span class="p">;</span><span class="w">  </span><span class="c1">//-128</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">byte</span><span class="w"> </span><span class="n">b3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)</span><span class="w"> </span><span class="n">129</span><span class="p">;</span><span class="w">  </span><span class="c1">//-127</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">byte</span><span class="w"> </span><span class="n">b4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="kt">byte</span><span class="p">)</span><span class="w"> </span><span class="n">130</span><span class="p">;</span><span class="w">  </span><span class="c1">//-126</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//128:10000000</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//-128: 10000000 这里1既是符号位，也是数值位，这里的0为负0</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="8默认类型转换">8.默认类型转换</h3>
+<p>char(2)、byte(1)、short(2) → int(4) → long(8) → float(4) → double</p>
+<p><strong>为什么 &lsquo;8字节&rsquo; 可以转换为 &lsquo;4字节&rsquo;？</strong></p>
+<ul>
+<li>
+<p>long：8字节，整数存储</p>
+</li>
+<li>
+<p>float：4字节，浮点型存储</p>
+</li>
+<li>
+<p>它们底层的存储类型不同，float类型在计算机中只使用4个字节存储，遵循IEEE-754格式标准。一个浮点数有两个部分构成：</p>
+<ul>
+<li>
+<p>底数m：以二进制数表示词浮点数的实际值，占24bit，高位始终为1。</p>
+</li>
+<li>
+<p>指数e：占用8bit的二进制数，范围0-255。有±，减127才是真正的指数</p>
+</li>
+<li>
+<p>例如：</p>
+<p><code>17.625</code>存储</p>
+<ol>
+<li>二进制：10001.101</li>
+<li>整数部分：除以2，商为0，余数反转。（10001.101）</li>
+<li>小数部分：乘以2，乘位为0，进位顺序取（1.0001101高位恒为1）</li>
+<li>右移至小数点前只有1位，2→3，需移动4位，指数加127 = 4 + 127=131</li>
+<li>131二进制：10000011</li>
+</ol>
+<p>结果为：0 1000001 10001101  00000000    00000000</p>
+<table>
+<thead>
+<tr>
+<th style="text-align:center">符号位</th>
+<th style="text-align:center">指数</th>
+<th style="text-align:center">底数</th>
+<th style="text-align:center"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align:center">0</td>
+<td style="text-align:center">10000011</td>
+<td style="text-align:center">0001101</td>
+<td style="text-align:center">0&hellip;0</td>
+</tr>
+</tbody>
+</table>
+</li>
+</ul>
+</li>
+<li>
+<p>float表示的数据范围比long大</p>
+<p>证明：</p>
+<img src="./images/image-20241216153452793.png" alt="image-20241216153452793" style="zoom: 67%;" />
+</li>
+<li>
+<p>char能存一个中文字符，一个字符2个字节。java语言采用Unicode编码。</p>
+</li>
+</ul>
+<p>​</p>
+<h3 id="9运算符">9.运算符</h3>
+<h4 id="1-算术运算符operator">1) 算术运算符（Operator）</h4>
+<p><code>+</code>、<code>-</code>、<code>×</code>、<code>÷</code>、<code>%</code>、<code>++</code>、<code>--</code></p>
+<p><strong>例一</strong>：a = 10； b = 10 ；c = 10；</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="o">++</span><span class="p">;</span><span class="w">   </span><span class="c1">//a = 10； b = 11 ；c = 10</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">--</span><span class="n">a</span><span class="p">;</span><span class="w">   </span><span class="c1">//a = 9；  b = 11 ；c = 9</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">++</span><span class="n">a</span><span class="p">;</span><span class="w">   </span><span class="c1">//a = 10； b = 10 ；c = 9</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="o">--</span><span class="p">;</span><span class="w">   </span><span class="c1">//a = 9；  b = 10 ；c = 8</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//在前，先++/--，再赋值</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//在后，先赋值，再++/--</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>例二</strong>：x = 4</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">y</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="o">++</span><span class="n">x</span><span class="p">)</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="p">(</span><span class="n">x</span><span class="o">*</span><span class="n">10</span><span class="p">);</span><span class="w">    </span><span class="c1">//x = 6;y = 70</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//   4       6       60</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//  x = 5   x = 6</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h4 id="2赋值运算符">2）赋值运算符</h4>
+<p><code>=</code>、<code>+=</code>、<code>-=</code>、<code>*=</code>、<code>/=</code>、<code>%=</code></p>
+<p><strong>例一</strong>：short s = 1；</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w">    </span><span class="c1">//short 参加运算，提升为int，可能损失精度</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">s</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w">       </span><span class="c1">//s为short</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//拓展的赋值运算符其实隐含了一个强制类型转换</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/*  s += 1; 
+</span></span></span><span class="line"><span class="cl"><span class="cm">&lt;≠&gt; s = s + 1; 
+</span></span></span><span class="line"><span class="cl"><span class="cm">&lt;=&gt; s =(short) s + 1;
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h4 id="3比较运算符关系运算符">3）比较运算符（关系运算符）</h4>
+<p><code>&lt;</code>、<code>&gt;</code>、<code>&lt;=</code>、<code>&gt;=</code>、<code>!=</code>、<code>==</code>、<code>instanceof</code></p>
+<p>结果都是boolean类型，只要有一个满足条件就可以</p>
+<p>​</p>
+<h4 id="4逻辑运算符">4）逻辑运算符</h4>
+<ul>
+<li><code>&amp;</code> 与 ：同真为真</li>
+<li><code>|</code> 或 ：同假为假</li>
+<li><code>^</code> 异或：同名为假，异名为真</li>
+<li><code>!</code> 非 ：取反</li>
+<li><code>&amp;&amp;</code> 短路与 ：左假右不管</li>
+<li><code>||</code> 短路或 ：左真右不算</li>
+</ul>
+<p>左右必须都是布尔型表达式。</p>
+<p>​</p>
+<h4 id="5位运算符2进制">5）位运算符（2进制）</h4>
+<ul>
+<li><code>&lt;&lt;</code>  扩大，正数补0，负数补1</li>
+<li><code>&gt;&gt;</code>  缩小，正数补0，负数补1</li>
+<li><code>&amp;</code>、<code>|</code>、<code>^</code>  当两边为数据做的是“位运算”，两边为表达式做的是“逻辑运算”</li>
+<li><code>~</code>、</li>
+<li><code>&gt;&gt;&gt;</code>  无符号右移，全补0</li>
+</ul>
+<p><strong>例一</strong>：某一个数据对另一个数据位异或两次，数据不变</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//可以用来加密</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">a</span><span class="o">^</span><span class="n">b</span><span class="o">^</span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">a</span><span class="o">^</span><span class="n">b</span><span class="o">^</span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>例二</strong>：将两个变量所携带的整数进行交换。a换成b，b换成a</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//方法一：</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">^</span><span class="n">b</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">^</span><span class="n">b</span><span class="p">;</span><span class="w">   </span><span class="c1">//b = a^b^b = a;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">^</span><span class="n">b</span><span class="p">;</span><span class="w">   </span><span class="c1">//a = a^b^a = b;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//方法二：</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span><span class="w">   </span><span class="c1">//a =30;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">;</span><span class="w">   </span><span class="c1">//b = 10, b = (a+b)-b = a;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">-</span><span class="n">b</span><span class="p">;</span><span class="w">   </span><span class="c1">//a = 20, a = (a+b)-a = b;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//方法三：</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//方法四：</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">-</span><span class="p">(</span><span class="n">a</span><span class="o">=</span><span class="n">b</span><span class="p">)</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//等价于</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">)</span><span class="o">-</span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="10键盘录入数据scanner">10.键盘录入数据（Scanner）</h3>
+<ol>
+<li>
+<p>导包</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>创建键盘录入对象</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p>通过对象获取数据</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="w">   </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">  </span><span class="c1">//键盘录入 整数值</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">s</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"> </span><span class="c1">//键盘录入 字符串</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ol>
+<p><strong>例一</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ScannerDemo</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">sc</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;请输入：&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sc</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;你输入的是：&#34;</span><span class="o">+</span><span class="n">x</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h3 id="11流程控制语句">11.流程控制语句</h3>
+<h4 id="1顺序结构">1）顺序结构</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">// 顺序结构示例  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;程序开始&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// 变量赋值  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">10</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">20</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// 计算和  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">// 输出结果  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;a 和 b 的和是: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sum</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;程序结束&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="2选择结构ifswitch">2）选择结构（if/switch）</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">if</span><span class="p">(</span><span class="n">比较表达式</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">语句体</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="k">else</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">语句体</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">switch</span><span class="p">(</span><span class="n">表达式</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">case</span><span class="w"> </span><span class="n">值1</span><span class="w"> </span><span class="p">:</span><span class="n">语句体1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			  </span><span class="k">break</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	 </span><span class="k">default</span><span class="w"> </span><span class="p">:</span><span class="n">语句体n</span><span class="o">+</span><span class="n">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">			  </span><span class="k">break</span><span class="p">;</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">1、case后面，只能是常量，不能是变量，且多个case后的值不能相同
+</span></span></span><span class="line"><span class="cl"><span class="cm">2、default可以省略，不建议
+</span></span></span><span class="line"><span class="cl"><span class="cm">3、break可以省略吗？可以（最后一个）
+</span></span></span><span class="line"><span class="cl"><span class="cm">4、default一定要在最后面吗？可以在任意位置
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>if/switch的区分</strong>：</p>
+<ul>
+<li>Boolean用if</li>
+<li>1000上万数据用if</li>
+<li>小数范围用if</li>
+<li>针对几个常量值情况用switch</li>
+</ul>
+<h4 id="3循环结构fordo-while">3）循环结构（for/do-while）</h4>
+<h5 id="for循环语句">for循环语句</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="n">初始化语句</span><span class="p">;</span><span class="n">判断条件语句</span><span class="p">;</span><span class="n">变量变化</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">循环语句体</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>例一</strong>：输出1~10</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="o">=</span><span class="n">1</span><span class="p">;</span><span class="n">x</span><span class="o">&lt;=</span><span class="n">10</span><span class="p">;</span><span class="n">x</span><span class="o">++</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>例二</strong>：求1~10的数据和</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="o">=</span><span class="n">1</span><span class="p">;</span><span class="n">x</span><span class="o">&lt;=</span><span class="n">10</span><span class="p">;</span><span class="n">x</span><span class="o">++</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>例三</strong>：求1~100之间的偶数和</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="cm">/**
+</span></span></span><span class="line"><span class="cl"><span class="cm">思路：1~100之和为5050
+</span></span></span><span class="line"><span class="cl"><span class="cm">1~100奇/偶对半各50
+</span></span></span><span class="line"><span class="cl"><span class="cm">偶比奇大1，总共多50
+</span></span></span><span class="line"><span class="cl"><span class="cm">（5050-50）÷ 2 +50 = 偶数和
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//方法一：</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="o">=</span><span class="n">1</span><span class="p">;</span><span class="n">x</span><span class="o">&lt;=</span><span class="n">100</span><span class="p">;</span><span class="n">x</span><span class="o">++</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="o">%</span><span class="n">2</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">0</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//方法二：</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//从0开始，自增2位</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="o">=</span><span class="n">0</span><span class="p">;</span><span class="n">x</span><span class="o">&lt;=</span><span class="n">100</span><span class="p">;</span><span class="n">x</span><span class="o">+=</span><span class="n">2</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sum</span><span class="w"> </span><span class="o">+=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>例四</strong>：求5的阶乘</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//阶乘：n! = n*(n-1)! = n*(n-1)*(n-2)*...*1</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">sum</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">1</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="o">=</span><span class="n">1</span><span class="p">;</span><span class="n">x</span><span class="o">&lt;=</span><span class="n">5</span><span class="p">;</span><span class="n">x</span><span class="o">++</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">sum</span><span class="w"> </span><span class="o">*=</span><span class="w"> </span><span class="n">x</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">sum</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>例五</strong>：水仙花数（求所有水仙花数）</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//水仙花数：一个三位数，即各位数字的立方和等于该数本身。</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//例如：153 = 1^3+5^3+3^3 = 153</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="o">=</span><span class="n">100</span><span class="p">;</span><span class="n">x</span><span class="o">&lt;</span><span class="n">1000</span><span class="p">;</span><span class="n">x</span><span class="o">++</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">ge</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">%</span><span class="n">10</span><span class="p">;</span><span class="w">        </span><span class="c1">//获取个位数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">shi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">/</span><span class="n">10</span><span class="o">%</span><span class="n">10</span><span class="p">;</span><span class="w">    </span><span class="c1">//获取十位数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">bai</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">x</span><span class="o">/</span><span class="n">10</span><span class="o">/</span><span class="n">10</span><span class="o">%</span><span class="n">10</span><span class="p">;</span><span class="w"> </span><span class="c1">//获取百位数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="p">(</span><span class="n">x</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="p">(</span><span class="n">ge</span><span class="o">*</span><span class="n">ge</span><span class="o">*</span><span class="n">ge</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">shi</span><span class="o">*</span><span class="n">shi</span><span class="o">*</span><span class="n">shi</span><span class="w"> </span><span class="o">+</span><span class="n">bai</span><span class="o">*</span><span class="n">bai</span><span class="o">*</span><span class="n">bai</span><span class="p">)){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">x</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="while循环语句">while循环语句</h5>
+<p>可以与for循环等价转换</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">while</span><span class="p">(</span><span class="n">判断条件语句</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">循环体语句</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>例一</strong>：按照for语句，交换各项位置</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="o">=</span><span class="n">0</span><span class="p">;</span><span class="n">x</span><span class="o">&lt;</span><span class="n">10</span><span class="p">;</span><span class="n">x</span><span class="o">++</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//等价于</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">while</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">10</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">x</span><span class="o">++</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">while的初始化在外面，x为全局变量
+</span></span></span><span class="line"><span class="cl"><span class="cm">for的x为局部变量
+</span></span></span><span class="line"><span class="cl"><span class="cm">当循环，有范围时，用for；无明确范围时，用while
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h5 id="do-while循环语句">do-while循环语句</h5>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="k">do</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">循环语句</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">判断条件句</span><span class="p">)</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//对应上方for循环</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">0</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">do</span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">   </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;hello&#34;</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">x</span><span class="o">++</span><span class="p">;</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="k">while</span><span class="p">(</span><span class="n">x</span><span class="o">&lt;</span><span class="n">10</span><span class="p">)</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="details admonition abstract open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>This is a tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p><strong>三种循环的区别</strong>：</p>
+<ol>
+<li>do-while至少执行一次循环体</li>
+<li>while、for必须判断条件再循环（只有这一个区别）</li>
+</ol>
+<p><strong>死循环</strong>：</p>
+<p><code>ctrl+c</code> 强制停止循环。一定注意造成死循环是因为没有写条件控制</p>
+</div>
+        </div>
+    </div>
+<p>​</p>
+<h3 id="12跳转控制语句">12.跳转控制语句</h3>
+<h4 id="1break中断">1）break中断</h4>
+<p>break使用场景（离开下面两个场景，无意义）</p>
+<ul>
+<li>switch语句中</li>
+<li>循环语句中</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span><span class="lnt">8
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//嵌套for中，只跳出一层</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//使用“标签名：语句” - 跳出目标层</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="nl">wc</span><span class="p">:</span><span class="k">for</span><span class="p">(...){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">nc</span><span class="p">:</span><span class="k">for</span><span class="p">(...){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="p">(){</span><span class="k">break</span><span class="w"> </span><span class="n">wc</span><span class="p">;}</span><span class="w"> </span><span class="c1">//中断外+内层</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">		</span><span class="k">if</span><span class="p">(){</span><span class="k">break</span><span class="w"> </span><span class="n">nc</span><span class="p">;}</span><span class="w"> </span><span class="c1">//中断内层</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="2continue继续">2）continue继续</h4>
+<p>使用场景，for循环中。（离开此场景无意义）</p>
+<p>跳出本次循环，进入下一循环体</p>
+<p>（0,1,2,跳出，4,5,6&hellip;）</p>
+<p>​</p>
+<h4 id="3return返回">3）return返回</h4>
+<p>使用场景，结束一个方法，跳转到上层调的方法</p>
+<p><strong>方法的注意事项：</strong></p>
+<ol>
+<li>方法不调用不执行</li>
+<li>方法与方法是平级关系，不能嵌套定义</li>
+<li>方法定义的时候参数之间用逗号隔开</li>
+<li>方法调用时不用在传递数据类型</li>
+<li>如有明确返回值，一定要return</li>
+</ol>
+<p>​</p>
+<h2 id="二核心部分">二、核心部分</h2>
+<h3 id="1方法函数">1.方法（函数）</h3>
+<p>方法定义在一个类中，完成特定功能的代码块。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">修饰符</span><span class="w"> </span><span class="n">返回类型</span><span class="w"> </span><span class="nf">方法名</span><span class="p">(</span><span class="n">参数类型</span><span class="w"> </span><span class="n">参数名</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="n">函数体</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">	</span><span class="k">return</span><span class="w"> </span><span class="n">返回值</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="cm">/*
+</span></span></span><span class="line"><span class="cl"><span class="cm">写一个方法（两个明确）
+</span></span></span><span class="line"><span class="cl"><span class="cm">1、返回值类型：结果的数据类型
+</span></span></span><span class="line"><span class="cl"><span class="cm">2、参数列表：传递几个、每个的数据类型
+</span></span></span><span class="line"><span class="cl"><span class="cm">*/</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>参数</strong>：</p>
+<ul>
+<li>实参：实际参与运算的</li>
+<li>形参：形式上定义的，用来接受实际参数的</li>
+</ul>
+<p><strong>return</strong>：结束方法</p>
+<p><strong>返回值</strong>：就是功能的结果，由return带回给调用者</p>
+<p><strong>例一</strong>：求2个数的和</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//方法不调用不会自动运行</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Sum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">a</span><span class="o">+</span><span class="n">b</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="n">c</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>特例</strong>：main方法，在Java虚拟机处调用，所以不用认为调用，依然可以运行</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{....}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>方法的调用方式</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//单独调用</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">Sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//输出调用</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">Sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">));</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//赋值调用</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kt">int</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">Sum</span><span class="p">(</span><span class="n">a</span><span class="p">,</span><span class="n">b</span><span class="p">);</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>void方法调用</strong>：只适用于第一种&quot;单独调用&quot;</p>
+<p>​</p>
+<h3 id="2重载">2.重载</h3>
+<p>方法的功能相同，参数列表不同，java允许它们起相同的名字。</p>
+<p>参数列表不同：</p>
+<ul>
+<li>参数个数不同</li>
+<li>参数数据类型不同</li>
+</ul>
+<p>通过参数个数识别，不同的方法。JVM会根据不同的参数，去调用不同的方法。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//原方法</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Sum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//重载入参个数</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">Sum</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">b</span><span class="p">,</span><span class="kt">int</span><span class="w"> </span><span class="n">c</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//重载入参类型</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">float</span><span class="w"> </span><span class="nf">Sum</span><span class="p">(</span><span class="kt">float</span><span class="w"> </span><span class="n">a</span><span class="p">,</span><span class="kt">float</span><span class="w"> </span><span class="n">b</span><span class="p">)</span><span class="w"> </span><span class="p">{}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h3 id="3数组">3.数组</h3>
+<p>数组是用于存储多个变量(元素)的容器，这多个元素的数据类型相同。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">数据类型</span><span class="o">[]</span><span class="w"> </span><span class="n">数组名</span><span class="w">     </span><span class="c1">//常用</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">数据类型</span><span class="w">  </span><span class="n">数组名</span><span class="o">[]</span><span class="w">    
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>数组定义后，没有值，需要初始化</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kt">int</span><span class="o">[]</span><span class="w"> </span><span class="n">arr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="kt">int</span><span class="o">[</span><span class="n">3</span><span class="o">]</span><span class="p">;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//int[] arr：看成一个变量，变量需要初始化才能使用</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//new：为数组分配内存空间。之后看见的所有的new都是分配内存空间的</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//int[3]：数组长度，动态初始化</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>初始化</strong>：开辟内存空间，并赋值</p>
+<ul>
+<li>静态初始化：给定元素数值，长度系统定</li>
+<li>动态初始化：给定系统长度，由系统分配初始值（默认为0）</li>
+</ul>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//动态初始化格式</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">数据类型</span><span class="o">[]</span><span class="w"> </span><span class="n">数组名</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">数据类型</span><span class="o">[</span><span class="n">数组长度</span><span class="o">]</span><span class="w">    
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//静态初始化格式</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">数据类型</span><span class="o">[]</span><span class="w"> </span><span class="n">数组名</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">数据类型</span><span class="o">[</span><span class="n">元素1</span><span class="p">,</span><span class="n">元素2</span><span class="p">,...</span><span class="o">]</span><span class="w">  
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><strong>注意：不要同时使用动/静态初始化。</strong></p>
+<p>使用<code>System.out.println(arr)</code> 输出数组arr，显示数组的<strong>地址值</strong></p>
+<p>用数组名和索引相结合，可以获取数组中指定编号的元素。格式：<strong>数组名[索引值]</strong>。</p>
+<div class="details admonition abstract open">
+        <div class="details-summary admonition-title">
+            <i class="icon fas fa-list-ul fa-fw" aria-hidden="true"></i>This is a tip<i class="details-icon fas fa-angle-right fa-fw" aria-hidden="true"></i>
+        </div>
+        <div class="details-content">
+            <div class="admonition-content"><p>Java中的<strong>内存分配</strong>以及<strong>栈</strong>和<strong>堆</strong>的区别：</p>
+<p>为了提高运算效率，对<strong>内存空间</strong>进行了<strong>不同区域</strong>的划分</p>
+<ul>
+<li><strong>栈</strong>：存&quot;基本类型变量&quot;和&quot;引用变量&quot;</li>
+<li><strong>不同区域</strong>：有特定的“处理数据方式&quot;和&quot;内存管理方式&quot;</li>
+</ul>
+<p><strong>5个内存空间</strong>：</p>
+<ol>
+<li>栈（存储局部变量：方法定义上、方法申明上）</li>
+<li>堆（存储new出来的东西 + 数组）</li>
+<li>方法区</li>
+<li>本地方法区（和系统有关）</li>
+<li>寄存器（给CPU使用）</li>
+</ol>
+<p><strong>堆内存的特点</strong>：</p>
+<ol>
+<li>每一个new出来的东西都有地址值</li>
+<li>每个变量都有默认值
+<ul>
+<li>byte、short、int、long → 0</li>
+<li>float、double → 0.0</li>
+<li>char → &lsquo;\u0000&rsquo; （空字符）</li>
+<li>boolean → false</li>
+<li>引用类型 → null</li>
+</ul>
+</li>
+<li>使用完毕后，就变成垃圾，但是并没有立即收回，在垃圾回收器空间的时候回收。</li>
+</ol>
+<p><strong>栈内存的特点</strong>：</p>
+<ol>
+<li>用完即释放（数据脱离其作用域）</li>
+</ol>
+<p><strong>图解</strong>：</p>
+<img src="./images/image-20241217162202370.png" alt="image-20241217162202370" style="zoom:50%;" />
+</div>
+        </div>
+    </div>
+<p><strong>数组操作（越界/空指针）问题</strong>：</p>
+<p><code>ArrayIndexOutOfBoundsException</code> 数组索引越界异常：原因你访问了不存在的索引。</p>
+<p><code>NullPointerException</code> 空指针异常：原因数组已经不指向堆内存了，但你使用数组名访问了元素。</p>
+<p>图解：</p>
+<img src="./images/image-20241217162843032.png" alt="image-20241217162843032" style="zoom:50%;" />
+<p><strong>数组操作（遍历）</strong>：</p>
+<p>依次输出数组中每一个元素。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="c1">//每个元素只有索引值不同</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//遍历：用循环改变索引即可</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="k">for</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">x</span><span class="o">=</span><span class="n">0</span><span class="p">;</span><span class="n">x</span><span class="o">&lt;</span><span class="n">10</span><span class="p">;</span><span class="n">x</span><span class="o">++</span><span class="p">){</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">arr</span><span class="o">[</span><span class="n">x</span><span class="o">]</span><span class="p">);</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>​</p>
+<h3 id="4">4.</h3>
+</div><div class="post-footer" id="post-footer">
     <div class="post-info">
         <div class="post-info-line">
             <div class="post-info-mod">
