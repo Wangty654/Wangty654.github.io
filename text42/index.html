@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="robots" content="noodp" />
+        <title>【Java】Java语言进阶（一） - TyNote</title><meta name="Description" content="你我一场唤不醒的梦……"><meta property="og:url" content="https://Wangty654.github.io/text42/">
+  <meta property="og:site_name" content="TyNote">
+  <meta property="og:title" content="【Java】Java语言进阶（一）">
+  <meta property="og:description" content="本篇记录黑马官网关于Java语言进阶教程的学习笔记">
+  <meta property="og:locale" content="zh_CN">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="posts">
+    <meta property="article:published_time" content="2024-12-27T00:00:00+00:00">
+    <meta property="article:modified_time" content="2024-12-27T00:00:00+00:00">
+    <meta property="article:tag" content="Java">
+    <meta property="og:image" content="https://Wangty654.github.io/images/avatar.png">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:image" content="https://Wangty654.github.io/images/avatar.png">
+  <meta name="twitter:title" content="【Java】Java语言进阶（一）">
+  <meta name="twitter:description" content="本篇记录黑马官网关于Java语言进阶教程的学习笔记">
+<meta name="application-name" content="TyNote">
+<meta name="apple-mobile-web-app-title" content="TyNote"><meta name="theme-color" content="#ffffff"><meta name="msapplication-TileColor" content="#da532c"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+        <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+        <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"><link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"><link rel="msapplication-TileColor" href="/favicon-16x16.png" color="#da532c"><link rel="manifest" href="/site.webmanifest"><link rel="canonical" href="https://Wangty654.github.io/text42/" /><link rel="prev" href="https://Wangty654.github.io/text40/" /><link rel="next" href="https://Wangty654.github.io/text45/" /><link rel="stylesheet" href="/css/style.min.cafd7a15685d3295cb0c60c3cf7c0cde0632ba4dd2c8b6c34b35bf00ee9e8a08.css" integrity="sha256-yv16FWhdMpXLDGDDz3wM3gYyuk3SyLbDSzW/AO6eigg="><link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/all.min.css"></noscript><link rel="preload" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/animate.css@4.1.1/animate.min.css"></noscript><script type="application/ld+json">
+    {
+        "@context": "http://schema.org",
+        "@type": "BlogPosting",
+        "headline": "【Java】Java语言进阶（一）",
+        "inLanguage": "zh-CN",
+        "mainEntityOfPage": {
+            "@type": "WebPage",
+            "@id": "https:\/\/Wangty654.github.io\/text42\/"
+        },"image": [{
+                            "@type": "ImageObject",
+                            "url": "https:\/\/Wangty654.github.io\/images\/Apple-Devices-Preview.png",
+                            "width":  3200 ,
+                            "height":  2048 
+                        }],"genre": "posts","keywords": "Java","wordcount":  7922 ,
+        "url": "https:\/\/Wangty654.github.io\/text42\/","datePublished": "2024-12-27T00:00:00+00:00","dateModified": "2024-12-27T00:00:00+00:00","license": "This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.","publisher": {
+            "@type": "Organization",
+            "name": "TyNote","logo": {
+                    "@type": "ImageObject",
+                    "url": "https:\/\/Wangty654.github.io\/images\/avatar.png",
+                    "width":  528 ,
+                    "height":  528 
+                }},"author": {
+                "@type": "Person",
+                "name": "wangty"
+            },"description": ""
+    }
+    </script></head>
+    <body data-header-desktop="normal" data-header-mobile="normal"><script type="text/javascript">(window.localStorage && localStorage.getItem('theme') ? localStorage.getItem('theme') === 'dark' : ('light' === 'auto' ? window.matchMedia('(prefers-color-scheme: dark)').matches : 'light' === 'dark')) && document.body.setAttribute('theme', 'dark');</script>
+
+        <div id="mask"></div><div class="wrapper"><header class="desktop" id="header-desktop">
+    <div class="header-wrapper">
+        <div class="header-title">
+            <a href="/" title="TyNote"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/avatarico.png"
+        data-srcset="/images/avatarico.png, /images/avatarico.png 1.5x, /images/avatarico.png 2x"
+        data-sizes="auto"
+        alt="/images/avatarico.png"
+        title="/images/avatarico.png" />TyNote</a>
+        </div>
+        <div class="menu">
+            <div class="menu-inner"><a class="menu-item" href="/"><i class='fa fa-home' aria-hidden='true'></i> 首页 </a><a class="menu-item" href="/posts/"><i class='fa fa-quote-left' aria-hidden='true'></i> 所有文章 </a><a class="menu-item" href="/tags/"><i class='fa fa-tags' aria-hidden='true'></i> 标签 </a><a class="menu-item" href="/categories/"><i class='fa fa-list' aria-hidden='true'></i> 分类 </a><a class="menu-item" href="/about/"><i class='fa fa-window-restore' aria-hidden='true'></i> 关于 </a><a class="menu-item" href="/friend/" title="Friend"><i class='fa fa-paper-plane' aria-hidden='true'></i> 友链 </a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i>  </a><span class="menu-item delimiter"></span><span class="menu-item search" id="search-desktop">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-desktop">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-desktop" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-desktop" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-desktop">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </span><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                    <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+                </a></div>
+        </div>
+    </div>
+</header><header class="mobile" id="header-mobile">
+    <div class="header-container">
+        <div class="header-wrapper">
+            <div class="header-title">
+                <a href="/" title="TyNote"><img
+        class="lazyload logo"
+        src="/svg/loading.min.svg"
+        data-src="/images/avatarico.png"
+        data-srcset="/images/avatarico.png, /images/avatarico.png 1.5x, /images/avatarico.png 2x"
+        data-sizes="auto"
+        alt="/images/avatarico.png"
+        title="/images/avatarico.png" />TyNote</a>
+            </div>
+            <div class="menu-toggle" id="menu-toggle-mobile">
+                <span></span><span></span><span></span>
+            </div>
+        </div>
+        <div class="menu" id="menu-mobile"><div class="search-wrapper">
+                    <div class="search mobile" id="search-mobile">
+                        <input type="text" placeholder="搜索文章标题或内容..." id="search-input-mobile">
+                        <a href="javascript:void(0);" class="search-button search-toggle" id="search-toggle-mobile" title="搜索">
+                            <i class="fas fa-search fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <a href="javascript:void(0);" class="search-button search-clear" id="search-clear-mobile" title="清空">
+                            <i class="fas fa-times-circle fa-fw" aria-hidden="true"></i>
+                        </a>
+                        <span class="search-button search-loading" id="search-loading-mobile">
+                            <i class="fas fa-spinner fa-fw fa-spin" aria-hidden="true"></i>
+                        </span>
+                    </div>
+                    <a href="javascript:void(0);" class="search-cancel" id="search-cancel-mobile">
+                        取消
+                    </a>
+                </div><a class="menu-item" href="/" title=""><i class='fa fa-home' aria-hidden='true'></i>首页</a><a class="menu-item" href="/posts/" title=""><i class='fa fa-quote-left' aria-hidden='true'></i>所有文章</a><a class="menu-item" href="/tags/" title=""><i class='fa fa-tags' aria-hidden='true'></i>标签</a><a class="menu-item" href="/categories/" title=""><i class='fa fa-list' aria-hidden='true'></i>分类</a><a class="menu-item" href="/about/" title=""><i class='fa fa-window-restore' aria-hidden='true'></i>关于</a><a class="menu-item" href="/friend/" title="Friend"><i class='fa fa-paper-plane' aria-hidden='true'></i>友链</a><a class="menu-item" href="https://github.com/dillonzq/LoveIt" title="GitHub" rel="noopener noreffer" target="_blank"><i class='fab fa-github fa-fw' aria-hidden='true'></i></a><a href="javascript:void(0);" class="menu-item theme-switch" title="切换主题">
+                <i class="fas fa-adjust fa-fw" aria-hidden="true"></i>
+            </a></div>
+    </div>
+</header><div class="search-dropdown desktop">
+        <div id="search-dropdown-desktop"></div>
+    </div>
+    <div class="search-dropdown mobile">
+        <div id="search-dropdown-mobile"></div>
+    </div><main class="main">
+                <div class="container"><div class="toc" id="toc-auto" >
+
+            <h2 class="toc-title">目录</h2>
+            <div class="toc-content" id="toc-content-auto"></div>
+        </div><article class="page single"><h1 class="single-title animate__animated animate__flipInX">【Java】Java语言进阶（一）</h1><div class="post-meta">
+            <div class="post-meta-line"><span class="post-author"><a href="/" title="Author" rel="author" class="author"><i class="fas fa-user-circle fa-fw" aria-hidden="true"></i>wangty</a></span>&nbsp;<span class="post-category">收录于 <a href="/categories/java/"><i class="far fa-folder fa-fw" aria-hidden="true"></i>Java</a></span></div>
+            <div class="post-meta-line"><i class="far fa-calendar-alt fa-fw" aria-hidden="true"></i>&nbsp;<time datetime="2024-12-27">2024-12-27</time>&nbsp;<i class="fas fa-pencil-alt fa-fw" aria-hidden="true"></i>&nbsp;约 7922 字&nbsp;
+                <i class="far fa-clock fa-fw" aria-hidden="true"></i>&nbsp;预计阅读 16 分钟&nbsp;<span id="/text42/" class="leancloud_visitors" data-flag-title="【Java】Java语言进阶（一）">
+                        <i class="far fa-eye fa-fw" aria-hidden="true"></i>&nbsp;<span class=leancloud-visitors-count></span>&nbsp;次阅读
+                    </span>&nbsp;
+
+
+
+
+
+
+
+<span id="busuanzi_container_value_page_pv"><i class="far fa-eye fa-fw"></i>
+                
+                <span id="busuanzi_value_page_pv"></span>&nbsp;次阅读</span>
+
+
+
+</div>
+        </div><div class="details toc" id="toc-static"  data-kept="">
+                <div class="details-summary toc-title">
+                    <span></span>
+                    <span><i class="details-icon fas fa-angle-right" aria-hidden="true"></i></span>
+                </div>
+                <div class="details-content toc-content" id="toc-content-static"><nav id="TableOfContents">
+  <ul>
+    <li>
+      <ul>
+        <li><a href="#api概述">API概述</a>
+          <ul>
+            <li><a href="#1-java标准库">1. <strong>Java标准库</strong></a></li>
+            <li><a href="#2-java-api文档">2. <strong>Java API文档</strong></a></li>
+            <li><a href="#3-第三方api">3. <strong>第三方API</strong></a></li>
+            <li><a href="#4-使用api的好处">4. <strong>使用API的好处</strong></a></li>
+          </ul>
+        </li>
+        <li><a href="#object类">Object类</a>
+          <ul>
+            <li><a href="#object类的重要特性"><code>Object</code>类的重要特性</a></li>
+            <li><a href="#示例代码">示例代码</a></li>
+          </ul>
+        </li>
+        <li><a href="#垃圾回收器">垃圾回收器</a>
+          <ul>
+            <li><a href="#垃圾回收器的工作原理">垃圾回收器的工作原理</a></li>
+            <li><a href="#垃圾回收的主要算法">垃圾回收的主要算法</a></li>
+            <li><a href="#java中的垃圾回收器">Java中的垃圾回收器</a></li>
+            <li><a href="#如何调整垃圾回收">如何调整垃圾回收</a></li>
+          </ul>
+        </li>
+        <li><a href="#scanner类">Scanner类</a>
+          <ul>
+            <li><a href="#scanner类的特点">Scanner类的特点</a></li>
+            <li><a href="#常用构造方法">常用构造方法</a></li>
+            <li><a href="#常用方法">常用方法</a></li>
+            <li><a href="#示例代码-1">示例代码</a></li>
+            <li><a href="#注意事项">注意事项</a></li>
+          </ul>
+        </li>
+        <li><a href="#string类">String类</a>
+          <ul>
+            <li><a href="#1-字符串的创建">1. 字符串的创建</a></li>
+            <li><a href="#2-不可变性">2. 不可变性</a></li>
+            <li><a href="#3-常用方法">3. 常用方法</a></li>
+            <li><a href="#4-示例代码">4. 示例代码</a></li>
+            <li><a href="#5-字符串连接">5. 字符串连接</a>
+              <ul>
+                <li><a href="#1java中的stringbuffer类">1.java中的StringBuffer类</a></li>
+                <li><a href="#2-stringbuffer的特点">2. StringBuffer的特点</a></li>
+                <li><a href="#3-常用构造方法">3. 常用构造方法</a></li>
+                <li><a href="#4-常用方法">4. 常用方法</a></li>
+                <li><a href="#5-示例代码">5. 示例代码</a></li>
+                <li><a href="#5-线程安全">5. 线程安全</a></li>
+              </ul>
+            </li>
+            <li><a href="#6字符串获取">6.字符串获取</a></li>
+            <li><a href="#7字符串转换">7.字符串转换</a></li>
+            <li><a href="#8字符串替换">8.字符串替换</a></li>
+            <li><a href="#9字符串判断">9.字符串判断</a>
+              <ul>
+                <li><a href="#1-string类的equals方法实现">1. <code>String</code>类的<code>equals()</code>方法实现</a></li>
+                <li><a href="#2-使用string类的equals方法示例">2. 使用<code>String</code>类的<code>equals()</code>方法示例</a></li>
+                <li><a href="#3-注意事项">3. 注意事项</a></li>
+              </ul>
+            </li>
+          </ul>
+        </li>
+        <li><a href="#equals与">equals与==</a>
+          <ul>
+            <li><a href="#1-equals方法的作用">1. <code>equals</code>方法的作用</a></li>
+            <li><a href="#2-示例">2. 示例</a></li>
+            <li><a href="#3-关键点总结">3. 关键点总结</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav></div>
+            </div>
+
+
+
+        <div class="content" id="content"><h2 id="api概述">API概述</h2>
+<p>在Java中，API（应用程序编程接口）指的是一些预定义的类和接口，这些类和接口可以被开发人员用来构建应用程序。Java的API为程序员提供了丰富的库和工具，使得开发变得更加高效和简单。以下是Java API的一些关键点：</p>
+<h3 id="1-java标准库">1. <strong>Java标准库</strong></h3>
+<p>Java的标准API涵盖了多个包，最重要的几个包括：</p>
+<ul>
+<li><strong><code>java.lang</code></strong>：自动导入的核心类库，例如基本数据类型、字符串处理和线程等。</li>
+<li><strong><code>java.util</code></strong>：包含集合框架、日期和时间处理、随机数生成等。</li>
+<li><strong><code>java.io</code></strong>：用于输入和输出的类，包括文件读取和写入。</li>
+<li><strong><code>java.nio</code></strong>：提供更高效的I/O操作，尤其是面向字节和字符的处理。</li>
+</ul>
+<h3 id="2-java-api文档">2. <strong>Java API文档</strong></h3>
+<p>Java API通常通过官方文档进行描述，开发者可以通过在线文档了解类、接口及其方法的使用说明。例如，Java SE的文档可以通过Oracle的官方网站访问。</p>
+<h3 id="3-第三方api">3. <strong>第三方API</strong></h3>
+<p>除了Java标准API外，开发者还可以使用各种开源和商业的第三方库和API，例如：</p>
+<ul>
+<li><strong>Apache Commons</strong>：提供了复用的功能库。</li>
+<li><strong>Spring Framework</strong>：一个流行的企业级应用开发框架。</li>
+<li><strong>Hibernate</strong>：用于对象关系映射（ORM）的框架。</li>
+</ul>
+<h3 id="4-使用api的好处">4. <strong>使用API的好处</strong></h3>
+<ul>
+<li><strong>提高生产力</strong>：通过复用现有的代码和库，减少重复开发。</li>
+<li><strong>可靠性</strong>：经过测试的API通常更为稳定，并能降低错误发生的概率。</li>
+<li><strong>文档和支持</strong>：大多数API都有良好的文档和社区支持，帮助开发者快速上手。</li>
+</ul>
+<br/>
+<h2 id="object类">Object类</h2>
+<p>在Java中，<code>Object</code>类是<strong>所有类的根类</strong>，意味着<strong>所有Java类都是直接或间接继承</strong>自<code>Object</code>类。它提供了一组基本的方法，这些方法可以被所有Java对象使用。了解<code>Object</code>类是理解Java面向对象编程的关键，因为它定义了一些通用行为。</p>
+<h3 id="object类的重要特性"><code>Object</code>类的重要特性</h3>
+<ol>
+<li><strong>所有类的基类</strong>：
+<ul>
+<li>任何类都可以被视为是<code>Object</code>类的子类，除非显式地继承自其他类（在这种情况下，<code>Object</code>类仍然是隐式的父类）。</li>
+</ul>
+</li>
+<li><strong>常用方法</strong>：
+<ul>
+<li><code>equals(Object obj)</code>：比较两个对象的值是否相等。默认实现比较的是对象的引用，但可以被重写以基于内容比较。</li>
+<li><code>hashCode()</code>：返回对象的哈希码，通常与<code>equals</code>方法一起使用。这个方法也可以重写。</li>
+<li><code>toString()</code>：返回对象的字符串表示形式，默认返回类名加对象的哈希码。可以重写以提供更有意义的信息。</li>
+<li><code>getClass()</code>：返回对象的运行时类。</li>
+<li><code>clone()</code>：创建并返回当前对象的一个副本。需要实现<code>Cloneable</code>接口才能使用。</li>
+<li><code>finalize()</code>：在垃圾回收前被调用，可以用于清理资源，但不应该依赖于它。</li>
+</ul>
+</li>
+</ol>
+<h3 id="示例代码">示例代码</h3>
+<p>以下是一个简单的示例，演示如何重写<code>toString()</code>和<code>equals()</code>方法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span><span class="lnt">35
+</span><span class="lnt">36
+</span><span class="lnt">37
+</span><span class="lnt">38
+</span><span class="lnt">39
+</span><span class="lnt">40
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Person</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">private</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Person</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//返回该对象的字符串表示，结果为一个&#34;简单的文字信息表达式&#34;</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="n">String</span><span class="w"> </span><span class="nf">toString</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="s">&#34;Person{name=&#39;&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;&#39;, age=&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;}&#34;</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//指示其他某个对象是否与此对象&#34;相等&#34;，和==比较相同。当数据类型不同时，用equals</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">equals</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// 引用相等  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">obj</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">getClass</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">getClass</span><span class="p">())</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 类型检查  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Person</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Person</span><span class="p">)</span><span class="w"> </span><span class="n">obj</span><span class="p">;</span><span class="w"> </span><span class="c1">// 强制类型转换  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">person</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">name</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">name</span><span class="p">);</span><span class="w"> </span><span class="c1">// 字段比较  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">   
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="c1">//根据不同对象的内部地址值[实际地址值]转化成一个整数[哈希码值]</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">hashCode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Objects</span><span class="p">.</span><span class="na">hash</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span><span class="w"> </span><span class="c1">// 哈希码生成  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">Main</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Person</span><span class="w"> </span><span class="n">person1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&#34;Alice&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">30</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Person</span><span class="w"> </span><span class="n">person2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&#34;Alice&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">30</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">person1</span><span class="p">.</span><span class="na">toString</span><span class="p">());</span><span class="w"> </span><span class="c1">// 输出：Person{name=&#39;Alice&#39;, age=30}  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">person1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">person2</span><span class="p">));</span><span class="w"> </span><span class="c1">// 输出：true  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">  
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><br/>
+<h2 id="垃圾回收器">垃圾回收器</h2>
+<p>在Java中，垃圾回收器（Garbage Collector，GC）是自动管理内存的机制，主要用于自动识别和回收不再使用的对象，以防止内存泄漏并优化应用程序的性能。Java的垃圾回收机制帮助开发者无需手动释放内存，从而降低了错误的风险，提高了开发效率。</p>
+<h3 id="垃圾回收器的工作原理">垃圾回收器的工作原理</h3>
+<ol>
+<li><strong>对象的创建与分配</strong>：
+当Java程序创建一个对象时，内存从堆中分配给这个对象。开发人员不需要明确释放这个内存，GC会在适当的时候自动进行。</li>
+<li><strong>对象的可达性分析</strong>：
+垃圾回收器通过可达性分析来判断对象是否仍被引用。根对象（如栈中的局部变量、静态变量等）是起始点，GC会追踪这些根对象，判断哪些对象是可达的（即仍在使用中的）和不可达的（即可以被回收的）。</li>
+<li><strong>回收策略</strong>：
+通过标记-清除、复制算法或其他策略，GC会清理那些不可达的对象，回收它们占用的内存空间。</li>
+</ol>
+<h3 id="垃圾回收的主要算法">垃圾回收的主要算法</h3>
+<ol>
+<li><strong>标记-清除（Mark-and-Sweep）</strong>：
+<ul>
+<li>首先标记所有可达对象。</li>
+<li>然后清理未标记的对象，释放它们的内存。</li>
+</ul>
+</li>
+<li><strong>复制（Copying）</strong>：
+<ul>
+<li>将存活的对象复制到一个新空间，清除旧空间。</li>
+<li>避免了内存碎片。</li>
+</ul>
+</li>
+<li><strong>分代收集（Generational GC）</strong>：
+<ul>
+<li>大多数Java垃圾回收器采用分代策略，将对象分为年轻代（Young Generation）和老年代（Old Generation）。</li>
+<li>年轻代中的对象通常短命，而老年代中的对象更长寿，GC可频繁回收年轻代，减少老年代的回收频率。</li>
+</ul>
+</li>
+</ol>
+<h3 id="java中的垃圾回收器">Java中的垃圾回收器</h3>
+<p>Java提供了多种垃圾回收器，以下是几种常见的：</p>
+<ol>
+<li><strong>串行垃圾回收器（Serial GC）</strong>：
+<ul>
+<li>简单易用，适合单线程环境，在老年代的处理上较慢。</li>
+</ul>
+</li>
+<li><strong>并行垃圾回收器（Parallel GC）</strong>：
+<ul>
+<li>针对多核处理器，使用多线程并行处理，适用于需要最高吞吐量的应用。</li>
+</ul>
+</li>
+<li><strong>并发标记清除（Concurrent Mark-Sweep, CMS）</strong>：
+<ul>
+<li>旨在减少垃圾回收的停顿时间，通过并发执行标记和清除过程来保持应用的响应性。</li>
+</ul>
+</li>
+<li><strong>G1垃圾回收器（Garbage-First, G1 GC）</strong>：
+<ul>
+<li>综合了多个算法，目前是默认的高性能垃圾回收器，适合大堆内存和多CPU系统。G1 GC使用分区（Region）处理内存，使得大对象可以有效地被收集。</li>
+</ul>
+</li>
+</ol>
+<h3 id="如何调整垃圾回收">如何调整垃圾回收</h3>
+<p>Java允许开发者通过JVM参数来调整垃圾回收的行为。例如：</p>
+<ul>
+<li><code>-XX:+UseG1GC</code>：启用G1垃圾回收器。</li>
+<li><code>-Xmx512m</code>：设置最大堆内存为512MB。</li>
+<li><code>-Xms256m</code>：设置初始堆内存为256MB。</li>
+</ul>
+<br/>
+<h2 id="scanner类">Scanner类</h2>
+<p>在Java中，<code>Scanner</code>类是一个非常有用的工具，主要用于获取用户输入和读取数据。它属于<code>java.util</code>包，可以从多种输入源读取文本，包括控制台输入、文件、字符串等。通过<code>Scanner</code>类，开发者可以以简单的方式处理用户输入。</p>
+<h3 id="scanner类的特点">Scanner类的特点</h3>
+<ol>
+<li><strong>多种输入来源</strong>：
+<ul>
+<li><code>Scanner</code>可以从控制台、文件、字符串、输入流等读取数据。</li>
+</ul>
+</li>
+<li><strong>简易的数据解析</strong>：
+<ul>
+<li>提供了一系列方法，可以方便地解析基本数据类型（如<code>int</code>、<code>double</code>、<code>String</code>等）。</li>
+</ul>
+</li>
+<li><strong>支持正则表达式</strong>：
+<ul>
+<li>可以使用正则表达式来定义分隔符，对输入进行更加灵活的处理。</li>
+</ul>
+</li>
+</ol>
+<h3 id="常用构造方法">常用构造方法</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w"> </span><span class="c1">// 从控制台读取输入  </span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="常用方法">常用方法</h3>
+<ul>
+<li><code>next()</code>: 读取下一个完整的单词（以空格为分隔符）。</li>
+<li><code>nextLine()</code>: 读取当前行的所有输入，包括空格。</li>
+<li><code>nextInt()</code>: 读取下一个整数。</li>
+<li><code>nextDouble()</code>: 读取下一个双精度浮点数。</li>
+<li><code>hasNext()</code>: 返回一个布尔值，指示是否还有输入。</li>
+<li><code>close()</code>: 关闭Scanner，释放相关资源。</li>
+</ul>
+<h3 id="示例代码-1">示例代码</h3>
+<p>以下是一个简单的示例，演示如何使用<code>Scanner</code>类从控制台读取用户输入：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kn">import</span><span class="w"> </span><span class="nn">java.util.Scanner</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">ScannerExample</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Scanner</span><span class="w"> </span><span class="n">scanner</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Scanner</span><span class="p">(</span><span class="n">System</span><span class="p">.</span><span class="na">in</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&#34;请输入您的名字：&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextLine</span><span class="p">();</span><span class="w"> </span><span class="c1">// 读取整行输入  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">print</span><span class="p">(</span><span class="s">&#34;请输入您的年龄：&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">scanner</span><span class="p">.</span><span class="na">nextInt</span><span class="p">();</span><span class="w"> </span><span class="c1">// 读取整数  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;你好，&#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">name</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34;！您今年 &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; 岁。&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">scanner</span><span class="p">.</span><span class="na">close</span><span class="p">();</span><span class="w"> </span><span class="c1">// 关闭scanner避免资源浪费  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">  
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="注意事项">注意事项</h3>
+<ol>
+<li><strong>资源管理</strong>：
+<ul>
+<li>使用完<code>Scanner</code>后应调用<code>close()</code>方法关闭，以释放相关资源。特别是在读取文件时，更应注意这一点。</li>
+</ul>
+</li>
+<li><strong>输入异常处理</strong>：
+<ul>
+<li>读取整数或浮点数时，如果输入不符合预期，<code>Scanner</code>会抛出<code>InputMismatchException</code>。建议在读取输入时进行异常处理，以避免程序崩溃。</li>
+</ul>
+</li>
+<li><strong>获取字符串包含空格的输入</strong>：
+<ul>
+<li>使用<code>nextLine()</code>而不是<code>next()</code>，因为<code>next()</code>读取到第一个空格就会停止。</li>
+</ul>
+</li>
+</ol>
+<br/>
+<h2 id="string类">String类</h2>
+<p>在Java中，<code>String</code>类是用于表示<strong>字符串的主要类</strong>，属于<code>java.lang</code>包。<code>String</code>在Java中是一个不可变（immutable）对象，这意味着一旦创建，字符串的内容就不能被改变。由于其广泛应用和重要性，理解<code>String</code>类的特性和方法对于Java开发者至关重要。</p>
+<p>String的<code>s</code>，大写为类，小写为数据类型。</p>
+<h3 id="1-字符串的创建">1. 字符串的创建</h3>
+<p>Java中可以通过以下几种方式创建<code>String</code>对象：</p>
+<ul>
+<li>
+<p><strong>字面量方式</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">str1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Hello, World!&#34;</span><span class="p">;</span><span class="w">  
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>使用构造函数</strong>：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">str2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&#34;Hello, World!&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<p>尽管可以用构造函数创建字符串，推荐使用字面量方式，因为Java会在字符串池中重用相同内容的字符串，以节省内存。</p>
+<h3 id="2-不可变性">2. 不可变性</h3>
+<p><code>String</code>对象一旦创建，就无法更改其内容。如果对字符串进行修改，例如连接或替换，会生成一个新的字符串对象。例如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Hello&#34;</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="s">&#34; World&#34;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 创建一个新字符串对象  HelloWorld</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="c1">//字符串直接赋值的方式是先到字符串常量池里去找，如果有就直接返回，如果没有就创建并返回</span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p>字符串变量相加，例：<code>s1+s2</code> ，先开空间，再相加</p>
+<p>字符串常量相加，例：<code>&quot;Hello&quot; + &quot;World&quot;</code> ，先相加，再常量池找，有就返回，无就创建返回</p>
+<h3 id="3-常用方法">3. 常用方法</h3>
+<p><code>String</code>类提供了丰富的方法，以下是一些常用的方法：</p>
+<ul>
+<li><code>length()</code>：返回字符串的长度。</li>
+<li><code>charAt(int index)</code>：返回指定位置的字符。</li>
+<li><code>substring(int beginIndex, int endIndex)</code>：返回字符串的子串（不包含<code>endIndex</code>的字符）。</li>
+<li><code>indexOf(String str)</code>：返回指定子字符串第一次出现的位置。</li>
+<li><code>toUpperCase()</code>：将字符串转换为大写。</li>
+<li><code>toLowerCase()</code>：将字符串转换为小写。</li>
+<li><code>trim()</code>：去除字符串两端的空格。</li>
+<li><code>equals(Object obj)</code>：比较两个字符串的内容是否相等。</li>
+<li><code>equalsIgnoreCase(String anotherString)</code>：忽略大小写比较字符串。</li>
+<li><code>replace(char oldChar, char newChar)</code>：替换字符串中的字符。</li>
+<li><code>split(String regex)</code>：根据给定的正则表达式分割字符串。</li>
+<li><code>contains(String str)</code>：判断大写字符串中是否包含小字符串。</li>
+<li><code>srartsWith(String str)</code>：判断字符串是否以某个指定的字符串开头。</li>
+<li><code>endsWith(String str)</code>：判断字符串是否以某个指定的字符串结尾。</li>
+<li><code>isEmpty()</code>：判断字符串是否为空。
+<ul>
+<li>字符串内容为空（对象存在，内容为空）<code>String s = &quot; &quot;</code></li>
+<li>字符串对象为空（对象不存在，空引用）<code>String s = null</code></li>
+</ul>
+</li>
+</ul>
+<h3 id="4-示例代码">4. 示例代码</h3>
+<p>以下是一个简单的示例，演示了<code>String</code>类的常用方法：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StringExample</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;  Hello, World!  &#34;</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 字符串长度  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;长度: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">length</span><span class="p">());</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 提取子串  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">subStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">substring</span><span class="p">(</span><span class="n">2</span><span class="p">,</span><span class="w"> </span><span class="n">7</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;子串: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">subStr</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 字符替换  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">replacedStr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">replace</span><span class="p">(</span><span class="s">&#34;World&#34;</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Java&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;替换后的字符串: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">replacedStr</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 字符串分割  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">parts</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">trim</span><span class="p">().</span><span class="na">split</span><span class="p">(</span><span class="s">&#34;, &#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;分割后的部分:&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">part</span><span class="w"> </span><span class="p">:</span><span class="w"> </span><span class="n">parts</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">            </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">part</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// Comparing strings  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;  hello, world!  &#34;</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="kt">boolean</span><span class="w"> </span><span class="n">isEqual</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">str</span><span class="p">.</span><span class="na">trim</span><span class="p">().</span><span class="na">equalsIgnoreCase</span><span class="p">(</span><span class="n">str2</span><span class="p">.</span><span class="na">trim</span><span class="p">());</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;忽略大小写比较: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">isEqual</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">  
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="5-字符串连接">5. 字符串连接</h3>
+<p>频繁的字符串连接可能会导致性能问题，因为每次连接都会创建新的字符串对象。为了解决这个问题，可以使用<code>StringBuilder</code>或<code>StringBuffer</code>，如：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">StringBuilder</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuilder</span><span class="p">();</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&#34;Hello&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&#34; World&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sb</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span><span class="w"> </span><span class="c1">// 转换为String  </span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="1java中的stringbuffer类">1.java中的StringBuffer类</h4>
+<p>在Java中，<code>StringBuffer</code>是一个<strong>可变的字符序列类</strong>，属于<code>java.lang</code>包。与<code>String</code>类不同，<code>StringBuffer</code>对象的内容可以在创建后进行修改，而不需要创建新的对象。这使得<code>StringBuffer</code>非常适合用于需要频繁修改字符串内容的情况，例如在拼接、插入或删除字符时。</p>
+<h4 id="2-stringbuffer的特点">2. StringBuffer的特点</h4>
+<ul>
+<li><strong>可变性</strong>：<code>StringBuffer</code>对象的内容可以更改，因此通过修改一个<code>StringBuffer</code>对象不会创建新的对象。</li>
+<li><strong>线程安全</strong>：<code>StringBuffer</code>的方法是同步的，意味着它是线程安全的，适合在多线程环境中使用。</li>
+<li><strong>性能较好</strong>：在进行大量的字符串操作（如拼接）时，<code>StringBuffer</code>通常比<code>String</code>更高效，因为它避免了字符串的重复创建。</li>
+</ul>
+<h4 id="3-常用构造方法">3. 常用构造方法</h4>
+<ul>
+<li>
+<p><strong>默认构造方法</strong>：创建一个长度为16的空<code>StringBuffer</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">StringBuffer</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuffer</span><span class="p">();</span><span class="w">  
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>指定初始容量</strong>：创建一个空的<code>StringBuffer</code>，并指定初始容量。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">StringBuffer</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuffer</span><span class="p">(</span><span class="n">50</span><span class="p">);</span><span class="w"> </span><span class="c1">// 初始容量为50  </span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+<li>
+<p><strong>使用字符串初始化</strong>：用指定字符串的内容初始化<code>StringBuffer</code>。</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">StringBuffer</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuffer</span><span class="p">(</span><span class="s">&#34;Hello&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div></li>
+</ul>
+<h4 id="4-常用方法">4. 常用方法</h4>
+<p><code>StringBuffer</code>类提供了很多方法来操作字符序列，以下是一些常用的方法：</p>
+<ul>
+<li><code>append(String str)</code>：在此<code>StringBuffer</code>的末尾添加字符串。</li>
+<li><code>insert(int offset, String str)</code>：在指定位置插入字符串。</li>
+<li><code>delete(int start, int end)</code>：删除从<code>start</code>到<code>end</code>的字符。</li>
+<li><code>replace(int start, int end, String str)</code>：替换从<code>start</code>到<code>end</code>的字符为给定字符串。</li>
+<li><code>reverse()</code>：反转字符序列。</li>
+<li><code>toString()</code>：将<code>StringBuffer</code>转换为<code>String</code>。</li>
+<li><code>capacity()</code>：返回当前容量。</li>
+<li><code>length()</code>：返回字符序列的长度。</li>
+</ul>
+<h4 id="5-示例代码">5. 示例代码</h4>
+<p>以下是一个使用<code>StringBuffer</code>的简单示例，展示其基本操作：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StringBufferExample</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">StringBuffer</span><span class="w"> </span><span class="n">sb</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">StringBuffer</span><span class="p">(</span><span class="s">&#34;Hello&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 追加字符串  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">sb</span><span class="p">.</span><span class="na">append</span><span class="p">(</span><span class="s">&#34; World&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;追加后的字符串: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sb</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出: Hello World  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 插入字符串  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">sb</span><span class="p">.</span><span class="na">insert</span><span class="p">(</span><span class="n">5</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;,&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;插入后的字符串: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sb</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出: Hello, World  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 删除字符  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">sb</span><span class="p">.</span><span class="na">delete</span><span class="p">(</span><span class="n">5</span><span class="p">,</span><span class="w"> </span><span class="n">6</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;删除后的字符串: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sb</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出: Hello World  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 替换字符  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">sb</span><span class="p">.</span><span class="na">replace</span><span class="p">(</span><span class="n">6</span><span class="p">,</span><span class="w"> </span><span class="n">11</span><span class="p">,</span><span class="w"> </span><span class="s">&#34;Java&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;替换后的字符串: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sb</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出: Hello Java  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 反转字符串  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">sb</span><span class="p">.</span><span class="na">reverse</span><span class="p">();</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;反转后的字符串: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">sb</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出: avaJ olleH  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 转换为String  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">sb</span><span class="p">.</span><span class="na">toString</span><span class="p">();</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">&#34;转为String: &#34;</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">result</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出: avaJ olleH  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">  
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="5-线程安全">5. 线程安全</h4>
+<p>尽管<code>StringBuffer</code>是线程安全的，但在某些情况下，使用<code>StringBuilder</code>（不安全但性能更高）会更合适，尤其是在单线程环境中。<code>StringBuilder</code>的使用方法和<code>StringBuffer</code>类似，但其方法没有同步，因此在多线程情况下使用时需要小心。</p>
+<h3 id="6字符串获取">6.字符串获取</h3>
+<ul>
+<li><code>int length()</code>：获取字符串的长度</li>
+<li><code>char charAt(int index)</code>：获取指定索引的位置上的字符</li>
+<li><code>int indexOf(int ch)</code>：返回指定字符在此字符串中第一次出现出的索引【可以给char类型的实参】</li>
+<li><code>int indexOf(String str)</code>：字符串（返回索引）</li>
+<li><code>int indexOf(int ch,int fromIndex)</code>：从指定位置（字符，返回索引）</li>
+<li><code>int indexOf(String str,int fromIndex)</code>：从指定位置（字符，返回索引）</li>
+<li><code>String subString(int start)</code>：从指定位置截取字符串（包括start位置的字符）</li>
+<li><code>String subString(int start,int end)</code>：从指定位置到指定位置（包左不包右）</li>
+</ul>
+<h3 id="7字符串转换">7.字符串转换</h3>
+<ul>
+<li><code>byte[] getBytes()</code>：把字符串转换为字节数组</li>
+<li><code>char[] toCharArray()</code>：把字符串转换为字符数组</li>
+<li><code>static String valueOf(char[] chs)</code>：把字符数组[或任意类型数据]换为字符串</li>
+<li><code>static String valueOf(int i)</code>：把int类型的数据转成字符串</li>
+<li><code>String toLowerCase()</code>：把字符串转成小写（原字符串不发生改变，转换时生成新的）</li>
+<li><code>String toUpperCase()</code>：把字符串转成大写</li>
+<li><code>String concat(String str)</code>：把字符串拼接</li>
+</ul>
+<h3 id="8字符串替换">8.字符串替换</h3>
+<ul>
+<li><code>String replace(char old,char new)</code></li>
+<li><code>String replace(String old,String new)</code></li>
+<li><code>String trim()</code>：去除字符串两端的空格</li>
+</ul>
+<h3 id="9字符串判断">9.字符串判断</h3>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="n">String</span><span class="w"> </span><span class="n">s1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&#34;Hello&#34;</span><span class="p">);</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">String</span><span class="w"> </span><span class="n">s2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Hello&#34;</span><span class="p">;</span><span class="w"> 
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">s1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">s2</span><span class="w">      </span><span class="c1">//false</span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="n">s1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">s2</span><span class="p">)</span><span class="w"> </span><span class="c1">//true    </span><span class="w">
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><p><code>==</code> 比较的是引用类型的地址值是否相同。<code>equals</code>  默认比较的也是引用类型的地址值。</p>
+<p><code>String类</code>重写了<code>equals()</code>方法，以便比较字符串的内容而非其引用。</p>
+<h4 id="1-string类的equals方法实现">1. <code>String</code>类的<code>equals()</code>方法实现</h4>
+<p>在Java中，<code>String</code>类重写了<code>equals()</code>方法，以便比较字符串的内容而非其引用。这意味着两个字符串对象，如果它们的字符序列相同，使用<code>equals()</code>方法比较时会返回<code>true</code>。下面是<code>String</code>类中<code>equals()</code>方法的实现逻辑以及一些常见的使用示例。</p>
+<p><code>String</code>类的<code>equals()</code>方法源码的核心逻辑如下：</p>
+<ul>
+<li>首先，检查两个引用是否指向同一个对象（如果是，则返回<code>true</code>）。</li>
+<li>然后，检查传递的对象是否为<code>null</code>，或者它是否与当前对象的类型不同。</li>
+<li>如果上述检查都通过，最后会逐个比较字符串中的字符，确保内容相同。</li>
+</ul>
+<p>以下是<code>String</code>类重写<code>equals()</code>方法的简化示例：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt">1
+</span><span class="lnt">2
+</span><span class="lnt">3
+</span><span class="lnt">4
+</span><span class="lnt">5
+</span><span class="lnt">6
+</span><span class="lnt">7
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="nd">@Override</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">equals</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// 引用相等  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">obj</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">getClass</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">getClass</span><span class="p">())</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 类型检查  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">other</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">String</span><span class="p">)</span><span class="w"> </span><span class="n">obj</span><span class="p">;</span><span class="w"> </span><span class="c1">// 强制类型转换  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="k">this</span><span class="p">.</span><span class="na">value</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">other</span><span class="p">.</span><span class="na">value</span><span class="p">);</span><span class="w"> </span><span class="c1">// 比较内容  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">  
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="2-使用string类的equals方法示例">2. 使用<code>String</code>类的<code>equals()</code>方法示例</h4>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">StringEqualsExample</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&#34;Hello&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">String</span><span class="p">(</span><span class="s">&#34;Hello&#34;</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str3</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Hello&#34;</span><span class="p">;</span><span class="w"> </span><span class="c1">// 字符串常量池  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">String</span><span class="w"> </span><span class="n">str4</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&#34;Hello&#34;</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 使用equals()比较内容  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">str2</span><span class="p">));</span><span class="w"> </span><span class="c1">// 输出：true (内容相同)  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">str3</span><span class="p">));</span><span class="w"> </span><span class="c1">// 输出：true (内容相同)  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str3</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">str4</span><span class="p">));</span><span class="w"> </span><span class="c1">// 输出：true (内容相同)  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 使用==比较引用  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">str2</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：false (不同对象)  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">str3</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">str4</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：true (相同对象，需要注意字符串池)  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">  
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h4 id="3-注意事项">3. 注意事项</h4>
+<ol>
+<li><strong>反身性</strong>：任何非空引用调用<code>equals</code>应该返回<code>true</code>。</li>
+<li><strong>对称性</strong>：如果<code>x.equals(y)</code>返回<code>true</code>，那么<code>y.equals(x)</code>也应该返回<code>true</code>。</li>
+<li><strong>传递性</strong>：如果<code>x.equals(y)</code>和<code>y.equals(z)</code>都返回<code>true</code>，则<code>x.equals(z)</code>也应返回<code>true</code>。</li>
+<li><strong>一致性</strong>：如果没有改变对象的内容，连续多次调用<code>equals</code>应该始终返回相同的结果。</li>
+<li><strong>对于任何非空引用<code>x</code>，<code>x.equals(null)</code>应该返回<code>false</code></strong>。</li>
+</ol>
+<br/>
+<h2 id="equals与">equals与==</h2>
+<p>在Java中，<code>equals</code>方法用于<strong>比较两个对象的内容</strong>是否相同，而不是它们的地址值（引用）。这意味着，如果你使用<code>equals</code>方法比较两个不同的对象，但它们的内容相同，则返回值为<code>true</code>。这与<code>==</code>运算符不同，后者<strong>比较的是对象的引用</strong>，即它们在内存中的地址。</p>
+<h3 id="1-equals方法的作用">1. <code>equals</code>方法的作用</h3>
+<ul>
+<li><strong>默认实现</strong>：<code>Object</code>类提供了<code>equals</code>方法的<strong>默认</strong>实现，该实现<strong>使用<code>==</code>运算符</strong>来比较对象的地址。因此，除非重写，否则<code>equals</code>方法将比较引用。</li>
+<li><strong>重写<code>equals</code>方法</strong>：通常，开发者会在其自定义类中重写<code>equals</code>方法，以便根据类的字段比较对象的实际内容。</li>
+</ul>
+<h3 id="2-示例">2. 示例</h3>
+<p>下面是一个简单的例子，展示了<code>equals</code>和<code>==</code>的区别：</p>
+<div class="highlight"><div class="chroma">
+<table class="lntable"><tr><td class="lntd">
+<pre tabindex="0" class="chroma"><code><span class="lnt"> 1
+</span><span class="lnt"> 2
+</span><span class="lnt"> 3
+</span><span class="lnt"> 4
+</span><span class="lnt"> 5
+</span><span class="lnt"> 6
+</span><span class="lnt"> 7
+</span><span class="lnt"> 8
+</span><span class="lnt"> 9
+</span><span class="lnt">10
+</span><span class="lnt">11
+</span><span class="lnt">12
+</span><span class="lnt">13
+</span><span class="lnt">14
+</span><span class="lnt">15
+</span><span class="lnt">16
+</span><span class="lnt">17
+</span><span class="lnt">18
+</span><span class="lnt">19
+</span><span class="lnt">20
+</span><span class="lnt">21
+</span><span class="lnt">22
+</span><span class="lnt">23
+</span><span class="lnt">24
+</span><span class="lnt">25
+</span><span class="lnt">26
+</span><span class="lnt">27
+</span><span class="lnt">28
+</span><span class="lnt">29
+</span><span class="lnt">30
+</span><span class="lnt">31
+</span><span class="lnt">32
+</span><span class="lnt">33
+</span><span class="lnt">34
+</span></code></pre></td>
+<td class="lntd">
+<pre tabindex="0" class="chroma"><code class="language-java" data-lang="java"><span class="line"><span class="cl"><span class="kd">class</span> <span class="nc">Person</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="nf">Person</span><span class="p">(</span><span class="n">String</span><span class="w"> </span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">age</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">name</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">name</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">this</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">age</span><span class="p">;</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">boolean</span><span class="w"> </span><span class="nf">equals</span><span class="p">(</span><span class="n">Object</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="k">this</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">obj</span><span class="p">)</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">true</span><span class="p">;</span><span class="w"> </span><span class="c1">// 引用相等  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">obj</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="kc">null</span><span class="w"> </span><span class="o">||</span><span class="w"> </span><span class="n">getClass</span><span class="p">()</span><span class="w"> </span><span class="o">!=</span><span class="w"> </span><span class="n">obj</span><span class="p">.</span><span class="na">getClass</span><span class="p">())</span><span class="w"> </span><span class="k">return</span><span class="w"> </span><span class="kc">false</span><span class="p">;</span><span class="w"> </span><span class="c1">// 类型检查  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Person</span><span class="w"> </span><span class="n">person</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">(</span><span class="n">Person</span><span class="p">)</span><span class="w"> </span><span class="n">obj</span><span class="p">;</span><span class="w"> </span><span class="c1">// 强制类型转换  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">age</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">person</span><span class="p">.</span><span class="na">age</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="n">name</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">person</span><span class="p">.</span><span class="na">name</span><span class="p">);</span><span class="w"> </span><span class="c1">// 内容比较  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="nd">@Override</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="nf">hashCode</span><span class="p">()</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="k">return</span><span class="w"> </span><span class="n">Objects</span><span class="p">.</span><span class="na">hash</span><span class="p">(</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="n">age</span><span class="p">);</span><span class="w"> </span><span class="c1">// 生成哈希码  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="kd">public</span><span class="w"> </span><span class="kd">class</span> <span class="nc">EqualsExample</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="kd">public</span><span class="w"> </span><span class="kd">static</span><span class="w"> </span><span class="kt">void</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span><span class="w"> </span><span class="n">args</span><span class="p">)</span><span class="w"> </span><span class="p">{</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Person</span><span class="w"> </span><span class="n">person1</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&#34;Alice&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">30</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">Person</span><span class="w"> </span><span class="n">person2</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="k">new</span><span class="w"> </span><span class="n">Person</span><span class="p">(</span><span class="s">&#34;Alice&#34;</span><span class="p">,</span><span class="w"> </span><span class="n">30</span><span class="p">);</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w">        
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 使用==比较引用  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">person1</span><span class="w"> </span><span class="o">==</span><span class="w"> </span><span class="n">person2</span><span class="p">);</span><span class="w"> </span><span class="c1">// 输出：false  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="c1">// 使用equals比较内容  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">        </span><span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="n">person1</span><span class="p">.</span><span class="na">equals</span><span class="p">(</span><span class="n">person2</span><span class="p">));</span><span class="w"> </span><span class="c1">// 输出：true  </span><span class="w">
+</span></span></span><span class="line"><span class="cl"><span class="w">    </span><span class="p">}</span><span class="w">  
+</span></span></span><span class="line"><span class="cl"><span class="w"></span><span class="p">}</span><span class="w">  
+</span></span></span></code></pre></td></tr></table>
+</div>
+</div><h3 id="3-关键点总结">3. 关键点总结</h3>
+<ul>
+<li><strong><code>==</code>运算符</strong>：用于检查两个对象引用是否指向同一块内存（即地址值）。</li>
+<li><strong><code>equals</code>方法</strong>：用于检查两个对象的值是否相等，具体比较的内容取决于类中如何重写<code>equals</code>方法。</li>
+<li>重写<code>equals</code>时的注意事项：
+<ul>
+<li>确保反身性：对于任意非空引用<code>x</code>，<code>x.equals(x)</code>应该返回<code>true</code>。</li>
+<li>对称性：如果<code>x.equals(y)</code>返回<code>true</code>，那么<code>y.equals(x)</code>也应该返回<code>true</code>。</li>
+<li>传递性：如果<code>x.equals(y)</code>和<code>y.equals(z)</code>都返回<code>true</code>，则<code>x.equals(z)</code>也应该返回<code>true</code>。</li>
+<li>一致性：多次调用<code>x.equals(y)</code>应该始终返回相同的结果，前提是对象未修改。</li>
+<li>对任何非空引用<code>x</code>，<code>x.equals(null)</code>应该返回<code>false</code>。</li>
+</ul>
+</li>
+</ul>
+<br/>
+</div><div class="post-footer" id="post-footer">
+    <div class="post-info">
+        <div class="post-info-line">
+            <div class="post-info-mod">
+                <span>更新于 2024-12-27</span>
+            </div></div>
+
+    </div>
+
+    <div class="post-info-more">
+        <section class="post-tags"><i class="fas fa-tags fa-fw" aria-hidden="true"></i>&nbsp;<a href="/tags/java/">Java</a></section>
+        <section>
+            <span><a href="javascript:void(0);" onclick="window.history.back();">返回</a></span>&nbsp;|&nbsp;<span><a href="/">主页</a></span>
+        </section>
+    </div>
+
+    <div class="post-nav"><a href="/text40/" class="prev" rel="prev" title="【Java】Java语言基础（二）"><i class="fas fa-angle-left fa-fw" aria-hidden="true"></i>【Java】Java语言基础（二）</a>
+            <a href="/text45/" class="next" rel="next" title="【Java】Java语言进阶（三）">【Java】Java语言进阶（三）<i class="fas fa-angle-right fa-fw" aria-hidden="true"></i></a></div>
+</div>
+<div id="comments"><div id="valine" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://valine.js.org/">Valine</a>.
+            </noscript><div id="utterances" class="comment"></div><noscript>
+                Please enable JavaScript to view the comments powered by <a href="https://utteranc.es/">utterances</a>.
+            </noscript></div></article></div>
+            </main><footer class="footer">
+        <div class="footer-container">
+            <div class="footer-line">
+                <span id="run-time"></span>
+            </div><div class="footer-line">欢迎来到wangty的笔记博客空间</div><div class="footer-line" itemscope itemtype="http://schema.org/CreativeWork"><i class="far fa-copyright fa-fw" aria-hidden="true"></i><span itemprop="copyrightYear">2021 - 2025</span><span class="author" itemprop="copyrightHolder">&nbsp;<a href="/" target="_blank">wangty</a></span></div>
+            <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+            <span id="busuanzi_container_site_pv">
+                  <i class="fa fa-eye"></i> <span id="busuanzi_value_site_pv"></span> 次
+              </span> |
+                        <span id="busuanzi_container_site_uv">
+                  <i class="fa fa-user"></i> <span id="busuanzi_value_site_uv"></span> 位
+              </span>
+        </div>
+    </footer></div>
+
+        <div id="fixed-buttons"><a href="#" id="back-to-top" class="fixed-button" title="回到顶部">
+                <i class="fas fa-arrow-up fa-fw" aria-hidden="true"></i>
+            </a><a href="#" id="view-comments" class="fixed-button" title="查看评论">
+                <i class="fas fa-comment fa-fw" aria-hidden="true"></i>
+            </a>
+        </div><link rel="stylesheet" href="/lib/valine/valine.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/css/lightgallery-bundle.min.css"><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.css"><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/valine@1.5.0/dist/Valine.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/autocomplete.js@0.38.1/dist/autocomplete.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/algoliasearch@4.13.1/dist/algoliasearch-lite.umd.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lazysizes@5.3.2/lazysizes.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/lightgallery.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/thumbnail/lg-thumbnail.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lightgallery@2.5.0/plugins/zoom/lg-zoom.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/clipboard@2.0.11/dist/clipboard.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/sharer.js@0.5.1/sharer.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/katex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/auto-render.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/copy-tex.min.js"></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/katex@0.16.0/dist/contrib/mhchem.min.js"></script><script type="text/javascript">window.config={"code":{"copyTitle":"复制到剪贴板","maxShownLines":20},"comment":{"utterances":{"darkTheme":"github-dark","issueTerm":"pathname","label":"","lightTheme":"github-light","repo":"Wangty654.github.io"},"valine":{"appId":"QGzwQXOqs5JOhN4RGPOkR2mR-MdYXbMMI","appKey":"WBmoGyJtbqUswvfLh6L8iEBr","avatar":"mp","el":"#valine","emojiCDN":"https://cdn.jsdelivr.net/npm/emoji-datasource-google@14.0.0/img/google/64/","emojiMaps":{"100":"1f4af.png","alien":"1f47d.png","anger":"1f4a2.png","angry":"1f620.png","anguished":"1f627.png","astonished":"1f632.png","black_heart":"1f5a4.png","blue_heart":"1f499.png","blush":"1f60a.png","bomb":"1f4a3.png","boom":"1f4a5.png","broken_heart":"1f494.png","brown_heart":"1f90e.png","clown_face":"1f921.png","cold_face":"1f976.png","cold_sweat":"1f630.png","confounded":"1f616.png","confused":"1f615.png","cry":"1f622.png","crying_cat_face":"1f63f.png","cupid":"1f498.png","dash":"1f4a8.png","disappointed":"1f61e.png","disappointed_relieved":"1f625.png","dizzy":"1f4ab.png","dizzy_face":"1f635.png","drooling_face":"1f924.png","exploding_head":"1f92f.png","expressionless":"1f611.png","face_vomiting":"1f92e.png","face_with_cowboy_hat":"1f920.png","face_with_hand_over_mouth":"1f92d.png","face_with_head_bandage":"1f915.png","face_with_monocle":"1f9d0.png","face_with_raised_eyebrow":"1f928.png","face_with_rolling_eyes":"1f644.png","face_with_symbols_on_mouth":"1f92c.png","face_with_thermometer":"1f912.png","fearful":"1f628.png","flushed":"1f633.png","frowning":"1f626.png","ghost":"1f47b.png","gift_heart":"1f49d.png","green_heart":"1f49a.png","grimacing":"1f62c.png","grin":"1f601.png","grinning":"1f600.png","hankey":"1f4a9.png","hear_no_evil":"1f649.png","heart":"2764-fe0f.png","heart_decoration":"1f49f.png","heart_eyes":"1f60d.png","heart_eyes_cat":"1f63b.png","heartbeat":"1f493.png","heartpulse":"1f497.png","heavy_heart_exclamation_mark_ornament":"2763-fe0f.png","hole":"1f573-fe0f.png","hot_face":"1f975.png","hugging_face":"1f917.png","hushed":"1f62f.png","imp":"1f47f.png","innocent":"1f607.png","japanese_goblin":"1f47a.png","japanese_ogre":"1f479.png","joy":"1f602.png","joy_cat":"1f639.png","kiss":"1f48b.png","kissing":"1f617.png","kissing_cat":"1f63d.png","kissing_closed_eyes":"1f61a.png","kissing_heart":"1f618.png","kissing_smiling_eyes":"1f619.png","laughing":"1f606.png","left_speech_bubble":"1f5e8-fe0f.png","love_letter":"1f48c.png","lying_face":"1f925.png","mask":"1f637.png","money_mouth_face":"1f911.png","nauseated_face":"1f922.png","nerd_face":"1f913.png","neutral_face":"1f610.png","no_mouth":"1f636.png","open_mouth":"1f62e.png","orange_heart":"1f9e1.png","partying_face":"1f973.png","pensive":"1f614.png","persevere":"1f623.png","pleading_face":"1f97a.png","pouting_cat":"1f63e.png","purple_heart":"1f49c.png","rage":"1f621.png","relaxed":"263a-fe0f.png","relieved":"1f60c.png","revolving_hearts":"1f49e.png","right_anger_bubble":"1f5ef-fe0f.png","robot_face":"1f916.png","rolling_on_the_floor_laughing":"1f923.png","scream":"1f631.png","scream_cat":"1f640.png","see_no_evil":"1f648.png","shushing_face":"1f92b.png","skull":"1f480.png","skull_and_crossbones":"2620-fe0f.png","sleeping":"1f634.png","sleepy":"1f62a.png","slightly_frowning_face":"1f641.png","slightly_smiling_face":"1f642.png","smile":"1f604.png","smile_cat":"1f638.png","smiley":"1f603.png","smiley_cat":"1f63a.png","smiling_face_with_3_hearts":"1f970.png","smiling_imp":"1f608.png","smirk":"1f60f.png","smirk_cat":"1f63c.png","sneezing_face":"1f927.png","sob":"1f62d.png","space_invader":"1f47e.png","sparkling_heart":"1f496.png","speak_no_evil":"1f64a.png","speech_balloon":"1f4ac.png","star-struck":"1f929.png","stuck_out_tongue":"1f61b.png","stuck_out_tongue_closed_eyes":"1f61d.png","stuck_out_tongue_winking_eye":"1f61c.png","sunglasses":"1f60e.png","sweat":"1f613.png","sweat_drops":"1f4a6.png","sweat_smile":"1f605.png","thinking_face":"1f914.png","thought_balloon":"1f4ad.png","tired_face":"1f62b.png","triumph":"1f624.png","two_hearts":"1f495.png","unamused":"1f612.png","upside_down_face":"1f643.png","weary":"1f629.png","white_frowning_face":"2639-fe0f.png","white_heart":"1f90d.png","wink":"1f609.png","woozy_face":"1f974.png","worried":"1f61f.png","yawning_face":"1f971.png","yellow_heart":"1f49b.png","yum":"1f60b.png","zany_face":"1f92a.png","zipper_mouth_face":"1f910.png","zzz":"1f4a4.png"},"enableQQ":false,"highlight":true,"lang":"zh-CN","pageSize":10,"placeholder":"你的评论 ...","recordIP":true,"serverURLs":"https://leancloud.hugoloveit.com","visitor":true}},"lightgallery":true,"math":{"delimiters":[{"display":true,"left":"$$","right":"$$"},{"display":true,"left":"\\[","right":"\\]"},{"display":true,"left":"\\begin{equation}","right":"\\end{equation}"},{"display":true,"left":"\\begin{equation*}","right":"\\end{equation*}"},{"display":true,"left":"\\begin{align}","right":"\\end{align}"},{"display":true,"left":"\\begin{align*}","right":"\\end{align*}"},{"display":true,"left":"\\begin{alignat}","right":"\\end{alignat}"},{"display":true,"left":"\\begin{alignat*}","right":"\\end{alignat*}"},{"display":true,"left":"\\begin{gather}","right":"\\end{gather}"},{"display":true,"left":"\\begin{CD}","right":"\\end{CD}"},{"display":false,"left":"$","right":"$"},{"display":false,"left":"\\(","right":"\\)"}],"strict":false},"search":{"algoliaAppID":"PASDMWALPK","algoliaIndex":"index.zh-cn","algoliaSearchKey":"b42948e51daaa93df92381c8e2ac0f93","highlightTag":"em","maxResultLength":10,"noResultsFound":"没有找到结果","snippetLength":50,"type":"algolia"}};</script><script type="text/javascript" src="/js/theme.min.d7121d72cd85153ec9d35a888cee3eb28c2700ca763f649a538f6c772d750021.js" integrity="sha256-1xIdcs2FFT7J01qIjO4+sownAMp2P2SaU49sdy11ACE="></script><script type="text/javascript" src="https://cdn.jsdelivr.net/npm/jquery@2.1.3/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/js/custom.js"></script></body>
+</html>
